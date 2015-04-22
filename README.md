@@ -1,8 +1,9 @@
 # Tópicos estudados com PHPUnit, utilizando composer para atualização do classmap, as OO as it possible, e alguns Patterns pra não ficar tão... tão somente a elementar lógica....
 #
-# Who was the first developer?
 #
 # Understand that if you can: 
+#
+# Who was the first developer?
 #
 # - Think about God, He is an observer, 
 # - He has an adapter strategy, 
