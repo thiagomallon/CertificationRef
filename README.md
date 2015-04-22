@@ -6,6 +6,7 @@
 # - He has an adapter strategy, 
 # - He is the world decorator, 
 # - He need no factories, 
+# - He is the main factory,
 # - He have the command, since the begining, 
 # - He is for real there is no facade. 
 # - My friend, who is the singleton?
