@@ -9,4 +9,4 @@
 # - He is the main factory,
 # - He has the command, since the begining, 
 # - He is for real there is no facade. 
-# - My friend, who cares about the singleton?
+# - my friend, who cares about the singleton?
