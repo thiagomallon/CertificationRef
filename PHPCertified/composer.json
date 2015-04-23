@@ -8,7 +8,10 @@
 	],
 	"autoload" : {
 		"classmap": [
-			"app"
+			"app/src/basics",
+			"app/src/arrays",
+			"app/src/functions",
+			"app/src/object-orientation"
 		]
 	}
 }
