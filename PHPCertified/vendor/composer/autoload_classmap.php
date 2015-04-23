@@ -8,5 +8,8 @@ $baseDir = dirname($vendorDir);
 return array(
     'Arrays' => $baseDir . '/app/Arrays.php',
     'Functions' => $baseDir . '/app/Functions.php',
+    'OODaughterClassTest' => $baseDir . '/app/OODaughterClass.php',
+    'OOMotherClass' => $baseDir . '/app/OOMotherClass.php',
+    'ObjectOrientedProgramming' => $baseDir . '/app/ObjectOrientedProgramming.php',
     'PHPBasics' => $baseDir . '/app/PHPBasics.php',
 );
