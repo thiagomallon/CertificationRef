@@ -3,7 +3,7 @@
 class OOMotherClass
 {
 
-    public final $number;
+    public $number;
 
     final public function finalSumNumbers($n1, $n2)
     {
