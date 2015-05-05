@@ -1,6 +1,11 @@
-# Welcome! 
+# Topics of PHP Certification tested with PHPUnit  
 
-This is the bank of PHP Beyond Logic.
-Here you can find/get the code of the website examples.
+### Covered Topics (up to now)
+* PHP Basics (*not complete*) 
+* Functions (*not complete*)
+* Arrays (*not complete*)
+* OO Programming (*not complete*)
 
-Enjoy!
+*by* **T. Mallon**
+
+![GitHub Logo](/mein_stream_mit_Mallon_und_semitischen.png)
