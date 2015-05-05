@@ -1,4 +1,4 @@
-# Topics of PHP Certification tested with PHPUnit  
+# *PHP Certification* topics tested with *PHPUnti*
 
 ### Covered Topics (up to now)
 * PHP Basics (*not complete*) 
