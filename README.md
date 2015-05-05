@@ -8,4 +8,4 @@
 
 *by* **T. Mallon**
 
-![GitHub Logo](mein_stream_mit_Mallon_und_semitischen.png)
+![GitHub Logo](mein_stream_mit_Mallon_und_semitischen.jpg)
