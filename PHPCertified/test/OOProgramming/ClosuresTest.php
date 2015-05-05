@@ -9,7 +9,7 @@ class ClosuresTest extends PHPUnit_Framework_TestCase
     /**
      * @var Closures
      */
-    protected $object;
+    protected $_closure;
 
     /**
      * Sets up the fixture, for example, opens a network connection.
@@ -17,7 +17,7 @@ class ClosuresTest extends PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->object = new Closures;
+        $this->_closure = new \App\OOProgramming\Closures();
     }
 
     /**
@@ -26,6 +26,7 @@ class ClosuresTest extends PHPUnit_Framework_TestCase
      */
     protected function tearDown()
     {
+        unset($this->_closure);
     }
 
     /**
