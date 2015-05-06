@@ -26,11 +26,23 @@
         }
     },
     "scripts": {
+        "pre-install-cmd": [       
+            "VendorOMine\\WelcomeAboard::preInstall"    
+        ],
         "post-install-cmd": [       
             "VendorOMine\\WelcomeAboard::postInstall"    
         ],
+        "pre-update-cmd": [
+            "VendorOMine\\WelcomeAboard::preUpdate"
+        ],
         "post-update-cmd": [        
             "VendorOMine\\WelcomeAboard::postUpdate"    
+        ],
+        "pre-autoload-dump": [        
+            "VendorOMine\\WelcomeAboard::preAutoLoadDump"    
+        ],
+        "post-autoload-dump": [        
+            "VendorOMine\\WelcomeAboard::postAutoLoadDump"    
         ]
     }
 }
