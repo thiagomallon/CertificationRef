@@ -21,12 +21,12 @@ class Closures
     {
         /* closure na sua forma mais simples, apenas retorna uma literal */
         $closure = function () {
-            return 'This is closure block saying!<br />';
+            return 'This closure is saying hi!';
         };
         return $closure; // retorna closure
     }
 
-    public function getClosureParam()
+    public function getClosureFeatParam()
     {
         /* closure recebe parâmetro, então o retorna */
         $closure = function ($something) {
@@ -35,7 +35,7 @@ class Closures
         return $closure; // retorna closure
     }
 
-    public function getClosureProperty()
+    public function getClosureFeatProperty()
     {
         /* closure recebe parâmetro, o atribui à propriedade da classe e retorna propriedade */
         $closure = function ($something) {
@@ -45,14 +45,19 @@ class Closures
         return $closure; // retorna closure
     }
 
-    public function getClosurePropertyParam($beginPhrase)
+    public function getClosureFeatPropertyParam($beginPhrase)
     {
         /* método recebe parâmetro, que é atribuído ao closure, através do use,
          * o atribui à propriedade da classe e retorna propriedade */
         $closure = function ($something) use ($beginPhrase) {
-            $this->property1 = $beginPhrase.' - '.$something;
+            $this->property1 = $beginPhrase.$something;
             return $this->property1;
         };
         return $closure; // retorna closure
+    }
+
+    public function getProperty1()
+    {
+        return $this->property1;
     }
 }
