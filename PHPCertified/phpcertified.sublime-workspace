@@ -75,7 +75,7 @@
 			"file": "test/OOProgramming/ClosuresTest.php",
 			"settings":
 			{
-				"buffer_size": 2049,
+				"buffer_size": 1961,
 				"line_ending": "Unix"
 			}
 		}
@@ -87,10 +87,22 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 243.0,
-		"last_filter": "insta",
+		"height": 117.0,
+		"last_filter": "remove",
 		"selected_items":
 		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
 			[
 				"insta",
 				"Package Control: Install Package"
@@ -144,6 +156,26 @@
 	],
 	"file_history":
 	[
+		"/home/mallon/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/mallon/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/mallon/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/var/www/html/RepTests/BetterWorkflowTests/test/src/ArraysOperationsTest.php",
+		"/var/www/html/RepTests/BetterWorkflowTests/test/src/CalculationsTest.php",
+		"/var/www/html/RepTests/BetterWorkflowTests/test/src/DaughterAndTypesTest.php",
+		"/var/www/html/RepTests/BetterWorkflowTests/test/src/FileSystemIteractTest.php",
+		"/var/www/html/RepTests/BetterWorkflowTests/test/src/IncompleteAndSkippingTest.php",
+		"/var/www/html/RepTests/BetterWorkflowTests/test/src/MockTaskRunnerTest.php",
+		"/var/www/html/RepTests/BetterWorkflowTests/test/src/SingletonDBConnectionTest.php",
+		"/var/www/html/RepTests/BetterWorkflowTests/test/src/StreamFileIteractTest.php",
+		"/var/www/html/RepTests/BetterWorkflowTests/test/src/StubsDateFormatterTest.php",
+		"/var/www/html/RepTests/BetterWorkflowTests/test/src/ThrowingExceptsTest.php",
+		"/var/www/html/RepTests/BetterWorkflowTests/test/src/WarningsAndNoticesTest.php",
+		"/var/www/html/RepCertification/PHPCertified/phpunit.xml.dist",
+		"/var/www/html/RepCertification/PHPCertified/test/OOProgramming/MagicMethodsTest.php",
+		"/var/www/html/RepTests/BetterWorkflowTests/composer.json",
+		"/var/www/html/RepTests/BetterWorkflowTests/phpunit.xml.dist",
+		"/var/www/html/RepCertification/PHPCertified/test/OOProgramming/ClosuresTest.php",
+		"/var/www/html/RepCertification/PHPCertified/phpcertified.sublime-project",
 		"/var/www/html/RepCertification/PHPCertified/test/OOProgramming/test",
 		"/var/www/html/testing_closures_b.php",
 		"/var/www/html/RepPHP-Beyond-Logic/PHPCertified/src/OOProgramming/Closures.php",
@@ -181,12 +213,9 @@
 		"/var/www/html/RepPHP-Beyond-Logic/PHPCertified/test/bootstrap.php",
 		"/home/mallon/.config/sublime-text-3/Packages/User/test.sublime-snippet",
 		"/home/mallon/.config/sublime-text-3/Packages/User/snippetsOMine/test.sublime-snippet",
-		"/home/mallon/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/mallon/.config/sublime-text-3/Packages/User/Default.sublime-theme",
 		"/home/mallon/.config/sublime-text-3/Packages/User/sublime-keymap",
 		"/home/mallon/Desktop/sublime-keymap",
-		"/home/mallon/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
-		"/home/mallon/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
 		"/var/www/html/RepPHP-Beyond-Logic/PHPCertified/phpunit.xml.dist",
 		"/var/www/html/RepTests/PSRFour/phpunit.xml.dist",
 		"/var/www/html/RepTests/PSRFour/test/Controller/LoggerTest.php",
@@ -254,18 +283,18 @@
 				{
 					"buffer": 0,
 					"file": "test/OOProgramming/ClosuresTest.php",
-					"semi_transient": false,
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 2049,
+						"buffer_size": 1961,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								672,
-								672
+								0,
+								0
 							]
 						],
 						"settings":
@@ -323,6 +352,10 @@
 	{
 		"height": 112.0
 	},
+	"output.xdebug":
+	{
+		"height": 0.0
+	},
 	"pinned_build_system": "",
 	"project": "phpcertified.sublime-project",
 	"replace":
@@ -362,7 +395,42 @@
 	{
 		"xdebug":
 		{
-			"hide_conflict": false
+			"hide_conflict": false,
+			"restore_index":
+			{
+				"15":
+				{
+					"group": 0,
+					"index": 0
+				},
+				"18":
+				{
+					"group": 0,
+					"index": 1
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			}
 		}
 	},
 	"show_minimap": true,
