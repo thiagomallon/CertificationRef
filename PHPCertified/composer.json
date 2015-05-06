@@ -13,7 +13,7 @@
     ],
     "homepage": "http://phpbeyondlogic.com/",
     "require": {
-        "php": ">=5.3.3",
+        "php": "^5.5",
         "psr/log": "dev-master"
         },
         "require-dev": {

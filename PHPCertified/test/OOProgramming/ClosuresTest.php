@@ -36,9 +36,7 @@ class ClosuresTest extends PHPUnit_Framework_TestCase
     public function testGetClosure()
     {
         // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-            'This test has not been implemented yet.'
-        );
+        $this->markTestIncomplete('This test has not been implemented yet.');
     }
 
     /**
@@ -48,9 +46,7 @@ class ClosuresTest extends PHPUnit_Framework_TestCase
     public function testGetClosureParam()
     {
         // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-            'This test has not been implemented yet.'
-        );
+        $this->markTestIncomplete('This test has not been implemented yet.');
     }
 
     /**
@@ -60,9 +56,7 @@ class ClosuresTest extends PHPUnit_Framework_TestCase
     public function testGetClosureProperty()
     {
         // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-            'This test has not been implemented yet.'
-        );
+        $this->markTestIncomplete('This test has not been implemented yet.');
     }
 
     /**
@@ -72,8 +66,6 @@ class ClosuresTest extends PHPUnit_Framework_TestCase
     public function testGetClosurePropertyParam()
     {
         // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-            'This test has not been implemented yet.'
-        );
+        $this->markTestIncomplete('This test has not been implemented yet.');
     }
 }
