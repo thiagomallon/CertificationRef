@@ -24,6 +24,10 @@
             "VendorOMine\\":"vendor-o-mine/"   
         }
     },
+    "suggest": {
+	"phpunit/phpunit": "Go test your codes, matey...",
+	"phpdocumentor/phpdocumentor": "Generates documentation for your application"
+    },
     "scripts": {
         "pre-install-cmd": [       
             "VendorOMine\\WelcomeAboard::preInstall"    
