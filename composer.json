@@ -1,5 +1,5 @@
 {
-    "name": "mallon/PHPCertApp:",
+    "name": "mallon/PHPCertApp",
     "description": "Application for PHP Certification study - by T.Mallon",    
     "keywords": [
     "MVC",
@@ -15,9 +15,6 @@
     "require": {
         "php": "^5.5",
         "psr/log": "dev-master"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "~4.6"
     },
     "autoload" : {
         "psr-4" : {
