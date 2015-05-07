@@ -1,0 +1,51 @@
+{
+    "name": "mallon/php-cert-app",
+    "description": "Application for PHP Certification study - by T.Mallon",    
+    "type": "project",
+    "license": "MIT",
+    "keywords": [
+        "MVC",
+        "PSR-4",
+        "TDD",
+        "Mallon",
+        "Thiago Mallon",
+        "PHP Certification",
+        "PHP",
+        "Certification"
+    ],
+    "homepage": "http://phpbeyondlogic.com/",
+    "require": {
+        "php": "^5.5",
+        "psr/log": "~1.0"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "App\\": "src/",
+            "VendorOMine\\":"vendor-o-mine/"   
+        }
+    },
+    "suggest": {
+	"phpunit/phpunit": "Go test your codes, matey...",
+	"phpdocumentor/phpdocumentor": "Generates documentation for your application"
+    },
+    "scripts": {
+        "pre-install-cmd": [       
+            "VendorOMine\\WelcomeAboard::preInstall"    
+        ],
+        "post-install-cmd": [       
+            "VendorOMine\\WelcomeAboard::postInstall"    
+        ],
+        "pre-update-cmd": [
+            "VendorOMine\\WelcomeAboard::preUpdate"
+        ],
+        "post-update-cmd": [        
+            "VendorOMine\\WelcomeAboard::postUpdate"    
+        ],
+        "pre-autoload-dump": [        
+            "VendorOMine\\WelcomeAboard::preAutoLoadDump"    
+        ],
+        "post-autoload-dump": [        
+            "VendorOMine\\WelcomeAboard::postAutoLoadDump"    
+        ]
+    }
+}
