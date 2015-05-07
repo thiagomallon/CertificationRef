@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"getC",
+				"getClosureFeatPropertyParam"
+			],
+			[
+				"getCl",
+				"getClosureFeatProperty"
+			],
+			[
+				"insta",
+				"installedPackage"
+			],
+			[
 				"_",
 				"_itsNotMagic"
 			],
@@ -75,7 +87,15 @@
 			"file": "test/OOProgramming/ClosuresTest.php",
 			"settings":
 			{
-				"buffer_size": 1961,
+				"buffer_size": 3854,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/OOProgramming/MagicMethods.php",
+			"settings":
+			{
+				"buffer_size": 1417,
 				"line_ending": "Unix"
 			}
 		}
@@ -87,17 +107,17 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 117.0,
-		"last_filter": "remove",
+		"height": 392.0,
+		"last_filter": "inst",
 		"selected_items":
 		[
 			[
-				"remove",
-				"Package Control: Remove Package"
-			],
-			[
 				"inst",
 				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
 			],
 			[
 				"in",
@@ -150,12 +170,29 @@
 	"expanded_folders":
 	[
 		"/var/www/html/RepCertification/PHPCertified",
-		"/var/www/html/RepCertification/PHPCertified/test",
-		"/var/www/html/RepCertification/PHPCertified/test/FunctionsAndArrays",
-		"/var/www/html/RepCertification/PHPCertified/test/OOProgramming"
+		"/var/www/html/RepCertification/PHPCertified/js",
+		"/var/www/html/RepCertification/PHPCertified/mine-trash",
+		"/var/www/html/RepCertification/PHPCertified/src",
+		"/var/www/html/RepCertification/PHPCertified/src/OOProgramming",
+		"/var/www/html/jasmine-course"
 	],
 	"file_history":
 	[
+		"/var/www/html/RepCertification/PHPCertified/js/jasmine-2.3.1/.gitignore",
+		"/var/www/html/RepCertification/PHPCertified/js/jasmine-2.3.0/MIT.LICENSE",
+		"/var/www/html/RepCertification/PHPCertified/test/OOProgramming/ClosuresTest.php",
+		"/var/www/html/RepCertification/PHPCertified/src/OOProgramming/Closures.php",
+		"/var/www/html/RepCertification/PHPCertified/composer.json",
+		"/var/www/html/RepCertification/PHPCertified/vendor-o-mine/WelcomeAboard.php",
+		"/var/www/html/RepCertification/PHPCertified/vendor/composer/WelcomeAboard.php",
+		"/var/www/html/ComposerInitTest/vendor-o-mine/WelcomeAboard.php",
+		"/var/www/html/ComposerInitTest/composer.json",
+		"/var/www/html/ComposerInitTest/phpunit.xml.dist",
+		"/var/www/html/ComposerInitTest/vendor/composer/WelcomeAboard.php",
+		"/var/www/html/RepCertification/PHPCertified/vendor/composer/ClassLoader.php",
+		"/var/www/html/RepCertification/PHPCertified/src/WelcomeAboard.php",
+		"/var/www/html/RepCertification/PHPCertified/vendor/composer/WelcomeAboard",
+		"/var/www/html/RepCertification/PHPCertified/vendor/composer/installed.json",
 		"/home/mallon/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
 		"/home/mallon/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
 		"/home/mallon/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
@@ -174,7 +211,6 @@
 		"/var/www/html/RepCertification/PHPCertified/test/OOProgramming/MagicMethodsTest.php",
 		"/var/www/html/RepTests/BetterWorkflowTests/composer.json",
 		"/var/www/html/RepTests/BetterWorkflowTests/phpunit.xml.dist",
-		"/var/www/html/RepCertification/PHPCertified/test/OOProgramming/ClosuresTest.php",
 		"/var/www/html/RepCertification/PHPCertified/phpcertified.sublime-project",
 		"/var/www/html/RepCertification/PHPCertified/test/OOProgramming/test",
 		"/var/www/html/testing_closures_b.php",
@@ -245,6 +281,13 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"getClosure((^Feat)\\w+)",
+			"getClosure(\\w+)",
+			"testGetClosure(\\w+)",
+			"_clousuresObj",
+			"_closure",
+			"sailor",
+			"matey",
 			"object",
 			"return $closure;",
 			"something",
@@ -264,9 +307,11 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"getClosureFeat$1",
+			"testGetClosureFeat$1"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -277,16 +322,16 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
 					"file": "test/OOProgramming/ClosuresTest.php",
-					"semi_transient": true,
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1961,
+						"buffer_size": 3854,
 						"regions":
 						{
 						},
@@ -295,6 +340,40 @@
 							[
 								0,
 								0
+							],
+							[
+								1423,
+								1423
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/OOProgramming/MagicMethods.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1417,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								756,
+								756
 							]
 						],
 						"settings":
@@ -437,7 +516,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 234.0,
+	"side_bar_width": 203.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
