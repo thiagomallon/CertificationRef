@@ -1,0 +1,1477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title="RepCertification" version="2.8.2">
+  <partials/>
+  <file path="src/OOProgramming/OODaughter.php" generated-path="src.OOProgramming.OODaughter.html" hash="c8353345a577ebfb85cb655e8743a65d" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="App\OOProgramming" line="5" package="Default">
+      <extends>\App\OOProgramming\OOMother</extends>
+      <name>OODaughter</name>
+      <full_name>\App\OOProgramming\OODaughter</full_name>
+      <docblock line="5">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="5" description="Default"/>
+        <tag name="inherited_from" description="\App\OOProgramming\OOMother" refers="\App\OOProgramming\OOMother" link="/classes/App.OOProgramming.OOMother.html"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="App\OOProgramming" line="8" package="Default">
+        <name>$name</name>
+        <full_name>\App\OOProgramming\OODaughter::name</full_name>
+        <default></default>
+        <docblock line="8">
+          <description></description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\App\OOProgramming\OOMother::name" refers="\App\OOProgramming\OOMother::name" link="/classes/App.OOProgramming.OOMother.html#property_name"/>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="App\OOProgramming" line="7" package="Default">
+        <name>$name</name>
+        <full_name>\App\OOProgramming\OOMother::name</full_name>
+        <default></default>
+        <docblock line="7">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="10" package="Default">
+        <name>__construct</name>
+        <full_name>\App\OOProgramming\OODaughter::__construct()</full_name>
+        <docblock line="10">
+          <description></description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\App\OOProgramming\OOMother::__construct()" refers="\App\OOProgramming\OOMother::__construct()" link="/classes/App.OOProgramming.OOMother.html#method___construct"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="15" package="Default">
+        <name>getInstance</name>
+        <full_name>\App\OOProgramming\OODaughter::getInstance()</full_name>
+        <docblock line="15">
+          <description></description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\App\OOProgramming\OOMother::getInstance()" refers="\App\OOProgramming\OOMother::getInstance()" link="/classes/App.OOProgramming.OOMother.html#method_getInstance"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="20" package="Default">
+        <name>setName</name>
+        <full_name>\App\OOProgramming\OODaughter::setName()</full_name>
+        <docblock line="20">
+          <description></description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\App\OOProgramming\OOMother::setName()" refers="\App\OOProgramming\OOMother::setName()" link="/classes/App.OOProgramming.OOMother.html#method_setName"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="25" package="Default">
+        <name>getName</name>
+        <full_name>\App\OOProgramming\OODaughter::getName()</full_name>
+        <docblock line="25">
+          <description></description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\App\OOProgramming\OOMother::getName()" refers="\App\OOProgramming\OOMother::getName()" link="/classes/App.OOProgramming.OOMother.html#method_getName"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="30" package="Default">
+        <name>returnArgsPassed</name>
+        <full_name>\App\OOProgramming\OODaughter::returnArgsPassed()</full_name>
+        <docblock line="30">
+          <description></description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\App\OOProgramming\OOMother::returnArgsPassed()" refers="\App\OOProgramming\OOMother::returnArgsPassed()" link="/classes/App.OOProgramming.OOMother.html#method_returnArgsPassed"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="35" package="Default">
+        <name>returnObjVars</name>
+        <full_name>\App\OOProgramming\OODaughter::returnObjVars()</full_name>
+        <docblock line="35">
+          <description></description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\App\OOProgramming\OOMother::returnObjVars()" refers="\App\OOProgramming\OOMother::returnObjVars()" link="/classes/App.OOProgramming.OOMother.html#method_returnObjVars"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="9" package="Default">
+        <name>__construct</name>
+        <full_name>\App\OOProgramming\OOMother::__construct()</full_name>
+        <docblock line="9">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <inherited_from>\App\OOProgramming\OOMother</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="14" package="Default">
+        <name>getInstance</name>
+        <full_name>\App\OOProgramming\OOMother::getInstance()</full_name>
+        <docblock line="14">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <inherited_from>\App\OOProgramming\OOMother</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="19" package="Default">
+        <name>returnObjVars</name>
+        <full_name>\App\OOProgramming\OOMother::returnObjVars()</full_name>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <inherited_from>\App\OOProgramming\OOMother</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="24" package="Default">
+        <name>returnArgsPassed</name>
+        <full_name>\App\OOProgramming\OOMother::returnArgsPassed()</full_name>
+        <docblock line="24">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <inherited_from>\App\OOProgramming\OOMother</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="29" package="Default">
+        <name>getName</name>
+        <full_name>\App\OOProgramming\OOMother::getName()</full_name>
+        <docblock line="29">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <inherited_from>\App\OOProgramming\OOMother</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="34" package="Default">
+        <name>setName</name>
+        <full_name>\App\OOProgramming\OOMother::setName()</full_name>
+        <docblock line="34">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type/>
+        </argument>
+        <inherited_from>\App\OOProgramming\OOMother</inherited_from>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="5" code="PPC:ERR-50005">No summary for class \App\OOProgramming\OODaughter</error>
+      <error line="10" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="15" code="PPC:ERR-50008">No summary for method getInstance()</error>
+      <error line="20" code="PPC:ERR-50015">Argument $name is missing from the Docblock of setName</error>
+      <error line="20" code="PPC:ERR-50008">No summary for method setName()</error>
+      <error line="25" code="PPC:ERR-50008">No summary for method getName()</error>
+      <error line="30" code="PPC:ERR-50008">No summary for method returnArgsPassed()</error>
+      <error line="35" code="PPC:ERR-50008">No summary for method returnObjVars()</error>
+      <error line="8" code="PPC:ERR-50007">No summary for property $name</error>
+    </parse_markers>
+    <source>eJyFkb1OwzAQgHc/xQ0dyoC6N/yoEgsDpBMTUuQ4R+KqOVv2BZCqPgy8Ci/G2QXEX1IPlnX+7jvf+ezSd14p0j1Grw3Cyvv7slwH1wbd95baQimz1TFCWV7poe0YA+AzIzUpdOO4w6B2SoEsHxyjYWxglozFR3Sot9bAw0CGrSOoKuMochgMz08ysct7ZnVA4uXyB1Pk6/3/thb5WkhNBv/YAvIQCAifQAi2RlywWKS4C6TBSuLbKxmrAeX0IoSGxoGrN0JMVY3It9LhPPf5u+yMOxtPL9IVnH+OYrqFLBt5/jfdpOaAr0Ib1/Jf2Iz5UkIlNSst6JHpHlLKenOnQxwTJlcameHqMWH5wV/evXoHyBG6sg==</source>
+  </file>
+  <file path="test/FunctionsAndArrays/ArrayStuffTest.php" generated-path="test.FunctionsAndArrays.ArrayStuffTest.html" hash="29c0894a92545a73ac457b2fdfb605e9" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="7" package="Default">
+      <extends>\PHPUnit_Framework_TestCase</extends>
+      <name>ArrayStuffTest</name>
+      <full_name>\ArrayStuffTest</full_name>
+      <docblock line="7">
+        <description>Generated by PHPUnit_SkeletonGenerator on 2015-05-05 at 12:12:07.</description>
+        <long-description></long-description>
+        <tag name="group" line="7" description="FunctionsAndArrays"/>
+        <tag name="group" line="7" description="ArrayStuffTest"/>
+        <tag name="package" line="7" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="" line="10" package="Default">
+        <name>$setOfStuff</name>
+        <full_name>\ArrayStuffTest::setOfStuff</full_name>
+        <default></default>
+        <docblock line="10">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="12" package="Default">
+        <name>setUp</name>
+        <full_name>\ArrayStuffTest::setUp()</full_name>
+        <docblock line="12">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="23" package="Default">
+        <name>tearDown</name>
+        <full_name>\ArrayStuffTest::tearDown()</full_name>
+        <docblock line="23">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="28" package="Default">
+        <name>testInArrayImplement</name>
+        <full_name>\ArrayStuffTest::testInArrayImplement()</full_name>
+        <docblock line="28">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="40" package="Default">
+        <name>testArrayKeysImplement</name>
+        <full_name>\ArrayStuffTest::testArrayKeysImplement()</full_name>
+        <docblock line="40">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="48" package="Default">
+        <name>testArrayKeyExistsImplement</name>
+        <full_name>\ArrayStuffTest::testArrayKeyExistsImplement()</full_name>
+        <docblock line="48">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="53" package="Default">
+        <name>testArrayValuesImplement</name>
+        <full_name>\ArrayStuffTest::testArrayValuesImplement()</full_name>
+        <docblock line="53">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="58" package="Default">
+        <name>testArrayFlipImplement</name>
+        <full_name>\ArrayStuffTest::testArrayFlipImplement()</full_name>
+        <docblock line="58">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="12" code="PPC:ERR-50008">No summary for method setUp()</error>
+      <error line="23" code="PPC:ERR-50008">No summary for method tearDown()</error>
+      <error line="28" code="PPC:ERR-50008">No summary for method testInArrayImplement()</error>
+      <error line="40" code="PPC:ERR-50008">No summary for method testArrayKeysImplement()</error>
+      <error line="48" code="PPC:ERR-50008">No summary for method testArrayKeyExistsImplement()</error>
+      <error line="53" code="PPC:ERR-50008">No summary for method testArrayValuesImplement()</error>
+      <error line="58" code="PPC:ERR-50008">No summary for method testArrayFlipImplement()</error>
+      <error line="10" code="PPC:ERR-50007">No summary for property $setOfStuff</error>
+    </parse_markers>
+    <source>eJyVVNtu2kAQffdXjBASBpEAiapKTaGN0tJEldqoIX2pKmtjj2GF2XX2EkBRvqYPfepX8GOdXRwDAZLWsuzRHu+ZM3Nm/fZdPsqDVqMRQAM+oUDFDCZwM4fL88trwU10NcYMjRQFKBVIAUftzquDtruBGegcvaG7/frQkbwfKmlz6FsRGy6FPhXJqVJsrtdAv3BlbJoOUBsCWkGcMa2fAIAzgyLRpZa+YhOcSjWOHHzGNAb3QQB05UoajJ30qkbzNfUcJwVmbzIeQ1ooAvrgOg/rHrv3T3dVzYjrg95qN3ThR4lWOtpUur1KyhUFzdX6kUjcusZYUrQGHCsPDEZcbawnUpgKdHsuioTcIJsyIdgSpNBERlZK8OeJDx9212SQqQ9yKrbKsoIqCreKqz+yueceRm0uhDfkYpJnOEFhtthbDbdh8XvxSwIXEXNfg6JxUYKBURap2XDHMpqaRJJJfIJcSWBqaB2fLIloNnDGteEKcAK3lmW3FhXYCe3TsPgjEh6jdiTLHBRoHFpB73WOkvhwbbW18li72r+htpkhex8Vh6V921NQNKoo9g4VT3nMXFnLMqVd1rmeZclB84zKDAgM1/OWnd9npDa+6Z9xrvc3vspFgjPUq1n1lURj2rXT7d3qfKYv0pwzTflCP+XNp+T/ofij8/A52VutKWVH3n8d+oOzy4j6CwegUPGdZRb/VcIZHUbGhQ5ry8NY2z8BL+XtZzx/1i+aHfo/OcrSrZT27D2bu80qnKoV/4dac5O6FPsQ/AUoecnv</source>
+  </file>
+  <file path="test/PHPBasics/BasicStuffTest.php" generated-path="test.PHPBasics.BasicStuffTest.html" hash="f3da9fee340be9fd803bdb9d24ae824e" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="7" package="Default">
+      <extends>\PHPUnit_Framework_TestCase</extends>
+      <name>BasicStuffTest</name>
+      <full_name>\BasicStuffTest</full_name>
+      <docblock line="7">
+        <description>Generated by PHPUnit_SkeletonGenerator on 2015-05-05 at 16:22:01.</description>
+        <long-description></long-description>
+        <tag name="group" line="7" description="PHPBasics"/>
+        <tag name="group" line="7" description="BasicStuffTest"/>
+        <tag name="package" line="7" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="" line="10" package="Default">
+        <name>$_basicStuff</name>
+        <full_name>\BasicStuffTest::_basicStuff</full_name>
+        <default></default>
+        <docblock line="10">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="12" package="Default">
+        <name>setUp</name>
+        <full_name>\BasicStuffTest::setUp()</full_name>
+        <docblock line="12">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="17" package="Default">
+        <name>tearDown</name>
+        <full_name>\BasicStuffTest::tearDown()</full_name>
+        <docblock line="17">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="22" package="Default">
+        <name>testIsAImplement</name>
+        <full_name>\BasicStuffTest::testIsAImplement()</full_name>
+        <docblock line="22">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="12" code="PPC:ERR-50008">No summary for method setUp()</error>
+      <error line="17" code="PPC:ERR-50008">No summary for method tearDown()</error>
+      <error line="22" code="PPC:ERR-50008">No summary for method testIsAImplement()</error>
+      <error line="10" code="PPC:ERR-50007">No summary for property $_basicStuff</error>
+    </parse_markers>
+    <source>eJyFUM1OwkAQvu9TzIFDIaktJHoARVGjciMBbk2abTuVDWV3szsNGsLTePBBeDG7DalISZxM9jDffj8zt/d6pVnQ6zHowStKNJwwg+QTZm+zpRQUz9dYICl5BJUBJWEQ9q/90DVwgv7NcDAYhv0rJ/LwblSpHf2RW5Hak1k9mFOZ5wu0VAEBSwtu7RkA+EEoM9tEeDF8g1tl1rGDn7hFtmMMqtJGEaYucSdOGpHRESyTQqSQlzIlUYW2SEvtdWtsV7+uOrQS1h+f0OEOJG4hmmgdNWtEvxm97qhm7y/bEHLzrLay5VTKKoHX9vtPztLUTqYbXeAGJbVkg6D+wx3l8H34UiBszL0uZMpd8HzR6t5oaGFKvBDFH4s/Vk20PfsBX5KrhA==</source>
+  </file>
+  <file path="src/PHPBasics/Mother.php" generated-path="src.PHPBasics.Mother.html" hash="9d9ee38421a17fb3498212bf0cd92a40" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="App\PHPBasics" line="8" package="Default">
+      <extends/>
+      <name>Mother</name>
+      <full_name>\App\PHPBasics\Mother</full_name>
+      <docblock line="8">
+        <description></description>
+        <long-description></long-description>
+        <tag name="codeCoverageIgnore" line="8" description=""/>
+        <tag name="package" line="8" description="Default"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\PHPBasics" line="10" package="Default">
+        <name>__construct</name>
+        <full_name>\App\PHPBasics\Mother::__construct()</full_name>
+        <docblock line="10">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="8" code="PPC:ERR-50005">No summary for class \App\PHPBasics\Mother</error>
+      <error line="10" code="PPC:ERR-50008">No summary for method __construct()</error>
+    </parse_markers>
+    <source>eJwdiksKwkAMQPc5RZY6mx5Awd9GF4UeQCgxxnagTsJkxk3p3S19mwePdzzZaACJvuJGLHgxe3b37koe2Q8ATQiAAc+sb7npTzIN8hiSZllzAzyRO7ZaRskwA65YfU2R8VMTl6gJ+541ecmVy26/HTNsWmCBPyr2JxE=</source>
+  </file>
+  <file path="test/OOProgramming/ClosuresTest.php" generated-path="test.OOProgramming.ClosuresTest.html" hash="142746e5fe644aaf50532123d3766a70" package="Default">
+    <docblock line="0">
+      <description>Generated by PHPUnit_SkeletonGenerator on 2015-05-05 at 16:55:51.</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="13" package="Default">
+      <extends>\PHPUnit_Framework_TestCase</extends>
+      <name>ClosuresTest</name>
+      <full_name>\ClosuresTest</full_name>
+      <docblock line="13">
+        <description>Classe de testes do objeto Closure</description>
+        <long-description></long-description>
+        <tag name="author" line="13" description="Thiago Mallon" link="mailto:thiagomallon@gmail.com"/>
+        <tag name="group" line="13" description="OOProgramming"/>
+        <tag name="group" line="13" description="ClosuresTest"/>
+        <tag name="package" line="13" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="" line="19" package="Default">
+        <name>$_closures</name>
+        <full_name>\ClosuresTest::_closures</full_name>
+        <default></default>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="19" description="&lt;p&gt;$_closures se faz instância de Clousures.&lt;/p&gt;" type="\Closure" variable="$_closures">
+            <type>\Closure</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="25" package="Default">
+        <name>setUp</name>
+        <full_name>\ClosuresTest::setUp()</full_name>
+        <docblock line="25">
+          <description>Sets up the fixture, for example, opens a network connection.</description>
+          <long-description>This method is called before a test is executed.</long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="34" package="Default">
+        <name>tearDown</name>
+        <full_name>\ClosuresTest::tearDown()</full_name>
+        <docblock line="34">
+          <description>Tears down the fixture, for example, closes a network connection.</description>
+          <long-description>This method is called after a test is executed.</long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="44" package="Default">
+        <name>testGetClosure</name>
+        <full_name>\ClosuresTest::testGetClosure()</full_name>
+        <docblock line="44">
+          <description>Testa-se a forma mais simples de um closure declarado em escopo de método.</description>
+          <long-description>Neste closure, apenas é retornada uma string, com uma mensagem genérica.</long-description>
+          <tag name="covers" line="44" description="" link="\App\OOProgramming\Closures::getClosure"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="55" package="Default">
+        <name>testGetClosureFeatParam</name>
+        <full_name>\ClosuresTest::testGetClosureFeatParam()</full_name>
+        <docblock line="55">
+          <description>O closure testao implementa recebimento de parâmetro e atribui o mesmo a uma
+propriedade do objeto do qual é membro.</description>
+          <long-description></long-description>
+          <tag name="covers" line="55" description="" link="\App\OOProgramming\Closures::getClosureFeatParam"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="68" package="Default">
+        <name>testGetClosureFeatProperty</name>
+        <full_name>\ClosuresTest::testGetClosureFeatProperty()</full_name>
+        <docblock line="68">
+          <description>Neste método é verificado que closures podem alterar propriedades da classe
+em que foi criado. Observamos por chamar o método getProperty1(), que nos retornou a
+string que passamos ao closure, que por sua vez atribui à propriedade $property1 do
+objeto Clousures.</description>
+          <long-description></long-description>
+          <tag name="covers" line="68" description="" link="\App\OOProgramming\Closures::getClosureFeatProperty"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="81" package="Default">
+        <name>testClousureInstance</name>
+        <full_name>\ClosuresTest::testClousureInstance()</full_name>
+        <docblock line="81">
+          <description>Método testa se closure é instância da classe testada e não é. Apesar
+de o closure poder alterar propriedades da classe a qual pertence, o mesmo
+não se faz instância da última.</description>
+          <long-description></long-description>
+          <tag name="covers" line="81" description="" link="\App\OOProgramming\Closures::getClosureFeatProperty"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="97" package="Default">
+        <name>testGetClosureFeatPropertyParam</name>
+        <full_name>\ClosuresTest::testGetClosureFeatPropertyParam()</full_name>
+        <docblock line="97">
+          <description>O closure testado espera um parâmetro na sua chamada e também faz uso de
+dados externos, pela palavra chave 'use'. Para argumento do 'use', passamos
+o parâmetro atribuído ao método que contém o closure. Este closure também
+altera uma propriedade da classe testada.</description>
+          <long-description></long-description>
+          <tag name="covers" line="97" description="" link="\App\OOProgramming\Closures::getClosureFeatPropertyParam"/>
+        </docblock>
+      </method>
+    </class>
+    <source>eJytV01vGzcQvetXTAEDkg1Zjgu4BztxHbiJ20NiA3FuBozRipK2XpJbkuuPFPkvRXLyIX+gV/2xvqF2VytZsmHVCwFeLjmPM2/eDOnXv+bjvNXa2dpq0RadKKMcBzWg/h2d/X722aTh8tOVylSwppy0jqyhn1/t7m2/kh9xoN1f9vf29vd2ewDZqdGOM/Ze0UBRUB4/Gliy/T+BhSnrC6dk1REXYQzQ83HKI0sfOMuA/zrEoY6jo5HmNOslVh9Gi5GzRU6np2fOjhxrnZpR43uJ7c+xafQnET/mPpO6DcoMfB3je8CoG+uuLmX6mL1q/d0iPDEUeQB/za5CoY3LpMSrpmdfCEEP+QulxofJN5OkLBzAsojTvdJiJ/7NnQ0qEcpnAAetxb0/qeAJsYUxoNPbgFVdGoI1dcs6zzCwuTKemIwKEgcl1hjgptZU+wnDnrQC2wPCWwJuJdMKOAqWkiT5rm5VUsChVX4OCxNxEWb4nHc24/SULXk2kDm/fThj4w18uqGLt3l+MZeyiyojnc2DaP31Qdjnip3I5sY8ErlspNYKnYdBuXUiD/DrN3j1IPjCgJTOIgWPxOcDb3thHyFpJugc8kklMC+iKTSVIBhBx45RQ0qT8onNrazQk/tgB7aO9KOUWmXUJYYs2NPknhzqzhkeMECZfHBIAcizOo411MMjII+Umdy7NOEa8Six1wppeCSD+/sjFeqabnJX9LM0aRLnw0m99KF2qmDfPJDR9uGoYXewKDfpNC68+6vgzHfaMd0VljDKd3CXxulP7W69SWdzZV5Oa2NxmC3FjICjwOAxUf1U3iP/ObvJNyjLIS9ohS7tFylZ8Om1pch1BQod5S5VA4bVrBPiTZyWDGml+86uy/t7xeEMAtHPSEBts24mGgBPpOQYJdfn5EqYEaX1er1mLpbOr07QVOWl9oU7MJUOodpIZ61/T7kdQNScodDRvRspQHkxxZOhUqzUldgObUqJSwHVo9M+YrhmbQXJUTJmDRhb7wwmkJcccd7tdja70d5g8bTYbEF19qcFFxfk2DRCQlh1ocYJbOELRjBfailN/pkTzkZebQflVNizQ3X+hFlLQiX+c1VUmv0vIdUYT2jpJL1G8hWJXuYqemFm89lAyzxsJHilHj+UeojtQs7/KmpIs3kNqCQ3XYgh5DL5Lgru0dtceXYVInJdqyOq2D2hYjSb2EjEV2USuRJMu1CFGDdacjVhmvybhVSv3fGfJZtKpH/AA4abLy2YnZ26FzySh8WLaFc+4TK4XC6Vr6fDTrtioCG7p3cvc/yoFJZv/dHO7746Iw8devJck7uEB4NyTDUPMsOxDcVuFzUaWPcn9zpKp/By7tUyBYiP12m0O9+F+jIGVMbXLgKgvtqFV+0eyTFB7EZFeXTa6US3bod1N2u6Mm2Dkx9YzrO2G1u8NUF8qqukR+8aV5/K5wp1WjzxrjN3EC+m4SWKYK1juGn7EkUxBcJVCO1NjVITD9QV/fAYXDLE2WlXS9kM5horxvEKjv+aVrfVpTBi9pzW+rX1HzrwxP4=</source>
+  </file>
+  <file path="src/OOProgramming/Reflecting.php" generated-path="src.OOProgramming.Reflecting.html" hash="51ae5fee8fc10a570382a3517c6159ce" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="App\OOProgramming" line="12" package="Default">
+      <extends/>
+      <name>Reflecting</name>
+      <full_name>\App\OOProgramming\Reflecting</full_name>
+      <docblock line="12">
+        <description></description>
+        <long-description></long-description>
+        <tag name="codeCoverageIgnore" line="12" description=""/>
+        <tag name="package" line="12" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="App\OOProgramming" line="15" package="Default">
+        <name>$setOUnaccessibles</name>
+        <full_name>\App\OOProgramming\Reflecting::setOUnaccessibles</full_name>
+        <default>array()</default>
+        <docblock line="15">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="App\OOProgramming" line="16" package="Default">
+        <name>$unreal</name>
+        <full_name>\App\OOProgramming\Reflecting::unreal</full_name>
+        <default></default>
+        <docblock line="16">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="App\OOProgramming" line="17" package="Default">
+        <name>$realLife</name>
+        <full_name>\App\OOProgramming\Reflecting::realLife</full_name>
+        <default></default>
+        <docblock line="17">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="19" package="Default">
+        <name>__call</name>
+        <full_name>\App\OOProgramming\Reflecting::__call()</full_name>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$args</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="24" package="Default">
+        <name>__set</name>
+        <full_name>\App\OOProgramming\Reflecting::__set()</full_name>
+        <docblock line="24">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$value</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="29" package="Default">
+        <name>__get</name>
+        <full_name>\App\OOProgramming\Reflecting::__get()</full_name>
+        <docblock line="29">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="34" package="Default">
+        <name>getRealLife</name>
+        <full_name>\App\OOProgramming\Reflecting::getRealLife()</full_name>
+        <docblock line="34">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="39" package="Default">
+        <name>setRealLife</name>
+        <full_name>\App\OOProgramming\Reflecting::setRealLife()</full_name>
+        <docblock line="39">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$realLife</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="12" code="PPC:ERR-50005">No summary for class \App\OOProgramming\Reflecting</error>
+      <error line="19" code="PPC:ERR-50015">Argument $name is missing from the Docblock of __call</error>
+      <error line="19" code="PPC:ERR-50015">Argument $args is missing from the Docblock of __call</error>
+      <error line="19" code="PPC:ERR-50008">No summary for method __call()</error>
+      <error line="24" code="PPC:ERR-50015">Argument $name is missing from the Docblock of __set</error>
+      <error line="24" code="PPC:ERR-50015">Argument $value is missing from the Docblock of __set</error>
+      <error line="24" code="PPC:ERR-50008">No summary for method __set()</error>
+      <error line="29" code="PPC:ERR-50015">Argument $name is missing from the Docblock of __get</error>
+      <error line="29" code="PPC:ERR-50008">No summary for method __get()</error>
+      <error line="34" code="PPC:ERR-50008">No summary for method getRealLife()</error>
+      <error line="39" code="PPC:ERR-50015">Argument $realLife is missing from the Docblock of setRealLife</error>
+      <error line="39" code="PPC:ERR-50008">No summary for method setRealLife()</error>
+      <error line="15" code="PPC:ERR-50007">No summary for property $setOUnaccessibles</error>
+      <error line="16" code="PPC:ERR-50007">No summary for property $unreal</error>
+      <error line="17" code="PPC:ERR-50007">No summary for property $realLife</error>
+    </parse_markers>
+    <source>eJyFkU1uwjAQhfc5xSyyoCiFA9A/xKZIVYmQuqIIDc4QLDm263HYIE7TVc/BxWqHv4oWakVWYs/73szL3aNd2iTptmGgkJlAVlZRRdpjgRlYdAhMjirwxOHMMIRHGC1I+vBWIPTzIYxpoUh4aTQUBvLnvAMJtOE1ajJASxoZePtpoCChAjSCUJW1Zqi2X97EbwLrjHWSCiyIO5BH8xU5WNRaBDTGtkzkBo+TYwbSARpA91HLVXRoeqVOqOwmUcUWBUHf2vfRKHemdFhVUpe9OHc78p6EKWhggheWNCy1cdSIRczkaKXLZJ0kEFbo04cTKiBl8qM3jUIQs5wrYriHybS3L5Mr9ARprR2h6p1r4+GLXFBvT63nSopm2ibJ2UygUq00jpBBiq7km6Zw3exxOfK107u7HX5ziRUaPaJWqGo6Z6V+Kfn24ddAk0Y1DXPtdP/4lAefS71et7lKD+zxPrPWdfwp2h0u7n8i+Qfy+EMuRHO4jlGcG2ySb96lCAI=</source>
+  </file>
+  <file path="test/OOProgramming/OODaughterTest.php" generated-path="test.OOProgramming.OODaughterTest.html" hash="e3ce93521f6e4f06a74f9bec9a3409be" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="7" package="Default">
+      <extends>\PHPUnit_Framework_TestCase</extends>
+      <name>OODaughterTest</name>
+      <full_name>\OODaughterTest</full_name>
+      <docblock line="7">
+        <description>Generated by PHPUnit_SkeletonGenerator on 2015-05-05 at 10:12:15.</description>
+        <long-description></long-description>
+        <tag name="group" line="7" description="OOProgramming"/>
+        <tag name="group" line="7" description="OODaughterTest"/>
+        <tag name="package" line="7" description="Default"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="9" package="Default">
+        <name>testClassAlias</name>
+        <full_name>\OODaughterTest::testClassAlias()</full_name>
+        <docblock line="9">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="33" package="Default">
+        <name>testDuplicatingInstance</name>
+        <full_name>\OODaughterTest::testDuplicatingInstance()</full_name>
+        <docblock line="33">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="43" package="Default">
+        <name>testDestructingObject</name>
+        <full_name>\OODaughterTest::testDestructingObject()</full_name>
+        <docblock line="43">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="59" package="Default">
+        <name>testReturnArgsPassed</name>
+        <full_name>\OODaughterTest::testReturnArgsPassed()</full_name>
+        <docblock line="59">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="69" package="Default">
+        <name>testReturnObjVars</name>
+        <full_name>\OODaughterTest::testReturnObjVars()</full_name>
+        <docblock line="69">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="9" code="PPC:ERR-50008">No summary for method testClassAlias()</error>
+      <error line="33" code="PPC:ERR-50008">No summary for method testDuplicatingInstance()</error>
+      <error line="43" code="PPC:ERR-50008">No summary for method testDestructingObject()</error>
+      <error line="59" code="PPC:ERR-50008">No summary for method testReturnArgsPassed()</error>
+      <error line="69" code="PPC:ERR-50008">No summary for method testReturnObjVars()</error>
+    </parse_markers>
+    <source>eJy9V11v2zYUffev4MMAO4FcJy360m3ZgmZfWNEESzdgQACDlq5tLhKpkpTbbsh/GbaHIgP2tJ+gP7Z7SVmiPmxnxba0D4lI3XvuueceUp98lq/z0ez4eMSO2VcgQXMLCVu8Y1dfX30vhZ1f30IKVslqUWmmJHt8cvp0ekL/Gbfs9OTZ6eNnp08fUZDPV1oVObu8vNJqpXmWCblqPb/gxWptQb8CY3FhNopTbkxngcFbCzIxNYwvMRS8Ufp2TsvPuYHRLyOGP3mxSEXMloWMrUBolpYp4nkquJkcuU1+K/24ZHPu1sY353l+00J608AYR2x8reT46OP65Y/mSbXIPmUS3rC9ASatNw1i8y9h0PYSl8quQV93d9RbZseuLENs9bFMzwzYl0jPZHzBNwIBs9kM+6LFohBsw1PsWfkry7XKtYCEJ8AS7omAJpxdCzM9o2fafvG64KmpwkWtVKsq1ZHPsgEtliLmzECVCUOHmcp7phiYHLWTqOFsL1U/IbIV5MJOnDMhjeUyFpw5LmX5u2IaYlgAZvC5fc3ln4kaKJjeL3/zAbb1hM1FksNqeJAQ4znFuMwRi1WWc21FuuYRyzGvhiXo8g+3F3cFiQ1zySvRtNrnSqw790JgAvkv9q4K2Cez07gucwd7FARuhLtXGKqweojOf8pkr/CwZVJlbo+pNuHvylRtC3kf4uqADWBpcxd04rgcqJCSN/i86N0zpcVKSJ42i5FXbkXBQbbJgdoIGtIPA0kGVewAIEYMUeevfykkanLSjHwwIdsl4qD/NMDlYI2xZ1YrMW4g+HLvRjuN+6LI8Rm32IJv/EvQc3BselNTVeegL36ARwvj32uCuFJiLUhgm5BNmkqSrqYJb/bv9+cfwawL/oApj2iVb8p707GugUwd42ogbguKkNsNtExEIhxUgyVbxtFLIFfCeZV/pqfOAXGiMlyVOxAcnKuq3KhG0rOJkFEny6US2FQlERZJ1IjMewLQloQfFBBprohJQJeLnyC2Pfn8X/rouNl+XbwobuEBqnjItPZHz/ctYtl29PEfcmN3WH3t84RpT+u2miOpvC6ARMSWeEGMquhNPx0af7gENCy08wvHZpCimfsBarelUEQ8uuBnlLayPM1AWnDbKnsNDhYsl3SMtxCZoI7K94qQZpCVf1FsN70+/w4zLtJ0UsM9REM4KYQ9qXSdK2Owq+3LEfbOjZ8bvlhJB4MC4VqR9eoe9Z3Y4R4w4wrtbiemFL5PB035O7CFlud6Za6IkaTvyLNA911pffC4YdQc8+E9QK8KajAe5zgOCK18j4xGZL/IMc8RnWsj15q/c6e+63dwtmIE05ra6ZnuFjVeCm0sXfoNYCsS+g1loJPWB0AojOeqkHbyJPLx+2dxhQfQBvCzSZIopS3vM/aE4SeVr2hXZGk5UtqA2pHCmwS8JRkwyBiNLopQOxbaSQ42GP3yB677X0z/TXcHbfDVGti3+A6j74A28RuENtjCGnb7Ju+I8cTzxN12NJgitfQHtiRe88wdMY2g6tfxY5XuW8qdH/ONC+6uqjTFiZtP/JyhDw8duamFVSEyumzGgHrVLIzkrceg99BnkHHzbzEuJI+CbTvO0UYHHWYiT0hV893obvQ3zzsovA==</source>
+  </file>
+  <file path="test/OOProgramming/MagicMethodsTest.php" generated-path="test.OOProgramming.MagicMethodsTest.html" hash="cf402155873602d157fde4ae4738d81d" package="Default">
+    <docblock line="0">
+      <description>Generated by PHPUnit_SkeletonGenerator on 2015-05-05 at 13:17:22.</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="13" package="Default">
+      <extends>\PHPUnit_Framework_TestCase</extends>
+      <name>MagicMethodsTest</name>
+      <full_name>\MagicMethodsTest</full_name>
+      <docblock line="13">
+        <description>Classe de testes para objeto MagicMethods</description>
+        <long-description></long-description>
+        <tag name="author" line="13" description="Thiago Mallon" link="mailto:thiagomallon@gmail.com"/>
+        <tag name="group" line="13" description="OOProgramming"/>
+        <tag name="group" line="13" description="MagicMethodsTest"/>
+        <tag name="package" line="13" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="" line="18" package="Default">
+        <name>$_itsNotMagic</name>
+        <full_name>\MagicMethodsTest::_itsNotMagic</full_name>
+        <default></default>
+        <docblock line="18">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="18" description="&lt;p&gt;Armazenará instância de MagicMethods&lt;/p&gt;" type="\MagicMethods" variable="$_itsNoMagic">
+            <type>\MagicMethods</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="24" package="Default">
+        <name>setUp</name>
+        <full_name>\MagicMethodsTest::setUp()</full_name>
+        <docblock line="24">
+          <description>Sets up the fixture, for example, opens a network connection.</description>
+          <long-description>This method is called before a test is executed.</long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="34" package="Default">
+        <name>tearDown</name>
+        <full_name>\MagicMethodsTest::tearDown()</full_name>
+        <docblock line="34">
+          <description>Tears down the fixture, for example, closes a network connection.</description>
+          <long-description>This method is called after a test is executed.</long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="44" package="Default">
+        <name>testUndefinedMethod</name>
+        <full_name>\MagicMethodsTest::testUndefinedMethod()</full_name>
+        <docblock line="44">
+          <description>Testa-se chamada à método indefinido, através do método mágico __call(),
+implementado no objeto da instância.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="60" package="Default">
+        <name>testSettingInaccessibleProperty</name>
+        <full_name>\MagicMethodsTest::testSettingInaccessibleProperty()</full_name>
+        <docblock line="60">
+          <description>Testa-se atribuição de valor à propriedade inacessível, através do método mágico
+__set(), implementado no objeto da instância.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="75" package="Default">
+        <name>testToStrindMagicMethod</name>
+        <full_name>\MagicMethodsTest::testToStrindMagicMethod()</full_name>
+        <docblock line="75">
+          <description>Testa-se impressão de instância como string, através do método mágico __string(),
+implementado no objeto da instância.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="90" package="Default">
+        <name>testVarDumpOverrite</name>
+        <full_name>\MagicMethodsTest::testVarDumpOverrite()</full_name>
+        <docblock line="90">
+          <description>Testa-se sobrescrição do var_dump, através do método mágico __debugInfo(), implementado
+no objeto da instância.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <source>eJytV9uOE0cQffdXdCQke1deexdEIgEhIAghD8si7RIeAFnt6bLdMNM9dPcYQ8S/hOQhIhJPfIJ/LKd6Lh5fWCeI0Uo7nu6pyzlVp2tu/ZTP8k5neHjYEYfiFzLkZCAlxm/F44ePnxgdRuevKKVgTbVonbBGXD0+uX50zH9CBnFy7cbJDzeuXh3AyLCxdi+V3pNQJAJ5/IlcOins+CWsiVM51ckphZlVnjffkQXunbiYaTnl5TSFm1sh/szirzvTTOp0kNjsdnxj6myRi7Ozx85Oncwybaat520HF/AfQ0s4pK0lQYtARvkm5QcwR2+sezXi5XvSU+f3jsAVM+MLbubSrVkSV0Y6+Ec2PhN3XSbfkZFu+UFo48PyT5NoyWCsZx6NDeP/3NlACaNfWQpx683OputzCl4gxTAjMdGLUDjqiwnAo4XM8hQ/bE7GCykMBU5DJNYYmNbWDGojANqLLIYhcJcAYuadYIfwJlPGz2lBSYGYBuuhFuMUSU4KE40KT+FJ3juIayVSZcgoDqfHhV6DQIqkrIyzs1M7C+TE8g9OPnealARCa+nXLvm6gnLwR7fXln9Ekm/E87t5/nytFJ63ce4d3IxG3m9heUHSeaHsG3MJnElqPX0VnnLC+f1fOAOCuo+QdiHaVTDlrO5GTOUGpC2wCgNWejsguwQLGDyClWQmMwmj4CVbfgxWWThTNNFGK9tnUuV8+ZFha9az5QeYtmI04sx7B/3aqGYIMzJBYpexdf/D+qom9qHhw5PSPamS0F3A0CJ35P3yLyvkWOqFrcCWX46xBdypBf2uL16iX18XJJrMGhfI5WXhw12lVlH0hWF/tNAQOGG2rGXSryw1ftdKGjGjhnfQdHR7092z7gPtfOj2RfecUIKK71B3TnVfVKS2uoQDceGeLUzonfSjo4ObYjjk4p1oyJOQzsm3LEnKcmmWNFnUrs2scGDJgS+1jcSagyQ6uFY6eHb8gn0c7vAR3PKflpM+HEzI4R5qY8ttfZwQ3ss25vuuwzJYT9PCKDYzLaJ9tlnDvsXaDkmpwUKZoix7DdBVUk1ec3J6ohMJjzXrc5lCK6o3BGVCpggCuLWy/e8JrSen7ArAJreIHZPDHVWlckkzVxK8/JsrVdXxbkiuNjLh5vk0p/TSBq/Nj0asLmiAb9PfONICRPtXhMFx6HFK0PIcnLzd6vWdvWJsuE8TfgfdhPaAMiIe5DfHPNP9QnP8/LqQKdje3N7f5+OgOpRLzMUjKVJtZjLWoUZJr0PYtJLkpEsiphRGDFUSRhgkQCk6BoSVlLEARWFJnOYHfeZtgtmrLUYFusvYuWzzGBUHzoFgVnYGsIWiQZlWPFWV0NalisuqVOCx7UjCVd2gHBlssIGqBtG0lLZtTdlWu8VYc5DjSBVZ3tvIe+f5tP+AQjK11sfibYaLUg2QhpnuO6fKXd/8pLqw52xYtcaP7QoepRZHwVON1eJr5hi+7BgpSAewo6rjbE50quU7jNhFyIsgxsUECtvsp2Rmd3mOb0/ku/bBj/g1+JVtGV0hF8oUgd3qAG01WLV66qdIClEy5UlK0lSRJjLHjBV59HL5SaGEUmAfH5QxM6nlkqC6zqKUYcDymWz13rBR5GiOWnXYinJitZAJGGJma4u2YHsIkjx0BllfrhEPCeXPCzzGQQnwcl1n9VMeINe+CCI0A/GUUtQlwh9b6RQaRvNH1ndRZlZg7a96b8eoemhC08F1W+2rdUXjAuI6sZuKXfv46nL/DZMqAjgDDU4H2jWYnZXff6WiqfhFlABYDJI5zx174hV++bkkUOmaQpkvP3tmPirA9cH3g+O2YGEHvuQGbQ0aDhsFumwift/5F3au6DQ=</source>
+  </file>
+  <file path="src/OOProgramming/MagicMethods.php" generated-path="src.OOProgramming.MagicMethods.html" hash="2076d38b2d1113fa4a8813727eb4f278" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="App\OOProgramming" line="5" package="Default">
+      <extends/>
+      <name>MagicMethods</name>
+      <full_name>\App\OOProgramming\MagicMethods</full_name>
+      <docblock line="5">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="5" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="App\OOProgramming" line="11" package="Default">
+        <name>$data</name>
+        <full_name>\App\OOProgramming\MagicMethods::data</full_name>
+        <default>array()</default>
+        <docblock line="11">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="11" description="&lt;p&gt;Armazenará propriedades não definidas e seus valores&lt;/p&gt;" type="Array" variable="$data">
+            <type>Array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="20" package="Default">
+        <name>__call</name>
+        <full_name>\App\OOProgramming\MagicMethods::__call()</full_name>
+        <docblock line="20">
+          <description></description>
+          <long-description></long-description>
+          <tag name="method" line="20" description="returntype description&#10;método mágico, utilizado para que métodos chamados via a instancia da classe,&#10;que não possuam implementação, sejam interceptados - caso chame-se, através de&#10;uma instância dessa classe, um método que não esteja em seu escopo, o método&#10;__call() será executado." method_name=""/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$args</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="28" package="Default">
+        <name>__set</name>
+        <full_name>\App\OOProgramming\MagicMethods::__set()</full_name>
+        <docblock line="28">
+          <description></description>
+          <long-description></long-description>
+          <tag name="method" line="28" description="returntype description" method_name=""/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$value</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="33" package="Default">
+        <name>__get</name>
+        <full_name>\App\OOProgramming\MagicMethods::__get()</full_name>
+        <docblock line="33">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="41" package="Default">
+        <name>__invoke</name>
+        <full_name>\App\OOProgramming\MagicMethods::__invoke()</full_name>
+        <docblock line="41">
+          <description></description>
+          <long-description></long-description>
+          <tag name="method" line="41" description="returntype description" method_name=""/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="49" package="Default">
+        <name>__serialize</name>
+        <full_name>\App\OOProgramming\MagicMethods::__serialize()</full_name>
+        <docblock line="49">
+          <description></description>
+          <long-description></long-description>
+          <tag name="method" line="49" description="returntype description" method_name=""/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="57" package="Default">
+        <name>__sleep</name>
+        <full_name>\App\OOProgramming\MagicMethods::__sleep()</full_name>
+        <docblock line="57">
+          <description></description>
+          <long-description></long-description>
+          <tag name="method" line="57" description="returntype description" method_name=""/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="68" package="Default">
+        <name>__toString</name>
+        <full_name>\App\OOProgramming\MagicMethods::__toString()</full_name>
+        <docblock line="68">
+          <description></description>
+          <long-description></long-description>
+          <tag name="method" line="68" description="returntype description&#10;método é chamado toda vez que instância de classe é chamado como um string. ex:&#10;echo $_magicMethods;&#10;Quando ocorre uma chamada assim, o retorno do método __toString será exibido no echo." method_name=""/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="76" package="Default">
+        <name>__debugInfo</name>
+        <full_name>\App\OOProgramming\MagicMethods::__debugInfo()</full_name>
+        <docblock line="76">
+          <description></description>
+          <long-description></long-description>
+          <tag name="method" line="76" description="returntype description" method_name=""/>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="5" code="PPC:ERR-50005">No summary for class \App\OOProgramming\MagicMethods</error>
+      <error line="20" code="PPC:ERR-50015">Argument $name is missing from the Docblock of __call</error>
+      <error line="20" code="PPC:ERR-50015">Argument $args is missing from the Docblock of __call</error>
+      <error line="20" code="PPC:ERR-50008">No summary for method __call()</error>
+      <error line="28" code="PPC:ERR-50015">Argument $name is missing from the Docblock of __set</error>
+      <error line="28" code="PPC:ERR-50015">Argument $value is missing from the Docblock of __set</error>
+      <error line="28" code="PPC:ERR-50008">No summary for method __set()</error>
+      <error line="33" code="PPC:ERR-50015">Argument $name is missing from the Docblock of __get</error>
+      <error line="33" code="PPC:ERR-50008">No summary for method __get()</error>
+      <error line="41" code="PPC:ERR-50008">No summary for method __invoke()</error>
+      <error line="49" code="PPC:ERR-50008">No summary for method __serialize()</error>
+      <error line="57" code="PPC:ERR-50008">No summary for method __sleep()</error>
+      <error line="68" code="PPC:ERR-50008">No summary for method __toString()</error>
+      <error line="76" code="PPC:ERR-50008">No summary for method __debugInfo()</error>
+    </parse_markers>
+    <source>eJy1Vc1u1DAQvucpBmmlbavt9k5py97gUBUEUg+lqmadaeIS/2A7C1vUhykc0D5HXoyxU4duqxUSYqNIScYz33wz/sZ5dWJrWxQaFXmLgmBm7aezs3fOVA6Vkro6LArRoPdwipUUpxRqU/riewF8HeztpSfswesFOpg5h0sYlRgw22dO4S1pdN09WGesk1RiSR5099NASddSyxI9EHhqPSywMY78Q/RBenJYIBGo7JHhCC4umdVTAipRA0ehdTosLTG6F07aII3OXqpbBVMaft5zNWYCbZCNvEU2WXQIX1rKPh5EjQrjy0IiIEjtA2rB7yVC6glNMm6MSxVZ432LCqSyDSnSAbtfbJ9weTfRrAM5QTYk3H0Q6E3KQ/uMBhgcLrqVZ+oZuVV95u5Hn5q8H7Lz4lDRwIB84FRAKnaUv4SxnN5kx4x7dSWwaXZ22SvuDX0j0UZW0/Xet/NGCrhutYhtzFGjKJgJjNBVfjc59oKIV78B/dphst7922ZtYuApDARYLy09ZTAKtfT7x1EsF8nxkjXTu64Reg5dZehNRT1D3kqFUi/MZ9rJJLbTRCeRlb/lLA2R/S8ZBp13qzyXwN8IC7pN2l+bkYcBeewsjDJxXnxwfKpNWfAvMzSJ2sDoSj064A7z2vsWNUcbYZyjNIw9IB8I3ksVB4t5G6f5MBtmjCsP5kNKNIyXnEteYLeY7W9DlqN3Nuhw/IaWE4hiBL61CXw89YX9sYaa1s7svidTOKeGe0GAc4OunICVDgO9GG9FySXN2+qtvjabKrkYDGPlq/HR8fi8xhB7uTQtfEUdoCZHJ/AxlmXmN/wniNXxr4k5D8HDHN4VvwEmeh3u</source>
+  </file>
+  <file path="src/PHPBasics/Daughter.php" generated-path="src.PHPBasics.Daughter.html" hash="818e01652b07c72349ba8b097aa61c2f" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="App\PHPBasics" line="5" package="Default">
+      <extends>\App\PHPBasics\Mother</extends>
+      <name>Daughter</name>
+      <full_name>\App\PHPBasics\Daughter</full_name>
+      <docblock line="5">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="5" description="Default"/>
+        <tag name="inherited_from" description="\App\PHPBasics\Mother" refers="\App\PHPBasics\Mother" link="/classes/App.PHPBasics.Mother.html"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="App\PHPBasics" line="7" package="Default">
+        <name>$name</name>
+        <full_name>\App\PHPBasics\Daughter::name</full_name>
+        <default></default>
+        <docblock line="7">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\PHPBasics" line="9" package="Default">
+        <name>__construct</name>
+        <full_name>\App\PHPBasics\Daughter::__construct()</full_name>
+        <docblock line="9">
+          <description></description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\App\PHPBasics\Mother::__construct()" refers="\App\PHPBasics\Mother::__construct()" link="/classes/App.PHPBasics.Mother.html#method___construct"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\PHPBasics" line="14" package="Default">
+        <name>setName</name>
+        <full_name>\App\PHPBasics\Daughter::setName()</full_name>
+        <docblock line="14">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\PHPBasics" line="19" package="Default">
+        <name>getName</name>
+        <full_name>\App\PHPBasics\Daughter::getName()</full_name>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\PHPBasics" line="10" package="Default">
+        <name>__construct</name>
+        <full_name>\App\PHPBasics\Mother::__construct()</full_name>
+        <docblock line="10">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <inherited_from>\App\PHPBasics\Mother</inherited_from>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="5" code="PPC:ERR-50005">No summary for class \App\PHPBasics\Daughter</error>
+      <error line="9" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="14" code="PPC:ERR-50015">Argument $name is missing from the Docblock of setName</error>
+      <error line="14" code="PPC:ERR-50008">No summary for method setName()</error>
+      <error line="19" code="PPC:ERR-50008">No summary for method getName()</error>
+      <error line="7" code="PPC:ERR-50007">No summary for property $name</error>
+    </parse_markers>
+    <source>eJxtzc0KwjAMB/B7nyIHD/PgE/iF4sGLsgcQRs3iWphtaVIQxt7dfYLIcsgh+eeX3TGYoJTTb+KgkeAUwiO/5mfNFnmrFNaaGS46VUYoAn2EXMlw82IoqkZBVyF6IRQqYdVD3dUwTc/aIrySQ7HeQVGgdywxoWTrIdGMwXY5zyT3TssGcz6AqVZiLG8O/Qr289sR6/siWE3gvxVJUnS/5Ey16gtHfVRq</source>
+  </file>
+  <file path="test/OOProgramming/OOMotherTest.php" generated-path="test.OOProgramming.OOMotherTest.html" hash="1d120945fe2f59c95923b10ed017a123" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="7" package="Default">
+      <extends>\PHPUnit_Framework_TestCase</extends>
+      <name>OOMotherTest</name>
+      <full_name>\OOMotherTest</full_name>
+      <docblock line="7">
+        <description>Generated by PHPUnit_SkeletonGenerator on 2015-05-05 at 09:01:34.</description>
+        <long-description></long-description>
+        <tag name="group" line="7" description="OOProgramming"/>
+        <tag name="group" line="7" description="OOMotherTest"/>
+        <tag name="package" line="7" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="" line="9" package="Default">
+        <name>$_mother</name>
+        <full_name>\OOMotherTest::_mother</full_name>
+        <default></default>
+        <docblock line="9">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="11" package="Default">
+        <name>setUp</name>
+        <full_name>\OOMotherTest::setUp()</full_name>
+        <docblock line="11">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="17" package="Default">
+        <name>tearDown</name>
+        <full_name>\OOMotherTest::tearDown()</full_name>
+        <docblock line="17">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="22" package="Default">
+        <name>testClassAlias</name>
+        <full_name>\OOMotherTest::testClassAlias()</full_name>
+        <docblock line="22">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="50" package="Default">
+        <name>testDuplicatingInstance</name>
+        <full_name>\OOMotherTest::testDuplicatingInstance()</full_name>
+        <docblock line="50">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="59" package="Default">
+        <name>testDestructingObject</name>
+        <full_name>\OOMotherTest::testDestructingObject()</full_name>
+        <docblock line="59">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="75" package="Default">
+        <name>testReturnArgsPassed</name>
+        <full_name>\OOMotherTest::testReturnArgsPassed()</full_name>
+        <docblock line="75">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="83" package="Default">
+        <name>testReturnObjVars</name>
+        <full_name>\OOMotherTest::testReturnObjVars()</full_name>
+        <docblock line="83">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="11" code="PPC:ERR-50008">No summary for method setUp()</error>
+      <error line="17" code="PPC:ERR-50008">No summary for method tearDown()</error>
+      <error line="22" code="PPC:ERR-50008">No summary for method testClassAlias()</error>
+      <error line="50" code="PPC:ERR-50008">No summary for method testDuplicatingInstance()</error>
+      <error line="59" code="PPC:ERR-50008">No summary for method testDestructingObject()</error>
+      <error line="75" code="PPC:ERR-50008">No summary for method testReturnArgsPassed()</error>
+      <error line="83" code="PPC:ERR-50008">No summary for method testReturnObjVars()</error>
+      <error line="9" code="PPC:ERR-50007">No summary for property $_mother</error>
+    </parse_markers>
+    <source>eJy1WNtuGzcQfddX8MGAZGEdOU370Lh1a8R1WzSJjTYpUMCAQO+OJda75IbkykmL/EvRPgQu0Kd+gn6sM+ReSElruYYjJIa8lzkzZ84ckv7iq3JeDibj8YCN2bcgQXMLGbt4x86+O3sthZ3+dAU5WCXrm0ozJdkn+48/29unf4xbtv/50/3HT598+oiCfD3TqirZ6emZVjPNi0LIWXT9hbJz0K/AWLw8GaQ5Nya6zOCtBZmZNoUTDAPXSl9N6fYzbmDw+4Dhp9TKQkoJ70wL9/7BwN+oLnKRsstKplZgvgbs63K06+75V+kzGTMhjeUyFZy5PCBhklPYUgvIeAZtYEq1eW/HzoXZO2zufMkkXLPzo7I8j6o+b4oa7R64d99vTs4C18fqWq7lV0nMexSj7R6wyYQNMyRCKzF0BSz/pApqCPrZA4PcUZFHueBmDWxnmquU5y/uXhMlkmqkrsuBZQ2RbUdbAHd9yh348JbIw4QNT7j7VvPm07vkQWb+gZ4kFvjf4dyWzs7UWChPbg+qKqvvHjoUFrFtItGE/O4dYmdfoqpHw2O+EEMPya0WF5VgC57jmC3/iITY4q3KkK5p+82biuemDpesos1qtF0PtAAtLkXKcS5qsCxW/fKGKQamxInP1GbAl2od07cogMNWHgUz1vRQLv9STEMKF4A4LoMWhD6eiOU/mdrAQtCNeiZCnSD1YXU8QG8lhGF9D33DE5aqouTainzOE1YiHRouQS//ptcShg8GKWDnIaY3anJDQdvf5wKh5AN2uA64ke+V9nqYjs2tnQxid9OxEj8muJsQT3LDbUxq1N37fsarrVnvTDuTQU/ChKUq3GOmfg6/K1OLYd3gY95vdSxkaOpCjpqubOCK0Dd0+aN8xn6GHaTSYiYkzzvshH1sdDfiagu1gfJqx4+Z7DS4lc3GGWIVIgkPJL1MoOxAWqDxr1eNoKx6qQ5tITCl5m6tjPUbQaEb1ndXk7l9C2HscVXiNW5Rmd/7l2DDIm8EYtGCF28ruiVPqkXIJHkUTbF2the907MfCrzvFzDzit/B+xK6yxfLG7Pi8D2IK1IIPd4XmCAlC4jsVWJKqApLaxq6egalEs7M/TW955YL9Ici9KsxbQh7E9pqGjUDSZvYmlmHZLuhuVQCNa0kZkkzbEThPQ/okYxvlQEpp0pJBqcXv+Lu+AFEsOK72xv/vLqCO7S9DXTPLW/CCpzx2moUVmt7lrh2faO8bmlGIyrSwpsKSCUMh1YldfSuQy4bv6gGxF7oZvscQXTz6FwsprgphSLikg2/oXaV5Xnh3IYeSzxssKAy9T9tbeyEjXs6maGSlh8UVVZAsfyXcnE7mloUvV5d5fmorTBmLhrImrtwaKjgrJZ3qYxBOcT7TWw6DeW9vJq2BTjIqZKuAoLHiFWxRvEmv/ZFb3Dkus5+OyYQL4qtzvwj2ErLIz0zZ8Rltn4QnaDJGoMbGj2rqO+4KcFJwSDLD8hZQhaMLPIS47huca35O7d3cW01Xcswglkb7L1DvZrC8FJoY+msZQCpy+gbvqOz6NAVCuCZqqQdPUk8xvpBos4J0Cms0pL0Ku3ypmBPGOTgq+qLLC1HZrukeiC8h8BbahqDgtFUo9S0YyIG2doONMefud5wDu7ztFdzYD+gqzI67sQ0LTBQL+ktUHxIcaV4qjidc27wF1Plln5BEtM5L9wK0MkgXJRol6ScvU8XLrjbb9N0ZW4C8ORGpyt3tkFFzypR0EY3BVSZZmEk7wsGjYFOfIZ3f1R5FDzWYwpd51bYSTwp7R8+3g/+A6f3rgo=</source>
+  </file>
+  <file path="test/PHPBasics/DaughterTest.php" generated-path="test.PHPBasics.DaughterTest.html" hash="562d219cc7564a901b37f08550b08a3c" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="7" package="Default">
+      <extends>\PHPUnit_Framework_TestCase</extends>
+      <name>DaughterTest</name>
+      <full_name>\DaughterTest</full_name>
+      <docblock line="7">
+        <description>Generated by PHPUnit_SkeletonGenerator on 2015-05-05 at 15:23:17.</description>
+        <long-description></long-description>
+        <tag name="group" line="7" description="PHPBasics"/>
+        <tag name="group" line="7" description="DaughterTest"/>
+        <tag name="package" line="7" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="" line="10" package="Default">
+        <name>$_daughter</name>
+        <full_name>\DaughterTest::_daughter</full_name>
+        <default></default>
+        <docblock line="10">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="12" package="Default">
+        <name>setUp</name>
+        <full_name>\DaughterTest::setUp()</full_name>
+        <docblock line="12">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="17" package="Default">
+        <name>tearDown</name>
+        <full_name>\DaughterTest::tearDown()</full_name>
+        <docblock line="17">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="22" package="Default">
+        <name>testDaughterInheritance</name>
+        <full_name>\DaughterTest::testDaughterInheritance()</full_name>
+        <docblock line="22">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="27" package="Default">
+        <name>testNameSeting</name>
+        <full_name>\DaughterTest::testNameSeting()</full_name>
+        <docblock line="27">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="36" package="Default">
+        <name>testNameGetting</name>
+        <full_name>\DaughterTest::testNameGetting()</full_name>
+        <docblock line="36">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="12" code="PPC:ERR-50008">No summary for method setUp()</error>
+      <error line="17" code="PPC:ERR-50008">No summary for method tearDown()</error>
+      <error line="22" code="PPC:ERR-50008">No summary for method testDaughterInheritance()</error>
+      <error line="27" code="PPC:ERR-50008">No summary for method testNameSeting()</error>
+      <error line="36" code="PPC:ERR-50008">No summary for method testNameGetting()</error>
+      <error line="10" code="PPC:ERR-50007">No summary for property $_daughter</error>
+    </parse_markers>
+    <source>eJyFUs1OAjEQvu9TzMGEZQMiGGMCij8QlYNKgtxISNkdoXHpbNrZoCE+kM/hi9kuK6KL0DQ9zM/3M9Ozi2SWeLUg8CCAW1SoBWMEkzfo3/WHSvJ48IIxMqk8SRpIQeOoflI9chcEQ/2k2Thu1k8PHcjlVFOauPZrYWRoNmJdkU5njPoJDdtwzQtjYcyvMOAro4rMmv5GizkuSL+MXbojDHpLzwN7Ek2MoVN7MI5yiFaeSiexDOE5VSFLK9cgDxO/nOWW2evOAc+kqbbXzXAOChcwukqS0Vr+6FudX25lne/bKRiF7tJCFVhSZdn9v1z7wAx/8/bUDLVkoUL8z4EdImruKZNVPT77pT8e7oktSKlSsLyW4d5/pTzYFQyQpZrunWG1bd26er80oDmSwlLOUdDbIcVCKvNTWdRXbU9zuPLvidUCuysLA/PPD6aIMp0EAkLSGllkBqx+EctIRAi2Iq9ciQnA0ESjCe1oyWXz/1bZWGSu2/7TXYO5Rd41mZXXhzSOC39gm7l37wunyxxv</source>
+  </file>
+  <file path="src/OOProgramming/Closures.php" generated-path="src.OOProgramming.Closures.html" hash="8cca631e3518d6e41cc8586cfcdf6e20" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="App\OOProgramming" line="13" package="Default">
+      <extends/>
+      <name>Closures</name>
+      <full_name>\App\OOProgramming\Closures</full_name>
+      <docblock line="13">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="13" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="App\OOProgramming" line="16" package="Default">
+        <name>$property1</name>
+        <full_name>\App\OOProgramming\Closures::property1</full_name>
+        <default></default>
+        <docblock line="16">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="App\OOProgramming" line="17" package="Default">
+        <name>$property2</name>
+        <full_name>\App\OOProgramming\Closures::property2</full_name>
+        <default></default>
+        <docblock line="17">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="App\OOProgramming" line="18" package="Default">
+        <name>$property3</name>
+        <full_name>\App\OOProgramming\Closures::property3</full_name>
+        <default></default>
+        <docblock line="18">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="20" package="Default">
+        <name>getClosure</name>
+        <full_name>\App\OOProgramming\Closures::getClosure()</full_name>
+        <docblock line="20">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="29" package="Default">
+        <name>getClosureFeatParam</name>
+        <full_name>\App\OOProgramming\Closures::getClosureFeatParam()</full_name>
+        <docblock line="29">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="38" package="Default">
+        <name>getClosureFeatProperty</name>
+        <full_name>\App\OOProgramming\Closures::getClosureFeatProperty()</full_name>
+        <docblock line="38">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="48" package="Default">
+        <name>getClosureFeatPropertyParam</name>
+        <full_name>\App\OOProgramming\Closures::getClosureFeatPropertyParam()</full_name>
+        <docblock line="48">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$beginPhrase</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="59" package="Default">
+        <name>getProperty1</name>
+        <full_name>\App\OOProgramming\Closures::getProperty1()</full_name>
+        <docblock line="59">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="13" code="PPC:ERR-50005">No summary for class \App\OOProgramming\Closures</error>
+      <error line="20" code="PPC:ERR-50008">No summary for method getClosure()</error>
+      <error line="29" code="PPC:ERR-50008">No summary for method getClosureFeatParam()</error>
+      <error line="38" code="PPC:ERR-50008">No summary for method getClosureFeatProperty()</error>
+      <error line="48" code="PPC:ERR-50015">Argument $beginPhrase is missing from the Docblock of getClosureFeatPropertyParam</error>
+      <error line="48" code="PPC:ERR-50008">No summary for method getClosureFeatPropertyParam()</error>
+      <error line="59" code="PPC:ERR-50008">No summary for method getProperty1()</error>
+      <error line="16" code="PPC:ERR-50007">No summary for property $property1</error>
+      <error line="17" code="PPC:ERR-50007">No summary for property $property2</error>
+      <error line="18" code="PPC:ERR-50007">No summary for property $property3</error>
+    </parse_markers>
+    <source>eJzNVMmO00AQvfdXFJKlmYmSsQZuhEUIiSOTA0cuFbsSN3Iv9DLSgPIvCE458BX+MaoTbwPJDMwhog+WXVWvllfP/eK1rawQGhV5iwXBG2s/Xl8vnFk7VErq9VyIfCJgAu+bHwasKel5+oIZxCBr+QXdzBNYZ6yTVGJJHkqEokbP5sIoxqBrvisKzrDLsMv46OjRSdIrAkIpHQV5gxA5JmVbdL3NwNGKHOlCHkpswCw/UTBQkk75hp4u92h+5mJXHN7uHV58FcAnn9zNxXHJzLZARaASsuQmF26v5sc8T496njHXO1dc1rKAVdRFkEbDmkLbx/nFLmDfTNtQ2ztoBB8RVsYpBIXSg5fK1uSngJY0emYlGMdhkQNqGchh3U2QTtZlejmUPr8YFUuHc0Sn4exDxQU6QKqFtywWqOSTs3kP2AyvLa6rMYc87/vpFZEgD1HwjjAsWAHqPi4cFbSkkWimwLtOAjZ91Ycmz7xhaMVTHeFgCDjBxK1E/nFoAxicXEYJzbexckd/F/VNjf2PJydjq5+96v8Dhh0iaszQb4jTsbnXUbaktdSLyqGnA/SqZhtMaQ7R+zkSNNuW4+YnB2F/l0yTGW+a7e7G4TtqOsw+Oc1i0sV4d7q/2NUo/PL/WFy3ras/xH9vHxuxEb8AxD4qzg==</source>
+  </file>
+  <file path="test/OOProgramming/ReflectingTest.php" generated-path="test.OOProgramming.ReflectingTest.html" hash="13fc05c9fb8c6d481c22b1067f2434cb" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="7" package="Default">
+      <extends>\PHPUnit_Framework_TestCase</extends>
+      <name>ReflectingTest</name>
+      <full_name>\ReflectingTest</full_name>
+      <docblock line="7">
+        <description>Generated by PHPUnit_SkeletonGenerator on 2015-05-05 at 11:58:43.</description>
+        <long-description></long-description>
+        <tag name="group" line="7" description="OOProgramming"/>
+        <tag name="group" line="7" description="ReflectingTest"/>
+        <tag name="package" line="7" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="" line="10" package="Default">
+        <name>$_classReflecting</name>
+        <full_name>\ReflectingTest::_classReflecting</full_name>
+        <default></default>
+        <docblock line="10">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="" line="11" package="Default">
+        <name>$_objOnReflection</name>
+        <full_name>\ReflectingTest::_objOnReflection</full_name>
+        <default></default>
+        <docblock line="11">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="13" package="Default">
+        <name>setUp</name>
+        <full_name>\ReflectingTest::setUp()</full_name>
+        <docblock line="13">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="19" package="Default">
+        <name>tearDown</name>
+        <full_name>\ReflectingTest::tearDown()</full_name>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="24" package="Default">
+        <name>testObjMethods</name>
+        <full_name>\ReflectingTest::testObjMethods()</full_name>
+        <docblock line="24">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="31" package="Default">
+        <name>testObjProperties</name>
+        <full_name>\ReflectingTest::testObjProperties()</full_name>
+        <docblock line="31">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="13" code="PPC:ERR-50008">No summary for method setUp()</error>
+      <error line="19" code="PPC:ERR-50008">No summary for method tearDown()</error>
+      <error line="24" code="PPC:ERR-50008">No summary for method testObjMethods()</error>
+      <error line="31" code="PPC:ERR-50008">No summary for method testObjProperties()</error>
+      <error line="10" code="PPC:ERR-50007">No summary for property $_classReflecting</error>
+      <error line="11" code="PPC:ERR-50007">No summary for property $_objOnReflection</error>
+    </parse_markers>
+    <source>eJytU9tq20AQfddXTCEQxVR1XMdQktZtcOkFWmzS5M1gVtJY3kTeWXZXcZqQj2n61P6Gf6wjJbYV2XIbqFiEmNk5c+ac0eu3eqK9ZqPhQQM+okIjHMYQfofBp8GZkm707QJTdKQekmSAFLzcb3WC/fyAcNBqHXZeHR60X+Qg7xJDmYZ+f2AoMWI6lSopxU9wnGLkOHiK1nGi6UWpsLaSALxyqGK7pPGBoXBG5mKUp3vConfjecCPNuS4kFnvjAqoFdIRNJsgzFRcoxJm/gOksm5+pyIpIMZlS1JrQBSe99UqvxVIQNEWQYBFA475CQ5qTAUcDz6X29z3ycJURjDOVBHkInem/b0id1O882fHTaQNulUm8AYUzmB4rPXwkcbD1dj+3tEaTEWZBcwKuJdf8Gu6PgDebh7AoTDvaabWZsgUz+bXUPgbpnX98PwrugnFdg2Z7bgUZhRnU12HH3QTdMv6kiS5laGQVwQRqbFkV3nbJPv5e7EYHZjOfzmKyYJauFtVNI8Z16NMOb/zvE7njSS2j8yeakaWuHHqMKWIFvyLVeP9yVdXG4mxYPJq/pNYnGtZjBUif6f81wZg0GYpryax9Ylw8pLKwDXOB1228ARF+kWO0d895UvAx3Dk2e5jUf/rqj3F5LJiXP4Eo9tl5f7R7PZ2sytk7v2+9f4AqgrFsQ==</source>
+  </file>
+  <file path="src/OOProgramming/OOMother.php" generated-path="src.OOProgramming.OOMother.html" hash="571e8ebd6dd73c22e1c5f551541d4cdf" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="App\OOProgramming" line="5" package="Default">
+      <extends/>
+      <name>OOMother</name>
+      <full_name>\App\OOProgramming\OOMother</full_name>
+      <docblock line="5">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="5" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="App\OOProgramming" line="7" package="Default">
+        <name>$name</name>
+        <full_name>\App\OOProgramming\OOMother::name</full_name>
+        <default></default>
+        <docblock line="7">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="9" package="Default">
+        <name>__construct</name>
+        <full_name>\App\OOProgramming\OOMother::__construct()</full_name>
+        <docblock line="9">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="14" package="Default">
+        <name>getInstance</name>
+        <full_name>\App\OOProgramming\OOMother::getInstance()</full_name>
+        <docblock line="14">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="19" package="Default">
+        <name>returnObjVars</name>
+        <full_name>\App\OOProgramming\OOMother::returnObjVars()</full_name>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="24" package="Default">
+        <name>returnArgsPassed</name>
+        <full_name>\App\OOProgramming\OOMother::returnArgsPassed()</full_name>
+        <docblock line="24">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="29" package="Default">
+        <name>getName</name>
+        <full_name>\App\OOProgramming\OOMother::getName()</full_name>
+        <docblock line="29">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\OOProgramming" line="34" package="Default">
+        <name>setName</name>
+        <full_name>\App\OOProgramming\OOMother::setName()</full_name>
+        <docblock line="34">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="5" code="PPC:ERR-50005">No summary for class \App\OOProgramming\OOMother</error>
+      <error line="9" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="14" code="PPC:ERR-50008">No summary for method getInstance()</error>
+      <error line="19" code="PPC:ERR-50008">No summary for method returnObjVars()</error>
+      <error line="24" code="PPC:ERR-50008">No summary for method returnArgsPassed()</error>
+      <error line="29" code="PPC:ERR-50008">No summary for method getName()</error>
+      <error line="34" code="PPC:ERR-50015">Argument $name is missing from the Docblock of setName</error>
+      <error line="34" code="PPC:ERR-50008">No summary for method setName()</error>
+      <error line="7" code="PPC:ERR-50007">No summary for property $name</error>
+    </parse_markers>
+    <source>eJyFkc1OwzAMgO95Ch92aA9oD1B+tCMHyE6ckKrUNW2mNYkSFw7THgZehRfDaQdCaB0+RJH1+bNlX9+FPijlzEApGCTYhPCs9Tb6LpphsK6rlMK9SQm0fvDcU1QHBRIheiZkamGVqwWbsmOztwgvo0O23kFdo3eJ44hclBNxmMHjeb4jvhfeOKQfHk4RicfowNEbCMEWi7KC9TrnfXQGrBR+fji0Bkh+70IYaD34ZifEpa6zWTe7JxPTUl8Zrc4q5Po1YyvubSqr/72b2KWtbJDaJXUuqLPfCFpcdgr2KPteUk1TXd3OJ5k1+T2rSifVdMC/vl8iuPm+8Sw8qi+Gsaru</source>
+  </file>
+  <file path="src/PHPBasics/BasicStuff.php" generated-path="src.PHPBasics.BasicStuff.html" hash="5639ef290e7fcf391a2827146a0a5321" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="App\PHPBasics" line="5" package="Default">
+      <extends/>
+      <name>BasicStuff</name>
+      <full_name>\App\PHPBasics\BasicStuff</full_name>
+      <docblock line="5">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="5" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="App\PHPBasics" line="7" package="Default">
+        <name>$_daughter</name>
+        <full_name>\App\PHPBasics\BasicStuff::_daughter</full_name>
+        <default></default>
+        <docblock line="7">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\PHPBasics" line="9" package="Default">
+        <name>isAImplement</name>
+        <full_name>\App\PHPBasics\BasicStuff::isAImplement()</full_name>
+        <docblock line="9">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="5" code="PPC:ERR-50005">No summary for class \App\PHPBasics\BasicStuff</error>
+      <error line="9" code="PPC:ERR-50008">No summary for method isAImplement()</error>
+      <error line="7" code="PPC:ERR-50007">No summary for property $_daughter</error>
+    </parse_markers>
+    <source>eJxlkMFqwkAURffzFXchGMHiB2gtiou6EIRuAzJOXsxAMjPMe0MXxZ+pi9LvyI81iRJoe3eXd+/h8lYvoQpKOd0QB20ImxDy4+txq9kaXiplas2Mwb5JKkv1odApRC9khApMToVOl0oodunhlM61NSiTM2K9g+XNvgk1NeQkmw2RO6PXRCrLT+uRgWc4esfuYbPZcowuFj2z/WpvHoSm/RZfeEQSH7v5kJgITP+JpY+wjqX9dMZqFISDl4riCO4QKfY7Tzr7255jmv96SX4vTx/DruqqfgD8IWnV</source>
+  </file>
+  <file path="test/bootstrap.php" generated-path="test.bootstrap.html" hash="f013a71ca1b196d3fc5a42a2c66ace19" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+    <source>eJyzsS/IKODiKkotLM0sSo3Pz0tOVYiPd/EMio/XU9fX09MvS81LyS/STywtyc/JT0zRAypXt+YCAAT/Els=</source>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="global" full_name="global"/>
+  <namespace name="global" full_name="global"/>
+  <namespace name="App" full_name="App">
+    <namespace name="OOProgramming" full_name="App\OOProgramming"/>
+    <namespace name="PHPBasics" full_name="App\PHPBasics"/>
+  </namespace>
+  <deprecated count="0"/>
+</project>

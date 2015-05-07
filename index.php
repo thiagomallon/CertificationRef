@@ -2,8 +2,8 @@
 
 require_once 'vendor/autoload.php';
 
-//$daughter = new \App\Controller\Logger();
+$_closures = new \App\OOProgramming\Closures();
 
-//var_dump($handler->getEntries());
+var_dump($_closures->getClosure());
 
 var_dump($_GET);
