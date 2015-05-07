@@ -1,15 +1,17 @@
 {
     "name": "mallon/PHPCertApp",
     "description": "Application for PHP Certification study - by T.Mallon",    
+    "type": "project",
+    "license": "MIT",
     "keywords": [
-    "MVC",
-    "PSR-4",
-    "TDD",
-    "Mallon",
-    "Thiago Mallon",
-    "PHP Certification",
-    "PHP",
-    "Certification"
+        "MVC",
+        "PSR-4",
+        "TDD",
+        "Mallon",
+        "Thiago Mallon",
+        "PHP Certification",
+        "PHP",
+        "Certification"
     ],
     "homepage": "http://phpbeyondlogic.com/",
     "require": {
