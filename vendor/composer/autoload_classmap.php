@@ -6,4 +6,21 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\OOProgramming\\Closures' => $baseDir . '/src/OOProgramming/Closures.php',
+    'App\\OOProgramming\\MagicMethods' => $baseDir . '/src/OOProgramming/MagicMethods.php',
+    'App\\OOProgramming\\OODaughter' => $baseDir . '/src/OOProgramming/OODaughter.php',
+    'App\\OOProgramming\\OOMother' => $baseDir . '/src/OOProgramming/OOMother.php',
+    'App\\OOProgramming\\Reflecting' => $baseDir . '/src/OOProgramming/Reflecting.php',
+    'App\\PHPBasics\\BasicStuff' => $baseDir . '/src/PHPBasics/BasicStuff.php',
+    'App\\PHPBasics\\Daughter' => $baseDir . '/src/PHPBasics/Daughter.php',
+    'App\\PHPBasics\\Mother' => $baseDir . '/src/PHPBasics/Mother.php',
+    'Psr\\Log\\AbstractLogger' => $vendorDir . '/psr/log/Psr/Log/AbstractLogger.php',
+    'Psr\\Log\\InvalidArgumentException' => $vendorDir . '/psr/log/Psr/Log/InvalidArgumentException.php',
+    'Psr\\Log\\LogLevel' => $vendorDir . '/psr/log/Psr/Log/LogLevel.php',
+    'Psr\\Log\\LoggerAwareInterface' => $vendorDir . '/psr/log/Psr/Log/LoggerAwareInterface.php',
+    'Psr\\Log\\LoggerAwareTrait' => $vendorDir . '/psr/log/Psr/Log/LoggerAwareTrait.php',
+    'Psr\\Log\\LoggerInterface' => $vendorDir . '/psr/log/Psr/Log/LoggerInterface.php',
+    'Psr\\Log\\LoggerTrait' => $vendorDir . '/psr/log/Psr/Log/LoggerTrait.php',
+    'Psr\\Log\\NullLogger' => $vendorDir . '/psr/log/Psr/Log/NullLogger.php',
+    'VendorOMine\\WelcomeAboard' => $baseDir . '/vendor-o-mine/WelcomeAboard.php',
 );
