@@ -24,7 +24,7 @@ class WelcomeAboard
         $composer = $event->getIO();
         $composer->write("\n\n            
             Take a look matey! There is always\n 
-            room for one more.\n
+            room for one us!\n
             by T.Mallon\n\n\n");
     }
 
