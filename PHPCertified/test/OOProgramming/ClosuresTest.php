@@ -39,7 +39,7 @@ class ClosuresTest extends PHPUnit_Framework_TestCase
     /**
      * Testa-se a forma mais simples de um closure declarado em escopo de método.
      * Neste closure, apenas é retornada uma string, com uma mensagem genérica.
-     * @covers Closures::getClosure
+     * @covers \App\OOProgramming\Closures::getClosure
      */
     public function testGetClosure()
     {
@@ -50,7 +50,7 @@ class ClosuresTest extends PHPUnit_Framework_TestCase
     /**
      * O closure testao implementa recebimento de parâmetro e atribui o mesmo a uma
      * propriedade do objeto do qual é membro.
-     * @covers Closures::getClosureFeatParam
+     * @covers \App\OOProgramming\Closures::getClosureFeatParam
      */
     public function testGetClosureFeatParam()
     {
@@ -63,7 +63,7 @@ class ClosuresTest extends PHPUnit_Framework_TestCase
      * em que foi criado. Observamos por chamar o método getProperty1(), que nos retornou a
      * string que passamos ao closure, que por sua vez atribui à propriedade $property1 do
      * objeto Clousures.
-     * @covers Closures::getClosureFeatProperty
+     * @covers \App\OOProgramming\Closures::getClosureFeatProperty
      */
     public function testGetClosureFeatProperty()
     {
@@ -76,7 +76,7 @@ class ClosuresTest extends PHPUnit_Framework_TestCase
      * Método testa se closure é instância da classe testada e não é. Apesar
      * de o closure poder alterar propriedades da classe a qual pertence, o mesmo
      * não se faz instância da última.
-     * @covers Closures::getClosureFeatProperty
+     * @covers \App\OOProgramming\Closures::getClosureFeatProperty
      */
     public function testClousureInstance()
     {
@@ -92,7 +92,7 @@ class ClosuresTest extends PHPUnit_Framework_TestCase
      * dados externos, pela palavra chave 'use'. Para argumento do 'use', passamos
      * o parâmetro atribuído ao método que contém o closure. Este closure também
      * altera uma propriedade da classe testada.
-     * @covers Closures::getClosureFeatPropertyParam
+     * @covers \App\OOProgramming\Closures::getClosureFeatPropertyParam
      */
     public function testGetClosureFeatPropertyParam()
     {
