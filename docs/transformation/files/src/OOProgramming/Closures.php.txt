@@ -1,22 +1,36 @@
 <?php
+/**
+ * Created by Thiago Mallon
+ */
 
+/**
+ * @package App\OOProgramming
+ */
 namespace App\OOProgramming;
 
-/*
+/**
  * Não pode:
  *  - utilizar-se propriedades da classe como parâmetros do closure
- *  - utilizar-se propriedades da classe como parâmetro para a diretiva use 
+ *  - utilizar-se propriedades da classe como parâmetro para a diretiva use
  * Pode:
  * - referenciar-se propriedades do objeto dentro do closure.
- * - 
+ * -
+ * @author Thiago Mallon <thiagomallon@gmail.com>
  */
 class Closures
 {
-    /* propriedades */
+    /**
+     * Propriedade de uso geral
+     * @var mixed $property1
+     * Propriedade de uso geral
+     */
     protected $property1;
-    protected $property2;
-    protected $property3;
 
+    /**
+     * Método retorna forma mais simples de closure de escopo de método.
+     * @return callable
+     * Método retorna forma mais simples de closure de escopo de método.
+     */
     public function getClosure()
     {
         /* closure na sua forma mais simples, apenas retorna uma literal */
@@ -26,6 +40,11 @@ class Closures
         return $closure; // retorna closure
     }
 
+    /**
+     * Método Retorna closure que implementa recebimento de parâmetro.
+     * @return callable
+     * Método Retorna closure que implementa recebimento de parâmetro.
+     */
     public function getClosureFeatParam()
     {
         /* closure recebe parâmetro, então o retorna */
@@ -35,6 +54,13 @@ class Closures
         return $closure; // retorna closure
     }
 
+    /**
+     * Retorna closure que implementa recebimento de parâmetro e atribui
+     * à propriedade property1.
+     * @return callable
+     * Retorna closure que implementa recebimento de parâmetro e atribui
+     * à propriedade property1.
+     */
     public function getClosureFeatProperty()
     {
         /* closure recebe parâmetro, o atribui à propriedade da classe e retorna propriedade */
@@ -45,6 +71,15 @@ class Closures
         return $closure; // retorna closure
     }
 
+    /**
+     * Retorna closure que recebe parâmetro, use e faz atribuição à propriedade
+     * property1.
+     * @return callable
+     * Retorna closure que recebe parâmetro, use e faz atribuição à propriedade
+     * property1.
+     * @param string $beginPhrase
+     * Parâmetro é usado na cláusula use do closure retornado pelo método.
+     */
     public function getClosureFeatPropertyParam($beginPhrase)
     {
         /* método recebe parâmetro, que é atribuído ao closure, através do use,
@@ -56,6 +91,11 @@ class Closures
         return $closure; // retorna closure
     }
 
+    /**
+     * Método retorna propriedade property1
+     * @return callable
+     * Método retorna propriedade property1
+     */
     public function getProperty1()
     {
         return $this->property1;

@@ -1,7 +1,13 @@
 <?php
+/**
+ * Created by Thiago Mallon
+ */
 
 namespace App\OOProgramming;
 
+/**
+ * @author Thiago Mallon <thiagomallon@gmail.com>
+ */
 class MagicMethods
 {
     /**
@@ -11,7 +17,7 @@ class MagicMethods
     protected $data = [];
 
     /**
-     * @method returntype description
+     * @return datatype description
      * método mágico, utilizado para que métodos chamados via a instancia da classe,
      * que não possuam implementação, sejam interceptados - caso chame-se, através de
      * uma instância dessa classe, um método que não esteja em seu escopo, o método
@@ -23,7 +29,7 @@ class MagicMethods
     }
 
     /**
-     * @method returntype description
+     * @return datatype description
      */
     public function __set($name, $value)
     {
@@ -36,7 +42,7 @@ class MagicMethods
     }
 
     /**
-     * @method returntype description
+     * @return datatype description
      */
     public function __invoke()
     {
@@ -44,7 +50,7 @@ class MagicMethods
     }
 
     /**
-     * @method returntype description
+     * @return datatype description
      */
     public function __serialize()
     {
@@ -52,7 +58,7 @@ class MagicMethods
     }
 
     /**
-     * @method returntype description
+     * @return datatype description
      */
     public function __sleep()
     {
@@ -60,7 +66,7 @@ class MagicMethods
     }
 
     /**
-     * @method returntype description
+     * @return datatype
      * método é chamado toda vez que instância de classe é chamado como um string. ex:
      * echo $_magicMethods;
      * Quando ocorre uma chamada assim, o retorno do método __toString será exibido no echo.
@@ -71,7 +77,7 @@ class MagicMethods
     }
 
     /**
-     * @method returntype description
+     * @return datatype description
      */
     public function __debugInfo()
     {
