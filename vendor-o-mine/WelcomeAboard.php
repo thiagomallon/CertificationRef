@@ -52,7 +52,7 @@ class WelcomeAboard
         $composer->write("\n\n 
             Damn, matey!\n
             This old map is making us going in circles.\n
-            Go get a new map for me!\n
+            Go get a new map for us!\n
             by T.Mallon\n\n\n");
     }
     
