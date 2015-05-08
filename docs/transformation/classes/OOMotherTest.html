@@ -114,7 +114,7 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">30</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">3</span>
                                 </a>
                             </li>
                             <li>
@@ -144,28 +144,28 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1693121982"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-582437260"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-1693121982" class="accordion-body collapse in">
+            <div id="namespace-582437260" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-407176605"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1207857318"></a>
                                 <a href="../namespaces/App.html" style="margin-left: 30px; padding-left: 0">App</a>
             </div>
-            <div id="namespace-407176605" class="accordion-body collapse ">
+            <div id="namespace-1207857318" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1798339747"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-809771839"></a>
                                 <a href="../namespaces/App.OOProgramming.html" style="margin-left: 30px; padding-left: 0">OOProgramming</a>
             </div>
-            <div id="namespace-1798339747" class="accordion-body collapse ">
+            <div id="namespace-809771839" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -184,10 +184,10 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-144912087"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-667847040"></a>
                                 <a href="../namespaces/App.PHPBasics.html" style="margin-left: 30px; padding-left: 0">PHPBasics</a>
             </div>
-            <div id="namespace-144912087" class="accordion-body collapse ">
+            <div id="namespace-667847040" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -385,8 +385,8 @@
                 <h3 class="public ">setUp()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">setUp() </pre>
-                <p><em></em></p>
-                
+                <p><em>Sets up the fixture, for example, opens a network connection.</em></p>
+                <p>This method is called before a test is executed.</p>
 
                 
                 
@@ -411,8 +411,8 @@
                 <h3 class="public ">tearDown()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">tearDown() </pre>
-                <p><em></em></p>
-                
+                <p><em>Tears down the fixture, for example, closes a network connection.</em></p>
+                <p>This method is called after a test is executed.</p>
 
                 
                 
@@ -436,9 +436,12 @@
             <article class="method">
                 <h3 class="public ">testClassAlias()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">testClassAlias() </pre>
-                <p><em></em></p>
-                
+                <pre class="signature" style="margin-right: 54px;">testClassAlias() : void</pre>
+                <p><em>Método testa funções class_alias() e get_class() do PHP.</em></p>
+                <p>class_alias() - Cria um alias da classe, ao qual novas instâncias podem ser geradas. As
+instâncias geradas através de um alias se fazem novas instâncias e não compartilham por
+referência os métodos e propriedades.</p>
+<p>get_class() - Recebe uma instância e retorna o nome da classe da mesma.</p>
 
                 
                 
@@ -462,8 +465,8 @@
             <article class="method">
                 <h3 class="public ">testDuplicatingInstance()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">testDuplicatingInstance() </pre>
-                <p><em></em></p>
+                <pre class="signature" style="margin-right: 54px;">testDuplicatingInstance() : void</pre>
+                <p><em>Método testa duplicação de instâncias, abordagem que cria instâncias por referência.</em></p>
                 
 
                 
@@ -488,8 +491,10 @@
             <article class="method">
                 <h3 class="public ">testDestructingObject()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">testDestructingObject() </pre>
-                <p><em></em></p>
+                <pre class="signature" style="margin-right: 54px;">testDestructingObject() : void</pre>
+                <p><em>Método testa &#039;destruição&#039; de instância. Verifica-se que por mais que seja aplicada a função
+unset() à instância, o objeto permanece até que qualquer outro compartilhamento por referência,
+do mesmo, esteja em uso.</em></p>
                 
 
                 
@@ -514,8 +519,11 @@
             <article class="method">
                 <h3 class="public ">testReturnArgsPassed()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">testReturnArgsPassed() </pre>
-                <p><em></em></p>
+                <pre class="signature" style="margin-right: 54px;">testReturnArgsPassed() : void</pre>
+                <p><em>Método testa retorno da função func_get_args(), que é o retorno do método returnArgsPassed(), do
+objeto. Confirma-se que o PHP não espera um número máximo de argumentos passados à um método,
+somente um número mínimo, ou seja, quando o método espera um parâmetro em sua assinatura, esse
+um parâmetro (pelo menos) deve ser passado.</em></p>
                 
 
                 
@@ -540,8 +548,10 @@
             <article class="method">
                 <h3 class="public ">testReturnObjVars()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">testReturnObjVars() </pre>
-                <p><em></em></p>
+                <pre class="signature" style="margin-right: 54px;">testReturnObjVars() : void</pre>
+                <p><em>Método testa retorno da função get_object_vars() do PHP, que é o retorno do método returnObjVars()
+do objeto. A função é capaz de retornar todas as propriedades do objeto, bem como seus respectivos
+valores, independentemente do encapsulamento que lhe(s) é(seja) atribuído.</em></p>
                 
 
                 
@@ -610,7 +620,7 @@
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on May 8th, 2015 at 10:21.
+                    on May 8th, 2015 at 11:19.
                 </section>
             </section>
         </section>
