@@ -61,7 +61,6 @@ class MagicMethodsTest extends PHPUnit_Framework_TestCase
     {
         $this->_itsNotMagic->notDefProp = 'Setando private';
         $this->assertEquals('Setando private', $this->_itsNotMagic->notDefProp);
-
         /* Na linha seguinte, através do retorno da função get_object_vars, constata-se que não cria-se, de fato
          * uma nova propriedade, mas, assim como está na implementação do método __set(), atribui-se
          * a um array, que então retorna, pelo método __get() */

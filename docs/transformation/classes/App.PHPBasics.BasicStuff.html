@@ -114,7 +114,7 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">96</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">30</span>
                                 </a>
                             </li>
                             <li>
@@ -144,28 +144,28 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-736555762"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1784839237"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-736555762" class="accordion-body collapse in">
+            <div id="namespace-1784839237" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-47721098"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-127839314"></a>
                                 <a href="../namespaces/App.html" style="margin-left: 30px; padding-left: 0">App</a>
             </div>
-            <div id="namespace-47721098" class="accordion-body collapse ">
+            <div id="namespace-127839314" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1856706387"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1919299507"></a>
                                 <a href="../namespaces/App.OOProgramming.html" style="margin-left: 30px; padding-left: 0">OOProgramming</a>
             </div>
-            <div id="namespace-1856706387" class="accordion-body collapse ">
+            <div id="namespace-1919299507" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -184,10 +184,10 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1525573089"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1834253312"></a>
                                 <a href="../namespaces/App.PHPBasics.html" style="margin-left: 30px; padding-left: 0">PHPBasics</a>
             </div>
-            <div id="namespace-1525573089" class="accordion-body collapse ">
+            <div id="namespace-1834253312" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -237,7 +237,7 @@
                     <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
 
                     <h1><small>\App\PHPBasics</small>BasicStuff</h1>
-                    <p><em></em></p>
+                    <p><em>Objeto criado para implementação de conceitos básicos do PHP</em></p>
                     
                     
                                         
@@ -309,7 +309,14 @@
                                                                         </dl>
                     <h2>Tags</h2>
                     <table class="table table-condensed">
-                                            <tr><td colspan="2"><em>None found</em></td></tr>
+                                            <tr>
+                            <th>
+                                author
+                            </th>
+                            <td>
+                                                                    <p>Thiago Mallon <a href="mailto:thiagomallon@gmail.com">thiagomallon@gmail.com</a></p>
+                                                            </td>
+                        </tr>
                                         </table>
                 </aside>
             </div>
@@ -328,12 +335,12 @@
             <a id="property__daughter" name="property__daughter" class="anchor"></a>
             <article class="property">
                 <h3 class="protected ">$_daughter</h3>
-                <pre class="signature">$_daughter : </pre>
-                <p><em></em></p>
+                <pre class="signature">$_daughter : object</pre>
+                <p><em>Instância do objeto Daughter</em></p>
                 
 
                                 <h4>Type</h4>
-                
+                object
                                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -360,13 +367,16 @@
             <article class="method">
                 <h3 class="public ">isAImplement()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">isAImplement() </pre>
-                <p><em></em></p>
+                <pre class="signature" style="margin-right: 54px;">isAImplement() : boolean</pre>
+                <p><em>Método utiliza a função is_a() do PHP, que verifica se propriedade instância de Daughter,
+é também instância de Mother (classe mãe) e retorna true em caso positivo.</em></p>
                 
 
                 
                 
-                				
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -430,7 +440,7 @@
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on May 7th, 2015 at 21:32.
+                    on May 8th, 2015 at 10:21.
                 </section>
             </section>
         </section>

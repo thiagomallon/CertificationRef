@@ -25,7 +25,7 @@ class ReflectingTest extends PHPUnit_Framework_TestCase
     {
         // var_dump($this->_classReflecting->getMethods());
         // abaixo confirma existência de 5 métodos na classe
-        $this->assertCount(5, $this->_classReflecting->getMethods());
+        $this->assertCount(3, $this->_classReflecting->getMethods());
     }
 
     public function testObjProperties()
@@ -36,7 +36,7 @@ class ReflectingTest extends PHPUnit_Framework_TestCase
         // var_dump($this->_classReflecting->getProperties());
 
         // abaixo confirma existência de 3 propriedades na classe
-        $this->assertCount(3, $this->_classReflecting->getProperties());
+        $this->assertCount(2, $this->_classReflecting->getProperties());
     }
 }
 
