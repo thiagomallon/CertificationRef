@@ -5,12 +5,17 @@
  */
 
 /**
+ * @package Test\OOProgramming
+ */
+namespace Test\OOProgramming;
+
+/**
  * Classe de testes do objeto OOMotherTest
  * @group OOProgramming
  * @group OOMotherTest
  * @author Thiago Mallon <thiagomallon@gmail.com>
  */
-class OOMotherTest extends PHPUnit_Framework_TestCase
+class OOMotherTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Instância da classe OOMother
@@ -52,8 +57,8 @@ class OOMotherTest extends PHPUnit_Framework_TestCase
     {
         $_localMother = new \App\OOProgramming\OOMother(); // cria instância da classe OOMother
         class_alias('\App\OOProgramming\OOMother', 'Father');
-        $_father = new Father(); // cria instância via alias da classe OOMother
-        $_stepFather = new Father(); // cria outra instância via alias da classe OOMother
+        $_father = new \Father(); // cria instância via alias da classe OOMother
+        $_stepFather = new \Father(); // cria outra instância via alias da classe OOMother
 
         /* tests */
         $_localMother->setName('Davi'); // atribui valor à propriedade da classe

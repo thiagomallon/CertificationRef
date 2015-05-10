@@ -5,6 +5,11 @@
  */
 
 /**
+ * @package Test\OOProgramming
+ */
+namespace Test\OOProgramming;
+
+/**
  * Classe de testes à classe OODaughter
  * @group OOProgramming
  * @group OODaughterTest
@@ -12,7 +17,7 @@
  * @ignore
  * @codeCoverageIgnore
  */
-class OODaughterTest extends PHPUnit_Framework_TestCase
+class OODaughterTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Evitar erros no phpunit
