@@ -21,7 +21,8 @@
     "autoload" : {
         "psr-4" : {
             "App\\": "src/",
-            "VendorOMine\\":"vendor-o-mine/"   
+            "Test\\": "test",
+            "ComposerCustoms\\":"data/composer-customs"   
         }
     },
     "suggest": {
@@ -30,22 +31,22 @@
     },
     "scripts": {
         "pre-install-cmd": [       
-            "VendorOMine\\WelcomeAboard::preInstall"    
+            "ComposerCustoms\\WelcomeAboard::preInstall"    
         ],
         "post-install-cmd": [       
-            "VendorOMine\\WelcomeAboard::postInstall"    
+            "ComposerCustoms\\WelcomeAboard::postInstall"    
         ],
         "pre-update-cmd": [
-            "VendorOMine\\WelcomeAboard::preUpdate"
+            "ComposerCustoms\\WelcomeAboard::preUpdate"
         ],
         "post-update-cmd": [        
-            "VendorOMine\\WelcomeAboard::postUpdate"    
+            "ComposerCustoms\\WelcomeAboard::postUpdate"    
         ],
         "pre-autoload-dump": [        
-            "VendorOMine\\WelcomeAboard::preAutoLoadDump"    
+            "ComposerCustoms\\WelcomeAboard::preAutoLoadDump"    
         ],
         "post-autoload-dump": [        
-            "VendorOMine\\WelcomeAboard::postAutoLoadDump"    
+            "ComposerCustoms\\WelcomeAboard::postAutoLoadDump"    
         ]
     }
 }

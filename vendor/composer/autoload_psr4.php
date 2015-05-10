@@ -6,6 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'VendorOMine\\' => array($baseDir . '/vendor-o-mine'),
+    'ComposerCustoms\\' => array($baseDir . '/data/composer-customs'),
     'App\\' => array($baseDir . '/src'),
 );

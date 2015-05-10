@@ -5,12 +5,17 @@
  */
 
 /**
+ * @package Test\PHPBasics
+ */
+namespace Test\PHPBasics;
+
+/**
  * Classe de testes do objeto de Daughter
  * @group PHPBasics
  * @group DaughterTest
  * @author Thiago Mallon <thiagomallon@gmail.com>
  */
-class DaughterTest extends PHPUnit_Framework_TestCase
+class DaughterTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Instância do classe Daughter

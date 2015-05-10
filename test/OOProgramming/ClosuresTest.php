@@ -5,12 +5,17 @@
  */
 
 /**
+ * @package Test\OOProgramming
+ */
+namespace Test\OOProgramming;
+
+/**
  * Classe de testes do objeto Closure
  * @author Thiago Mallon <thiagomallon@gmail.com>
  * @group OOProgramming
  * @group ClosuresTest
  */
-class ClosuresTest extends PHPUnit_Framework_TestCase
+class ClosuresTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var Closure $_closures

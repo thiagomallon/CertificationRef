@@ -5,12 +5,17 @@
  */
 
 /**
+ * @package Test\PHPBasics
+ */
+namespace Test\PHPBasics;
+
+/**
  * Classe de testes do objeto de BasicStuff
  * @group PHPBasics
  * @group BasicStuffTest
  * @author Thiago Mallon <thiagomallon@gmail.com>
  */
-class BasicStuffTest extends PHPUnit_Framework_TestCase
+class BasicStuffTest extends \PHPUnit_Framework_TestCase
 {
 
     /**

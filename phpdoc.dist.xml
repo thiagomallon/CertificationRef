@@ -2,7 +2,7 @@
 <phpdoc>
     <title>RepCertification</title>
     <parser>
-        <target>./docs/parser</target>
+        <target>./data/documentation/parser</target>
         <encoding>utf8</encoding>
         <markers>
             <item>TODO</item>
@@ -16,13 +16,13 @@
         <visibility></visibility>
     </parser>
     <transformer>
-        <target>./docs/transformation</target>
+        <target>./data/documentation/transformation</target>
     </transformer>
     <logging>
         <level>warn</level>
         <paths>
-            <default>./docs/log/{DATE}.log</default>
-            <errors>./docs/log/{DATE}.errors.log</errors>
+            <default>./data/documentation/log/{DATE}.log</default>
+            <errors>./data/documentation/log/{DATE}.errors.log</errors>
         </paths>
     </logging>
     <transformations>

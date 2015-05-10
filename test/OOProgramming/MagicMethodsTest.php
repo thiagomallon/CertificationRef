@@ -5,12 +5,17 @@
  */
 
 /**
+ * @package Test\OOProgramming
+ */
+namespace Test\OOProgramming;
+
+/**
  * Classe de testes para objeto MagicMethods
  * @author Thiago Mallon <thiagomallon@gmail.com>
  * @group OOProgramming
  * @group MagicMethodsTest
  */
-class MagicMethodsTest extends PHPUnit_Framework_TestCase
+class MagicMethodsTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var MagicMethods $_itsNoMagic Armazenará instância de MagicMethods

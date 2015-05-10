@@ -5,12 +5,17 @@
  */
 
 /**
+ * @package Test\OOProgramming
+ */
+namespace Test\OOProgramming;
+
+/**
  * Classe testa conceito de Reflection do PHP
  * @group OOProgramming
  * @group ReflectingTest
  * @author Thiago Mallon <thiagomallon@gmail.com>
  */
-class ReflectingTest extends PHPUnit_Framework_TestCase
+class ReflectingTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Instância da classe ReflectionClass do PHP
