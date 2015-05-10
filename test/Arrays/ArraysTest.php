@@ -4,17 +4,17 @@
  */
 
 /**
- * @package Test\FunctionsAndArrays
+ * @package Test\Arrays
  */
-namespace Test\FunctionsAndArrays;
+namespace Test\Arrays;
 
 /**
- * Classe de testes do objeto ArrayStuff
- * @group FunctionsAndArrays
+ * Classe de testes do objeto Arrays
+ * @group Arrays
  * @group ArrayStuffTest
  * @author Thiago Mallon <thiagomallon@gmail.com>
  */
-class ArrayStuffTest extends \PHPUnit_Framework_TestCase
+class ArraysTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
