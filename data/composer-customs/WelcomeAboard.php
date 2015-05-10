@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Created by Thiago Mallon <thiagomallon@gmail.com>
+ */
+
+/**
+ * @package ComposerCustoms;
+ */
 namespace ComposerCustoms;
 
 use Composer\Script\Event;
