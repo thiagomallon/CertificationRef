@@ -19,9 +19,10 @@ namespace Test\InputOutput;
 class FileManipulationTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var FileManipulation
+     * Propriedade atuará como objeto de FileManipulation
+     * @var FileManipulation $_fileManipulation Ojbeto de de FileManipulation
      */
-    protected $object;
+    protected $_fileManipulation;
 
     /**
      * Sets up the fixture, for example, opens a network connection.
@@ -29,7 +30,7 @@ class FileManipulationTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->object = new \App\InputOutput\FileManipulation;
+        $this->_fileManipulation = new \App\InputOutput\FileManipulation;
     }
 
     /**
@@ -38,6 +39,7 @@ class FileManipulationTest extends \PHPUnit_Framework_TestCase
      */
     protected function tearDown()
     {
+        unset($this->_fileManipulation);
     }
 
     /**
@@ -47,8 +49,6 @@ class FileManipulationTest extends \PHPUnit_Framework_TestCase
     public function testFactoryFile()
     {
         // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-            'This test has not been implemented yet.'
-        );
+        $this->markTestIncomplete('This test has not been implemented yet.');
     }
 }
