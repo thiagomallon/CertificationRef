@@ -34,10 +34,9 @@ class Closures
     public function getClosure()
     {
         /* closure na sua forma mais simples, apenas retorna uma literal */
-        $closure = function () {
+        return function () {
             return 'This closure is saying hi!';
         };
-        return $closure; // retorna closure
     }
 
     /**
@@ -48,10 +47,9 @@ class Closures
     public function getClosureFeatParam()
     {
         /* closure recebe parâmetro, então o retorna */
-        $closure = function ($something) {
+        return function ($something) {
             return $something;
         };
-        return $closure; // retorna closure
     }
 
     /**
@@ -64,11 +62,10 @@ class Closures
     public function getClosureFeatProperty()
     {
         /* closure recebe parâmetro, o atribui à propriedade da classe e retorna propriedade */
-        $closure = function ($something) {
+        return function ($something) {
             $this->property1 = $something;
             return $this->property1;
         };
-        return $closure; // retorna closure
     }
 
     /**
@@ -84,11 +81,20 @@ class Closures
     {
         /* método recebe parâmetro, que é atribuído ao closure, através do use,
          * o atribui à propriedade da classe e retorna propriedade */
-        $closure = function ($something) use ($beginPhrase) {
+        return function ($something) use ($beginPhrase) {
             $this->property1 = $beginPhrase.$something;
             return $this->property1;
         };
-        return $closure; // retorna closure
+    }
+
+    /**
+     * Método seta valor da propriedade $property1
+     * @return datatype description
+     * @param datatype $content description
+     */
+    public function setProperty1($content)
+    {
+        $this->property1 = $content;
     }
 
     /**
