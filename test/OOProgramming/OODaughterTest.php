@@ -11,10 +11,9 @@ namespace Test\OOProgramming;
 
 /**
  * Classe de testes à classe OODaughter
- * @group OOProgramming
- * @group OODaughterTest
  * @author Thiago Mallon <thiagomallon@gmail.com>
- * @ignore
+ * @group OOProgramming
+ * @group OOProgramming/OODaughterTest
  * @codeCoverageIgnore
  */
 class OODaughterTest extends \PHPUnit_Framework_TestCase

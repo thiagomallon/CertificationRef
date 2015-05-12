@@ -11,9 +11,9 @@ namespace Test\OOProgramming;
 
 /**
  * Classe testa conceito de Reflection do PHP
- * @group OOProgramming
- * @group ReflectingTest
  * @author Thiago Mallon <thiagomallon@gmail.com>
+ * @group OOProgramming
+ * @group OOProgramming/ReflectingTest
  */
 class ReflectingTest extends \PHPUnit_Framework_TestCase
 {

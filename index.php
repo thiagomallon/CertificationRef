@@ -20,3 +20,7 @@ fseek($handler2, 0, SEEK_END);
 fwrite($handler2, "Davi, vou te morder!\n");
 fseek($handler2, 0);
 echo fread($handler2, 1024)."\n\n\n\n";
+
+print_r(stream_get_wrappers());
+
+echo gettype(LOCK_SH);

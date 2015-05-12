@@ -11,9 +11,9 @@ namespace Test\OOProgramming;
 
 /**
  * Classe de testes do objeto OOMotherTest
- * @group OOProgramming
- * @group OOMotherTest
  * @author Thiago Mallon <thiagomallon@gmail.com>
+ * @group OOProgramming
+ * @group OOProgramming/OOMotherTest
  */
 class OOMotherTest extends \PHPUnit_Framework_TestCase
 {

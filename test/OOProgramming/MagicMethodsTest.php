@@ -13,7 +13,7 @@ namespace Test\OOProgramming;
  * Classe de testes para objeto MagicMethods
  * @author Thiago Mallon <thiagomallon@gmail.com>
  * @group OOProgramming
- * @group MagicMethodsTest
+ * @group OOProgramming/MagicMethodsTest
  */
 class MagicMethodsTest extends \PHPUnit_Framework_TestCase
 {

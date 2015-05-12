@@ -10,9 +10,9 @@ namespace Test\Arrays;
 
 /**
  * Classe de testes do objeto Arrays
- * @group Arrays
- * @group ArrayStuffTest
  * @author Thiago Mallon <thiagomallon@gmail.com>
+ * @group Arrays
+ * @group Arrays/ArrayTest
  */
 class ArraysTest extends \PHPUnit_Framework_TestCase
 {

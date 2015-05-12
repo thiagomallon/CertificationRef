@@ -11,9 +11,9 @@ namespace Test\PHPBasics;
 
 /**
  * Classe de testes do objeto de Daughter
- * @group PHPBasics
- * @group DaughterTest
  * @author Thiago Mallon <thiagomallon@gmail.com>
+ * @group PHPBasics
+ * @group PHPBasics/DaughterTest
  */
 class DaughterTest extends \PHPUnit_Framework_TestCase
 {
