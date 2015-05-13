@@ -1,10 +1,12 @@
-
-/**
- * Created by Thiago Mallon on 2015-05-12 at 21:09:10.
- * @author Thiago Mallon <thiagomallon@gmail.com>
- */
-
- (function(){
-    angular.module('gameEngine').controller('gameScreen', ['$scope', '$http', function($scope, $http) {        
-    }]);
+(function(){
+    angular.module('GameEngine').controller('GameScreen', function ($scope) {
+        $scope.phones = [
+        {'name': 'Nexus S',
+        'snippet': 'Fast just got faster with Nexus S.'},
+        {'name': 'Motorola XOOM™ with Wi-Fi',
+        'snippet': 'The Next, Next Generation tablet.'},
+        {'name': 'MOTOROLA XOOM™',
+        'snippet': 'The Next, Next Generation tablet.'}
+        ];
+    });
 })();
