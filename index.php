@@ -1,26 +1,27 @@
-<?php
+<?php require_once 'vendor/autoload.php'; ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <title>Refresing fingers</title>
 
-require_once 'vendor/autoload.php';
+    <link rel="shortcut icon" type="image/png" href="refreshing-neurons/img/space_bus.ico">
+    <link rel="stylesheet" href="refreshing-neurons/js/jasmine/lib/jasmine-2.3.2/jasmine.css">
+    <link rel="stylesheet" href="refreshing-neurons/css/style.css">
 
-$_closures = new \App\OOProgramming\Closures();
+    <script src="refreshing-neurons/js/jasmine/lib/jasmine-2.3.2/jasmine.js"></script>
+    <script src="refreshing-neurons/js/jasmine/lib/jasmine-2.3.2/jasmine-html.js"></script>
+    <script src="refreshing-neurons/js/jasmine/lib/jasmine-2.3.2/boot.js"></script>
+    <script src="refreshing-neurons/js/angular.js"></script>    
 
-//var_dump($_closures->getClosure());
+    <!-- include source files here... -->
+    <script src="refreshing-neurons/js/game-engine.js"></script>
+    <script src="refreshing-neurons/js/controller/game-screen.js"></script>
 
-//var_dump($_GET);
-$handler = fopen('php://memory', 'a+');
-fwrite($handler, "Churupita, eu te amo - by T.Mallon\n");
-fseek($handler, 0);
-echo fread($handler, 1024);
-
-$handler2 = fopen('php://memory', 'a+');
-fwrite($handler2, "Davi, vou te morder!\n");
-fseek($handler2, 0);
-echo fread($handler2, 1024);
-fseek($handler2, 0, SEEK_END);
-fwrite($handler2, "Davi, vou te morder!\n");
-fseek($handler2, 0);
-echo fread($handler2, 1024)."\n\n\n\n";
-
-print_r(stream_get_wrappers());
-
-echo gettype(LOCK_SH);
+    <!-- include spec files here... -->
+    <script src="refreshing-neurons/js/game-engine.spec.js"></script>
+</head>
+<body ng-app="gameEngine">
+   <div ng-controller="gameScreen as screen" id="screenGame"></div>
+</body>
+</html>
