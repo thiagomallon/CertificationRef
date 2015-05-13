@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset='UTF-8'>
-    <title>Refresing fingers</title>
+    <title>Refresing Neurons</title>
 
     <link rel="shortcut icon" type="image/png" href="refreshing-neurons/img/space_bus.ico">
     <link rel="stylesheet" href="refreshing-neurons/js/jasmine/lib/jasmine-2.3.2/jasmine.css">
