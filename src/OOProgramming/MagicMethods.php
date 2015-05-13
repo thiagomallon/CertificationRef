@@ -21,18 +21,18 @@ class MagicMethods
      */
     protected $data = [];
 
+
     /**
-     * método mágico, utilizado para que métodos chamados via a instancia da classe,
-     * que não possuam implementação, sejam interceptados - caso chame-se, através de
-     * uma instância dessa classe, um método que não esteja em seu escopo, o método
-     * __call() será executado.
-     * @return array
-     * @param string $name
-     * @param array $args
+     * Retorna variável não declarada no escopo da classe, desde que essa tenha sido
+     * criada pelo método mágico __set(), caso contrário é exibido um notice de propriedade
+     * undefined.
+     * @return mixed
+     * @param string $name Nome da variável inacessível (não declarada no esocpo da classe)
+     * que solicita-se acesso.
      */
-    public function __call($name, $args)
+    public function __get($name)
     {
-        return $args;
+        return $this->$name;
     }
 
     /**
@@ -51,16 +51,47 @@ class MagicMethods
     }
 
     /**
-     * Retorna variável não declarada no escopo da classe, desde que essa tenha sido
-     * criada pelo método mágico __set(), caso contrário é exibido um notice de propriedade
-     * undefined.
-     * @return mixed
-     * @param string $name Nome da variável inacessível (não declarada no esocpo da classe)
-     * que solicita-se acesso.
+     * Método
+     * @return datatype description
+     *
      */
-    public function __get($name)
+    public function __isset($name)
     {
-        return $this->$name;
+        
+    }
+
+    /**
+     * Método
+     * @return datatype description
+     *
+     */
+    public function __empty()
+    {
+        
+    }
+
+    /**
+     * método mágico, utilizado para que métodos chamados via a instancia da classe,
+     * que não possuam implementação, sejam interceptados - caso chame-se, através de
+     * uma instância dessa classe, um método que não esteja em seu escopo, o método
+     * __call() será executado.
+     * @return array
+     * @param string $name
+     * @param array $args
+     */
+    public function __call($name, $args)
+    {
+        return $args;
+    }
+
+    /**
+     * Método
+     * @return datatype description
+     *
+     */
+    public static function __callStatic($name, $args)
+    {
+        
     }
 
     /**
@@ -72,11 +103,13 @@ class MagicMethods
     }
 
     /**
+     * Método
      * @return datatype description
+     *
      */
-    public function __serialize()
+    public function __clone()
     {
-
+        
     }
 
     /**
@@ -86,6 +119,35 @@ class MagicMethods
     {
 
     }
+
+    /**
+     * Método
+     * @return datatype description
+     *
+     */
+    public function __wakeup()
+    {
+        
+    }
+
+    /**
+     * Método
+     * @return datatype description
+     *
+     */
+    public function __set_start()
+    {
+        
+    }
+
+    /**
+     * @return datatype description
+     */
+    public function __serialize()
+    {
+
+    }
+
 
     /**
      * método é chamado toda vez que instância de classe é chamado como um string. ex:

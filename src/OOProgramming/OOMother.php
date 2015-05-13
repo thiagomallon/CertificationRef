@@ -13,7 +13,7 @@ namespace App\OOProgramming;
  * em classe de teste.
  * @author Thiago Mallon <thiagomallon@gmail.com>
  */
-class OOMother
+class OOMother extends OOGrandMa
 {
     /**
      * Propriedade armazena nome
@@ -28,6 +28,25 @@ class OOMother
     public function __construct()
     {
         $this->name = 'MotherClass!';
+    }
+
+    /**
+     * Método retorna valor da propriedade $name do objeto
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+    
+    /**
+     * Método atribui valor à propriedade $name do objeto
+     * @return void
+     * @param string $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
     }
 
     /**
@@ -56,24 +75,5 @@ class OOMother
     public function returnArgsPassed()
     {
         return func_get_args();
-    }
-
-    /**
-     * Método retorna valor da propriedade $name do objeto
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-    
-    /**
-     * Método atribui valor à propriedade $name do objeto
-     * @return void
-     * @param string $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
     }
 }

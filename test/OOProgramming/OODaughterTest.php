@@ -19,12 +19,56 @@ namespace Test\OOProgramming;
 class OODaughterTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * Evitar erros no phpunit
-     * @return void
-     * @covers
+     * Instância da classe OODaughter
+     * @var object $_daughter
      */
-    public function testNotYet()
+    protected $_daughter;
+
+    /**
+     * Sets up the fixture, for example, opens a network connection.
+     * This method is called before a test is executed.
+     */
+    public function setUp()
     {
-        $this->markTestIncomplete('Not implemented');
+        /* Cria stub da classe a ser testada (just for fun) */
+        $this->_daughter = $this->getMockBuilder('\App\OOProgramming\OODaughter')
+        ->setMethods(null)
+        ->getMock();
+    }
+
+    /**
+     * Tears down the fixture, for example, closes a network connection.
+     * This method is called after a test is executed.
+     */
+    public function tearDown()
+    {
+        unset($this->_daughter); // 'destroi' instância
+    }
+
+    /**
+     * Método testa retorno do método getGrandMaName, que por sua vez, faz chamada ao método getName
+     * da classe OOGrancMa, porém, observa-se que o valor original da propriedade $name (o da classe
+     * OOGrancMa), foi sobrescrito, já que nas classe OOMother e OODaughter, a mesma propriedade é
+     * setada, na sobrescrição do construtor, um jeito de consiguir pegar o valor declarado no contrutor
+     * da classe OOGrandMa, é apresentado no método de teste que se segue.
+     * @return void
+     * @covers App\InputOutput\OODaughter::getGrandMaName
+     */
+    public function testAcessoGrandMa()
+    {
+        $this->assertNotEquals('GrandMa class', $this->_daughter->getGrandMaName());
+        $this->assertEquals('MotherClass!DaughterClass!', $this->_daughter->getGrandMaName());
+    }
+
+    /**
+     * Método implementa, no metodo da classe, testado, uma forma de recuperação do valor original
+     * da propriedade, uma vez que a mesma é atribuída no método construtor, sendo o mesmo sobrescrito
+     * nas demais classes que herdam (OOMother e OODaughter).
+     * @return void
+     * @covers App\InputOutput\OODaughter::getMomName
+     */
+    public function testGetMomName()
+    {
+        $this->assertEquals('MotherClass!', $this->_daughter->getMomName());
     }
 }

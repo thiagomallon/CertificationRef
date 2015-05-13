@@ -103,4 +103,159 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
         $invertedStuf = array_flip($this->setOfStuff);
         $this->assertArrayHasKey('want_to', $invertedStuf);
     }
+
+    /**
+     * Método implementa função sort().
+     * Quando aplicamos a função sort() a um array, o mesmo será ordenado segundo os seus valores,
+     * não será preservada a ordem dos índices do array e se o mesmo for associativo, os índices
+     * associativos serão substituídos por índices numéricos.
+     * @return void
+     */
+    public function testSortArray()
+    {
+        $localSet = [
+        'Arnoldo'=>'Chove Várzea Negra',
+        'Oscar' => 'Shimitd',
+        'Carlos'=> 'Albino'
+        ];
+
+        sort($localSet);
+        // var_dump($localSet); // verifica que os índices associativos foram substituídos por numéricos
+        $this->assertContains('Albino', $localSet[0]);
+    }
+
+    /**
+     * Método atua de forma semelhante à função sort(), diferenciando-se na ordem em que se dispõe
+     * os elementos, fazendo-o de forma reversa.
+     * @return void
+     */
+    public function testRSortArray()
+    {
+        $localSet = [
+        'Arnoldo'=>'Chove Várzea Negra',
+        'Oscar' => 'Shimitd',
+        'Carlos'=> 'Albino'
+        ];
+
+        rsort($localSet);
+        // var_dump($localSet); // verifica que os índices associativos foram substituídos por numéricos
+        $this->assertContains('Shimitd', $localSet[0]);
+    }
+
+    /**
+     * Método testa atribuição de array à função array_intersect_assoc(), do PHP.
+     * Função array_intersect_assoc(), compara dois array e retorna um terceiro array
+     * com os elementos em que coincidem tanto índice quanto valor. Nos dois arrays de
+     * teste, o único elemento que ocorre com mesmo valor e índice em ambos é o de índice
+     * 'Carlos', sendo assim esse o único elemento que existirá no array retornado da função.
+     * @return void
+     */
+    public function testArrayIntersectAssoc()
+    {
+        $localSetA = [
+        'Arnoldo'=>'Churrus de Nega',
+        'Oscar' => 'Shimitd',
+        'Carlos'=> 'Albino'
+        ];
+
+        $localSetB = [
+        'Arnoldo'=>'Chove Várzea Negra',
+        'Oscar' => 'Chimidi',
+        'Carlos'=> 'Albino'
+        ];
+
+        $res = array_intersect_assoc($localSetA, $localSetB);
+        //var_dump($res);
+        $this->assertCount(1, $res);
+        $this->assertContains('Albino', $res); // verifica-se ocorrência do valor Albino
+    }
+
+    /**
+     * Método implementa ordenação de forma ascendênte aos valores dos elementos do array
+     * passado, função preserva valores dos índices, sejam esses numéricos ou associativos,
+     * porém, não ordena corretamente valores alfa numéricos, não substituindo, assim, a função
+     * natsort().
+     * @return void
+     */
+    public function testASortArray()
+    {
+        $localSet = [
+        'a'=>'book11.pdf',
+        'b'=>'book1.pdf',
+        'c'=>'book2.pdf',
+        'd'=>'book12.pdf',
+        ];
+
+        asort($localSet);
+        //var_dump($localSet);
+        $this->assertCount(4, $localSet); // mera constância de assertion
+    }
+
+    /**
+     * Método testa atribuição de array à função ksort() do PHP. Verifica-se que apesar
+     * de ordenar os índices e manter a associação ao valor, não ordenando assim os valores,
+     * mas tão somente os índices, a função ksort() não ordena de forma eficiente índices de
+     * de nomes alfanuméricos, o índice book2.pdf é colocado posterior ao índice book12.pdf.
+     * O var_dump mostra a atuação da função em um array associativo.
+     * @return void
+     */
+    public function testKSortArray()
+    {
+        $localSet = [
+        'book11.pdf'=>'a',
+        'book1.pdf'=>'b',
+        'book2.pdf'=>'c',
+        'book12.pdf'=>'d',
+        ];
+        ksort($localSet);
+        //var_dump($localSet);
+        $this->assertCount(4, $localSet); // mera constância
+    }
+
+    /**
+     * Método testa implementação de função natsort() do PHP.
+     * Quando ordenamos os valores alfanúmericos de um array, pela função padrão (sort())
+     * o ordenamento não é feito realmente da forma que se espera, o var dump da função
+     * sort(), abaixo, mostra como os valores são ordenados, porém quando utilizamos a
+     * função natsort() o ordenamento é o que mais comumente se espera. É importante
+     * ressaltar que os índices são preservados na função nartsort(), somente a ordem
+     * dos elementos é alterada.
+     * @return void
+     */
+    public function testNatSort()
+    {
+        $localSet = [
+        'book11.pdf',
+        'book1.pdf',
+        'book2.pdf',
+        'book12.pdf',
+        ];
+
+        sort($localSet);
+        // var_dump($localSet); // o 11 e o 12 vem indesejavelmente antes do 2
+        natsort($localSet);
+        //var_dump($localSet); // aqui vemos a ordenação alfanumérica acontecer
+        $this->assertCount(4, $localSet);
+    }
+
+    /**
+     * Método retorna soma de todos os valores numéricos do array.
+     * Observações: Quando um elemento possui valores alfanuméricos, a menos que esse valor
+     * alfanumérico comece com representações numéricas ('345cdf') o elemento não será incluido
+     * na soma, e também quando inicia com dígitos, obviamente que somente os dígitos serão
+     * incluídos na soma.
+     * @return void
+     */
+    public function testArraySum()
+    {
+        $localSet = [12,12,12]; // declara-se array com somente valores numéricos
+        $this->assertEquals(36, array_sum($localSet)); // verifica-se o valor total
+
+        $localSet[2] = 'abc12'; // atribui-se valor alfa-numérico (começando com letras) ao elemento 2
+        $this->assertNotEquals(36, array_sum($localSet)); // agora não mais a soma é 36, já que foi encontrado elemento com valor que inicia com letra
+        $this->assertEquals(24, array_sum($localSet)); // o valor da soma é 24, pois o elemento 2 foi excluído da soma
+
+        $localSet[1] = '5abc'; // atribui-se valor alfa-numérico (iniciado com números) ao elemento 1
+        $this->assertEquals(17, array_sum($localSet)); // Observa-se aqui que quando a soma do valor alfanumérico
+    }
 }

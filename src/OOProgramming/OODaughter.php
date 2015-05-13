@@ -33,15 +33,6 @@ class OODaughter extends OOMother
     }
 
     /**
-     * Método retorna instância estática da classe
-     * @return object
-     */
-    public function getInstance()
-    {
-        return new static(); // retorna instância estática do objeto
-    }
-
-    /**
      * Método atribui valor de dado recebido à propriedade $name
      * @return void
      * @param string $name É esperado dado do tipo string
@@ -59,6 +50,16 @@ class OODaughter extends OOMother
     {
         return $this->name;
     }
+
+    /**
+     * Método retorna instância estática da classe
+     * @return object
+     */
+    public function getInstance()
+    {
+        return new static(); // retorna instância estática do objeto
+    }
+
 
     /**
      * Método retorna array de argumentos passado ao mesmo.
@@ -84,5 +85,27 @@ class OODaughter extends OOMother
     public function returnObjVars()
     {
         return get_object_vars($this);
+    }
+
+    /**
+     * Método retorna chamada ao método getName, que por sua vez retorna valor da propriedade
+     * $name
+     * @return string Valor retornado da chamada ao método getName da classe OOGrandMa
+     * construtor da classe
+     */
+    public function getGrandMaName()
+    {
+        // OOGrandMa::__construct(); // para que a função getName, retorne o valor da propriedade, na classe OOGrandMa
+        return OOGrandMa::getName();
+    }
+
+    /**
+     * Método retorna chamada ao método getName da classe mãe OOMother
+     * @return string Valor retornado da chamada ao método getName da classe OOMother
+     */
+    public function getMomName()
+    {
+        OOMother::__construct();
+        return OOMother::getName();
     }
 }
