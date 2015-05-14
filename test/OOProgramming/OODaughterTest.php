@@ -14,7 +14,6 @@ namespace Test\OOProgramming;
  * @author Thiago Mallon <thiagomallon@gmail.com>
  * @group OOProgramming
  * @group OOProgramming/OODaughterTest
- * @codeCoverageIgnore
  */
 class OODaughterTest extends \PHPUnit_Framework_TestCase
 {

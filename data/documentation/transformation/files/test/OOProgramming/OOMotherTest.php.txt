@@ -43,6 +43,25 @@ class OOMotherTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Método testa keyword clone, para clonagem de objetos. Verifica-se que o objeto quando
+     * duplicado através da palavra-chave clone, não compartilha por referência o endereço
+     * de memória do objeto clonado, porém, possui todas as características do objeto clonado,
+     * desde suas propriedades e métodos aos valores já setados às suas propriedades, porém,
+     * como supra-citado, se faz outro objeto, alocado a outro endereço de memória.
+     * @return void
+     */
+    public function testCloning()
+    {
+        $this->_mother->setName('Mom'); // atribui-se valor à propriedade name do objeto
+
+        $stepMother = clone $this->_mother; // duplica-se a classe, utilizando-se a palavra-chave clone
+        $stepMother->setName('StepMom'); // atribui-se valor à propriedade name da instãncia clonada
+
+        $this->assertEquals('Mom', $this->_mother->getName()); // verifica-se se atribuição à outra instância, afetou valor de propriedade da presente instância
+        $this->assertEquals('StepMom', $stepMother->getName()); // verifica-se se valor confere
+    }
+
+    /**
      * Método testa funções class_alias() e get_class() do PHP.
      *
      * class_alias() - Cria um alias da classe, ao qual novas instâncias podem ser geradas. As
