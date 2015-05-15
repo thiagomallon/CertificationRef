@@ -10,15 +10,15 @@
 namespace Test\OOProgramming;
 
 /**
- * Classe de testes do objeto OOMotherTest
+ * Classe de testes do objeto MotherTest
  * @author Thiago Mallon <thiagomallon@gmail.com>
  * @group OOProgramming
- * @group OOProgramming/OOMotherTest
+ * @group OOProgramming/MotherTest
  */
-class OOMotherTest extends \PHPUnit_Framework_TestCase
+class MotherTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * Instância da classe OOMother
+     * Instância da classe Mother
      * @var object $_mother
      */
     protected $_mother;
@@ -30,7 +30,7 @@ class OOMotherTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         /* instancia classe, na propriedade $_mother */
-        $this->_mother = new \App\OOProgramming\OOMother();
+        $this->_mother = new \App\OOProgramming\Mother();
     }
 
     /**
@@ -74,10 +74,10 @@ class OOMotherTest extends \PHPUnit_Framework_TestCase
      */
     public function testClassAlias()
     {
-        $_localMother = new \App\OOProgramming\OOMother(); // cria instância da classe OOMother
-        class_alias('\App\OOProgramming\OOMother', 'Father');
-        $_father = new \Father(); // cria instância via alias da classe OOMother
-        $_stepFather = new \Father(); // cria outra instância via alias da classe OOMother
+        $_localMother = new \App\OOProgramming\Mother(); // cria instância da classe Mother
+        class_alias('\App\OOProgramming\Mother', 'Father');
+        $_father = new \Father(); // cria instância via alias da classe Mother
+        $_stepFather = new \Father(); // cria outra instância via alias da classe Mother
 
         /* tests */
         $_localMother->setName('Davi'); // atribui valor à propriedade da classe
@@ -90,7 +90,7 @@ class OOMotherTest extends \PHPUnit_Framework_TestCase
         $this->assertNotEquals('Lilian', $_stepFather->getName()); /* verifica se outra instancia do alias, compartilha,
                                                                     * por referência as propriedades da classe */
         /* verifica nomes das classes dos alias */
-        $this->assertEquals('App\OOProgramming\OOMother', get_class($_father)); /* verifica se nome da classe
+        $this->assertEquals('App\OOProgramming\Mother', get_class($_father)); /* verifica se nome da classe
                                                                                              * é o nome original da classe, 
                                                                                              * não o alias */
         $this->assertNotEquals('Father', get_class($_stepFather)); /* verifica se nome da classe da instancia do alias é

@@ -13,7 +13,7 @@ namespace App\OOProgramming;
  * em classe de teste.
  * @author Thiago Mallon <thiagomallon@gmail.com>
  */
-class OOMother extends OOGrandMa
+class Mother extends GrandMa
 {
     /**
      * Propriedade armazena nome

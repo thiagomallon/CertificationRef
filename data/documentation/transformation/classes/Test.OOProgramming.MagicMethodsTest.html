@@ -133,26 +133,42 @@
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_testSettingInaccessibleProperty" title="testSettingInaccessibleProperty :: Testa-se atribuição de valor à propriedade inacessível, através do método mágico
-__set(), implementado no objeto da instância.">
-            <span class="description">Testa-se atribuição de valor à propriedade inacessível, através do método mágico
-__set(), implementado no objeto da instância.</span><pre>testSettingInaccessibleProperty</pre>
-        </a>
-    </li>
-
-                                                                                                        <li class="method public">
-        <a href="#method_testToStrindMagicMethod" title="testToStrindMagicMethod :: Testa-se impressão de instância como string, através do método mágico __string(),
-implementado no objeto da instância.">
-            <span class="description">Testa-se impressão de instância como string, através do método mágico __string(),
-implementado no objeto da instância.</span><pre>testToStrindMagicMethod</pre>
-        </a>
-    </li>
-
-                                                                                                        <li class="method public">
-        <a href="#method_testUndefinedMethod" title="testUndefinedMethod :: Testa-se chamada à método indefinido, através do método mágico __call(),
+        <a href="#method_testCallMagicMethod" title="testCallMagicMethod :: Testa-se chamada à método indefinido, através do método mágico __call(),
 implementado no objeto da instância.">
             <span class="description">Testa-se chamada à método indefinido, através do método mágico __call(),
-implementado no objeto da instância.</span><pre>testUndefinedMethod</pre>
+implementado no objeto da instância.</span><pre>testCallMagicMethod</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testGetSetMagicMethod" title="testGetSetMagicMethod :: Testa-se atribuição de valor à propriedade inacessível, através do método mágico
+__set(), implementado no objeto da instância.">
+            <span class="description">Testa-se atribuição de valor à propriedade inacessível, através do método mágico
+__set(), implementado no objeto da instância.</span><pre>testGetSetMagicMethod</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testIssetMagicMethod" title="testIssetMagicMethod :: Testa-se interceptação da função isset(), através do método mágico __isset(), declarado na classe
+do objeto. A função é interceptada quando chama-se a função isset(), passando-se uma propriedade
+inacessível (ou inexistente), no objeto.">
+            <span class="description">Testa-se interceptação da função isset(), através do método mágico __isset(), declarado na classe
+do objeto. A função é interceptada quando chama-se a função isset(), passando-se uma propriedade
+inacessível (ou inexistente), no objeto.</span><pre>testIssetMagicMethod</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testSleepMagicMethod" title="testSleepMagicMethod :: Método">
+            <span class="description">Método</span><pre>testSleepMagicMethod</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testToStrindMagicMethod" title="testToStrindMagicMethod :: Testa-se impressão de instância como string, através do método mágico __toString(),
+implementado no objeto da instância.">
+            <span class="description">Testa-se impressão de instância como string, através do método mágico __toString(),
+implementado no objeto da instância.</span><pre>testToStrindMagicMethod</pre>
         </a>
     </li>
 
@@ -168,11 +184,11 @@ no objeto da instância.</span><pre>testVarDumpOverrite</pre>
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                                                                                                                                                                                                    </ul>
+                                                                                                                                                                                                                                                                                                                                            </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                    </ul>
+                                                                                                                                                                                                                                                                                                                                            </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -303,11 +319,11 @@ no objeto da instância.</span><pre>testVarDumpOverrite</pre>
                             </div>
 
                         </div>
-                                            <a id="method_testSettingInaccessibleProperty"></a>
-                        <div class="element clickable method public  method_testSettingInaccessibleProperty" data-toggle="collapse" data-target=".method_testSettingInaccessibleProperty .collapse">
-                            <h2>Testa-se atribuição de valor à propriedade inacessível, através do método mágico
-__set(), implementado no objeto da instância.</h2>
-                            <pre>testSettingInaccessibleProperty() </pre>
+                                            <a id="method_testCallMagicMethod"></a>
+                        <div class="element clickable method public  method_testCallMagicMethod" data-toggle="collapse" data-target=".method_testCallMagicMethod .collapse">
+                            <h2>Testa-se chamada à método indefinido, através do método mágico __call(),
+implementado no objeto da instância.</h2>
+                            <pre>testCallMagicMethod() : void</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -319,9 +335,124 @@ __set(), implementado no objeto da instância.</h2>
                                     <table class="table">
                                                                                     <tr>
                                                 <th>
+                                                    covers
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
                                                     
                                                 </th>
                                                 <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testGetSetMagicMethod"></a>
+                        <div class="element clickable method public  method_testGetSetMagicMethod" data-toggle="collapse" data-target=".method_testGetSetMagicMethod .collapse">
+                            <h2>Testa-se atribuição de valor à propriedade inacessível, através do método mágico
+__set(), implementado no objeto da instância.</h2>
+                            <pre>testGetSetMagicMethod() : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    covers
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        
+                                                                                                                                                                        
+                                                                                                                                                                        
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testIssetMagicMethod"></a>
+                        <div class="element clickable method public  method_testIssetMagicMethod" data-toggle="collapse" data-target=".method_testIssetMagicMethod .collapse">
+                            <h2>Testa-se interceptação da função isset(), através do método mágico __isset(), declarado na classe
+do objeto. A função é interceptada quando chama-se a função isset(), passando-se uma propriedade
+inacessível (ou inexistente), no objeto.</h2>
+                            <pre>testIssetMagicMethod() : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    covers
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testSleepMagicMethod"></a>
+                        <div class="element clickable method public  method_testSleepMagicMethod" data-toggle="collapse" data-target=".method_testSleepMagicMethod .collapse">
+                            <h2>Método</h2>
+                            <pre>testSleepMagicMethod() : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    covers
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        
                                                                                                     </td>
                                             </tr>
                                                                                     <tr>
@@ -340,9 +471,9 @@ __set(), implementado no objeto da instância.</h2>
                         </div>
                                             <a id="method_testToStrindMagicMethod"></a>
                         <div class="element clickable method public  method_testToStrindMagicMethod" data-toggle="collapse" data-target=".method_testToStrindMagicMethod .collapse">
-                            <h2>Testa-se impressão de instância como string, através do método mágico __string(),
+                            <h2>Testa-se impressão de instância como string, através do método mágico __toString(),
 implementado no objeto da instância.</h2>
-                            <pre>testToStrindMagicMethod() </pre>
+                            <pre>testToStrindMagicMethod() : void</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -354,44 +485,11 @@ implementado no objeto da instância.</h2>
                                     <table class="table">
                                                                                     <tr>
                                                 <th>
-                                                    
+                                                    covers
                                                 </th>
                                                 <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                    
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_testUndefinedMethod"></a>
-                        <div class="element clickable method public  method_testUndefinedMethod" data-toggle="collapse" data-target=".method_testUndefinedMethod .collapse">
-                            <h2>Testa-se chamada à método indefinido, através do método mágico __call(),
-implementado no objeto da instância.</h2>
-                            <pre>testUndefinedMethod() </pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        
                                                                                                     </td>
                                             </tr>
                                                                                     <tr>
@@ -492,7 +590,7 @@ no objeto da instância.</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Thu, 14 May 2015 22:11:00 -0300.<br/>
+            generated on Fri, 15 May 2015 14:28:55 -0300.<br/>
     </footer>
     </body>
 </html>

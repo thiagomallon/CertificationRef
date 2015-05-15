@@ -10,10 +10,10 @@
 namespace App\OOProgramming;
 
 /**
- * Classe OOGrandMa
+ * Classe GrandMa
  * @author Thiago Mallon <thiagomallon@gmail.com>
  */
-class OOGrandMa
+class GrandMa
 {
     protected $name;
 
