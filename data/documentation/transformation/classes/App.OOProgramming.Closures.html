@@ -3,734 +3,443 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>RepCertification</title>
+    <title>    RepCertification &raquo; \App\OOProgramming\Closures
+</title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
 
-    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
-    <link href="../css/prism.css" rel="stylesheet" media="all"/>
-    <link href="../css/template.css" rel="stylesheet" media="all"/>
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
     
-    <!--[if lt IE 9]>
-    <script src="../js/html5.js"></script>
-    <![endif]-->
-    <script src="../js/jquery-1.11.0.min.js"></script>
-    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery.smooth-scroll.js"></script>
-    <script src="../js/prism.min.js"></script>
-    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
-    <script type="text/javascript">
-    function loadExternalCodeSnippets() {
-        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
-            var src = pre.getAttribute('data-src');
-            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
-            var language = 'php';
-
-            var code = document.createElement('code');
-            code.className = 'language-' + language;
-
-            pre.textContent = '';
-
-            code.textContent = 'Loading…';
-
-            pre.appendChild(code);
-
-            var xhr = new XMLHttpRequest();
-
-            xhr.open('GET', src, true);
-
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState == 4) {
-
-                    if (xhr.status < 400 && xhr.responseText) {
-                        code.textContent = xhr.responseText;
-
-                        Prism.highlightElement(code);
-                    }
-                    else if (xhr.status >= 400) {
-                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
-                    }
-                    else {
-                        code.textContent = '✖ Error: File does not exist or is empty';
-                    }
-                }
-            };
-
-            xhr.send(null);
-        });
-    }
-
-    $(document).ready(function(){
-        loadExternalCodeSnippets();
-    });
-    $('#source-view').on('shown', function () {
-        loadExternalCodeSnippets();
-    })
-</script>
-
-    <link rel="shortcut icon" href="../images/favicon.ico"/>
-    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
-    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
-    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
-</head>
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
 <body>
 
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <i class="icon-ellipsis-vertical"></i>
-            </a>
-            <a class="brand" href="../index.html">RepCertification</a>
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">RepCertification</a>
 
-            <div class="nav-collapse">
-                <ul class="nav pull-right">
-                                        <li class="dropdown">
-                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
-                            API Documentation <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                                                        <li><a href="../namespaces/App.html">\App</a></li>
-                                                        <li><a href="../namespaces/Test.html">\Test</a></li>
-                                                    </ul>
-                    </li>
-                                        <li class="dropdown" id="charts-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Charts <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="../graphs/class.html">
-                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown" id="reports-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Reports <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">7</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../reports/markers.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">1</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../reports/deprecated.html">
-                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!--<div class="go_to_top">-->
-    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
-    <!--</div>-->
-</div>
-
-<div id="___" class="container-fluid">
-        <section class="row-fluid">
-        <div class="span2 sidebar">
-                                <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1535430121"></a>
-                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
-            </div>
-            <div id="namespace-1535430121" class="accordion-body collapse in">
-                <div class="accordion-inner">
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1048142619"></a>
-                                <a href="../namespaces/App.html" style="margin-left: 30px; padding-left: 0">App</a>
-            </div>
-            <div id="namespace-1048142619" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-507247523"></a>
-                                <a href="../namespaces/App.InputOutput.html" style="margin-left: 30px; padding-left: 0">InputOutput</a>
-            </div>
-            <div id="namespace-507247523" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/App.InputOutput.FileManipulation.html">FileManipulation</a></li>
-                                                    <li class="class"><a href="../classes/App.InputOutput.ResourceStream.html">ResourceStream</a></li>
-                                            </ul>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Test.html">Test</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1229448687"></a>
-                                <a href="../namespaces/App.OOProgramming.html" style="margin-left: 30px; padding-left: 0">OOProgramming</a>
-            </div>
-            <div id="namespace-1229448687" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/App.OOProgramming.Closures.html">Closures</a></li>
-                                                    <li class="class"><a href="../classes/App.OOProgramming.ClosuresToBind.html">ClosuresToBind</a></li>
-                                                    <li class="class"><a href="../classes/App.OOProgramming.MagicMethods.html">MagicMethods</a></li>
-                                                    <li class="class"><a href="../classes/App.OOProgramming.OODaughter.html">OODaughter</a></li>
-                                                    <li class="class"><a href="../classes/App.OOProgramming.OOGrandMa.html">OOGrandMa</a></li>
-                                                    <li class="class"><a href="../classes/App.OOProgramming.OOMother.html">OOMother</a></li>
-                                                    <li class="class"><a href="../classes/App.OOProgramming.Reflecting.html">Reflecting</a></li>
-                                            </ul>
-                </div>
-            </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
         </div>
     </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1810647710"></a>
-                                <a href="../namespaces/App.PHPBasics.html" style="margin-left: 30px; padding-left: 0">PHPBasics</a>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
             </div>
-            <div id="namespace-1810647710" class="accordion-body collapse ">
-                <div class="accordion-inner">
+        </noscript>
 
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/App.PHPBasics.BasicStuff.html">BasicStuff</a></li>
-                                                    <li class="class"><a href="../classes/App.PHPBasics.Daughter.html">Daughter</a></li>
-                                                    <li class="class"><a href="../classes/App.PHPBasics.Mother.html">Mother</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
     </div>
 
-                    
-                    <ul>
-                                                                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method_getClosure" title="getClosure :: Método retorna forma mais simples de closure de escopo de método.">
+            <span class="description">Método retorna forma mais simples de closure de escopo de método.</span><pre>getClosure</pre>
+        </a>
+    </li>
 
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-381677696"></a>
-                                <a href="../namespaces/Test.html" style="margin-left: 30px; padding-left: 0">Test</a>
-            </div>
-            <div id="namespace-381677696" class="accordion-body collapse ">
-                <div class="accordion-inner">
+                                                                                                        <li class="method public">
+        <a href="#method_getClosureFeatParam" title="getClosureFeatParam :: Método Retorna closure que implementa recebimento de parâmetro.">
+            <span class="description">Método Retorna closure que implementa recebimento de parâmetro.</span><pre>getClosureFeatParam</pre>
+        </a>
+    </li>
 
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-148946076"></a>
-                                <a href="../namespaces/Test.Arrays.html" style="margin-left: 30px; padding-left: 0">Arrays</a>
-            </div>
-            <div id="namespace-148946076" class="accordion-body collapse ">
-                <div class="accordion-inner">
+                                                                                                        <li class="method public">
+        <a href="#method_getClosureFeatProperty" title="getClosureFeatProperty :: Retorna closure que implementa recebimento de parâmetro e atribui
+à propriedade property1.">
+            <span class="description">Retorna closure que implementa recebimento de parâmetro e atribui
+à propriedade property1.</span><pre>getClosureFeatProperty</pre>
+        </a>
+    </li>
 
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Test.Arrays.ArraysTest.html">ArraysTest</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+                                                                                                        <li class="method public">
+        <a href="#method_getClosureFeatPropertyParam" title="getClosureFeatPropertyParam :: Retorna closure que recebe parâmetro, use e faz atribuição à propriedade
+property1.">
+            <span class="description">Retorna closure que recebe parâmetro, use e faz atribuição à propriedade
+property1.</span><pre>getClosureFeatPropertyParam</pre>
+        </a>
+    </li>
 
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-737371416"></a>
-                                <a href="../namespaces/Test.InputOutput.html" style="margin-left: 30px; padding-left: 0">InputOutput</a>
-            </div>
-            <div id="namespace-737371416" class="accordion-body collapse ">
-                <div class="accordion-inner">
+                                                                                                        <li class="method public">
+        <a href="#method_getProperty1" title="getProperty1 :: Método retorna propriedade property1">
+            <span class="description">Método retorna propriedade property1</span><pre>getProperty1</pre>
+        </a>
+    </li>
 
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Test.InputOutput.FileManipulationTest.html">FileManipulationTest</a></li>
-                                                    <li class="class"><a href="../classes/Test.InputOutput.ResourceStreamTest.html">ResourceStreamTest</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+                                                                                                        <li class="method public">
+        <a href="#method_setProperty1" title="setProperty1 :: Método seta valor da propriedade $property1">
+            <span class="description">Método seta valor da propriedade $property1</span><pre>setProperty1</pre>
+        </a>
+    </li>
 
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-772303131"></a>
-                                <a href="../namespaces/Test.OOProgramming.html" style="margin-left: 30px; padding-left: 0">OOProgramming</a>
-            </div>
-            <div id="namespace-772303131" class="accordion-body collapse ">
-                <div class="accordion-inner">
+                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                                                                                                    </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                    </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                            </ul>
+        </li>
+    </ul>
 
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Test.OOProgramming.ClosuresTest.html">ClosuresTest</a></li>
-                                                    <li class="class"><a href="../classes/Test.OOProgramming.ClosuresToBindTest.html">ClosuresToBindTest</a></li>
-                                                    <li class="class"><a href="../classes/Test.OOProgramming.MagicMethodsTest.html">MagicMethodsTest</a></li>
-                                                    <li class="class"><a href="../classes/Test.OOProgramming.OODaughterTest.html">OODaughterTest</a></li>
-                                                    <li class="class"><a href="../classes/Test.OOProgramming.OOMotherTest.html">OOMotherTest</a></li>
-                                                    <li class="class"><a href="../classes/Test.OOProgramming.ReflectingTest.html">ReflectingTest</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1308484679"></a>
-                                <a href="../namespaces/Test.PHPBasics.html" style="margin-left: 30px; padding-left: 0">PHPBasics</a>
-            </div>
-            <div id="namespace-1308484679" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Test.PHPBasics.BasicStuffTest.html">BasicStuffTest</a></li>
-                                                    <li class="class"><a href="../classes/Test.PHPBasics.DaughterTest.html">DaughterTest</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                    
-                    <ul>
-                                                                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                    
-                    <ul>
-                                                                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
 
         </div>
-    </section>
-    <section class="row-fluid">
-        <div class="span10 offset2">
-            <div class="row-fluid">
-                <div class="span8 content class">
-                    <nav>
-                                                <a href="../namespaces/App.OOProgramming.html">\App\OOProgramming</a> <i class="icon-level-up"></i>
-                                            </nav>
-                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
 
-                    <h1><small>\App\OOProgramming</small>Closures</h1>
-                    <p><em>Não pode:
+        <div class="span8">
+            <div class="element class">
+                <h1>Closures</h1>
+                <small style="display: block; text-align: right">
+                                                        </small>
+                <p class="short_description">Não pode:
  - utilizar-se propriedades da classe como parâmetros do closure
  - utilizar-se propriedades da classe como parâmetro para a diretiva use
 Pode:
-- referenciar-se propriedades do objeto dentro do closure.</em></p>
-                    <p>-</p>
-                    
-                                        
-                    <section id="summary">
-                        <h2>Summary</h2>
-                        <section class="row-fluid heading">
-                            <section class="span4">
-                                <a href="#methods">Methods</a>
-                            </section>
-                            <section class="span4">
-                                <a href="#properties">Properties</a>
-                            </section>
-                            <section class="span4">
-                                <a href="#constants">Constants</a>
-                            </section>
-                        </section>
-                        <section class="row-fluid public">
-                            <section class="span4">
-                                                                    <a href="../classes/App.OOProgramming.Closures.html#method_getClosure" class="">getClosure()</a><br />
-                                                                    <a href="../classes/App.OOProgramming.Closures.html#method_getClosureFeatParam" class="">getClosureFeatParam()</a><br />
-                                                                    <a href="../classes/App.OOProgramming.Closures.html#method_getClosureFeatProperty" class="">getClosureFeatProperty()</a><br />
-                                                                    <a href="../classes/App.OOProgramming.Closures.html#method_getClosureFeatPropertyParam" class="">getClosureFeatPropertyParam()</a><br />
-                                                                    <a href="../classes/App.OOProgramming.Closures.html#method_setProperty1" class="">setProperty1()</a><br />
-                                                                    <a href="../classes/App.OOProgramming.Closures.html#method_getProperty1" class="">getProperty1()</a><br />
-                                                            </section>
-                            <section class="span4">
-                                                                    <em>No public properties found</em>
-                                                            </section>
-                            <section class="span4">
-                                                                    <em>No constants found</em>
-                                                            </section>
-                        </section>
-                        <section class="row-fluid protected">
-                            <section class="span4">
-                                                                    <em>No protected methods found</em>
-                                                            </section>
-                            <section class="span4">
-                                                                    <a href="../classes/App.OOProgramming.Closures.html#property_property1" class="">$property1</a><br />
-                                                            </section>
-                            <section class="span4">
-                                <em>N/A</em>
-                            </section>
-                        </section>
-                        <section class="row-fluid private">
-                            <section class="span4">
-                                                                    <em>No private methods found</em>
-                                                            </section>
-                            <section class="span4">
-                                                                    <em>No private properties found</em>
-                                                            </section>
-                            <section class="span4">
-                                <em>N/A</em>
-                            </section>
-                        </section>
-                    </section>
-                </div>
-                <aside class="span4 detailsbar">
-                                        
-                    
-                    <dl>
-                        <dt>File</dt>
-                            <dd><a href="../files/src.OOProgramming.Closures.html"><div class="path-wrapper">src/OOProgramming/Closures.php</div></a></dd>
-                                                <dt>Package</dt>
-                            <dd><div class="namespace-wrapper">Default</div></dd>
-                                                <dt>Class hierarchy</dt>
-                            <dd class="hierarchy">
-                                                                                                                                                                    <div class="namespace-wrapper">\App\OOProgramming\Closures</div>
-                            </dd>
+- referenciar-se propriedades do objeto dentro do closure.</p>
+                <div class="details">
+                    <div class="long_description">
+                        <p>-</p>
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        author
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Thiago Mallon <a href="mailto:thiagomallon@gmail.com">thiagomallon@gmail.com</a></p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Default</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                </table>
 
-                        
-                        
-                        
-                        
-                                                                        </dl>
-                    <h2>Tags</h2>
-                    <table class="table table-condensed">
-                                            <tr>
-                            <th>
-                                author
-                            </th>
-                            <td>
-                                                                    <p>Thiago Mallon <a href="mailto:thiagomallon@gmail.com">thiagomallon@gmail.com</a></p>
-                                                            </td>
-                        </tr>
-                                        </table>
-                </aside>
-            </div>
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method_getClosure"></a>
+                        <div class="element clickable method public  method_getClosure" data-toggle="collapse" data-target=".method_getClosure .collapse">
+                            <h2>Método retorna forma mais simples de closure de escopo de método.</h2>
+                            <pre>getClosure() : callable</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
 
-                        
-                                    <a id="properties" name="properties"></a>
-            <div class="row-fluid">
-                <div class="span8 content class">
-                    <h2>Properties</h2>
-                </div>
-                <aside class="span4 detailsbar"></aside>
-            </div>
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
 
-                                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="property_property1" name="property_property1" class="anchor"></a>
-            <article class="property">
-                <h3 class="protected ">$property1</h3>
-                <pre class="signature">$property1 : mixed</pre>
-                <p><em>Propriedade de uso geral</em></p>
-                
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
 
-                                <h4>Type</h4>
-                mixed
-                &mdash; Propriedade de uso geral                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                        <dl>
-                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                            
-                                    <a id="methods" name="methods"></a>
-            <div class="row-fluid">
-                <div class="span8 content class"><h2>Methods</h2></div>
-                <aside class="span4 detailsbar"></aside>
-            </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_getClosure" name="method_getClosure" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">getClosure()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getClosure() : callable</pre>
-                <p><em>Método retorna forma mais simples de closure de escopo de método.</em></p>
-                
-
-                
-                
-                                    <h4>Returns</h4>
-                    callable
-                                            &mdash; <p>Método retorna forma mais simples de closure de escopo de método.</p>
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_getClosureFeatParam" name="method_getClosureFeatParam" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">getClosureFeatParam()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getClosureFeatParam() : callable</pre>
-                <p><em>Método Retorna closure que implementa recebimento de parâmetro.</em></p>
-                
-
-                
-                
-                                    <h4>Returns</h4>
-                    callable
-                                            &mdash; <p>Método Retorna closure que implementa recebimento de parâmetro.</p>
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_getClosureFeatProperty" name="method_getClosureFeatProperty" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">getClosureFeatProperty()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getClosureFeatProperty() : callable</pre>
-                <p><em>Retorna closure que implementa recebimento de parâmetro e atribui
-à propriedade property1.</em></p>
-                
-
-                
-                
-                                    <h4>Returns</h4>
-                    callable
-                                            &mdash; <p>Retorna closure que implementa recebimento de parâmetro e atribui
-à propriedade property1.</p>
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_getClosureFeatPropertyParam" name="method_getClosureFeatPropertyParam" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">getClosureFeatPropertyParam()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getClosureFeatPropertyParam(string  <span class="argument">$beginPhrase</span>) : callable</pre>
-                <p><em>Retorna closure que recebe parâmetro, use e faz atribuição à propriedade
-property1.</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td>string</td>
-                                <td>$beginPhrase </td>
-                                <td><p>Parâmetro é usado na cláusula use do closure retornado pelo método.</p></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    callable
-                                            &mdash; <p>Retorna closure que recebe parâmetro, use e faz atribuição à propriedade
-property1.</p>
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_setProperty1" name="method_setProperty1" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">setProperty1()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">setProperty1(\App\OOProgramming\datatype  <span class="argument">$content</span>) : \App\OOProgramming\datatype</pre>
-                <p><em>Método seta valor da propriedade $property1</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td>\App\OOProgramming\datatype</td>
-                                <td>$content </td>
-                                <td><p>description</p></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    \App\OOProgramming\datatype
-                                            &mdash; <p>description</p>
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_getProperty1" name="method_getProperty1" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">getProperty1()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getProperty1() : callable</pre>
-                <p><em>Método retorna propriedade property1</em></p>
-                
-
-                
-                
-                                    <h4>Returns</h4>
-                    callable
-                                            &mdash; <p>Método retorna propriedade property1</p>
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>callable</code><p><p>Método retorna forma mais simples de closure de escopo de método.</p></p>
                                                                     </div>
-    </section>
+                            </div>
 
-    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3 id="source-view-label">Closures.php</h3>
-        </div>
-        <div class="modal-body">
-            <pre data-src="../files/src/OOProgramming/Closures.php.txt" class="language-php line-numbers"></pre>
+                        </div>
+                                            <a id="method_getClosureFeatParam"></a>
+                        <div class="element clickable method public  method_getClosureFeatParam" data-toggle="collapse" data-target=".method_getClosureFeatParam .collapse">
+                            <h2>Método Retorna closure que implementa recebimento de parâmetro.</h2>
+                            <pre>getClosureFeatParam() : callable</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>callable</code><p><p>Método Retorna closure que implementa recebimento de parâmetro.</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getClosureFeatProperty"></a>
+                        <div class="element clickable method public  method_getClosureFeatProperty" data-toggle="collapse" data-target=".method_getClosureFeatProperty .collapse">
+                            <h2>Retorna closure que implementa recebimento de parâmetro e atribui
+à propriedade property1.</h2>
+                            <pre>getClosureFeatProperty() : callable</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>callable</code><p><p>Retorna closure que implementa recebimento de parâmetro e atribui
+à propriedade property1.</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getClosureFeatPropertyParam"></a>
+                        <div class="element clickable method public  method_getClosureFeatPropertyParam" data-toggle="collapse" data-target=".method_getClosureFeatPropertyParam .collapse">
+                            <h2>Retorna closure que recebe parâmetro, use e faz atribuição à propriedade
+property1.</h2>
+                            <pre>getClosureFeatPropertyParam(string $beginPhrase) : callable</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$beginPhrase</h4>
+                                                <code>string</code><p><p>Parâmetro é usado na cláusula use do closure retornado pelo método.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>callable</code><p><p>Retorna closure que recebe parâmetro, use e faz atribuição à propriedade
+property1.</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getProperty1"></a>
+                        <div class="element clickable method public  method_getProperty1" data-toggle="collapse" data-target=".method_getProperty1 .collapse">
+                            <h2>Método retorna propriedade property1</h2>
+                            <pre>getProperty1() : callable</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>callable</code><p><p>Método retorna propriedade property1</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setProperty1"></a>
+                        <div class="element clickable method public  method_setProperty1" data-toggle="collapse" data-target=".method_setProperty1 .collapse">
+                            <h2>Método seta valor da propriedade $property1</h2>
+                            <pre>setProperty1(\App\OOProgramming\datatype $content) : \App\OOProgramming\datatype</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$content</h4>
+                                                <code>\App\OOProgramming\datatype</code><p><p>description</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\App\OOProgramming\datatype</code><p><p>description</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                    
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_property1"> </a>
+                            <div class="element clickable property  protected property_property1" data-toggle="collapse" data-target=".property_property1 .collapse">
+                                <h2>Propriedade de uso geral</h2>
+                                <pre>property1 : mixed</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Propriedade de uso geral</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>mixed</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\App\OOProgramming\Closures"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/App.OOProgramming.html">OOProgramming</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/App.OOProgramming.Closures.html">Closures</a></li>
+            </ul>
         </div>
     </div>
 
-    <footer class="row-fluid">
-        <section class="span10 offset2">
-            <section class="row-fluid">
-                <section class="span10 offset1">
-                    <section class="row-fluid footer-sections">
-                        <section class="span4">
-                                                        <h1><i class="icon-code"></i></h1>
-                            <div>
-                                <ul>
-                                                                            <li><a href="../namespaces/App.html">\App</a></li>
-                                                                            <li><a href="../namespaces/Test.html">\Test</a></li>
-                                                                    </ul>
-                            </div>
-                        </section>
-                        <section class="span4">
-                                                        <h1><i class="icon-bar-chart"></i></h1>
-                            <div>
-                                <ul>
-                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
-                                </ul>
-                            </div>
-                        </section>
-                        <section class="span4">
-                                                        <h1><i class="icon-pushpin"></i></h1>
-                            <div>
-                                <ul>
-                                    <li><a href="../reports/errors.html">Errors</a></li>
-                                    <li><a href="../reports/markers.html">Markers</a></li>
-                                </ul>
-                            </div>
-                        </section>
-                    </section>
-                </section>
-            </section>
-            <section class="row-fluid">
-                <section class="span10 offset1">
-                    <hr />
-                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on May 14th, 2015 at 10:48.
-                </section>
-            </section>
-        </section>
-    </footer>
-</div>
+    </div>
 
-</body>
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Thu, 14 May 2015 22:11:00 -0300.<br/>
+    </footer>
+    </body>
 </html>
