@@ -177,8 +177,12 @@ undefined.</span><pre>__get</pre>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method___isset" title="__isset :: Método">
-            <span class="description">Método</span><pre>__isset</pre>
+        <a href="#method___isset" title="__isset :: Método é chamado quando é atribuída uma propriedade do objeto à função isset(),
+tendo então, na classe, a implementação do método __isset(), este interceptará
+a chamada de isset(), possibilitando acrescentar-se funcionalidades à verificação.">
+            <span class="description">Método é chamado quando é atribuída uma propriedade do objeto à função isset(),
+tendo então, na classe, a implementação do método __isset(), este interceptará
+a chamada de isset(), possibilitando acrescentar-se funcionalidades à verificação.</span><pre>__isset</pre>
         </a>
     </li>
 
@@ -503,7 +507,9 @@ que solicita-se acesso.</p></p>
                         </div>
                                             <a id="method___isset"></a>
                         <div class="element clickable method public  method___isset" data-toggle="collapse" data-target=".method___isset .collapse">
-                            <h2>Método</h2>
+                            <h2>Método é chamado quando é atribuída uma propriedade do objeto à função isset(),
+tendo então, na classe, a implementação do método __isset(), este interceptará
+a chamada de isset(), possibilitando acrescentar-se funcionalidades à verificação.</h2>
                             <pre>__isset( $name) : \App\OOProgramming\datatype</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -719,7 +725,7 @@ Quando ocorre uma chamada assim, o retorno do método __toString será exibido n
                                                                 <h3><i class="icon-custom icon-property"></i> Properties</h3>
                                                     <a id="property_data"> </a>
                             <div class="element clickable property  protected property_data" data-toggle="collapse" data-target=".property_data .collapse">
-                                <h2>Armazenará propriedades não definidas e seus valores</h2>
+                                <h2>Armazena propriedades não definidas e seus valores</h2>
                                 <pre>data : array</pre>
                                 <div class="labels">
                                                                                                         </div>
@@ -743,6 +749,32 @@ Quando ocorre uma chamada assim, o retorno do método __toString será exibido n
                                                                             </div>
                                 </div>
                             </div>
+                                                    <a id="property_property1"> </a>
+                            <div class="element clickable property  public property_property1" data-toggle="collapse" data-target=".property_property1 .collapse">
+                                <h2>Propriedade para testes</h2>
+                                <pre>property1 : mixed</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>mixed</code>
+                                                                            </div>
+                                </div>
+                            </div>
                                                             </div>
             </div>
             <a id="\App\OOProgramming\MagicMethods"></a>
@@ -763,7 +795,7 @@ Quando ocorre uma chamada assim, o retorno do método __toString será exibido n
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Thu, 14 May 2015 22:11:00 -0300.<br/>
+            generated on Fri, 15 May 2015 14:28:54 -0300.<br/>
     </footer>
     </body>
 </html>

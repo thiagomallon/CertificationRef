@@ -10,15 +10,15 @@
 namespace Test\OOProgramming;
 
 /**
- * Classe de testes à classe OODaughter
+ * Classe de testes à classe Daughter
  * @author Thiago Mallon <thiagomallon@gmail.com>
  * @group OOProgramming
- * @group OOProgramming/OODaughterTest
+ * @group OOProgramming/DaughterTest
  */
-class OODaughterTest extends \PHPUnit_Framework_TestCase
+class DaughterTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * Instância da classe OODaughter
+     * Instância da classe Daughter
      * @var object $_daughter
      */
     protected $_daughter;
@@ -30,7 +30,7 @@ class OODaughterTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         /* Cria stub da classe a ser testada (just for fun) */
-        $this->_daughter = $this->getMockBuilder('\App\OOProgramming\OODaughter')
+        $this->_daughter = $this->getMockBuilder('\App\OOProgramming\Daughter')
         ->setMethods(null)
         ->getMock();
     }
@@ -47,11 +47,11 @@ class OODaughterTest extends \PHPUnit_Framework_TestCase
     /**
      * Método testa retorno do método getGrandMaName, que por sua vez, faz chamada ao método getName
      * da classe OOGrancMa, porém, observa-se que o valor original da propriedade $name (o da classe
-     * OOGrancMa), foi sobrescrito, já que nas classe OOMother e OODaughter, a mesma propriedade é
+     * OOGrancMa), foi sobrescrito, já que nas classe Mother e Daughter, a mesma propriedade é
      * setada, na sobrescrição do construtor, um jeito de consiguir pegar o valor declarado no contrutor
-     * da classe OOGrandMa, é apresentado no método de teste que se segue.
+     * da classe GrandMa, é apresentado no método de teste que se segue.
      * @return void
-     * @covers App\InputOutput\OODaughter::getGrandMaName
+     * @covers App\OOProgramming\Daughter::getGrandMaName
      */
     public function testAcessoGrandMa()
     {
@@ -62,9 +62,9 @@ class OODaughterTest extends \PHPUnit_Framework_TestCase
     /**
      * Método implementa, no metodo da classe, testado, uma forma de recuperação do valor original
      * da propriedade, uma vez que a mesma é atribuída no método construtor, sendo o mesmo sobrescrito
-     * nas demais classes que herdam (OOMother e OODaughter).
+     * nas demais classes que herdam (Mother e Daughter).
      * @return void
-     * @covers App\InputOutput\OODaughter::getMomName
+     * @covers App\OOProgramming\Daughter::getMomName
      */
     public function testGetMomName()
     {

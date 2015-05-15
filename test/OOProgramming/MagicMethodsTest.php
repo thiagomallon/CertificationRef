@@ -45,8 +45,10 @@ class MagicMethodsTest extends \PHPUnit_Framework_TestCase
     /**
      * Testa-se chamada à método indefinido, através do método mágico __call(),
      * implementado no objeto da instância.
+     * @return void
+     * @covers App\OOProgramming\MagicMethods::__call
      */
-    public function testUndefinedMethod()
+    public function testCallMagicMethod()
     {
         /* expressão abaixo executa método mágico __call(), da classe Mother, já que o método
          * justAddedMethod(), não existe na classe Mother, mas o método __call() */
@@ -61,8 +63,11 @@ class MagicMethodsTest extends \PHPUnit_Framework_TestCase
     /**
      * Testa-se atribuição de valor à propriedade inacessível, através do método mágico
      * __set(), implementado no objeto da instância.
+     * @return void
+     * @covers App\OOProgramming\MagicMethods::__set
+     * @covers App\OOProgramming\MagicMethods::__get
      */
-    public function testSettingInaccessibleProperty()
+    public function testGetSetMagicMethod()
     {
         $this->_itsNotMagic->notDefProp = 'Setando private';
         $this->assertEquals('Setando private', $this->_itsNotMagic->notDefProp);
@@ -73,8 +78,45 @@ class MagicMethodsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Testa-se impressão de instância como string, através do método mágico __string(),
+     * Testa-se interceptação da função isset(), através do método mágico __isset(), declarado na classe
+     * do objeto. A função é interceptada quando chama-se a função isset(), passando-se uma propriedade
+     * inacessível (ou inexistente), no objeto.
+     * @return void
+     * @covers App\OOProgramming\MagicMethods::__isset
+     */
+    public function testIssetMagicMethod()
+    {
+        $this->markTestIncomplete('Incompleted test of __isset() magic method');
+        // $this->_itsNotMagic->notDef = 'Setted!';
+        // var_dump(isset($this->_itsNotMagic->notDef));
+        // var_dump(isset($this->_itsNotMagic->vatapa));
+    }
+
+    /**
+     * Método
+     * @return void
+     * @covers App\OOProgramming\MagicMethods::__sleep
+     */
+    public function testSleepMagicMethod()
+    {
+        $this->_itsNotMagic->property1 = 'Mingal de aveia';
+        $this->_itsNotMagic->notDef = 'Propriedade ndef';
+        $serialized = serialize($this->_itsNotMagic);
+        //var_dump($serialized);
+        $unserialized = unserialize($serialized);
+        // echo $unserialized->notDef;
+        $this->assertEquals('Propriedade ndef', $unserialized->notDef);
+        /* verifica-se através da expressão acima que foram preservados tanto propriedades como
+        métodos declarados na classe do objeto, já a expressão acima, fez uso do método mágico
+        __set(), declarado na classe MagicMethods(), pois a propriedade notDef, não existe na
+        classe, mas foi declarada pelo método __set() e retornada pelo método __get()*/
+    }
+
+    /**
+     * Testa-se impressão de instância como string, através do método mágico __toString(),
      * implementado no objeto da instância.
+     * @return void
+     * @covers App\OOProgramming\MagicMethods::__toString
      */
     public function testToStrindMagicMethod()
     {

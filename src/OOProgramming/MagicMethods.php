@@ -16,11 +16,16 @@ namespace App\OOProgramming;
 class MagicMethods
 {
     /**
-     * Armazenará propriedades não definidas e seus valores
+     * Armazena propriedades não definidas e seus valores
      * @var array $data
      */
     protected $data = [];
 
+    /**
+     * Propriedade para testes
+     * @var mixed $property1
+     */
+    public $property1;
 
     /**
      * Retorna variável não declarada no escopo da classe, desde que essa tenha sido
@@ -32,7 +37,7 @@ class MagicMethods
      */
     public function __get($name)
     {
-        return $this->$name;
+        return $this->data[$name];
     }
 
     /**
@@ -47,17 +52,22 @@ class MagicMethods
     public function __set($name, $value)
     {
         $this->data[$name] = $value;
-        $this->$name = $value;
+        //$this->$name = $value;
     }
 
     /**
-     * Método
+     * Método é chamado quando é atribuída uma propriedade do objeto à função isset(),
+     * tendo então, na classe, a implementação do método __isset(), este interceptará
+     * a chamada de isset(), possibilitando acrescentar-se funcionalidades à verificação.
      * @return datatype description
      *
      */
     public function __isset($name)
     {
-        
+        // if (isset($this->data[$name])) {
+        //     return 'yep! not a declared property, but we have it.';
+        // }
+        return 'anyway!';
     }
 
     /**
@@ -67,7 +77,7 @@ class MagicMethods
      */
     public function __empty()
     {
-        
+
     }
 
     /**
@@ -91,7 +101,7 @@ class MagicMethods
      */
     public static function __callStatic($name, $args)
     {
-        
+
     }
 
     /**
@@ -109,7 +119,7 @@ class MagicMethods
      */
     public function __clone()
     {
-        
+
     }
 
     /**
@@ -117,7 +127,7 @@ class MagicMethods
      */
     public function __sleep()
     {
-
+        return ['data', 'property1'];
     }
 
     /**
@@ -127,7 +137,7 @@ class MagicMethods
      */
     public function __wakeup()
     {
-        
+
     }
 
     /**
@@ -137,7 +147,7 @@ class MagicMethods
      */
     public function __set_start()
     {
-        
+
     }
 
     /**

@@ -13,7 +13,7 @@ namespace App\OOProgramming;
  * em classe de teste.
  * @author Thiago Mallon <thiagomallon@gmail.com>
  */
-class OODaughter extends OOMother
+class Daughter extends Mother
 {
 
     /**
@@ -57,7 +57,7 @@ class OODaughter extends OOMother
      */
     public function getInstance()
     {
-        return new static(); // retorna instância estática do objeto
+        return new static(); // retorna instância objeto
     }
 
 
@@ -90,22 +90,22 @@ class OODaughter extends OOMother
     /**
      * Método retorna chamada ao método getName, que por sua vez retorna valor da propriedade
      * $name
-     * @return string Valor retornado da chamada ao método getName da classe OOGrandMa
+     * @return string Valor retornado da chamada ao método getName da classe GrandMa
      * construtor da classe
      */
     public function getGrandMaName()
     {
-        // OOGrandMa::__construct(); // para que a função getName, retorne o valor da propriedade, na classe OOGrandMa
-        return OOGrandMa::getName();
+        // GrandMa::__construct(); // para que a função getName, retorne o valor da propriedade, na classe GrandMa
+        return GrandMa::getName();
     }
 
     /**
-     * Método retorna chamada ao método getName da classe mãe OOMother
-     * @return string Valor retornado da chamada ao método getName da classe OOMother
+     * Método retorna chamada ao método getName da classe mãe Mother
+     * @return string Valor retornado da chamada ao método getName da classe Mother
      */
     public function getMomName()
     {
-        OOMother::__construct();
-        return OOMother::getName();
+        Mother::__construct();
+        return Mother::getName();
     }
 }
