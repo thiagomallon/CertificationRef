@@ -5,15 +5,15 @@
  */
 
 /**
- * @package App\OOProgramming
+ * @package App\Patterns
  */
- namespace App\OOProgramming;
+namespace App\Patterns;
 
 /**
- * Interface TargetInterface
+ * Interface SapiensInterface
  * @author Thiago Mallon <thiagomallon@gmail.com>
  */
-interface TargetInterface
+interface SapiensInterface
 {
     
 }
