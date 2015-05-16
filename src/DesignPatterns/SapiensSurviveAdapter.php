@@ -5,9 +5,9 @@
  */
 
 /**
- * @package App\Patterns
+ * @package App\DesignPatterns
  */
-namespace App\Patterns;
+namespace App\DesignPatterns;
 
 /**
  * Classe SapiensSurviveAdapter - Implementa padrão adapter. Sabemos que a forma de conseguir comida, pelo
