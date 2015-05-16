@@ -42,14 +42,25 @@ class PeculiarCallsTest extends \PHPUnit_Framework_TestCase
      * Método implementa instanciamento imediato, que só existe na linha de execução, logo
      * após a expressão, o objeto é destruído, a não ser que seja retornada uma instância da
      * mesma.
-     * @return void
      * @covers App\OOProgramming\Daughter::setName
      * @covers App\OOProgramming\Daughter::getName
+     * @return void
      */
     public function testSecondMode()
     {
         /* PECULAR CALLS by Mallon */
         $name = (new \App\OOProgramming\Daughter())->getName();
         $this->assertEquals('MotherClass!DaughterClass!', $name);
+    }
+
+    /**
+     * Método estático de teste, testa chamada peculiar em método estático
+     * @covers App\OOProgramming\GrandMa::sayHello
+     * @return void
+     */
+    public static function testStaticFirsMode()
+    {
+        $salute = \App\OOProgramming\GrandMa::{'sayHello'}(); // faz chamada peculiar
+        self::assertEquals('Hello, how are you, son?!', $salute); // testa retorno
     }
 }

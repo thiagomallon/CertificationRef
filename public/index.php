@@ -17,13 +17,13 @@
     <script src="lib/angular-mocks/angular-mocks.js"></script>      
 
     <!-- include source files here... -->
-    <script src="js/game-engine.js"></script>    
-    <script src="js/controller/game-screen.js"></script>    
+    <script src="js/game-engine.js"></script> 
+    <script src="js/controller/game-screen.js"></script> 
 
     <!-- include spec files here... -->
     <script src="js/test/controller/game-screen.spec.js"></script>
 </head>
 <body>    
-   <div ng-controller="GameScreen as screen" id="screenGame"></div>    
+   <div ng-controller="GameScreen as screen" id="screenGame"></div>
 </body>
 </html>
