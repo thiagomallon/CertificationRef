@@ -15,6 +15,10 @@ namespace App\OOProgramming;
  */
 class GrandMa
 {
+    /**
+     * Propriedade armazena nome
+     * @var string $name
+     */
     protected $name;
 
     /**
@@ -43,5 +47,23 @@ class GrandMa
     public function setName($name)
     {
         $this->name = $name;
+    }
+
+    /**
+     * Método
+     * @return datatype description
+     */
+    public static function getCpf()
+    {
+        return self::$cpf;
+    }
+
+    /**
+     * Método estático retorna string
+     * @return string
+     */
+    public static function sayHello()
+    {
+        return 'Hello, how are you, son?!';
     }
 }

@@ -29,13 +29,13 @@ class UNSerializingTest extends \PHPUnit_Framework_TestCase
      */
     public function testSerialization()
     {
-        /* oh today I'm a bit lazy */
         $_daughter = new \App\OOProgramming\Daughter;
 
         $_daughter->setName('PreSerialize'); // atribui-se valor à propriedade $name
         $daughSrz = serialize($_daughter); // serializa-se o objeto
         //print_r($daughSrz); // opção para verificar-se string gerada (consegue-se notar a ocorrência do valor atribuído à propriedade $name)
-        $daughUsrz = unserialize($daughSrz); // deserializa o objeto
+
+        $daughUsrz = unserialize($daughSrz); // deserializa-se o objeto
         //print_r($daughUsrz);
         $this->assertEquals('PreSerialize', $daughUsrz->getName()); /* observa-se que ainda é possível realiza chamada à métodos e a
                                                                      * presente chamada retornou o valor atribuído à propriedade antes de sua serialização,

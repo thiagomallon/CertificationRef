@@ -1,5 +1,6 @@
 <?php
 
+
 /**
  * Created by Thiago Mallon
  */
@@ -10,10 +11,10 @@
 namespace App\Patterns;
 
 /**
- * Interface SapiensInterface
+ * Classe SapiensFemale
  * @author Thiago Mallon <thiagomallon@gmail.com>
  */
-interface SapiensInterface
+class SapiensFemale extends SapiensAbstract
 {
     
 }
