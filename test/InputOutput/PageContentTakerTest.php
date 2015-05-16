@@ -7,9 +7,9 @@ namespace Test\InputOutput;
 class PageContentTakerTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var PageContentTaker
+     * @var PageContentTaker $_pageContentTaker
      */
-    protected $object;
+    protected $_pageContentTaker;
 
     /**
      * Sets up the fixture, for example, opens a network connection.
@@ -17,7 +17,7 @@ class PageContentTakerTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->object = new PageContentTaker;
+        $this->_pageContentTaker = new \App\InputOutput\PageContentTaker;
     }
 
     /**
@@ -26,17 +26,37 @@ class PageContentTakerTest extends \PHPUnit_Framework_TestCase
      */
     protected function tearDown()
     {
+        unset($this->_pageContentTaker);
     }
 
     /**
+     * @return void
      * @covers App\InputOutput\PageContentTaker::takingWithGet
-     * @todo   Implement testTakingWithGet().
      */
     public function testTakingWithGet()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-            'This test has not been implemented yet.'
-        );
+        $this->markTestIncomplete('Incomplete. Method need more tests!');
+        print_r($this->_pageContentTaker->takingWithGet('http://www.example.com'));
+    }
+
+    /**
+     * @return void
+     * @covers App\InputOutput\PageContentTaker::takingWithPost
+     */
+    public function testTakingWithPost()
+    {
+        $this->markTestIncomplete('Incomplete. Method need more tests!');
+        print_r($this->_pageContentTaker->takingWithPost());
+    }
+
+    /**
+     * Método
+     * @return void
+     * @covers App\InputOutput\PageContentTaker::takingWithPostAndSocket
+     */
+    public function testTakingWithPostAndSocket()
+    {
+        $this->markTestIncomplete('Incomplete. Method need more tests!');
+        print_r($this->_pageContentTaker->takingWithPostAndSocket());
     }
 }
