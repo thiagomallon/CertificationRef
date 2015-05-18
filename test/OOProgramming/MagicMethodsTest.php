@@ -104,7 +104,7 @@ class MagicMethodsTest extends \PHPUnit_Framework_TestCase
         $serialized = serialize($this->_itsNotMagic);
         //var_dump($serialized);
         $unserialized = unserialize($serialized);
-        // echo $unserialized->notDef;
+        // print $unserialized->notDef;
         $this->assertEquals('Propriedade ndef', $unserialized->notDef);
         /* verifica-se através da expressão acima que foram preservados tanto propriedades como
         métodos declarados na classe do objeto, já a expressão acima, fez uso do método mágico
@@ -122,7 +122,7 @@ class MagicMethodsTest extends \PHPUnit_Framework_TestCase
     {
         $_localWithoutMagic = new \App\OOProgramming\MagicMethods();
         ob_start(); // iniciliaza output buffer
-        echo $_localWithoutMagic; // faz-se chamada indireta ao método mágico __toString() da classe
+        print $_localWithoutMagic; // faz-se chamada indireta ao método mágico __toString() da classe
         $toStringMsg = ob_get_clean(); // captura-se saída, limpa-se buffer de saída e retorna-se a mesma
 
         // verifica-se se método __toString() foi acionado e retornou a msg esperada

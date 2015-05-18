@@ -43,8 +43,8 @@
                             </a>
                             <ul class="dropdown-menu">
                                                                     <li><a>Namespaces</a></li>
-                                                                        <li><a href="../namespaces/Test.html">Test</a></li>
                                                                         <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Test.html">Test</a></li>
                                                                                                                                 </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
@@ -192,9 +192,13 @@ e valores invertidos, ou seja, índice no lugar do valor e vice-versa.</span><pr
 
                                                                                                         <li class="method public">
         <a href="#method_testArrayKeyExistsImplement" title="testArrayKeyExistsImplement :: Método testa função array_key_exists() do PHP. Função verifica se existe
-dado índice no array e retorna true caso ocorra.">
+dado índice no array e retorna true caso ocorra. Essa função é útil e deve ser utilizada
+quando a informação que se deseja é saber se um dado elemento existe. Veja os resultados
+não satisfatórios que uma abordagem com isset() poderia trazer:">
             <span class="description">Método testa função array_key_exists() do PHP. Função verifica se existe
-dado índice no array e retorna true caso ocorra.</span><pre>testArrayKeyExistsImplement</pre>
+dado índice no array e retorna true caso ocorra. Essa função é útil e deve ser utilizada
+quando a informação que se deseja é saber se um dado elemento existe. Veja os resultados
+não satisfatórios que uma abordagem com isset() poderia trazer:</span><pre>testArrayKeyExistsImplement</pre>
         </a>
     </li>
 
@@ -243,6 +247,16 @@ vista no método acima, implementa substituição tanto de índices associativos
     </li>
 
                                                                                                         <li class="method public">
+        <a href="#method_testArrayReverse" title="testArrayReverse :: Método implementa função array_reverse() do PHP. Função inverte ordem dos valores, sendo, sendo o último
+elemento colocado em primeiro e vice-versa. Para índices numéricos ocorre perda de relação índice/chave,
+porém, índices associativos são mantidos.">
+            <span class="description">Método implementa função array_reverse() do PHP. Função inverte ordem dos valores, sendo, sendo o último
+elemento colocado em primeiro e vice-versa. Para índices numéricos ocorre perda de relação índice/chave,
+porém, índices associativos são mantidos.</span><pre>testArrayReverse</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
         <a href="#method_testArrayShift" title="testArrayShift :: Método implementa chamada à função array_shift() do PHP. A função retira o primerio elemento do
 array passado e retorna seu valor, deixando o array passado sem o primeiro elemento.">
             <span class="description">Método implementa chamada à função array_shift() do PHP. A função retira o primerio elemento do
@@ -279,14 +293,12 @@ dessa vez numericamente indexados.</span><pre>testArrayValuesImplement</pre>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_testASortArray" title="testASortArray :: Método implementa ordenação de forma ascendênte aos valores dos elementos do array
-passado, função preserva valores dos índices, sejam esses numéricos ou associativos,
-porém, não ordena corretamente valores alfa numéricos, não substituindo, assim, a função
-natsort().">
-            <span class="description">Método implementa ordenação de forma ascendênte aos valores dos elementos do array
-passado, função preserva valores dos índices, sejam esses numéricos ou associativos,
-porém, não ordena corretamente valores alfa numéricos, não substituindo, assim, a função
-natsort().</span><pre>testASortArray</pre>
+        <a href="#method_testArrayWalk" title="testArrayWalk :: Método implementa função array_walk(), que possibilita o uso de função callback, para tratamento de valores e/ou
+índices do array navegado. Função muito útil, e em adição à função array_map(), ela permite alteração também dos
+índices, equanto a array_map() somente de valores.">
+            <span class="description">Método implementa função array_walk(), que possibilita o uso de função callback, para tratamento de valores e/ou
+índices do array navegado. Função muito útil, e em adição à função array_map(), ela permite alteração também dos
+índices, equanto a array_map() somente de valores.</span><pre>testArrayWalk</pre>
         </a>
     </li>
 
@@ -301,34 +313,28 @@ ocorra.</span><pre>testInArrayImplement</pre>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_testKSortArray" title="testKSortArray :: Método testa atribuição de array à função ksort() do PHP. Verifica-se que apesar
-de ordenar os índices e manter a associação ao valor, não ordenando assim os valores,
-mas tão somente os índices, a função ksort() não ordena de forma eficiente índices de
-de nomes alfanuméricos, o índice book2.pdf é colocado posterior ao índice book12.pdf.">
-            <span class="description">Método testa atribuição de array à função ksort() do PHP. Verifica-se que apesar
-de ordenar os índices e manter a associação ao valor, não ordenando assim os valores,
-mas tão somente os índices, a função ksort() não ordena de forma eficiente índices de
-de nomes alfanuméricos, o índice book2.pdf é colocado posterior ao índice book12.pdf.</span><pre>testKSortArray</pre>
+        <a href="#method_testInsertion" title="testInsertion :: Método verifica forma de iteração em inserção de elementos em um array. Observa-se
+que o primeiro índice numérico é 4, porém, somente ele e o índice 0 foram explicitamente
+declarados, o outro índice numérico, que possui valor &#039;um&#039;, não foi explicitamente declarado,
+porém, verifica-se que o índice criado para ele, é o 5, uma vez que foi declarado o índice
+4. Sendo assim conclui-se que o PHP não se importa com posições de indexação vazias, ele
+sempre criará um índice incrementando um ao índice de maior posição.">
+            <span class="description">Método verifica forma de iteração em inserção de elementos em um array. Observa-se
+que o primeiro índice numérico é 4, porém, somente ele e o índice 0 foram explicitamente
+declarados, o outro índice numérico, que possui valor &#039;um&#039;, não foi explicitamente declarado,
+porém, verifica-se que o índice criado para ele, é o 5, uma vez que foi declarado o índice
+4. Sendo assim conclui-se que o PHP não se importa com posições de indexação vazias, ele
+sempre criará um índice incrementando um ao índice de maior posição.</span><pre>testInsertion</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_testNatSort" title="testNatSort :: Método testa implementação de função natsort() do PHP.">
-            <span class="description">Método testa implementação de função natsort() do PHP.</span><pre>testNatSort</pre>
-        </a>
-    </li>
-
-                                                                                                        <li class="method public">
-        <a href="#method_testRSortArray" title="testRSortArray :: Método atua de forma semelhante à função sort(), diferenciando-se na ordem em que se dispõe
-os elementos, fazendo-o de forma reversa.">
-            <span class="description">Método atua de forma semelhante à função sort(), diferenciando-se na ordem em que se dispõe
-os elementos, fazendo-o de forma reversa.</span><pre>testRSortArray</pre>
-        </a>
-    </li>
-
-                                                                                                        <li class="method public">
-        <a href="#method_testSortArray" title="testSortArray :: Método implementa função sort().">
-            <span class="description">Método implementa função sort().</span><pre>testSortArray</pre>
+        <a href="#method_testList" title="testList :: Método implementa função (ou melhor, construtor de linguagem list()). Função atribui
+valor de dada posição à variável atribuída, seguindo-se a ordem de ocorrência. No exemplo
+abaixo.">
+            <span class="description">Método implementa função (ou melhor, construtor de linguagem list()). Função atribui
+valor de dada posição à variável atribuída, seguindo-se a ordem de ocorrência. No exemplo
+abaixo.</span><pre>testList</pre>
         </a>
     </li>
 
@@ -336,11 +342,11 @@ os elementos, fazendo-o de forma reversa.</span><pre>testRSortArray</pre>
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -358,10 +364,30 @@ os elementos, fazendo-o de forma reversa.</span><pre>testRSortArray</pre>
                 <small style="display: block; text-align: right">
                                             Extends \PHPUnit_Framework_TestCase
                                                         </small>
-                <p class="short_description">Classe de testes do objeto Arrays</p>
+                <p class="short_description">Classe de testes do objeto Arrays
+Observações:</p>
                 <div class="details">
                     <div class="long_description">
-                        
+                        <p>PHP provides a great amount of flexibility in how numeric keys can be
+assigned to arrays: numeric keys can be any integer number (both negative
+and positive), and they don’t need to be sequential, so a large gap can exist
+between the indices of two consecutive values without the need to create
+intermediate values to cover every possible key in between. Moreover, the
+keys of an array do not determine the order of its elements—as we saw earlier
+when we created an enumerative array with keys that were out of natural
+order</p>
+<p>When an element is added to an array without specifying a key, PHP
+automatically assigns a numeric one that is equal to the greatest numeric key
+already in existence in the array, plus one</p>
+<p>Note that array keys are case-sensitive, but type insensitive. Thus, the key
+'A' is different from the key 'a' , but the keys '1' and 1 are the same.
+However, the conversion is only applied if a string key contains the traditional
+decimal representation of a number; thus, for example, the key '01' is not
+the same as the key 1 . Attempting to use a float as a key will convert it to an
+integer key, so that '12.5' becomes '12' . Using boolean values of true and
+false as keys will cast them to 1 and 0 respectively, while using NULL will
+actually cause them to be stored under the empty string &quot;&quot; . Finally, arrays
+and objects cannot be used as keys.</p>
                     </div>
                     <table class="table table-bordered">
                                                                                     <tr>
@@ -388,7 +414,7 @@ os elementos, fazendo-o de forma reversa.</span><pre>testRSortArray</pre>
                                                                             </th>
                                     <td>
                                                                                     
-                                                                                <p>Arrays/ArrayTest</p>
+                                                                                <p>Arrays/ArraysTest</p>
                                     </td>
                                 </tr>
                                                                                                                 <tr>
@@ -659,7 +685,9 @@ teste, o único elemento que ocorre com mesmo valor e índice em ambos é o de �
                                             <a id="method_testArrayKeyExistsImplement"></a>
                         <div class="element clickable method public  method_testArrayKeyExistsImplement" data-toggle="collapse" data-target=".method_testArrayKeyExistsImplement .collapse">
                             <h2>Método testa função array_key_exists() do PHP. Função verifica se existe
-dado índice no array e retorna true caso ocorra.</h2>
+dado índice no array e retorna true caso ocorra. Essa função é útil e deve ser utilizada
+quando a informação que se deseja é saber se um dado elemento existe. Veja os resultados
+não satisfatórios que uma abordagem com isset() poderia trazer:</h2>
                             <pre>testArrayKeyExistsImplement() : void</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -667,7 +695,13 @@ dado índice no array e retorna true caso ocorra.</h2>
                             
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"></div>
+                                    <div class="long_description"><p>$a = ['1st'=&gt;null, '2nd'='second'];
+isset($a['1st']); // false</p>
+<p>Verifica-se que mesmo o índice '1st' existindo, o resultado é false, isso pq o que está
+sendo comparado é o valor do elemento e não seu índice. Por isso utilizar a função
+array_key_exists() é a abordagem correta e a única satisfatória.</p>
+<p>Por sua vez, se quisermos saber se um elemento (valor) existe em um dado array,
+a função para tal tarefa á a in_array();</p></div>
 
                                     <table class="table">
                                                                                     <tr>
@@ -781,6 +815,35 @@ do array de retorno.</h2>
                             <h2>Método implementa chamada à função array_replace() do PHP. Função, diferentemente da função array_merge(),
 vista no método acima, implementa substituição tanto de índices associativos, quanto de índices numéricos.</h2>
                             <pre>testArrayReplace() : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testArrayReverse"></a>
+                        <div class="element clickable method public  method_testArrayReverse" data-toggle="collapse" data-target=".method_testArrayReverse .collapse">
+                            <h2>Método implementa função array_reverse() do PHP. Função inverte ordem dos valores, sendo, sendo o último
+elemento colocado em primeiro e vice-versa. Para índices numéricos ocorre perda de relação índice/chave,
+porém, índices associativos são mantidos.</h2>
+                            <pre>testArrayReverse() : void</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -954,13 +1017,12 @@ dessa vez numericamente indexados.</h2>
                             </div>
 
                         </div>
-                                            <a id="method_testASortArray"></a>
-                        <div class="element clickable method public  method_testASortArray" data-toggle="collapse" data-target=".method_testASortArray .collapse">
-                            <h2>Método implementa ordenação de forma ascendênte aos valores dos elementos do array
-passado, função preserva valores dos índices, sejam esses numéricos ou associativos,
-porém, não ordena corretamente valores alfa numéricos, não substituindo, assim, a função
-natsort().</h2>
-                            <pre>testASortArray() : void</pre>
+                                            <a id="method_testArrayWalk"></a>
+                        <div class="element clickable method public  method_testArrayWalk" data-toggle="collapse" data-target=".method_testArrayWalk .collapse">
+                            <h2>Método implementa função array_walk(), que possibilita o uso de função callback, para tratamento de valores e/ou
+índices do array navegado. Função muito útil, e em adição à função array_map(), ela permite alteração também dos
+índices, equanto a array_map() somente de valores.</h2>
+                            <pre>testArrayWalk() : void</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -1013,73 +1075,15 @@ ocorra.</h2>
                             </div>
 
                         </div>
-                                            <a id="method_testKSortArray"></a>
-                        <div class="element clickable method public  method_testKSortArray" data-toggle="collapse" data-target=".method_testKSortArray .collapse">
-                            <h2>Método testa atribuição de array à função ksort() do PHP. Verifica-se que apesar
-de ordenar os índices e manter a associação ao valor, não ordenando assim os valores,
-mas tão somente os índices, a função ksort() não ordena de forma eficiente índices de
-de nomes alfanuméricos, o índice book2.pdf é colocado posterior ao índice book12.pdf.</h2>
-                            <pre>testKSortArray() : void</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"><p>O var_dump mostra a atuação da função em um array associativo.</p></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                    
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_testNatSort"></a>
-                        <div class="element clickable method public  method_testNatSort" data-toggle="collapse" data-target=".method_testNatSort .collapse">
-                            <h2>Método testa implementação de função natsort() do PHP.</h2>
-                            <pre>testNatSort() : void</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"><p>Quando ordenamos os valores alfanúmericos de um array, pela função padrão (sort())
-o ordenamento não é feito realmente da forma que se espera, o var dump da função
-sort(), abaixo, mostra como os valores são ordenados, porém quando utilizamos a
-função natsort() o ordenamento é o que mais comumente se espera. É importante
-ressaltar que os índices são preservados na função nartsort(), somente a ordem
-dos elementos é alterada.</p></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                    
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_testRSortArray"></a>
-                        <div class="element clickable method public  method_testRSortArray" data-toggle="collapse" data-target=".method_testRSortArray .collapse">
-                            <h2>Método atua de forma semelhante à função sort(), diferenciando-se na ordem em que se dispõe
-os elementos, fazendo-o de forma reversa.</h2>
-                            <pre>testRSortArray() : void</pre>
+                                            <a id="method_testInsertion"></a>
+                        <div class="element clickable method public  method_testInsertion" data-toggle="collapse" data-target=".method_testInsertion .collapse">
+                            <h2>Método verifica forma de iteração em inserção de elementos em um array. Observa-se
+que o primeiro índice numérico é 4, porém, somente ele e o índice 0 foram explicitamente
+declarados, o outro índice numérico, que possui valor &#039;um&#039;, não foi explicitamente declarado,
+porém, verifica-se que o índice criado para ele, é o 5, uma vez que foi declarado o índice
+4. Sendo assim conclui-se que o PHP não se importa com posições de indexação vazias, ele
+sempre criará um índice incrementando um ao índice de maior posição.</h2>
+                            <pre>testInsertion() : void</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -1103,19 +1107,19 @@ os elementos, fazendo-o de forma reversa.</h2>
                             </div>
 
                         </div>
-                                            <a id="method_testSortArray"></a>
-                        <div class="element clickable method public  method_testSortArray" data-toggle="collapse" data-target=".method_testSortArray .collapse">
-                            <h2>Método implementa função sort().</h2>
-                            <pre>testSortArray() : void</pre>
+                                            <a id="method_testList"></a>
+                        <div class="element clickable method public  method_testList" data-toggle="collapse" data-target=".method_testList .collapse">
+                            <h2>Método implementa função (ou melhor, construtor de linguagem list()). Função atribui
+valor de dada posição à variável atribuída, seguindo-se a ordem de ocorrência. No exemplo
+abaixo.</h2>
+                            <pre>testList() : void</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
                             
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"><p>Quando aplicamos a função sort() a um array, o mesmo será ordenado segundo os seus valores
-e não será preservadas as ordems dos índices do array e se o mesmo for associativo, os índices
-associativos serão substituídos por índices numéricos.</p></div>
+                                    <div class="long_description"></div>
 
                                     <table class="table">
                                                                                     <tr>
@@ -1181,7 +1185,7 @@ associativos serão substituídos por índices numéricos.</p></div>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Sat, 16 May 2015 16:23:47 -0300.<br/>
+            generated on Mon, 18 May 2015 18:41:03 -0300.<br/>
     </footer>
     </body>
 </html>

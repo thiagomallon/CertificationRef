@@ -43,8 +43,8 @@
                             </a>
                             <ul class="dropdown-menu">
                                                                     <li><a>Namespaces</a></li>
-                                                                        <li><a href="../namespaces/Test.html">Test</a></li>
                                                                         <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Test.html">Test</a></li>
                                                                                                                                 </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
@@ -218,11 +218,11 @@ controle.</span><pre>__set</pre>
 
                                                                                                         <li class="method public">
         <a href="#method___toString" title="__toString :: método é chamado toda vez que instância de classe é chamado como um string. ex:
-echo $_magicMethods;
-Quando ocorre uma chamada assim, o retorno do método __toString será exibido no echo.">
+print $_magicMethods;
+Quando ocorre uma chamada assim, o retorno do método __toString será exibido no print.">
             <span class="description">método é chamado toda vez que instância de classe é chamado como um string. ex:
-echo $_magicMethods;
-Quando ocorre uma chamada assim, o retorno do método __toString será exibido no echo.</span><pre>__toString</pre>
+print $_magicMethods;
+Quando ocorre uma chamada assim, o retorno do método __toString será exibido no print.</span><pre>__toString</pre>
         </a>
     </li>
 
@@ -322,7 +322,7 @@ __call() será executado.</h2>
                                             <a id="method___callStatic"></a>
                         <div class="element clickable method public  method___callStatic" data-toggle="collapse" data-target=".method___callStatic .collapse">
                             <h2>Método</h2>
-                            <pre>__callStatic( $name,  $args) : \App\OOProgramming\datatype</pre>
+                            <pre>__callStatic(string $name, array $args) : \App\OOProgramming\datatype</pre>
                             <div class="labels">
                                                                 <span class="label">static</span>                                                                                                                            </div>
 
@@ -332,23 +332,16 @@ __call() será executado.</h2>
                                     <div class="long_description"></div>
 
                                     <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
                                                                             </table>
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$name</h4>
-                                                <code></code><p></p>
+                                                <code>string</code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
                                                 <h4>$args</h4>
-                                                <code></code><p></p>
+                                                <code>array</code><p></p>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
@@ -510,7 +503,7 @@ que solicita-se acesso.</p></p>
                             <h2>Método é chamado quando é atribuída uma propriedade do objeto à função isset(),
 tendo então, na classe, a implementação do método __isset(), este interceptará
 a chamada de isset(), possibilitando acrescentar-se funcionalidades à verificação.</h2>
-                            <pre>__isset( $name) : \App\OOProgramming\datatype</pre>
+                            <pre>__isset(string $name) : \App\OOProgramming\datatype</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -520,19 +513,12 @@ a chamada de isset(), possibilitando acrescentar-se funcionalidades à verifica�
                                     <div class="long_description"></div>
 
                                     <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
                                                                             </table>
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$name</h4>
-                                                <code></code><p></p>
+                                                <code>string</code><p><p>Propriedade a ser verificada a existência</p></p>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
@@ -663,8 +649,8 @@ controle.</h2>
                                             <a id="method___toString"></a>
                         <div class="element clickable method public  method___toString" data-toggle="collapse" data-target=".method___toString .collapse">
                             <h2>método é chamado toda vez que instância de classe é chamado como um string. ex:
-echo $_magicMethods;
-Quando ocorre uma chamada assim, o retorno do método __toString será exibido no echo.</h2>
+print $_magicMethods;
+Quando ocorre uma chamada assim, o retorno do método __toString será exibido no print.</h2>
                             <pre>__toString() : string</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -795,7 +781,7 @@ Quando ocorre uma chamada assim, o retorno do método __toString será exibido n
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Sat, 16 May 2015 16:23:47 -0300.<br/>
+            generated on Mon, 18 May 2015 18:41:03 -0300.<br/>
     </footer>
     </body>
 </html>

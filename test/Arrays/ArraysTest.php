@@ -10,9 +10,34 @@ namespace Test\Arrays;
 
 /**
  * Classe de testes do objeto Arrays
+ * Observações:
+ *
+ * PHP provides a great amount of flexibility in how numeric keys can be
+ * assigned to arrays: numeric keys can be any integer number (both negative
+ * and positive), and they don’t need to be sequential, so a large gap can exist
+ * between the indices of two consecutive values without the need to create
+ * intermediate values to cover every possible key in between. Moreover, the
+ * keys of an array do not determine the order of its elements—as we saw earlier
+ * when we created an enumerative array with keys that were out of natural
+ * order
+ *
+ * When an element is added to an array without specifying a key, PHP
+ * automatically assigns a numeric one that is equal to the greatest numeric key
+ * already in existence in the array, plus one
+ *
+ * Note that array keys are case-sensitive, but type insensitive. Thus, the key
+ * 'A' is different from the key 'a' , but the keys '1' and 1 are the same.
+ * However, the conversion is only applied if a string key contains the traditional
+ * decimal representation of a number; thus, for example, the key '01' is not
+ * the same as the key 1 . Attempting to use a float as a key will convert it to an
+ * integer key, so that '12.5' becomes '12' . Using boolean values of true and
+ * false as keys will cast them to 1 and 0 respectively, while using NULL will
+ * actually cause them to be stored under the empty string "" . Finally, arrays
+ * and objects cannot be used as keys.
+ *
  * @author Thiago Mallon <thiagomallon@gmail.com>
  * @group Arrays
- * @group Arrays/ArrayTest
+ * @group Arrays/ArraysTest
  */
 class ArraysTest extends \PHPUnit_Framework_TestCase
 {
@@ -49,6 +74,25 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Método verifica forma de iteração em inserção de elementos em um array. Observa-se
+     * que o primeiro índice numérico é 4, porém, somente ele e o índice 0 foram explicitamente
+     * declarados, o outro índice numérico, que possui valor 'um', não foi explicitamente declarado,
+     * porém, verifica-se que o índice criado para ele, é o 5, uma vez que foi declarado o índice
+     * 4. Sendo assim conclui-se que o PHP não se importa com posições de indexação vazias, ele
+     * sempre criará um índice incrementando um ao índice de maior posição.
+     * @return void
+     */
+    public function testInsertion()
+    {
+        $localSet = ['1st'=>'first',
+        4=>'four',
+        0=>'zero',
+        'um'];
+        //print_r($localSet);
+        $this->assertEquals('um', $localSet[5]); // índice atribuído foi o 5 e não 1
+    }
+
+    /**
      * Método testa função in_array() do PHP. Função verifica se existe dado
      * valor em qualquer um dos índices do array passado e retorna true caso
      * ocorra.
@@ -74,7 +118,20 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Método testa função array_key_exists() do PHP. Função verifica se existe
-     * dado índice no array e retorna true caso ocorra.
+     * dado índice no array e retorna true caso ocorra. Essa função é útil e deve ser utilizada
+     * quando a informação que se deseja é saber se um dado elemento existe. Veja os resultados
+     * não satisfatórios que uma abordagem com isset() poderia trazer:
+     *
+     * $a = ['1st'=>null, '2nd'='second'];
+     * isset($a['1st']); // false
+     *
+     * Verifica-se que mesmo o índice '1st' existindo, o resultado é false, isso pq o que está
+     * sendo comparado é o valor do elemento e não seu índice. Por isso utilizar a função
+     * array_key_exists() é a abordagem correta e a única satisfatória.
+     *
+     * Por sua vez, se quisermos saber se um elemento (valor) existe em um dado array,
+     * a função para tal tarefa á a in_array();
+     *
      * @return void
      */
     public function testArrayKeyExistsImplement()
@@ -103,44 +160,6 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
     {
         $invertedStuf = array_flip($this->setOfStuff);
         $this->assertArrayHasKey('want_to', $invertedStuf);
-    }
-
-    /**
-     * Método implementa função sort().
-     * Quando aplicamos a função sort() a um array, o mesmo será ordenado segundo os seus valores
-     * e não será preservadas as ordems dos índices do array e se o mesmo for associativo, os índices
-     * associativos serão substituídos por índices numéricos.
-     * @return void
-     */
-    public function testSortArray()
-    {
-        $localSet = [
-        'Arnoldo'=>'Chove Várzea Negra',
-        'Oscar' => 'Shimitd',
-        'Carlos'=> 'Albino'
-        ];
-
-        sort($localSet);
-        // var_dump($localSet); // verifica que os índices associativos foram substituídos por numéricos
-        $this->assertContains('Albino', $localSet[0]);
-    }
-
-    /**
-     * Método atua de forma semelhante à função sort(), diferenciando-se na ordem em que se dispõe
-     * os elementos, fazendo-o de forma reversa.
-     * @return void
-     */
-    public function testRSortArray()
-    {
-        $localSet = [
-        'Arnoldo'=>'Chove Várzea Negra',
-        'Oscar' => 'Shimitd',
-        'Carlos'=> 'Albino'
-        ];
-
-        rsort($localSet);
-        // var_dump($localSet); // verifica que os índices associativos foram substituídos por numéricos
-        $this->assertContains('Shimitd', $localSet[0]);
     }
 
     /**
@@ -315,71 +334,6 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Método implementa ordenação de forma ascendênte aos valores dos elementos do array
-     * passado, função preserva valores dos índices, sejam esses numéricos ou associativos,
-     * porém, não ordena corretamente valores alfa numéricos, não substituindo, assim, a função
-     * natsort().
-     * @return void
-     */
-    public function testASortArray()
-    {
-        $localSet = [
-        'a'=>'book11.pdf',
-        'b'=>'book1.pdf',
-        'c'=>'book2.pdf',
-        'd'=>'book12.pdf',
-        ];
-
-        asort($localSet);
-        //var_dump($localSet);
-        $this->assertCount(4, $localSet); // mera constância de assertion
-    }
-
-    /**
-     * Método testa atribuição de array à função ksort() do PHP. Verifica-se que apesar
-     * de ordenar os índices e manter a associação ao valor, não ordenando assim os valores,
-     * mas tão somente os índices, a função ksort() não ordena de forma eficiente índices de
-     * de nomes alfanuméricos, o índice book2.pdf é colocado posterior ao índice book12.pdf.
-     * O var_dump mostra a atuação da função em um array associativo.
-     * @return void
-     */
-    public function testKSortArray()
-    {
-        $localSet = [
-        'book11.pdf'=>'a',
-        'book1.pdf'=>'b',
-        'book2.pdf'=>'c',
-        'book12.pdf'=>'d',
-        ];
-        ksort($localSet);
-        //var_dump($localSet);
-        $this->assertCount(4, $localSet); // mera constância
-    }
-
-    /**
-     * Método testa implementação de função natsort() do PHP.
-     * Quando ordenamos os valores alfanúmericos de um array, pela função padrão (sort())
-     * o ordenamento não é feito realmente da forma que se espera, o var dump da função
-     * sort(), abaixo, mostra como os valores são ordenados, porém quando utilizamos a
-     * função natsort() o ordenamento é o que mais comumente se espera. É importante
-     * ressaltar que os índices são preservados na função nartsort(), somente a ordem
-     * dos elementos é alterada.
-     * @return void
-     */
-    public function testNatSort()
-    {
-        $localSet = [
-        'c'=>'book11.pdf',
-        'a'=>'book1.pdf',
-        'b'=>'book2.pdf',
-        'd'=>'book12.pdf',
-        ];
-        natsort($localSet);
-        //var_dump($localSet); // aqui vemos a ordenação alfanumérica acontecer
-        $this->assertCount(4, $localSet);
-    }
-
-    /**
      * Método retorna soma de todos os valores numéricos do array.
      * Observações: Quando um elemento possui valores alfanuméricos, a menos que esse valor
      * alfanumérico comece com representações numéricas ('345cdf') o elemento não será incluido
@@ -454,5 +408,66 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
         $res = array_fill_keys($localSet, 'mALLON');
         // print_r($res);
         $this->assertCount(3, $res);
+    }
+
+    /**
+     * Método implementa função (ou melhor, construtor de linguagem list()). Função atribui
+     * valor de dada posição à variável atribuída, seguindo-se a ordem de ocorrência. No exemplo
+     * abaixo.
+     * @return void
+     */
+    public function testList()
+    {
+        $localSet = ['1st',
+        '2nd',
+        '3rd' => 'third',  // esse não é listado, pois possui índice declarado
+        '5th',
+        4 => 'fourth', // esse não é listado, pois possui índice declarado e também para a listagem.
+        '4th' => 'fourth', // esse não é listado, pois possui índice declarado
+        '6th'
+        ];
+
+        list($one,$two,$three) = $localSet;
+        //print_r($three);
+        $this->assertEquals('5th', $three); // observa-se que o elemento de índice '3th' foi pulado na listagem
+    }
+
+    /**
+     * Método implementa função array_reverse() do PHP. Função inverte ordem dos valores, sendo, sendo o último
+     * elemento colocado em primeiro e vice-versa. Para índices numéricos ocorre perda de relação índice/chave,
+     * porém, índices associativos são mantidos.
+     * @return void
+     */
+    public function testArrayReverse()
+    {
+        $localSet = ['abacate', // abacate é índice 0
+        '2nd'=>'book2.png',
+        'banana', // banana é índice 1
+        '1st'=>'book1.png',
+        '11th'=>'book11.png'];
+
+        $res = array_reverse($localSet); // atribui função ao array
+        //print_r($res);
+        $this->assertEquals('banana', $res[0]); // verifica-se que alterou-se o índice numérico, agora banana é índice 0
+        $this->assertEquals('abacate', $res[1]); // verifica-se que alterou-se o índice numérico, agora abacate é índice 1
+    }
+
+    /**
+     * Método implementa função array_walk(), que possibilita o uso de função callback, para tratamento de valores e/ou
+     * índices do array navegado. Função muito útil, e em adição à função array_map(), ela permite alteração também dos
+     * índices, equanto a array_map() somente de valores.
+     * @return void
+     */
+    public function testArrayWalk()
+    {
+        $localSet = ['1st'=>'first',
+        '2nd'=>'second',
+        '3rd'=>'third'];
+
+        array_walk($localSet, function (&$value, $key) {
+            $value = $value . " place"; // adiciona a string ' place' ao valor de cada elemento do array
+        });
+        //print_r($localSet);
+        $this->assertContains('first place', $localSet);
     }
 }

@@ -13,6 +13,12 @@
         "PHP",
         "Certification"
     ],
+    "authors": [
+        {
+            "name": "Thiago Mallon",
+            "email": "thiagomallon@gmail.com"
+        }
+    ],
     "homepage": "http://phpbeyondlogic.com/",
     "require": {
         "php": "^5.5",

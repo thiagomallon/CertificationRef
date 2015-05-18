@@ -60,7 +60,7 @@ class MagicMethods
      * tendo então, na classe, a implementação do método __isset(), este interceptará
      * a chamada de isset(), possibilitando acrescentar-se funcionalidades à verificação.
      * @return datatype description
-     *
+     * @param string $name Propriedade a ser verificada a existência
      */
     public function __isset($name)
     {
@@ -73,7 +73,6 @@ class MagicMethods
     /**
      * Método
      * @return datatype description
-     *
      */
     public function __empty()
     {
@@ -97,7 +96,8 @@ class MagicMethods
     /**
      * Método
      * @return datatype description
-     *
+     * @param string $name
+     * @param array $args
      */
     public static function __callStatic($name, $args)
     {
@@ -143,7 +143,6 @@ class MagicMethods
     /**
      * Método
      * @return datatype description
-     *
      */
     public function __set_start()
     {
@@ -161,8 +160,8 @@ class MagicMethods
 
     /**
      * método é chamado toda vez que instância de classe é chamado como um string. ex:
-     * echo $_magicMethods;
-     * Quando ocorre uma chamada assim, o retorno do método __toString será exibido no echo.
+     * print $_magicMethods;
+     * Quando ocorre uma chamada assim, o retorno do método __toString será exibido no print.
      * @return string
      */
     public function __toString()

@@ -43,8 +43,8 @@
                             </a>
                             <ul class="dropdown-menu">
                                                                     <li><a>Namespaces</a></li>
-                                                                        <li><a href="../namespaces/Test.html">Test</a></li>
                                                                         <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Test.html">Test</a></li>
                                                                                                                                 </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
@@ -163,6 +163,33 @@
         </ul>
     </li>
         <li>
+        <a href="../namespaces/App.PregMatchingFilter.html" title="PregMatchingFilter">
+            <i class="icon-th"></i> PregMatchingFilter
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/App.PregMatchingReplace.html" title="PregMatchingReplace">
+            <i class="icon-th"></i> PregMatchingReplace
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/App.PregMatchingSplit.html" title="PregMatchingSplit">
+            <i class="icon-th"></i> PregMatchingSplit
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
         <a href="../namespaces/App.StringsAndPatterns.html" title="StringsAndPatterns">
             <i class="icon-th"></i> StringsAndPatterns
         </a>
@@ -192,7 +219,7 @@
 
     
     <li>
-        <span class="divider">\</span><a href="../namespaces/App.InputOutput.html">InputOutput</a>
+        <span class="divider">\</span><a href="../namespaces/App.PregMatchingSplit.html">PregMatchingSplit</a>
     </li>
 
         </ul>
@@ -203,35 +230,13 @@
                 <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
                 
                 
-                                        <div id="class_FileManipulation" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FileManipulation .collapse">
-        <h1>FileManipulation<a href="../classes/App.InputOutput.FileManipulation.html">¶</a></h1>
-        <p class="short_description">Classe</p>
+                                        <div id="class_PregMatchingSplit" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PregMatchingSplit .collapse">
+        <h1>PregMatchingSplit<a href="../classes/App.PregMatchingSplit.PregMatchingSplit.html">¶</a></h1>
+        <p class="short_description">Classe PregMatchingSplit</p>
         <div class="details collapse">
                             
                     </div>
-        <a href="../classes/App.InputOutput.FileManipulation.html" class="more">« More »</a>    </div>
-
-                                        <div id="class_PageContentTaker" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PageContentTaker .collapse">
-        <h1>PageContentTaker<a href="../classes/App.InputOutput.PageContentTaker.html">¶</a></h1>
-        <p class="short_description">Classe PageContentTaker</p>
-        <div class="details collapse">
-                            
-                    </div>
-        <a href="../classes/App.InputOutput.PageContentTaker.html" class="more">« More »</a>    </div>
-
-                                        <div id="class_ResourceStream" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ResourceStream .collapse">
-        <h1>ResourceStream<a href="../classes/App.InputOutput.ResourceStream.html">¶</a></h1>
-        <p class="short_description">Classe implementa criação e manipulação de streams PHP.</p>
-        <div class="details collapse">
-                            <p>Três tipos serão manipulados:</p>
-<ul>
-<li>memory, que guarda os dados em um wrapper file-like alocado em memória volátil, e não em um arquivo fixo.</li>
-<li>temp, guarda os dados em um arquivo temporário do sistema operacional, sendo possível acessá-lo por seu</li>
-<li>arquivo temporário, criado com a função tempnam, aliada a função sys_get_temp_dir(), que nos retorna o
-local de arquivos temporários do sistema operacional.</li>
-</ul>
-                    </div>
-        <a href="../classes/App.InputOutput.ResourceStream.html" class="more">« More »</a>    </div>
+        <a href="../classes/App.PregMatchingSplit.PregMatchingSplit.html" class="more">« More »</a>    </div>
 
                             </div>
             
@@ -249,7 +254,7 @@ local de arquivos temporários do sistema operacional.</li>
 
     
     <li>
-        <span class="divider">\</span><a href="../namespaces/App.PHPBasics.html">PHPBasics</a>
+        <span class="divider">\</span><a href="../namespaces/App.StringsAndPatterns.html">StringsAndPatterns</a>
     </li>
 
         </ul>
@@ -260,29 +265,129 @@ local de arquivos temporários do sistema operacional.</li>
                 <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
                 
                 
-                                        <div id="class_BasicStuff" class="element ajax clickable class" data-toggle="collapse" data-target="#class_BasicStuff .collapse">
-        <h1>BasicStuff<a href="../classes/App.PHPBasics.BasicStuff.html">¶</a></h1>
-        <p class="short_description">Objeto criado para implementação de conceitos básicos do PHP</p>
+                                        <div id="class_PregMatching" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PregMatching .collapse">
+        <h1>PregMatching<a href="../classes/App.StringsAndPatterns.PregMatching.html">¶</a></h1>
+        <p class="short_description">Classe PregMatching implementa diferentes conceitos de padrões e os executa com a função preg_match().</p>
         <div class="details collapse">
-                            
+                            <p>A função preg_match() atua de forma não global, sendo essa atuação possível para outra variedade da
+mesma, a preg_match_all(). Não é possível atribuir-se a flag g, em REGEX do PHP, gerando-se um warning,
+na tentativa de atribuição da mesma. Pode-se aplicar a flag m (multiline), porém, sem
+atuar-se globalmente ela não é, de fato, aplicada.</p>
                     </div>
-        <a href="../classes/App.PHPBasics.BasicStuff.html" class="more">« More »</a>    </div>
+        <a href="../classes/App.StringsAndPatterns.PregMatching.html" class="more">« More »</a>    </div>
 
-                                        <div id="class_Daughter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Daughter .collapse">
-        <h1>Daughter<a href="../classes/App.PHPBasics.Daughter.html">¶</a></h1>
-        <p class="short_description">Classe filha, usada para exemplificação simples de conceitos de herança</p>
+                                        <div id="class_PregMatchingAll" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PregMatchingAll .collapse">
+        <h1>PregMatchingAll<a href="../classes/App.StringsAndPatterns.PregMatchingAll.html">¶</a></h1>
+        <p class="short_description">Classe PregMatchingAll</p>
         <div class="details collapse">
                             
                     </div>
-        <a href="../classes/App.PHPBasics.Daughter.html" class="more">« More »</a>    </div>
+        <a href="../classes/App.StringsAndPatterns.PregMatchingAll.html" class="more">« More »</a>    </div>
 
-                                        <div id="class_Mother" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Mother .collapse">
-        <h1>Mother<a href="../classes/App.PHPBasics.Mother.html">¶</a></h1>
-        <p class="short_description">Classe utilizada para exemplificação simples de herança</p>
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/App.html">App</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/App.PregMatchingReplace.html">PregMatchingReplace</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_PregMatchingReplace" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PregMatchingReplace .collapse">
+        <h1>PregMatchingReplace<a href="../classes/App.PregMatchingReplace.PregMatchingReplace.html">¶</a></h1>
+        <p class="short_description">Classe PregMatchingReplace</p>
         <div class="details collapse">
                             
                     </div>
-        <a href="../classes/App.PHPBasics.Mother.html" class="more">« More »</a>    </div>
+        <a href="../classes/App.PregMatchingReplace.PregMatchingReplace.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/App.html">App</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/App.PregMatchingFilter.html">PregMatchingFilter</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_PregMatchingFilter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PregMatchingFilter .collapse">
+        <h1>PregMatchingFilter<a href="../classes/App.PregMatchingFilter.PregMatchingFilter.html">¶</a></h1>
+        <p class="short_description">Classe PregMatchingFilter</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/App.PregMatchingFilter.PregMatchingFilter.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/App.html">App</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/App.DatabasesSql.html">DatabasesSql</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_SingWithTongue" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SingWithTongue .collapse">
+        <h1>SingWithTongue<a href="../classes/App.DatabasesSql.SingWithTongue.html">¶</a></h1>
+        <p class="short_description">Classe SingWithTongue</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/App.DatabasesSql.SingWithTongue.html" class="more">« More »</a>    </div>
 
                             </div>
             
@@ -385,81 +490,11 @@ do Reflection, ir ao arquivo de teste.</p>
 
                                         <div id="class_StaticStuffMother" class="element ajax clickable class" data-toggle="collapse" data-target="#class_StaticStuffMother .collapse">
         <h1>StaticStuffMother<a href="../classes/App.OOProgramming.StaticStuffMother.html">¶</a></h1>
-        <p class="short_description">Classe StaticStuffMother</p>
+        <p class="short_description">Classe StaticStuffMother implementa conceito de Late Static Binding</p>
         <div class="details collapse">
                             
                     </div>
         <a href="../classes/App.OOProgramming.StaticStuffMother.html" class="more">« More »</a>    </div>
-
-                            </div>
-            
-    
-                
-    
-        <ul class="breadcrumb">
-            <li><a href="../index.html"><i class="icon-th"></i></a></li>
-                
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../namespaces/App.html">App</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../namespaces/App.StringsAndPatterns.html">StringsAndPatterns</a>
-    </li>
-
-        </ul>
-
-        
-        
-                    <div class="namespace-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="class_PregMatching" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PregMatching .collapse">
-        <h1>PregMatching<a href="../classes/App.StringsAndPatterns.PregMatching.html">¶</a></h1>
-        <p class="short_description">Classe PregMatching</p>
-        <div class="details collapse">
-                            
-                    </div>
-        <a href="../classes/App.StringsAndPatterns.PregMatching.html" class="more">« More »</a>    </div>
-
-                            </div>
-            
-    
-                
-    
-        <ul class="breadcrumb">
-            <li><a href="../index.html"><i class="icon-th"></i></a></li>
-                
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../namespaces/App.html">App</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../namespaces/App.DatabasesSql.html">DatabasesSql</a>
-    </li>
-
-        </ul>
-
-        
-        
-                    <div class="namespace-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="class_SingWithTongue" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SingWithTongue .collapse">
-        <h1>SingWithTongue<a href="../classes/App.DatabasesSql.SingWithTongue.html">¶</a></h1>
-        <p class="short_description">Classe SingWithTongue</p>
-        <div class="details collapse">
-                            
-                    </div>
-        <a href="../classes/App.DatabasesSql.SingWithTongue.html" class="more">« More »</a>    </div>
 
                             </div>
             
@@ -552,6 +587,114 @@ MammalSurvive, que se encontra no presente método getFood().</p>
                             </div>
             
     
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/App.html">App</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/App.PHPBasics.html">PHPBasics</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_BasicStuff" class="element ajax clickable class" data-toggle="collapse" data-target="#class_BasicStuff .collapse">
+        <h1>BasicStuff<a href="../classes/App.PHPBasics.BasicStuff.html">¶</a></h1>
+        <p class="short_description">Objeto criado para implementação de conceitos básicos do PHP</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/App.PHPBasics.BasicStuff.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Daughter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Daughter .collapse">
+        <h1>Daughter<a href="../classes/App.PHPBasics.Daughter.html">¶</a></h1>
+        <p class="short_description">Classe filha, usada para exemplificação simples de conceitos de herança</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/App.PHPBasics.Daughter.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Mother" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Mother .collapse">
+        <h1>Mother<a href="../classes/App.PHPBasics.Mother.html">¶</a></h1>
+        <p class="short_description">Classe utilizada para exemplificação simples de herança</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/App.PHPBasics.Mother.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/App.html">App</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/App.InputOutput.html">InputOutput</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_FileManipulation" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FileManipulation .collapse">
+        <h1>FileManipulation<a href="../classes/App.InputOutput.FileManipulation.html">¶</a></h1>
+        <p class="short_description">Classe</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/App.InputOutput.FileManipulation.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PageContentTaker" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PageContentTaker .collapse">
+        <h1>PageContentTaker<a href="../classes/App.InputOutput.PageContentTaker.html">¶</a></h1>
+        <p class="short_description">Classe PageContentTaker</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/App.InputOutput.PageContentTaker.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ResourceStream" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ResourceStream .collapse">
+        <h1>ResourceStream<a href="../classes/App.InputOutput.ResourceStream.html">¶</a></h1>
+        <p class="short_description">Classe implementa criação e manipulação de streams PHP.</p>
+        <div class="details collapse">
+                            <p>Três tipos serão manipulados:</p>
+<ul>
+<li>memory, que guarda os dados em um wrapper file-like alocado em memória volátil, e não em um arquivo fixo.</li>
+<li>temp, guarda os dados em um arquivo temporário do sistema operacional, sendo possível acessá-lo por seu</li>
+<li>arquivo temporário, criado com a função tempnam, aliada a função sys_get_temp_dir(), que nos retorna o
+local de arquivos temporários do sistema operacional.</li>
+</ul>
+                    </div>
+        <a href="../classes/App.InputOutput.ResourceStream.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
     
         </div>
     </div>
@@ -561,7 +704,7 @@ MammalSurvive, que se encontra no presente método getFood().</p>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Sat, 16 May 2015 16:23:46 -0300.<br/>
+            generated on Mon, 18 May 2015 18:41:02 -0300.<br/>
     </footer>
     </body>
 </html>

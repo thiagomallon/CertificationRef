@@ -1,6 +1,7 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Formulário para testes de requisição</title>
 </head>
 <body>

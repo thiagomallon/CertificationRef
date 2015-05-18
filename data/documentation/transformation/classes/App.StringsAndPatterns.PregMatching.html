@@ -43,8 +43,8 @@
                             </a>
                             <ul class="dropdown-menu">
                                                                     <li><a>Namespaces</a></li>
-                                                                        <li><a href="../namespaces/Test.html">Test</a></li>
                                                                         <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Test.html">Test</a></li>
                                                                                                                                 </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
@@ -121,8 +121,14 @@
             <i class="icon-custom icon-method"></i> Methods
             <ul>
                                                                                                     <li class="method public">
-        <a href="#method_matching" title="matching :: Método">
-            <span class="description">Método</span><pre>matching</pre>
+        <a href="#method___construct" title="__construct :: Método construtor inicializa propriedade com conteúdo de arquivo">
+            <span class="description">Método construtor inicializa propriedade com conteúdo de arquivo</span><pre>__construct</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_simpleMatching" title="simpleMatching :: Método implementa procura simples de padrão de regex">
+            <span class="description">Método implementa procura simples de padrão de regex</span><pre>simpleMatching</pre>
         </a>
     </li>
 
@@ -130,11 +136,11 @@
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                </ul>
+                                                                                                                    </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                </ul>
+                                                                                                                    </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -151,10 +157,13 @@
                 <h1>PregMatching</h1>
                 <small style="display: block; text-align: right">
                                                         </small>
-                <p class="short_description">Classe PregMatching</p>
+                <p class="short_description">Classe PregMatching implementa diferentes conceitos de padrões e os executa com a função preg_match().</p>
                 <div class="details">
                     <div class="long_description">
-                        
+                        <p>A função preg_match() atua de forma não global, sendo essa atuação possível para outra variedade da
+mesma, a preg_match_all(). Não é possível atribuir-se a flag g, em REGEX do PHP, gerando-se um warning,
+na tentativa de atribuição da mesma. Pode-se aplicar a flag m (multiline), porém, sem
+atuar-se globalmente ela não é, de fato, aplicada.</p>
                     </div>
                     <table class="table table-bordered">
                                                                                     <tr>
@@ -178,10 +187,37 @@
                                                                                                                                                                                 </table>
 
                     <h3><i class="icon-custom icon-method"></i> Methods</h3>
-                                                                <a id="method_matching"></a>
-                        <div class="element clickable method public  method_matching" data-toggle="collapse" data-target=".method_matching .collapse">
-                            <h2>Método</h2>
-                            <pre>matching() : \App\StringsAndPatterns\datatype</pre>
+                                                                <a id="method___construct"></a>
+                        <div class="element clickable method public  method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+                            <h2>Método construtor inicializa propriedade com conteúdo de arquivo</h2>
+                            <pre>__construct() : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_simpleMatching"></a>
+                        <div class="element clickable method public  method_simpleMatching" data-toggle="collapse" data-target=".method_simpleMatching .collapse">
+                            <h2>Método implementa procura simples de padrão de regex</h2>
+                            <pre>simpleMatching() : string</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -202,14 +238,41 @@
 
                                     
                                                                             <h3>Response</h3>
-                                        <code>\App\StringsAndPatterns\datatype</code><p><p>description</p></p>
+                                        <code>string</code><p></p>
                                                                     </div>
                             </div>
 
                         </div>
                     
                     
-                                                        </div>
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property__fileContent"> </a>
+                            <div class="element clickable property  protected property__fileContent" data-toggle="collapse" data-target=".property__fileContent .collapse">
+                                <h2>Propriedade armazena conteúdo de arquivo cobaia</h2>
+                                <pre>_fileContent : string</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
             </div>
             <a id="\App\StringsAndPatterns\PregMatching"></a>
             <ul class="breadcrumb">
@@ -229,7 +292,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Sat, 16 May 2015 16:23:47 -0300.<br/>
+            generated on Mon, 18 May 2015 18:41:03 -0300.<br/>
     </footer>
     </body>
 </html>

@@ -34,6 +34,7 @@ abstract class SapiensAbstract
     /**
      * Método abstrato, seta propriedade $gender
      * @return void
+     * @param string $gender
      */
     abstract public function setGender($gender);
     /**
