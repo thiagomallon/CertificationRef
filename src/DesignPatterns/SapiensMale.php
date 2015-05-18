@@ -17,6 +17,7 @@ class SapiensMale extends SapiensAbstract
 {
     /**
      * Método seta propriedade gender
+     * @param string $gender
      * @return void
      */
     public function setGender($gender)

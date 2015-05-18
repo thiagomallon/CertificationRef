@@ -15,5 +15,10 @@ namespace App\DesignPatterns;
  */
 interface FindFoodAdapter
 {
+    /**
+     * Método
+     * @return void
+     * @param string $food
+     */
     public function getFood($food);
 }

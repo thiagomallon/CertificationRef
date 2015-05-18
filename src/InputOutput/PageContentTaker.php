@@ -17,6 +17,7 @@ class PageContentTaker
 {
     /**
      * Método retorna $handle de página capturada
+     * @param string $url
      * @return resource
      */
     public static function takingWithGet($url = 'http://example.com/')
@@ -42,6 +43,7 @@ class PageContentTaker
 
     /**
      * Método
+     * @param string $url
      * @return datatype description
      */
     public function takingWithPost($url = 'http://localhost/RepCertification/public/form.php')
@@ -64,6 +66,7 @@ class PageContentTaker
 
     /**
      * Método
+     * @param string $url
      * @return datatype description
      */
     public function takingWithPostAndSocket($url = 'http://localhost/RepCertification/public/form.php')

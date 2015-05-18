@@ -10,7 +10,7 @@
 namespace App\OOProgramming;
 
 /**
- * Classe StaticStuffMother
+ * Classe StaticStuffMother implementa conceito de Late Static Binding
  * @author Thiago Mallon <thiagomallon@gmail.com>
  */
 class StaticStuffMother
@@ -22,9 +22,8 @@ class StaticStuffMother
     protected static $staticProp;
 
     /**
-     * Método estático
-     * @return datatype description
-     *
+     * Método estático retorna valor de propriedade estática, realizando atribuição à mesma.
+     * @return string
      */
     public static function getStaticProp()
     {
@@ -32,8 +31,8 @@ class StaticStuffMother
     }
 
     /**
-     * Método estático
-     * @return datatype description
+     * Método estático retorna valor do tipo string
+     * @return string
      */
     public static function seeNeverYours()
     {
@@ -41,14 +40,18 @@ class StaticStuffMother
     }
 
     /**
-     * Método estático
-     * @return datatype description
+     * Método estático retorna valor do tipo string
+     * @return string
      */
     public static function getCouldBeYours()
     {
         return 'Yet Mother scope, son';
     }
 
+    /**
+     * Método método implementa teste ao conceito de Late Static Bindings
+     * @return string Retorna valor combinado de retornos dos métodos getCouldBeYours() e SeeNeverYours()
+     */
     public static function getStaticStuff()
     {
         return

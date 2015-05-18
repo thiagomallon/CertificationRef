@@ -1,4 +1,12 @@
 <?php
+
+/**
+ * Created by Thiago Mallon
+ */
+        
+/**
+ * @package Test\InputOutput
+ */
 namespace Test\InputOutput;
 
 /**
@@ -7,6 +15,7 @@ namespace Test\InputOutput;
 class PageContentTakerTest extends \PHPUnit_Framework_TestCase
 {
     /**
+     * Propriedade
      * @var PageContentTaker $_pageContentTaker
      */
     protected $_pageContentTaker;
@@ -30,16 +39,23 @@ class PageContentTakerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Método de teste
      * @return void
      * @covers App\InputOutput\PageContentTaker::takingWithGet
      */
     public function testTakingWithGet()
     {
-        $this->markTestIncomplete('Incomplete. Method need more tests!');
-        print_r($this->_pageContentTaker->takingWithGet('http://www.example.com'));
+        //$this->markTestIncomplete('Incomplete. Method need more tests!');
+        //print_r($this->_pageContentTaker->takingWithGet('http://www.example.com'));
+        $content = $this->_pageContentTaker->takingWithGet('http://www.example.com');
+        // $handle = fopen('public/files/html-sample.html', 'w+');
+        // fwrite($handle, $content);
+        // fclose($handle);
+        // print_r(file_get_contents('public/files/html-sample.html'));
     }
 
     /**
+     * Método de teste
      * @return void
      * @covers App\InputOutput\PageContentTaker::takingWithPost
      */

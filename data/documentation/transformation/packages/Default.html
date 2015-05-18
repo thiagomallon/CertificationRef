@@ -43,8 +43,8 @@
                             </a>
                             <ul class="dropdown-menu">
                                                                     <li><a>Namespaces</a></li>
-                                                                        <li><a href="../namespaces/Test.html">Test</a></li>
                                                                         <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Test.html">Test</a></li>
                                                                                                                                 </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
@@ -148,10 +148,55 @@
     </div>
 
                 
+                                        <div id="ArrayCallbacksTest" class="element ajax clickable class">
+        <h1>ArrayCallbacksTest<a href="../classes/Test.Arrays.ArrayCallbacksTest.html">¶</a></h1>
+        <p class="short_description">Classe ArrayCallbacksTest</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Test.Arrays.ArrayCallbacksTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ArrayPointerTest" class="element ajax clickable class">
+        <h1>ArrayPointerTest<a href="../classes/Test.Arrays.ArrayPointerTest.html">¶</a></h1>
+        <p class="short_description">Classe ArrayPointerTest</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Test.Arrays.ArrayPointerTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ArraySortingTest" class="element ajax clickable class">
+        <h1>ArraySortingTest<a href="../classes/Test.Arrays.ArraySortingTest.html">¶</a></h1>
+        <p class="short_description">Classe ArraySortingTest - Classe testa funções de ordenação de arrays, do PHP. Ao todo são 11 funções
+de ordenação disponíveis. Algumas delas possuem flags, tonando-se assim esse número um pouco mais
+elevado.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Test.Arrays.ArraySortingTest.html" class="more">« More »</a>
+    </div>
+
                                         <div id="ArraysTest" class="element ajax clickable class">
         <h1>ArraysTest<a href="../classes/Test.Arrays.ArraysTest.html">¶</a></h1>
-        <p class="short_description">Classe de testes do objeto Arrays</p>
-        <div class="details collapse"></div>
+        <p class="short_description">Classe de testes do objeto Arrays
+Observações:</p>
+        <div class="details collapse">PHP provides a great amount of flexibility in how numeric keys can be
+assigned to arrays: numeric keys can be any integer number (both negative
+and positive), and they don’t need to be sequential, so a large gap can exist
+between the indices of two consecutive values without the need to create
+intermediate values to cover every possible key in between. Moreover, the
+keys of an array do not determine the order of its elements—as we saw earlier
+when we created an enumerative array with keys that were out of natural
+order
+
+When an element is added to an array without specifying a key, PHP
+automatically assigns a numeric one that is equal to the greatest numeric key
+already in existence in the array, plus one
+
+Note that array keys are case-sensitive, but type insensitive. Thus, the key
+&#039;A&#039; is different from the key &#039;a&#039; , but the keys &#039;1&#039; and 1 are the same.
+However, the conversion is only applied if a string key contains the traditional
+decimal representation of a number; thus, for example, the key &#039;01&#039; is not
+the same as the key 1 . Attempting to use a float as a key will convert it to an
+integer key, so that &#039;12.5&#039; becomes &#039;12&#039; . Using boolean values of true and
+false as keys will cast them to 1 and 0 respectively, while using NULL will
+actually cause them to be stored under the empty string &quot;&quot; . Finally, arrays
+and objects cannot be used as keys.</div>
         <a href="../classes/Test.Arrays.ArraysTest.html" class="more">« More »</a>
     </div>
 
@@ -217,17 +262,17 @@ em classe de teste.</p>
     </div>
 
                                         <div id="DaughterTest" class="element ajax clickable class">
-        <h1>DaughterTest<a href="../classes/Test.OOProgramming.DaughterTest.html">¶</a></h1>
-        <p class="short_description">Classe de testes à classe Daughter</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Test.OOProgramming.DaughterTest.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="DaughterTest" class="element ajax clickable class">
         <h1>DaughterTest<a href="../classes/Test.PHPBasics.DaughterTest.html">¶</a></h1>
         <p class="short_description">Classe de testes do objeto de Daughter</p>
         <div class="details collapse"></div>
         <a href="../classes/Test.PHPBasics.DaughterTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="DaughterTest" class="element ajax clickable class">
+        <h1>DaughterTest<a href="../classes/Test.OOProgramming.DaughterTest.html">¶</a></h1>
+        <p class="short_description">Classe de testes à classe Daughter</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Test.OOProgramming.DaughterTest.html" class="more">« More »</a>
     </div>
 
                                         <div id="FileManipulation" class="element ajax clickable class">
@@ -325,9 +370,47 @@ em classe de teste.</p>
 
                                         <div id="PregMatching" class="element ajax clickable class">
         <h1>PregMatching<a href="../classes/App.StringsAndPatterns.PregMatching.html">¶</a></h1>
-        <p class="short_description">Classe PregMatching</p>
-        <div class="details collapse"></div>
+        <p class="short_description">Classe PregMatching implementa diferentes conceitos de padrões e os executa com a função preg_match().</p>
+        <div class="details collapse">A função preg_match() atua de forma não global, sendo essa atuação possível para outra variedade da
+mesma, a preg_match_all(). Não é possível atribuir-se a flag g, em REGEX do PHP, gerando-se um warning,
+na tentativa de atribuição da mesma. Pode-se aplicar a flag m (multiline), porém, sem
+atuar-se globalmente ela não é, de fato, aplicada.</div>
         <a href="../classes/App.StringsAndPatterns.PregMatching.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="PregMatchingAll" class="element ajax clickable class">
+        <h1>PregMatchingAll<a href="../classes/App.StringsAndPatterns.PregMatchingAll.html">¶</a></h1>
+        <p class="short_description">Classe PregMatchingAll</p>
+        <div class="details collapse"></div>
+        <a href="../classes/App.StringsAndPatterns.PregMatchingAll.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="PregMatchingFilter" class="element ajax clickable class">
+        <h1>PregMatchingFilter<a href="../classes/App.PregMatchingFilter.PregMatchingFilter.html">¶</a></h1>
+        <p class="short_description">Classe PregMatchingFilter</p>
+        <div class="details collapse"></div>
+        <a href="../classes/App.PregMatchingFilter.PregMatchingFilter.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="PregMatchingReplace" class="element ajax clickable class">
+        <h1>PregMatchingReplace<a href="../classes/App.PregMatchingReplace.PregMatchingReplace.html">¶</a></h1>
+        <p class="short_description">Classe PregMatchingReplace</p>
+        <div class="details collapse"></div>
+        <a href="../classes/App.PregMatchingReplace.PregMatchingReplace.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="PregMatchingSplit" class="element ajax clickable class">
+        <h1>PregMatchingSplit<a href="../classes/App.PregMatchingSplit.PregMatchingSplit.html">¶</a></h1>
+        <p class="short_description">Classe PregMatchingSplit</p>
+        <div class="details collapse"></div>
+        <a href="../classes/App.PregMatchingSplit.PregMatchingSplit.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="PregMatchTest" class="element ajax clickable class">
+        <h1>PregMatchTest<a href="../classes/Test.StringsAndPatters.PregMatchTest.html">¶</a></h1>
+        <p class="short_description">Classe PregMatchTest</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Test.StringsAndPatters.PregMatchTest.html" class="more">« More »</a>
     </div>
 
                                         <div id="Reflecting" class="element ajax clickable class">
@@ -426,7 +509,7 @@ MammalSurvive, que se encontra no presente método getFood().</div>
 
                                         <div id="StaticStuffMother" class="element ajax clickable class">
         <h1>StaticStuffMother<a href="../classes/App.OOProgramming.StaticStuffMother.html">¶</a></h1>
-        <p class="short_description">Classe StaticStuffMother</p>
+        <p class="short_description">Classe StaticStuffMother implementa conceito de Late Static Binding</p>
         <div class="details collapse"></div>
         <a href="../classes/App.OOProgramming.StaticStuffMother.html" class="more">« More »</a>
     </div>
@@ -449,7 +532,7 @@ MammalSurvive, que se encontra no presente método getFood().</div>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Sat, 16 May 2015 16:23:46 -0300.<br/>
+            generated on Mon, 18 May 2015 18:41:02 -0300.<br/>
     </footer>
     </body>
 </html>
