@@ -20,9 +20,14 @@ class FileManipulationTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Propriedade atuará como objeto de FileManipulation
-     * @var FileManipulation $_fileManipulation Ojbeto de de FileManipulation
+     * @var FileManipulation $fileHandle Objeto de de FileManipulation
      */
-    protected $_fileManipulation;
+    protected $fileHandle;
+    /**
+     * Property stores
+     * @var datatype $filePath description
+     */
+    protected $filePath = 'public/files/fileManipulationTest';
 
     /**
      * Sets up the fixture, for example, opens a network connection.
@@ -30,7 +35,12 @@ class FileManipulationTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->_fileManipulation = new \App\InputOutput\FileManipulation;
+        $this->fileHandle = fopen($this->filePath, 'w+');
+        if (!$this->fileHandle) {
+            die('Unable to create/open file');
+        } else {
+            fwrite($this->fileHandle, "This is the initial file content\n");
+        }
     }
 
     /**
@@ -39,16 +49,27 @@ class FileManipulationTest extends \PHPUnit_Framework_TestCase
      */
     protected function tearDown()
     {
-        unset($this->_fileManipulation);
+        //unset($this->fileHandle); // limpa variável que armazena handle
+        //unlink($this->filePath); // deleta arquivo
     }
 
     /**
      * Método implementará testes
      * @covers App\InputOutput\FileManipulation::factoryFile
-     * @todo   Implement testFactoryFile().
+     * @return void
      */
-    public function testFactoryFile()
+    public function testFileGetContents()
     {
-        $this->markTestIncomplete('This test has not been implemented yet.');
+        // verifica conteúdo inicial do arquivo, através da função file_get_contents()
+        $this->assertContains('This is the initial file content', file_get_contents($this->filePath));
+    }
+
+    /**
+     * The testFTruncate method
+     * @return void
+     */
+    public function testFTruncate()
+    {
+        
     }
 }

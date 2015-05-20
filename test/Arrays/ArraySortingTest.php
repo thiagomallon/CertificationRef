@@ -139,4 +139,39 @@ class ArraySortingTest extends \PHPUnit_Framework_TestCase
         end($this->localSet); // coloca ponteiro no último elemento do array
         $this->assertEquals('book11.pdf', current($this->localSet)); // verifica-se o valor do elemento
     }
+
+    /**
+     * Método implementa função array_reverse() do PHP. Função inverte ordem dos valores, sendo, sendo o último
+     * elemento colocado em primeiro e vice-versa. Para índices numéricos ocorre perda de relação índice/chave,
+     * porém, índices associativos são mantidos.
+     * @return void
+     */
+    public function testArrayReverse()
+    {
+        $localSet = ['abacate', // abacate é índice 0
+        '2nd'=>'book2.png',
+        'banana', // banana é índice 1
+        '1st'=>'book1.png',
+        '11th'=>'book11.png'];
+
+        $res = array_reverse($localSet); // atribui função ao array
+        //print_r($res);
+        $this->assertEquals('banana', $res[0]); // verifica-se que alterou-se o índice numérico, agora banana é índice 0
+        $this->assertEquals('abacate', $res[1]); // verifica-se que alterou-se o índice numérico, agora abacate é índice 1
+    }
+
+    /**
+     * The testShuffle method tests the PHP shuffle() function. This function shuffles the elements in an
+     * array, this function don't preserve the array keys. New numeric keys will be applied to the elements
+     * of the array. You can see that the shuffle() function randomize the order of array elements.
+     * The value of the indexes is not testable, cause it was randomized, but we can see that the associative
+     * indexes was lost.
+     * @return void
+     */
+    public function testShuffle()
+    {
+        shuffle($this->localSet);
+        //print_r($this->localSet);
+        $this->assertArrayNotHasKey('1st', $this->localSet); // associative array indexes was lost
+    }
 }

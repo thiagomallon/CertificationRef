@@ -8,5 +8,6 @@ $baseDir = dirname($vendorDir);
 return array(
     'Test\\' => array($baseDir . '/test'),
     'ComposerCustoms\\' => array($baseDir . '/data/composer-customs'),
+    'CliStuff\\' => array($baseDir . '/data/cli-stuff'),
     'App\\' => array($baseDir . '/src'),
 );

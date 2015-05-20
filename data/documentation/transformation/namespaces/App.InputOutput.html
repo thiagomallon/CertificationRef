@@ -149,9 +149,23 @@
                 
                                         <div id="class_FileManipulation" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FileManipulation .collapse">
         <h1>FileManipulation<a href="../classes/App.InputOutput.FileManipulation.html">¶</a></h1>
-        <p class="short_description">Classe</p>
+        <p class="short_description">FileManipulation class. There is many modes to open a file. The following list shows the possible
+modes to do this:</p>
         <div class="details collapse">
-                            
+                            <p>r - open the file for reading only and place the file pointer at the beginning of the file.
+r+ - same as above but you can also write.</p>
+<p>w - open for writing only, place the pointer at the beginning of the file and trucate it.
+w+ - same as above but you can also read.</p>
+<p>a - open for writing only an place the pointer at the end of the file.
+a+ - same as above but you can also read the file.</p>
+<p>x - try to create a file, it it exists fopen will return false and an E_WARNING error will be thrown.
+The file will be created for writing only and the file pointer obviously will be placed at the beginning
+of the file.
+x+ - same as above but you'll be able also to read the file.</p>
+<p>c - Try to open a file to writing only, if the file doesnt exists, it creates the file, if it exists
+'c' mode will not truncate it and will place the file pointer at the beginning of the file.
+Unlinke 'x' mode, 'c' mode will not generates an E_WARNING error if the file exists.</p>
+<p>c+ - same as above, but you'll be able also to read the file.</p>
                     </div>
         <a href="../classes/App.InputOutput.FileManipulation.html" class="more">« More »</a>    </div>
 
@@ -188,7 +202,7 @@ local de arquivos temporários do sistema operacional.</li>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Mon, 18 May 2015 18:41:02 -0300.<br/>
+            generated on Wed, 20 May 2015 13:15:51 -0300.<br/>
     </footer>
     </body>
 </html>
