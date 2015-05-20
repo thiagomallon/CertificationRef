@@ -72,7 +72,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
     {
         unset($this->setOfStuff);
     }
-    
+
     /**
      * Método verifica forma de iteração em inserção de elementos em um array. Observa-se
      * que o primeiro índice numérico é 4, porém, somente ele e o índice 0 foram explicitamente
@@ -98,7 +98,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
      * ocorra.
      * @return void
      */
-    public function testInArrayImplement()
+    public function testInArray()
     {
         $stuffResult = in_array("second", $this->setOfStuff);
         $this->assertTrue($stuffResult);
@@ -110,7 +110,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
      * e os índices, dessa vez, númericamente indexados.
      * @return void
      */
-    public function testArrayKeysImplement()
+    public function testArrayKeys()
     {
         $indexesOfStuff = array_keys($this->setOfStuff);
         $this->assertArrayNotHasKey("1st", $indexesOfStuff);
@@ -134,7 +134,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
      *
      * @return void
      */
-    public function testArrayKeyExistsImplement()
+    public function testArrayKeyExists()
     {
         $this->assertTrue(array_key_exists("3rd", $this->setOfStuff));
     }
@@ -145,7 +145,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
      * dessa vez numericamente indexados.
      * @return void
      */
-    public function testArrayValuesImplement()
+    public function testArrayValues()
     {
         $valuesOfStuffs = array_values($this->setOfStuff);
         $this->assertContains('do_not', $valuesOfStuffs);
@@ -156,69 +156,10 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
      * e valores invertidos, ou seja, índice no lugar do valor e vice-versa.
      * @return void
      */
-    public function testArrayFlipImplement()
+    public function testArrayFlip()
     {
         $invertedStuf = array_flip($this->setOfStuff);
         $this->assertArrayHasKey('want_to', $invertedStuf);
-    }
-
-    /**
-     * Método testa atribuição de array à função array_intersect_assoc(), do PHP.
-     * Função array_intersect_assoc(), compara dois array e retorna um terceiro array
-     * com os elementos em que coincidem tanto índice quanto valor. Nos dois arrays de
-     * teste, o único elemento que ocorre com mesmo valor e índice em ambos é o de índice
-     * 'Carlos', sendo assim esse o único elemento que existirá no array retornado da função.
-     * @return void
-     */
-    public function testArrayIntersectAssoc()
-    {
-        $localSetA = [
-        'Arnoldo'=>'Churrus de Nega',
-        'Oscar' => 'Shimitd',
-        'Carlos'=> 'Albino'
-        ];
-
-        $localSetB = [
-        'Arnoldo'=>'Chove Várzea Negra',
-        'Oscar' => 'Chimidi',
-        'Carlos'=> 'Albino'
-        ];
-
-        $res = array_intersect_assoc($localSetA, $localSetB);
-        //var_dump($res);
-        $this->assertCount(1, $res);
-        $this->assertContains('Albino', $res); // verifica-se ocorrência do valor Albino
-    }
-
-    /**
-     * Método implementa função array_intersect() do PHP, e testa sua atuação.
-     * A função array_intersect() espera dois parâmetros o primeiro é o array
-     * a ser comparado e o segundo é o array a comparar. A função retorna um
-     * terceiro array, com os elementos do primeiro, que possuírem valores
-     * existentes entre os elementos do segundo array. Observe o array de retorno
-     * atribuído à função var_dump().
-     * O array retornado se caracteriza por conter os elementos do primeiro
-     * elemento, que por sua vez tenham valores existentes em qualquer dos elementos do segundo,
-     * não importando a coincidência dos índices, mas tão somente os valores.
-     * @return void
-     */
-    public function testArrayIntersect()
-    {
-        $localSetA = [
-        'Arnoldo'=>'Churrus de Nega',
-        'Oscar' => 'Shimitd',
-        'Carlos'=> 'Albino',
-        'John'=> 'Luke',
-        'Mathew'=> 'Marc',
-        ];
-        $localSetB = [
-        'Arnoldo'=>'Luke',
-        'Oscar' => 'Albino',
-        'Carlos'=> 'Marc'
-        ];
-        $res = array_intersect($localSetA, $localSetB);
-        // var_dump($res);
-        $this->assertCount(3, $res);
     }
 
     /**
@@ -355,22 +296,6 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Método implementa teste à função array_map() do PHP.
-     * A função submete cada elemento do array passado à uma função callback, que pode ser tanto uma função externa,
-     * ou um método (em caso de escopo de classe), ou um closure. No exemplo abaixo utilizamos um closure como a função
-     * callback. O closure receberá cada elemento do array e poderá então alterar o valor de cada índice recebido.
-     * @return void
-     */
-    public function testArrayMap()
-    {
-        /* manipulação dos valores do array */
-        $res = array_map(function ($element) {
-            return $element.' - interceptado pelo closure';
-        }, $this->setOfStuff);/* manipulação dos valores do array */
-        // print_r($res); // aqui observamos a concatenação de uma string à cada valor de cada elemento do array passado
-    }
-
-    /**
      * Método implementa teste à função array_count_values() do PHP.
      * Função conta quantas vezes um mesmo valor ocorre no array passado e retorna um outro array, com dodos os valores
      * e a quantidade de suas ocorrências. O Array possui então, os valores nos lugares dos índices e a quantidade de
@@ -430,44 +355,5 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
         list($one,$two,$three) = $localSet;
         //print_r($three);
         $this->assertEquals('5th', $three); // observa-se que o elemento de índice '3th' foi pulado na listagem
-    }
-
-    /**
-     * Método implementa função array_reverse() do PHP. Função inverte ordem dos valores, sendo, sendo o último
-     * elemento colocado em primeiro e vice-versa. Para índices numéricos ocorre perda de relação índice/chave,
-     * porém, índices associativos são mantidos.
-     * @return void
-     */
-    public function testArrayReverse()
-    {
-        $localSet = ['abacate', // abacate é índice 0
-        '2nd'=>'book2.png',
-        'banana', // banana é índice 1
-        '1st'=>'book1.png',
-        '11th'=>'book11.png'];
-
-        $res = array_reverse($localSet); // atribui função ao array
-        //print_r($res);
-        $this->assertEquals('banana', $res[0]); // verifica-se que alterou-se o índice numérico, agora banana é índice 0
-        $this->assertEquals('abacate', $res[1]); // verifica-se que alterou-se o índice numérico, agora abacate é índice 1
-    }
-
-    /**
-     * Método implementa função array_walk(), que possibilita o uso de função callback, para tratamento de valores e/ou
-     * índices do array navegado. Função muito útil, e em adição à função array_map(), ela permite alteração também dos
-     * índices, equanto a array_map() somente de valores.
-     * @return void
-     */
-    public function testArrayWalk()
-    {
-        $localSet = ['1st'=>'first',
-        '2nd'=>'second',
-        '3rd'=>'third'];
-
-        array_walk($localSet, function (&$value, $key) {
-            $value = $value . " place"; // adiciona a string ' place' ao valor de cada elemento do array
-        });
-        //print_r($localSet);
-        $this->assertContains('first place', $localSet);
     }
 }

@@ -28,7 +28,8 @@
         "psr-4" : {
             "App\\": "src/",
             "Test\\": "test",
-            "ComposerCustoms\\":"data/composer-customs"   
+            "ComposerCustoms\\":"data/composer-customs",
+            "CliStuff\\":"data/cli-stuff"
         }
     },
     "suggest": {

@@ -5,7 +5,7 @@
  */
 
 /**
- * @package Test\PHPBasics
+ * @subpackage Test\PHPBasics
  */
 namespace Test\PHPBasics;
 
