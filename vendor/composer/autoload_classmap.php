@@ -7,13 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\DatabasesSql\\SingWithTongue' => $baseDir . '/src/DatabasesSQL/SingWithTongue.php',
-    'App\\DesignPatterns\\FindFoodAdapter' => $baseDir . '/src/DesignPatterns/FindFoodAdapter.php',
-    'App\\DesignPatterns\\MammalSurvive' => $baseDir . '/src/DesignPatterns/MammalSurvive.php',
-    'App\\DesignPatterns\\SapiensAbstract' => $baseDir . '/src/DesignPatterns/SapiensAbstract.php',
-    'App\\DesignPatterns\\SapiensFactory' => $baseDir . '/src/DesignPatterns/SapiensFactory.php',
-    'App\\DesignPatterns\\SapiensFemale' => $baseDir . '/src/DesignPatterns/SapiensFemale.php',
-    'App\\DesignPatterns\\SapiensMale' => $baseDir . '/src/DesignPatterns/SapiensMale.php',
-    'App\\DesignPatterns\\SapiensSurviveAdapter' => $baseDir . '/src/DesignPatterns/SapiensSurviveAdapter.php',
     'App\\InputOutput\\FileManipulation' => $baseDir . '/src/InputOutput/FileManipulation.php',
     'App\\InputOutput\\PageContentTaker' => $baseDir . '/src/InputOutput/PageContentTaker.php',
     'App\\InputOutput\\ResourceStream' => $baseDir . '/src/InputOutput/ResourceStream.php',

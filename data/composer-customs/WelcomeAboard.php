@@ -88,7 +88,7 @@ class WelcomeAboard
         $composer = $event->getIO();
         $composer->write(TxtDecorator::color(". Dumping autoload")."\n\n 
             Damn, matey!\n
-            This old map is making us going in circles.\n
+            This old map is making us navigate in circles.\n
             Go get a new map for us!\n\n".
         TxtDecorator::color("by T.Mallon", 'blue', 'black')."\n".
         "-------------------------------------------------------------\n");
@@ -105,7 +105,7 @@ class WelcomeAboard
         $composer = $event->getIO();
         $composer->write("\n".TxtDecorator::color(". Autoload dumped")."\n\n           
             Oh yes, matey!\n
-            Now we are sailing like butterflys!\n\n".
+            Now we are sailing like butterflies!\n\n".
         TxtDecorator::color("by T.Mallon", 'blue', 'black')."\n");
     }
 }
