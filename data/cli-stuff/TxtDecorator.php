@@ -16,6 +16,10 @@ namespace CliStuff;
  */
 class TxtDecorator
 {
+    /**
+     * Property stores possible foreground colors
+     * @var array $fgColor
+     */
     protected static $fgColor = [
     'black' => '0;30',
     'darkgray' => '1;30',
@@ -35,6 +39,10 @@ class TxtDecorator
     'white' => '1;37',
     ];
 
+    /**
+     * Property stores possible background colors
+     * @var array $bgColor
+     */
     protected static $bgColor = [
     'black' => '40',
     'red' => '41',
@@ -46,19 +54,35 @@ class TxtDecorator
     'lightgray' => '47',
     ];
 
-    // return decorated text
-    public static function color($msg = 'We need a string value - by TxtDecorator', $fgrColor = null, $bgrColor = null)
+    /**
+     * Property stores message to be decorated
+     * @var type $decoratedTxt
+     */
+    protected static $decoratedTxt;
+
+    /**
+     * Method returns decorated text
+     * @param string $msg Text to be decorated
+     * @param string $fgrColor Foreground color
+     * @param string $bfrColor Background color
+     * @return string $decoratedTxt
+     */
+    public static function color($txt = 'We need a string value - by TxtDecorator', $fgrColor = null, $bgrColor = null)
     {
         // check and try to apply fg. color
-        return ((array_key_exists($fgrColor, self::$fgColor))?
-            "\033[".self::$fgColor[$fgrColor].'m': "\033[".self::$fgColor['blue'].'m').
+        self::$decoratedTxt = ((array_key_exists($fgrColor, self::$fgColor))?
+            "\033[".self::$fgColor[$fgrColor].'m': // if !null set
+            "\033[".self::$fgColor['blue'].'m'); // set default value
+
         // check and try to apply bg. color
-        ((array_key_exists($bgrColor, self::$bgColor))?
-            "\033[".self::$bgColor[$bgrColor].'m': "\033[".self::$bgColor['lightgray'].'m').
-        // concatenate msg
-        $msg."\033[0m";
-        
+        self::$decoratedTxt .= ((array_key_exists($bgrColor, self::$bgColor))?
+            "\033[".self::$bgColor[$bgrColor].'m': // if !null set
+            "\033[".self::$bgColor['lightgray'].'m'); // set default value
+
+        return self::$decoratedTxt . "$txt\033[0m";
     }
 }
 
-//echo TxtDecorator::color('red', 'lightgray', 'Hello World!');
+if (isset($argv)) {
+    print TxtDecorator::color()."\n";
+}
