@@ -5,18 +5,17 @@
  */
 
 /**
- * @package ComposerCustoms;
+ * @package Lib\CliStuff;
  */
-namespace ComposerCustoms;
+namespace Lib\CliStuff;
 
 use Composer\Script\Event;
-use CliStuff\TxtDecorator;
 
 /**
  * This class implements customized messages for install and update packages.
  * @author Thiago Mallon <thiagomallon@gmail.com>
  */
-class WelcomeAboard
+class CompCustom
 {
     /**
      * Método exibe mensagem personalizada quando ocorre comando install

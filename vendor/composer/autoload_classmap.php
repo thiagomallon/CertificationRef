@@ -27,7 +27,8 @@ return array(
     'App\\PregMatchingSplit\\PregMatchingSplit' => $baseDir . '/src/StringsAndPatterns/PregMathingSplit.php',
     'App\\StringsAndPatterns\\PregMatching' => $baseDir . '/src/StringsAndPatterns/PregMatching.php',
     'App\\StringsAndPatterns\\PregMatchingAll' => $baseDir . '/src/StringsAndPatterns/PregMatchingAll.php',
-    'CliStuff\\TxtDecorator' => $baseDir . '/data/cli-stuff/TxtDecorator.php',
-    'ComposerCustoms\\WelcomeAboard' => $baseDir . '/data/composer-customs/WelcomeAboard.php',
+    'Lib\\CliStuff\\CompCustom' => $baseDir . '/lib/CliStuff/CompCustom.php',
+    'Lib\\CliStuff\\PSkelG' => $baseDir . '/lib/CliStuff/PSkelG.php',
+    'Lib\\CliStuff\\TxtDecorator' => $baseDir . '/lib/CliStuff/TxtDecorator.php',
     'Test\\Arrays\\ArrayDifferentiatingTest' => $baseDir . '/test/Arrays/ArrayDifferenciating.php',
 );

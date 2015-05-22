@@ -5,9 +5,9 @@
  */
 
 /**
- * @package CliStuff
+ * @package Lib\CliStuff
  */
-namespace CliStuff;
+namespace Lib\CliStuff;
 
 /**
  * Class TxtDecorator.

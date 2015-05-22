@@ -27,33 +27,32 @@
     "autoload" : {
         "psr-4" : {
             "App\\": "src/",
-            "Test\\": "test",
-            "ComposerCustoms\\":"data/composer-customs",
-            "CliStuff\\":"data/cli-stuff"
+            "Test\\": "test",            
+            "Lib\\":"lib/"
         }
     },
     "suggest": {
-	"phpunit/phpunit": "Go test your codes, matey...",
-	"phpdocumentor/phpdocumentor": "Generates documentation for your application"
+    	"phpunit/phpunit": "Go test your codes, matey...",
+    	"phpdocumentor/phpdocumentor": "Generates documentation for your application"
     },
     "scripts": {
         "pre-install-cmd": [       
-            "ComposerCustoms\\WelcomeAboard::preInstall"    
+            "Lib\\CliStuff\\CompCustom::preInstall"    
         ],
         "post-install-cmd": [       
-            "ComposerCustoms\\WelcomeAboard::postInstall"    
+            "Lib\\CliStuff\\CompCustom::postInstall"    
         ],
         "pre-update-cmd": [
-            "ComposerCustoms\\WelcomeAboard::preUpdate"
+            "Lib\\CliStuff\\CompCustom::preUpdate"
         ],
         "post-update-cmd": [        
-            "ComposerCustoms\\WelcomeAboard::postUpdate"    
+            "Lib\\CliStuff\\CompCustom::postUpdate"    
         ],
         "pre-autoload-dump": [        
-            "ComposerCustoms\\WelcomeAboard::preAutoLoadDump"    
+            "Lib\\CliStuff\\CompCustom::preAutoLoadDump"    
         ],
         "post-autoload-dump": [        
-            "ComposerCustoms\\WelcomeAboard::postAutoLoadDump"    
+            "Lib\\CliStuff\\CompCustom::postAutoLoadDump"    
         ]
     }
 }
