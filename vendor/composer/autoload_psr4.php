@@ -7,7 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Test\\' => array($baseDir . '/test'),
-    'ComposerCustoms\\' => array($baseDir . '/data/composer-customs'),
-    'CliStuff\\' => array($baseDir . '/data/cli-stuff'),
+    'Lib\\' => array($baseDir . '/lib'),
     'App\\' => array($baseDir . '/src'),
 );
