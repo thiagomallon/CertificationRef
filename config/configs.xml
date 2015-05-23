@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<application>
+    <stage>development</stage> <!-- O estágio do projeto. Se development, lerá dados referentes à development-->
+    <development>
+        <database dbms="mysql">
+            <host>localhost</host>
+            <name>db_ppp</name>
+            <user>mysql_root</user>
+            <pass>root123</pass>
+        </database>
+        <database dbms="sqlite">
+            <host>localhost</host>
+            <name>db_ppp</name>
+            <user>sqlite_root</user>
+            <pass>root123</pass>
+        </database>
+    </development>
+    <production>
+        <database dbms="mysql">            
+            <user>root</user>
+            <pass>root</pass>
+        </database>
+        <database dbms="sqlite">            
+            <user>root</user>            
+            <pass>root</pass>
+        </database>
+    </production>
+</application>
