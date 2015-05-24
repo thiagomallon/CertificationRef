@@ -6,6 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\DatabasesSQL\\DBAdapter' => $baseDir . '/src/DatabasesSQL/DBAdapter.php',
+    'App\\DatabasesSQL\\DBPrototype' => $baseDir . '/src/DatabasesSQL/DBPrototype.php',
+    'App\\DatabasesSQL\\SqliteDB' => $baseDir . '/src/DatabasesSQL/SqliteDB.php',
     'App\\DatabasesSql\\SingWithTongue' => $baseDir . '/src/DatabasesSQL/SingWithTongue.php',
     'App\\InputOutput\\FileManipulation' => $baseDir . '/src/InputOutput/FileManipulation.php',
     'App\\InputOutput\\PageContentTaker' => $baseDir . '/src/InputOutput/PageContentTaker.php',
@@ -27,8 +30,10 @@ return array(
     'App\\PregMatchingSplit\\PregMatchingSplit' => $baseDir . '/src/StringsAndPatterns/PregMathingSplit.php',
     'App\\StringsAndPatterns\\PregMatching' => $baseDir . '/src/StringsAndPatterns/PregMatching.php',
     'App\\StringsAndPatterns\\PregMatchingAll' => $baseDir . '/src/StringsAndPatterns/PregMatchingAll.php',
+    'App\\WebFeatures\\ConfigsXMLReader' => $baseDir . '/src/WebFeatures/ConfigsXMLReader.php',
+    'App\\WebFeatures\\XMLReader' => $baseDir . '/src/WebFeatures/XMLReader.php',
     'Lib\\CliStuff\\CompCustom' => $baseDir . '/lib/CliStuff/CompCustom.php',
     'Lib\\CliStuff\\PSkelG' => $baseDir . '/lib/CliStuff/PSkelG.php',
-    'Lib\\CliStuff\\TxtDecorator' => $baseDir . '/lib/CliStuff/TxtDecorator.php',
+    'Lib\\CliStuff\\TxtColor' => $baseDir . '/lib/CliStuff/TxtColor.php',
     'Test\\Arrays\\ArrayDifferentiatingTest' => $baseDir . '/test/Arrays/ArrayDifferenciating.php',
 );

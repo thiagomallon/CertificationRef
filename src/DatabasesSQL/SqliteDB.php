@@ -47,11 +47,11 @@ class SqliteDB implements DBAdapter
      * @param array $dbCredentials Array de dados de conexão
      * @return void
      */
-    private function __construct($dbCredentials)
+    private function __construct(\Object $dbCredentials)
     {
         // Please note that this is Private Constructor
+        $this->dbms = $dbCredentials->dbms;
         $this->dbName = $dbCredentials->name;
-        $this->dbHost = $dbCredentials->host;
         $this->dbUser = $dbCredentials->user;
         $this->dbPass = $dbCredentials->pass;
 

@@ -21,11 +21,6 @@ final class SingWithTongue
      */
     private $dbName = null;
     /**
-     * Propriedade armazena host
-     * @var string $dbHost
-     */
-    private $dbHost = null;
-    /**
      * Propriedade armazena senha de usuário da base
      * @var string $dbPass
      */
@@ -50,13 +45,14 @@ final class SingWithTongue
     private function __construct($dbDetails = array())
     {
         // Please note that this is Private Constructor
-        $this->dbName = $dbDetails['db_name'];
-        $this->dbHost = $dbDetails['db_host'];
-        $this->dbUser = $dbDetails['db_user'];
-        $this->dbPass = $dbDetails['db_pass'];
+        $this->dbms = $dbDetails['dbms'];
+        $this->dbName = $dbDetails['name'];
+        $this->dbUser = $dbDetails['user'];
+        $this->dbPass = $dbDetails['pass'];
 
         // Your Code here to connect to database //
-        $this->dbh = new PDO('mysql:host='.$this->dbHost.';dbname='.$this->dbName, $this->dbUser, $this->dbPass);
+        //$this->dbh = new \PDO($this->dbms.':host='.$this->dbHost.';dbname='.$this->dbName, $this->dbUser, $this->dbPass);
+        $this->dbh = new \PDO($this->dbms.':data/streams/'.$this->dbName, $this->dbUser, $this->dbPass);
     }
 
     /**
@@ -68,7 +64,7 @@ final class SingWithTongue
     {
         // Check if instance is already exists
         if (self::$instance == null) {
-            self::$instance = new database($dbDetails);
+            self::$instance = new static($dbDetails);
         }
 
         return self::$instance;
