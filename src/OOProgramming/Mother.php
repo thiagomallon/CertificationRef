@@ -4,7 +4,7 @@
  */
 
 /**
- * @package App\OOPrograming
+ * @subpackage App\OOPrograming
  */
 namespace App\OOProgramming;
 

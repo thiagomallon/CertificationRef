@@ -4,7 +4,7 @@
  */
 
 /**
- * @package Test\InputOutput;
+ * @subpackage Test\InputOutput;
  */
 namespace Test\InputOutput;
 

@@ -4,7 +4,7 @@
  */
 
 /**
- * @package App\WebFeatures
+ * @subpackage App\WebFeatures
  */
 namespace App\WebFeatures;
 

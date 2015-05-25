@@ -5,7 +5,7 @@
  */
 
 /**
- * @package App\InputOutput
+ * @subpackage App\InputOutput
  */
 namespace App\InputOutput;
 

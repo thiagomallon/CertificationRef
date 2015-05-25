@@ -5,7 +5,7 @@
  */
 
  /**
-  * @package Test\StringsAndPatters
+  * @subpackage Test\StringsAndPatters
   */
 namespace Test\StringsAndPatters;
 

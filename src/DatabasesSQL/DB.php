@@ -4,7 +4,7 @@
  */
 
 /**
- * @package App\DatabasesSQL
+ * @subpackage App\DatabasesSQL
  */
 namespace App\DatabasesSQL;
 

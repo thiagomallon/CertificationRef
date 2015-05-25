@@ -4,7 +4,7 @@
  */
 
 /**
- * @package Test\Arrays
+ * @subpackage Test\Arrays
  */
 namespace Test\Arrays;
 

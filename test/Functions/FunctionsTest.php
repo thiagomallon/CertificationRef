@@ -5,7 +5,7 @@
  */
 
  /**
-  * @package Test\Functions
+  * @subpackage Test\Functions
   */
 namespace Test\Functions;
 

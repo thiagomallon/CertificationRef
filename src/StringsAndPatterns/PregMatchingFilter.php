@@ -5,7 +5,7 @@
  */
 
 /**
- * @package App\PregMatchingFilter
+ * @subpackage App\PregMatchingFilter
  */
 namespace App\PregMatchingFilter;
 

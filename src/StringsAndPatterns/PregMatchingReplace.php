@@ -5,7 +5,7 @@
  */
 
 /**
- * @package App\PregMatchingReplace
+ * @subpackage App\PregMatchingReplace
  */
 namespace App\PregMatchingReplace;
 

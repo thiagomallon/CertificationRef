@@ -5,7 +5,7 @@
  */
 
 /**
- * @package App\StringsAndPatterns
+ * @subpackage App\StringsAndPatterns
  */
 namespace App\StringsAndPatterns;
 

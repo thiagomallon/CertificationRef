@@ -4,7 +4,7 @@
  */
 
 /**
- * @package App\PHPBasics
+ * @subpackage App\PHPBasics
  */
 namespace App\PHPBasics;
 

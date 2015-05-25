@@ -5,7 +5,7 @@
  */
 
 /**
- * @package App\PregMatchingSplit
+ * @subpackage App\PregMatchingSplit
  */
 namespace App\PregMatchingSplit;
 

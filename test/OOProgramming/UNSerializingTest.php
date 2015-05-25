@@ -5,7 +5,7 @@
  */
 
  /**
-  * @package Test\OOProgramming
+  * @subpackage Test\OOProgramming
   */
 namespace Test\OOProgramming;
 
