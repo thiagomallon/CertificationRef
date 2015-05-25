@@ -45,6 +45,7 @@
                                                                     <li><a>Namespaces</a></li>
                                                                         <li><a href="../namespaces/App.html">App</a></li>
                                                                         <li><a href="../namespaces/Test.html">Test</a></li>
+                                                                        <li><a href="../namespaces/test.html">test</a></li>
                                                                                                                                 </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
@@ -140,11 +141,11 @@
                     <div class="package-indent">
                 <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
                 
-                                        <div id="FindFoodAdapter" class="element ajax clickable interface">
-        <h1>FindFoodAdapter<a href="../classes/App.DesignPatterns.FindFoodAdapter.html">¶</a></h1>
-        <p class="short_description">Interface FindFoodAdapter - interface implementa padrão adapter - padroniza método de conseguir food</p>
+                                        <div id="XMLReader" class="element ajax clickable interface">
+        <h1>XMLReader<a href="../classes/App.WebFeatures.XMLReader.html">¶</a></h1>
+        <p class="short_description">Interface XMLReader</p>
         <div class="details collapse"></div>
-        <a href="../classes/App.DesignPatterns.FindFoodAdapter.html" class="more">« More »</a>
+        <a href="../classes/App.WebFeatures.XMLReader.html" class="more">« More »</a>
     </div>
 
                 
@@ -221,6 +222,24 @@ and objects cannot be used as keys.</div>
         <a href="../classes/Test.PHPBasics.BasicStuffTest.html" class="more">« More »</a>
     </div>
 
+                                        <div id="CastingFunctionsTest" class="element ajax clickable class">
+        <h1>CastingFunctionsTest<a href="../classes/Test.PHPBasics.CastingFunctionsTest.html">¶</a></h1>
+        <p class="short_description">Class CastingFunctionsTest testa funções especialistas em realizar casting. Existem 5 funções para
+que realizam tal tarefa, sendo elas:</p>
+        <div class="details collapse">strval(), intval(), floatval(), doubleval() (alias da floatval, boolval()
+
+Existe também uma função especializa em casting, na qual você mesmo define o tipo de conversão,
+que é a função:
+
+settype()
+
+A função supra-citada permite conversão para todos os tipos escalares, bem como tipos compostos e null,
+porém, como se espera, não realiza a conversão para resource, sendo essa uma conversão impossível, pela
+quantidade de resources que podem existir, porém, como na abordagem convencional de cast, é possível
+converter um tipo resource para outro tipo.</div>
+        <a href="../classes/Test.PHPBasics.CastingFunctionsTest.html" class="more">« More »</a>
+    </div>
+
                                         <div id="Closures" class="element ajax clickable class">
         <h1>Closures<a href="../classes/App.OOProgramming.Closures.html">¶</a></h1>
         <p class="short_description">Não pode:
@@ -253,6 +272,20 @@ Pode:
         <a href="../classes/Test.OOProgramming.ClosuresToBindTest.html" class="more">« More »</a>
     </div>
 
+                                        <div id="ConfigsXMLReader" class="element ajax clickable class">
+        <h1>ConfigsXMLReader<a href="../classes/App.WebFeatures.ConfigsXMLReader.html">¶</a></h1>
+        <p class="short_description">Class ConfigXMLReader</p>
+        <div class="details collapse"></div>
+        <a href="../classes/App.WebFeatures.ConfigsXMLReader.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ConfigsXMLReaderTest" class="element ajax clickable class">
+        <h1>ConfigsXMLReaderTest<a href="../classes/test.WebFeatures.ConfigsXMLReaderTest.html">¶</a></h1>
+        <p class="short_description">Class ConfigsXMLReaderTest.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/test.WebFeatures.ConfigsXMLReaderTest.html" class="more">« More »</a>
+    </div>
+
                                         <div id="Daughter" class="element ajax clickable class">
         <h1>Daughter<a href="../classes/App.PHPBasics.Daughter.html">¶</a></h1>
         <p class="short_description">Classe filha, usada para exemplificação simples de conceitos de herança</p>
@@ -280,6 +313,20 @@ em classe de teste.</p>
         <p class="short_description">Classe de testes do objeto de Daughter</p>
         <div class="details collapse"></div>
         <a href="../classes/Test.PHPBasics.DaughterTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="DB" class="element ajax clickable class">
+        <h1>DB<a href="../classes/App.DatabasesSQL.DB.html">¶</a></h1>
+        <p class="short_description">Interface DBAdapter</p>
+        <div class="details collapse"></div>
+        <a href="../classes/App.DatabasesSQL.DB.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="DBPrototype" class="element ajax clickable class">
+        <h1>DBPrototype<a href="../classes/App.DatabasesSQL.DBPrototype.html">¶</a></h1>
+        <p class="short_description">Class DBPrototype</p>
+        <div class="details collapse"></div>
+        <a href="../classes/App.DatabasesSQL.DBPrototype.html" class="more">« More »</a>
     </div>
 
                                         <div id="FileManipulation" class="element ajax clickable class">
@@ -344,11 +391,12 @@ c+ - same as above, but you&#039;ll be able also to read the file.</div>
         <a href="../classes/Test.OOProgramming.MagicMethodsTest.html" class="more">« More »</a>
     </div>
 
-                                        <div id="MammalSurvive" class="element ajax clickable class">
-        <h1>MammalSurvive<a href="../classes/App.DesignPatterns.MammalSurvive.html">¶</a></h1>
-        <p class="short_description">Classe Survive</p>
+                                        <div id="Mother" class="element ajax clickable class">
+        <h1>Mother<a href="../classes/App.OOProgramming.Mother.html">¶</a></h1>
+        <p class="short_description">Classe implementa herança - Métodos, propriedade e herança são testados
+em classe de teste.</p>
         <div class="details collapse"></div>
-        <a href="../classes/App.DesignPatterns.MammalSurvive.html" class="more">« More »</a>
+        <a href="../classes/App.OOProgramming.Mother.html" class="more">« More »</a>
     </div>
 
                                         <div id="Mother" class="element ajax clickable class">
@@ -358,19 +406,25 @@ c+ - same as above, but you&#039;ll be able also to read the file.</div>
         <a href="../classes/App.PHPBasics.Mother.html" class="more">« More »</a>
     </div>
 
-                                        <div id="Mother" class="element ajax clickable class">
-        <h1>Mother<a href="../classes/App.OOProgramming.Mother.html">¶</a></h1>
-        <p class="short_description">Classe implementa herança - Métodos, propriedade e herança são testados
-em classe de teste.</p>
-        <div class="details collapse"></div>
-        <a href="../classes/App.OOProgramming.Mother.html" class="more">« More »</a>
-    </div>
-
                                         <div id="MotherTest" class="element ajax clickable class">
         <h1>MotherTest<a href="../classes/Test.OOProgramming.MotherTest.html">¶</a></h1>
         <p class="short_description">Classe de testes do objeto MotherTest</p>
         <div class="details collapse"></div>
         <a href="../classes/Test.OOProgramming.MotherTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="MySqlDB" class="element ajax clickable class">
+        <h1>MySqlDB<a href="../classes/App.DatabasesSQL.MySqlDB.html">¶</a></h1>
+        <p class="short_description">Classe SingWithTongue</p>
+        <div class="details collapse"></div>
+        <a href="../classes/App.DatabasesSQL.MySqlDB.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="MySqlDBTest" class="element ajax clickable class">
+        <h1>MySqlDBTest<a href="../classes/Test.DatabasesSQL.MySqlDBTest.html">¶</a></h1>
+        <p class="short_description">Generated by PHPUnit_SkeletonGenerator on 2015-05-24 at 17:13:32.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Test.DatabasesSQL.MySqlDBTest.html" class="more">« More »</a>
     </div>
 
                                         <div id="PageContentTaker" class="element ajax clickable class">
@@ -392,6 +446,13 @@ em classe de teste.</p>
         <p class="short_description">Classe PeculiarCallsTest</p>
         <div class="details collapse"></div>
         <a href="../classes/Test.OOProgramming.PeculiarCallsTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="PeculiarVariablesNamingTest" class="element ajax clickable class">
+        <h1>PeculiarVariablesNamingTest<a href="../classes/Test.PHPBasics.PeculiarVariablesNamingTest.html">¶</a></h1>
+        <p class="short_description">Class PeculiarVariablesNamingTest</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Test.PHPBasics.PeculiarVariablesNamingTest.html" class="more">« More »</a>
     </div>
 
                                         <div id="PregMatching" class="element ajax clickable class">
@@ -439,6 +500,13 @@ atuar-se globalmente ela não é, de fato, aplicada.</div>
         <a href="../classes/Test.StringsAndPatters.PregMatchTest.html" class="more">« More »</a>
     </div>
 
+                                        <div id="RawCastingTest" class="element ajax clickable class">
+        <h1>RawCastingTest<a href="../classes/Test.PHPBasics.RawCastingTest.html">¶</a></h1>
+        <p class="short_description">Class RawCasting</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Test.PHPBasics.RawCastingTest.html" class="more">« More »</a>
+    </div>
+
                                         <div id="Reflecting" class="element ajax clickable class">
         <h1>Reflecting<a href="../classes/App.OOProgramming.Reflecting.html">¶</a></h1>
         <p class="short_description">Classe implementada, para serem testados os conceitos da API Reflection do PHP.</p>
@@ -472,51 +540,11 @@ local de arquivos temporários do sistema operacional.</div>
         <a href="../classes/Test.InputOutput.ResourceStreamTest.html" class="more">« More »</a>
     </div>
 
-                                        <div id="SapiensAbstract" class="element ajax clickable class">
-        <h1>SapiensAbstract<a href="../classes/App.DesignPatterns.SapiensAbstract.html">¶</a></h1>
-        <p class="short_description">Interface SapiensAbstract</p>
+                                        <div id="SqliteDB" class="element ajax clickable class">
+        <h1>SqliteDB<a href="../classes/App.DatabasesSQL.SqliteDB.html">¶</a></h1>
+        <p class="short_description">Class SqliteAdapter</p>
         <div class="details collapse"></div>
-        <a href="../classes/App.DesignPatterns.SapiensAbstract.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="SapiensFactory" class="element ajax clickable class">
-        <h1>SapiensFactory<a href="../classes/App.DesignPatterns.SapiensFactory.html">¶</a></h1>
-        <p class="short_description">Classe SapiensFactory</p>
-        <div class="details collapse"></div>
-        <a href="../classes/App.DesignPatterns.SapiensFactory.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="SapiensFemale" class="element ajax clickable class">
-        <h1>SapiensFemale<a href="../classes/App.DesignPatterns.SapiensFemale.html">¶</a></h1>
-        <p class="short_description">Classe SapiensFemale</p>
-        <div class="details collapse"></div>
-        <a href="../classes/App.DesignPatterns.SapiensFemale.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="SapiensMale" class="element ajax clickable class">
-        <h1>SapiensMale<a href="../classes/App.DesignPatterns.SapiensMale.html">¶</a></h1>
-        <p class="short_description">Classe SapiensMale</p>
-        <div class="details collapse"></div>
-        <a href="../classes/App.DesignPatterns.SapiensMale.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="SapiensSurviveAdapter" class="element ajax clickable class">
-        <h1>SapiensSurviveAdapter<a href="../classes/App.DesignPatterns.SapiensSurviveAdapter.html">¶</a></h1>
-        <p class="short_description">Classe SapiensSurviveAdapter - Implementa padrão adapter. Sabemos que a forma de conseguir comida, pelo
-ser humano, modou com o passar do tempo. Antes caçavamos, mas agora compramos a mesma em mercados e
-conveniências. Da mesma forma uma api pode mudar o nome de seus métodos, sendo assim, cria-se um adapter.</p>
-        <div class="details collapse">A fonte para conseguir-se commida, pelos Sapiens, está no presente método getFood(), sempre que se
-quiser adquirir comida, deve-se chamar o método getFood(), uma vez que se o método de conseguir comida
-na classe MammalSurvive mudar, o único lugar de precisaremos alterar, será o método chamado da classe
-MammalSurvive, que se encontra no presente método getFood().</div>
-        <a href="../classes/App.DesignPatterns.SapiensSurviveAdapter.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="SingWithTongue" class="element ajax clickable class">
-        <h1>SingWithTongue<a href="../classes/App.DatabasesSql.SingWithTongue.html">¶</a></h1>
-        <p class="short_description">Classe SingWithTongue</p>
-        <div class="details collapse"></div>
-        <a href="../classes/App.DatabasesSql.SingWithTongue.html" class="more">« More »</a>
+        <a href="../classes/App.DatabasesSQL.SqliteDB.html" class="more">« More »</a>
     </div>
 
                                         <div id="StaticStuffDaughter" class="element ajax clickable class">
@@ -547,6 +575,13 @@ MammalSurvive, que se encontra no presente método getFood().</div>
         <a href="../classes/Test.OOProgramming.UNSerializingTest.html" class="more">« More »</a>
     </div>
 
+                                        <div id="VariableVariablesTest" class="element ajax clickable class">
+        <h1>VariableVariablesTest<a href="../classes/Test.PHPBasics.VariableVariablesTest.html">¶</a></h1>
+        <p class="short_description">Class VariableVariablesTest</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Test.PHPBasics.VariableVariablesTest.html" class="more">« More »</a>
+    </div>
+
                             </div>
             
     
@@ -558,7 +593,7 @@ MammalSurvive, que se encontra no presente método getFood().</div>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 20 May 2015 13:15:51 -0300.<br/>
+            generated on Mon, 25 May 2015 17:58:54 -0300.<br/>
     </footer>
     </body>
 </html>

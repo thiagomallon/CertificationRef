@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>    RepCertification &raquo; \App\DesignPatterns\SapiensSurviveAdapter
+    <title>    RepCertification &raquo; \Test\DatabasesSQL\MySqlDBTest
 </title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
@@ -45,6 +45,7 @@
                                                                     <li><a>Namespaces</a></li>
                                                                         <li><a href="../namespaces/App.html">App</a></li>
                                                                         <li><a href="../namespaces/Test.html">Test</a></li>
+                                                                        <li><a href="../namespaces/test.html">test</a></li>
                                                                                                                                 </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
@@ -120,15 +121,9 @@
         <li class="nav-header">
             <i class="icon-custom icon-method"></i> Methods
             <ul>
-                                                                                                    <li class="method public">
-        <a href="#method___construct" title="__construct :: Método recebe e atribui objeto à propriedade $_mammalSurvive">
-            <span class="description">Método recebe e atribui objeto à propriedade $_mammalSurvive</span><pre>__construct</pre>
-        </a>
-    </li>
-
-                                                                                                        <li class="method public">
-        <a href="#method_getFood" title="getFood :: Método">
-            <span class="description">Método</span><pre>getFood</pre>
+                                                                                                                                                                                                                    <li class="method public">
+        <a href="#method_testFetchAll" title="testFetchAll :: The test method">
+            <span class="description">The test method</span><pre>testFetchAll</pre>
         </a>
     </li>
 
@@ -136,11 +131,21 @@
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                                                    </ul>
+                                                                            <li class="method protected">
+                            <a href="#method_setUp" title="setUp :: Sets up the fixture, for example, opens a network connection.">
+                                <span class="description">Sets up the fixture, for example, opens a network connection.</span><pre>setUp</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_tearDown" title="tearDown :: Tears down the fixture, for example, closes a network connection.">
+                                <span class="description">Tears down the fixture, for example, closes a network connection.</span><pre>tearDown</pre>
+                            </a>
+                        </li>
+                                                                                    </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                    </ul>
+                                                                                                                                                        </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -154,31 +159,17 @@
 
         <div class="span8">
             <div class="element class">
-                <h1>SapiensSurviveAdapter</h1>
+                <h1>MySqlDBTest</h1>
                 <small style="display: block; text-align: right">
-                                                                Implements <a href="../classes/App.DesignPatterns.FindFoodAdapter.html">\App\DesignPatterns\FindFoodAdapter</a>
-                                    </small>
-                <p class="short_description">Classe SapiensSurviveAdapter - Implementa padrão adapter. Sabemos que a forma de conseguir comida, pelo
-ser humano, modou com o passar do tempo. Antes caçavamos, mas agora compramos a mesma em mercados e
-conveniências. Da mesma forma uma api pode mudar o nome de seus métodos, sendo assim, cria-se um adapter.</p>
+                                            Extends \PHPUnit_Framework_TestCase
+                                                        </small>
+                <p class="short_description">Generated by PHPUnit_SkeletonGenerator on 2015-05-24 at 17:13:32.</p>
                 <div class="details">
                     <div class="long_description">
-                        <p>A fonte para conseguir-se commida, pelos Sapiens, está no presente método getFood(), sempre que se
-quiser adquirir comida, deve-se chamar o método getFood(), uma vez que se o método de conseguir comida
-na classe MammalSurvive mudar, o único lugar de precisaremos alterar, será o método chamado da classe
-MammalSurvive, que se encontra no presente método getFood().</p>
+                        
                     </div>
                     <table class="table table-bordered">
                                                                                     <tr>
-                                    <th>
-                                        author
-                                                                            </th>
-                                    <td>
-                                                                                    
-                                                                                <p>Thiago Mallon <a href="mailto:thiagomallon@gmail.com">thiagomallon@gmail.com</a></p>
-                                    </td>
-                                </tr>
-                                                                                                                <tr>
                                     <th>
                                         package
                                                                             </th>
@@ -190,37 +181,78 @@ MammalSurvive, que se encontra no presente método getFood().</p>
                                                                                                                                                                                 </table>
 
                     <h3><i class="icon-custom icon-method"></i> Methods</h3>
-                                                                <a id="method___construct"></a>
-                        <div class="element clickable method public  method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
-                            <h2>Método recebe e atribui objeto à propriedade $_mammalSurvive</h2>
-                            <pre>__construct(object $survive) : \App\DesignPatterns\datatype</pre>
+                                                                <a id="method_setUp"></a>
+                        <div class="element clickable method protected  method_setUp" data-toggle="collapse" data-target=".method_setUp .collapse">
+                            <h2>Sets up the fixture, for example, opens a network connection.</h2>
+                            <pre>setUp() </pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
                             
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"></div>
+                                    <div class="long_description"><p>This method is called before a test is executed.</p></div>
 
                                     <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
                                                                             </table>
 
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$survive</h4>
-                                                <code>object</code><p><p>Parâmetro com type hinting, necessário ser objeto de MammalSurvive</p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code>\App\DesignPatterns\datatype</code><p><p>description</p></p>
+                                    
                                                                     </div>
                             </div>
 
                         </div>
-                                            <a id="method_getFood"></a>
-                        <div class="element clickable method public  method_getFood" data-toggle="collapse" data-target=".method_getFood .collapse">
-                            <h2>Método</h2>
-                            <pre>getFood(\App\DesignPatterns\datatype $food) : \App\DesignPatterns\datatype</pre>
+                                            <a id="method_tearDown"></a>
+                        <div class="element clickable method protected  method_tearDown" data-toggle="collapse" data-target=".method_tearDown .collapse">
+                            <h2>Tears down the fixture, for example, closes a network connection.</h2>
+                            <pre>tearDown() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This method is called after a test is executed.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testFetchAll"></a>
+                        <div class="element clickable method public  method_testFetchAll" data-toggle="collapse" data-target=".method_testFetchAll .collapse">
+                            <h2>The test method</h2>
+                            <pre>testFetchAll() : void</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -230,16 +262,25 @@ MammalSurvive, que se encontra no presente método getFood().</p>
                                     <div class="long_description"></div>
 
                                     <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    covers
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
                                                                             </table>
 
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$food</h4>
-                                                <code>\App\DesignPatterns\datatype</code><p><p>description</p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code>\App\DesignPatterns\datatype</code><p><p>description</p></p>
+                                    
                                                                     </div>
                             </div>
 
@@ -247,10 +288,10 @@ MammalSurvive, que se encontra no presente método getFood().</p>
                     
                     
                                                                 <h3><i class="icon-custom icon-property"></i> Properties</h3>
-                                                    <a id="property__mammalSurvive"> </a>
-                            <div class="element clickable property  protected property__mammalSurvive" data-toggle="collapse" data-target=".property__mammalSurvive .collapse">
-                                <h2>Propriedade se faz instância de MammalSurvive</h2>
-                                <pre>_mammalSurvive : object</pre>
+                                                    <a id="property__mySqlDB"> </a>
+                            <div class="element clickable property  protected property__mySqlDB" data-toggle="collapse" data-target=".property__mySqlDB .collapse">
+                                <h2>_mySqlDB</h2>
+                                <pre>_mySqlDB : \Test\DatabasesSQL\MySqlDB</pre>
                                 <div class="labels">
                                                                                                         </div>
                                 <div class="row collapse">
@@ -269,20 +310,20 @@ MammalSurvive, que se encontra no presente método getFood().</p>
                                                                                     </table>
 
                                                                                     <h3>Type(s)</h3>
-                                            <code>object</code>
+                                            <code>\Test\DatabasesSQL\MySqlDB</code>
                                                                             </div>
                                 </div>
                             </div>
                                                             </div>
             </div>
-            <a id="\App\DesignPatterns\SapiensSurviveAdapter"></a>
+            <a id="\Test\DatabasesSQL\MySqlDBTest"></a>
             <ul class="breadcrumb">
                 <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
                     
     
-    <li><span class="divider">\</span><a href="../namespaces/App.DesignPatterns.html">DesignPatterns</a></li>
+    <li><span class="divider">\</span><a href="../namespaces/Test.DatabasesSQL.html">DatabasesSQL</a></li>
 
-                <li class="active"><span class="divider">\</span><a href="../classes/App.DesignPatterns.SapiensSurviveAdapter.html">SapiensSurviveAdapter</a></li>
+                <li class="active"><span class="divider">\</span><a href="../classes/Test.DatabasesSQL.MySqlDBTest.html">MySqlDBTest</a></li>
             </ul>
         </div>
     </div>
@@ -293,7 +334,7 @@ MammalSurvive, que se encontra no presente método getFood().</p>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 20 May 2015 13:15:51 -0300.<br/>
+            generated on Mon, 25 May 2015 17:58:54 -0300.<br/>
     </footer>
     </body>
 </html>
