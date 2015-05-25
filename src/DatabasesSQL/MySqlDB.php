@@ -7,30 +7,14 @@
 /**
  * @package App\DatabasesSql
  */
-namespace App\DatabasesSql;
+namespace App\DatabasesSQL;
 
 /**
  * Classe SingWithTongue
  * @author Thiago Mallon <thiagomallon@gmail.com>
  */
-final class SingWithTongue
+final class MySqlDB extends DB
 {
-    /**
-     * Propriedade armazena nome da base
-     * @var string $dbName
-     */
-    private $dbName = null;
-    /**
-     * Propriedade armazena senha de usuário da base
-     * @var string $dbPass
-     */
-    private $dbPass = null;
-    /**
-     * Propriedade armazena nome de usuário da base
-     * @var string $dbUser
-     */
-    private $dbUser = null;
-
     /**
      * Propriedade armazena estaticamente uma instância do objeto
      * @var object $instance
@@ -42,17 +26,11 @@ final class SingWithTongue
      * @param array $dbDetails Array de dados de conexão
      * @return void
      */
-    private function __construct($dbDetails = array())
+    private function __construct($dbDetails)
     {
-        // Please note that this is Private Constructor
-        $this->dbms = $dbDetails['dbms'];
-        $this->dbName = $dbDetails['name'];
-        $this->dbUser = $dbDetails['user'];
-        $this->dbPass = $dbDetails['pass'];
-
         // Your Code here to connect to database //
-        //$this->dbh = new \PDO($this->dbms.':host='.$this->dbHost.';dbname='.$this->dbName, $this->dbUser, $this->dbPass);
-        $this->dbh = new \PDO($this->dbms.':data/streams/'.$this->dbName, $this->dbUser, $this->dbPass);
+        $this->dbh = new \PDO('mysql:host='.$dbDetails->host.
+            ';dbname='.$dbDetails->name, $dbDetails->user, $dbDetails->pass);
     }
 
     /**
@@ -60,15 +38,42 @@ final class SingWithTongue
      * @param array $dbDetails Dados para conexão com a base
      * @return object Retorna instância única da classe
      */
-    public static function connect($dbDetails = array())
+    public static function connect(\SimpleXMLElement $dbDetails)
     {
         // Check if instance is already exists
         if (self::$instance == null) {
             self::$instance = new static($dbDetails);
         }
-
         return self::$instance;
+    }
 
+    /**
+     * The setDBConfigs method
+     * @return datatype description
+     */
+    public static function setDBConfigs()
+    {
+
+    }
+
+    /**
+     * The fetchRow method
+     * @return datatype description
+     */
+    public static function fetchRow($where, $order)
+    {
+
+    }
+
+    /**
+     * The fetchAll method
+     * @return datatype description
+     */
+    public function fetchAll($statement, $args)
+    {
+        $stmt = $this->dbh->prepare($statement);
+        $stmt->execute($args);
+        return $stmt->fetchAll();
     }
 
     /**
@@ -77,7 +82,7 @@ final class SingWithTongue
      * pattern é que haja apenas uma instância do objeto.
      * @return void
      */
-    private function __clone()
+    protected function __clone()
     {
         // Stopping Clonning of Object
     }
@@ -91,7 +96,7 @@ final class SingWithTongue
      * mas uma brecha àqueles que compreendem o processo de serialização e gostam de desafios.
      * @return void
      */
-    private function __wakeup()
+    protected function __wakeup()
     {
         // Stopping unserialize of object
     }

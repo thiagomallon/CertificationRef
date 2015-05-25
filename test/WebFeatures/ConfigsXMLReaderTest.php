@@ -90,15 +90,15 @@ class ConfigsXMLReaderTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetElementDataByAttr()
     {
-        $elementDetails = ['element'=>'database', 'attribute'=>'dbms', 'value'=>'sqlite']; // matriz relativa ao atributo a ser selecionado
+        $elementDetails = ['element'=>'database', 'attribute'=>'dbms', 'value'=>'mysql']; // matriz relativa ao atributo a ser selecionado
         $selectedElm = $this->_configXML->getElementDataByAttr($elementDetails); // chama função que retorna dados do elemento, para o atributo passado
         //print_r($selectedElm);
         $this->assertInstanceOf('\SimpleXMLElement', $selectedElm); // verifica-se se é instancia esperada
         $this->assertInternalType('object', $selectedElm); // verifica-se se é objeto
 
-        $this->assertEquals(3, count($selectedElm)); // método assertCount() não funciona para objetos, sendo assim, verifica-se atraves da função count()
-        $this->assertEquals('sqlitedb', $selectedElm->name); // verifica-se valor da propriedade host, do objeto
-        $this->assertEquals('sqlite', $selectedElm['dbms']); // verifica-se valor do atributo
+        $this->assertEquals(4, count($selectedElm)); // método assertCount() não funciona para objetos, sendo assim, verifica-se atraves da função count()
+        $this->assertEquals('db_test', $selectedElm->name); // verifica-se valor da propriedade host, do objeto
+        $this->assertEquals('mysql', $selectedElm['dbms']); // verifica-se valor do atributo
     }
 
     /**

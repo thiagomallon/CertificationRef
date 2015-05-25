@@ -4,14 +4,12 @@
     <development>
         <database dbms="mysql">
             <host>localhost</host>
-            <name>db_ppp</name>
-            <user>mysql_root</user>
-            <pass>root123</pass>
-        </database>
-        <database dbms="sqlite">            
-            <name>sqlitedb</name>
+            <name>db_test</name>
             <user>root</user>
             <pass>root</pass>
+        </database>
+        <database dbms="sqlite">            
+            <name>sqlitedb.sqlite</name>            
         </database>
     </development>
     <production>
@@ -20,8 +18,7 @@
             <pass>root</pass>
         </database>
         <database dbms="sqlite">            
-            <user>root</user>            
-            <pass>root</pass>
+            <name>sqlitedb.sqlite</name>
         </database>
     </production>
 </application>

@@ -14,17 +14,11 @@ namespace App\DatabasesSQL;
  */
 class SqliteDB implements DBAdapter
 {
-
     /**
      * Propriedade armazena nome da base
      * @var string $dbName
      */
     private $dbName = null;
-    /**
-     * Propriedade armazena host
-     * @var string $dbHost
-     */
-    private $dbHost = null;
     /**
      * Propriedade armazena senha de usuário da base
      * @var string $dbPass
@@ -47,16 +41,15 @@ class SqliteDB implements DBAdapter
      * @param array $dbCredentials Array de dados de conexão
      * @return void
      */
-    private function __construct(\Object $dbCredentials)
+    private function __construct(\SimpleXMLElement $dbCredentials)
     {
         // Please note that this is Private Constructor
-        $this->dbms = $dbCredentials->dbms;
         $this->dbName = $dbCredentials->name;
         $this->dbUser = $dbCredentials->user;
         $this->dbPass = $dbCredentials->pass;
 
         // Your Code here to connect to database //
-        $this->dbh = new PDO('mysql:host='.$this->dbHost.';dbname='.$this->dbName, $this->dbUser, $this->dbPass);
+        $this->dbh = new PDO('sqlite:host='.$this->dbHost.';dbname='.$this->dbName, $this->dbUser, $this->dbPass);
     }
 
     /**
@@ -64,7 +57,7 @@ class SqliteDB implements DBAdapter
      * @param array $dbCredentials Dados para conexão com a base
      * @return object Retorna instância única da classe
      */
-    public static function connect(\App\WebFeatures\XMLReader $dbCredentials)
+    public static function connect(\SimpleXMLElement $dbCredentials)
     {
         // Check if instance is already exists
         if (self::$instance == null) {
