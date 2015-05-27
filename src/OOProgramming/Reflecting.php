@@ -51,7 +51,7 @@ class Reflecting
     
     /**
      * Recebe parâmetro na chamada e atribui à propriedade $realLife
-     * @return void
+     * @return null
      * @param mixed $realLife É atribuído à propriedade $realLife
      */
     public function setRealLife($realLife)

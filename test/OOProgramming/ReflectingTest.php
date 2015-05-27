@@ -53,7 +53,7 @@ class ReflectingTest extends \PHPUnit_Framework_TestCase
      * métodos declarados na classe implementada. O método getMethods() da classe
      * ReflectionClass do PHP, retorna array com especificações dos métodos existentes
      * no objeto da classe implementada, Reflecting.
-     * @return void
+     * @return null
      */
     public function testObjMethods()
     {
@@ -68,7 +68,7 @@ class ReflectingTest extends \PHPUnit_Framework_TestCase
      * propriedades declaradas na classe implementada. O método getProperties() da classe
      * ReflectionClass do PHP, retorna array com especificações das propriedades existentes
      * no objeto da classe implementada, Reflecting.
-     * @return void
+     * @return null
      */
     public function testObjProperties()
     {

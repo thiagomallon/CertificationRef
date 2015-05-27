@@ -19,7 +19,7 @@ class FunctionsTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Método implementa função sscanf() do PHP.
-     * @return void
+     * @return null
      */
     public function testSscanf()
     {

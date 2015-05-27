@@ -23,7 +23,7 @@ class GrandMa
 
     /**
      * Método construtor
-     * @return void
+     * @return null
      */
     public function __construct()
     {
@@ -41,7 +41,7 @@ class GrandMa
     
     /**
      * Método
-     * @return void description
+     * @return null description
      * @param datatype $name description
      */
     public function setName($name)

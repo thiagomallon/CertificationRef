@@ -24,7 +24,7 @@ class ArrayDifferentiatingTest extends \PHPUnit_Framework_TestCase
      * com os elementos em que coincidem tanto índice quanto valor. Nos dois arrays de
      * teste, o único elemento que ocorre com mesmo valor e índice em ambos é o de índice
      * 'Carlos', sendo assim esse o único elemento que existirá no array retornado da função.
-     * @return void
+     * @return null
      */
     public function testArrayIntersectAssoc()
     {
@@ -56,7 +56,7 @@ class ArrayDifferentiatingTest extends \PHPUnit_Framework_TestCase
      * O array retornado se caracteriza por conter os elementos do primeiro
      * elemento, que por sua vez tenham valores existentes em qualquer dos elementos do segundo,
      * não importando a coincidência dos índices, mas tão somente os valores.
-     * @return void
+     * @return null
      */
     public function testArrayIntersect()
     {

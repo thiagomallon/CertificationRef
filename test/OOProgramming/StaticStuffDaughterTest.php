@@ -61,7 +61,7 @@ class StaticStuffDaughterTest extends \PHPUnit_Framework_TestCase
     /**
      * Método implementa chamada à método estático através do objeto e não pelo nome da classe,
      * como habitual.
-     * @return void
+     * @return null
      * @covers App\OOProgramming\StaticStuffDaughter::getStaticProp
      */
     public function testCallStaticMethodFromObj()

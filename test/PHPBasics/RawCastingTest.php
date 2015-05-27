@@ -24,7 +24,7 @@ class RawCastingTest extends \PHPUnit_Framework_TestCase
      * false = (bool) 0; // valores 0 são convertidos para false
      * true = (bool) -5; // números negativos são convertidos para true
      *
-     * @return void
+     * @return null
      */
     public function testCastingIntBool()
     {
@@ -46,7 +46,7 @@ class RawCastingTest extends \PHPUnit_Framework_TestCase
      * 1 = (int) true;
      * 0 = (int) false;
      *
-     * @return void
+     * @return null
      */
     public function testCastingBoolInt()
     {
@@ -68,7 +68,7 @@ class RawCastingTest extends \PHPUnit_Framework_TestCase
      * false = (bool) ''
      * true = (bool) '-1'
      *
-     * @return void
+     * @return null
      */
     public function testCastingStrBool()
     {

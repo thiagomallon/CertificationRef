@@ -110,7 +110,7 @@ class FileManipulation
      * The deleteTempFile method implementa deleção do arquivo, cujo nome é recebido via parâmetro.
      * Método implementa deleção de arquivo
      * @param string $filename Path do arquivo à ser deletado
-     * @return void
+     * @return null
      */
     public function deleteTempFile($filename)
     {

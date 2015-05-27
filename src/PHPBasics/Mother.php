@@ -17,7 +17,7 @@ class Mother
 {
     /**
      * Método construtor do objeto
-     * @return void
+     * @return null
      */
     public function __construct()
     {

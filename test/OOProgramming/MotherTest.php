@@ -48,7 +48,7 @@ class MotherTest extends \PHPUnit_Framework_TestCase
      * de memória do objeto clonado, porém, possui todas as características do objeto clonado,
      * desde suas propriedades e métodos aos valores já setados às suas propriedades, porém,
      * como supra-citado, se faz outro objeto, alocado a outro endereço de memória.
-     * @return void
+     * @return null
      */
     public function testCloning()
     {
@@ -70,7 +70,7 @@ class MotherTest extends \PHPUnit_Framework_TestCase
      *
      * get_class() - Recebe uma instância e retorna o nome da classe da mesma.
      *
-     * @return void
+     * @return null
      */
     public function testClassAlias()
     {
@@ -102,7 +102,7 @@ class MotherTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Método testa duplicação de instâncias, abordagem que cria instâncias por referência.
-     * @return void
+     * @return null
      */
     public function testDuplicatingInstance()
     {
@@ -117,7 +117,7 @@ class MotherTest extends \PHPUnit_Framework_TestCase
      * Método testa 'destruição' de instância. Verifica-se que por mais que seja aplicada a função
      * unset() à instância, o objeto permanece até que qualquer outro compartilhamento por referência,
      * do mesmo, esteja em uso.
-     * @return void
+     * @return null
      */
     public function testDestructingObject()
     {
@@ -140,7 +140,7 @@ class MotherTest extends \PHPUnit_Framework_TestCase
      * objeto. Confirma-se que o PHP não espera um número máximo de argumentos passados à um método,
      * somente um número mínimo, ou seja, quando o método espera um parâmetro em sua assinatura, esse
      * um parâmetro (pelo menos) deve ser passado.
-     * @return void
+     * @return null
      */
     public function testReturnArgsPassed()
     {
@@ -154,7 +154,7 @@ class MotherTest extends \PHPUnit_Framework_TestCase
      * Método testa retorno da função get_object_vars() do PHP, que é o retorno do método returnObjVars()
      * do objeto. A função é capaz de retornar todas as propriedades do objeto, bem como seus respectivos
      * valores, independentemente do encapsulamento que lhe(s) é(seja) atribuído.
-     * @return void
+     * @return null
      */
     public function testReturnObjVars()
     {

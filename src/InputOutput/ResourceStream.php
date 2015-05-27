@@ -48,7 +48,7 @@ class ResourceStream
 
     /**
      * Método escreve em dado
-     * @return void
+     * @return null
      * @param resource $handler Handler a ser escrito
      * @param string $content Dado recebido será atribuído ao conteúdo do stream que
      * o handler manipula.
@@ -68,7 +68,7 @@ class ResourceStream
      * - LOCK_EX to acquire an exclusive lock (writer).
      * - LOCK_UN to release a lock (shared or exclusive).
      *
-     * @return void
+     * @return null
      * @param resource &$handler Handler do stream, por referência
      * @param integer $lockOperation Tipo de lock a ser atribuído ao stream. Apesar do dado ser uma constante,
      * ele possui valor inteiro, por isso o datatype é integer.

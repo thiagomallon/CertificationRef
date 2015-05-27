@@ -46,7 +46,7 @@ class BasicStuffTest extends \PHPUnit_Framework_TestCase
      * Método testa retorno da função is_a() do PHP, que é o retorno do método isAImplement() do
      * objeto. A função retorna valor boleano após verificar se dada instância no primeiro argumento
      * é um objeto do tipo da classe especificada no segundo parâmetro.
-     * @return void
+     * @return null
      */
     public function testIsAImplement()
     {

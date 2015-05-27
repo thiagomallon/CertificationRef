@@ -109,7 +109,7 @@ class ClosuresTest extends \PHPUnit_Framework_TestCase
     /**
      * Método exemplifica uso de closure como callback, para a função array_map(), que
      * faz uso de funções de callback em sua chamada.
-     * @return void
+     * @return null
      */
     public function testArrayMapCallback()
     {
@@ -131,7 +131,7 @@ class ClosuresTest extends \PHPUnit_Framework_TestCase
      * e o segundo o método que se deseja invocar. Verificamos também, nesse exemplo, que
      * não é criado um novo objeto, a expressão é, de fato, o que aparente, o objeto é atribuído
      * ao callback, logo, mantém o valor da propriedade $property1.
-     * @return void
+     * @return null
      */
     public function testObjectMethodCall()
     {
@@ -145,7 +145,7 @@ class ClosuresTest extends \PHPUnit_Framework_TestCase
      * Método apresenta uma variação de chamada de método via array. A diferença entre a abordagem seguinte,
      * da abordagem exemplificado no exemplo anterior, é que no seguinte atribuímos o nome da classe, logo
      * um novo objeto é criado e no anterior o objeto já instanciado é atribuído.
-     * @return void
+     * @return null
      */
     public function testStaticMethod()
     {

@@ -45,7 +45,7 @@ class ConfigsXMLReaderTest extends \PHPUnit_Framework_TestCase
 
     /**
      * The testsetFilePath method
-     * @return void
+     * @return null
      * @covers \App\WebFeatures\ConfigsXMLReader::setFilePath
      */
     public function testSetFilePath()
@@ -84,7 +84,7 @@ class ConfigsXMLReaderTest extends \PHPUnit_Framework_TestCase
 
     /**
      * The testGetElementDataByAttr method
-     * @return void
+     * @return null
      * @covers \App\WebFeatures\ConfigsXMLReader::getElementData
      * @covers \App\WebFeatures\ConfigsXMLReader::getElementDataByAttr
      */

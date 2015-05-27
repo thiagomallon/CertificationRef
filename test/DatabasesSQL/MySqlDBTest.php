@@ -33,7 +33,7 @@ class MySqlDBTest extends \PHPUnit_Framework_TestCase
 
     /**
      * The test method
-     * @return void
+     * @return null
      * @covers \App\DatabasesSQL\MySqlDB::fetchAll
      */
     public function testFetchAll()

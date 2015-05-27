@@ -25,7 +25,7 @@ class ArrayPointerTest extends \PHPUnit_Framework_TestCase
     
     /**
      * Método sobrescrito do PHPUnit, chamado antes de cada método de teste
-     * @return void
+     * @return null
      */
     public function setUp()
     {
@@ -40,7 +40,7 @@ class ArrayPointerTest extends \PHPUnit_Framework_TestCase
     
     /**
      * Método sobrescrito do PHPUnit, chamado após finalização de cada método de teste
-     * @return void
+     * @return null
      */
     public function tearDown()
     {
@@ -52,7 +52,7 @@ class ArrayPointerTest extends \PHPUnit_Framework_TestCase
      * Como estamos usando fixtures para 'refazer' uma chamada imediata à função current()
      * (sem antes ter sido atribuída nenhuma ação ao array) fará com que a função retorne
      * o valor 'first', que é o valor do primeiro elemento.
-     * @return void
+     * @return null
      */
     public function testCurrent()
     {
@@ -62,7 +62,7 @@ class ArrayPointerTest extends \PHPUnit_Framework_TestCase
     /**
      * Método implementa uso da função next(), de manipulação de ponteiros de array. Utilizo também
      * a função current(), para resgatar a atual posição do mesmo.
-     * @return void
+     * @return null
      */
     public function testNext()
     {
@@ -73,7 +73,7 @@ class ArrayPointerTest extends \PHPUnit_Framework_TestCase
     /**
      * Método implementa uso da função end(), que tem por finalidade posicionar o ponteiro do array no
      * último elemento do mesmo.
-     * @return void
+     * @return null
      */
     public function testEnd()
     {
@@ -84,7 +84,7 @@ class ArrayPointerTest extends \PHPUnit_Framework_TestCase
     /**
      * Método implementa uso da função prev(), que volta ponteiro uma posição, relativamente à posição
      * atual do mesmo.
-     * @return void
+     * @return null
      */
     public function testPrev()
     {
@@ -96,7 +96,7 @@ class ArrayPointerTest extends \PHPUnit_Framework_TestCase
     /**
      * Método faz uso da função each(), que retorna um novo array, contendo o índice e o valor do elemento ao qual
      * o ponteiro em sua presente posição, está apontando.
-     * @return void
+     * @return null
      */
     public function testEach()
     {
@@ -112,7 +112,7 @@ class ArrayPointerTest extends \PHPUnit_Framework_TestCase
     /**
      * Método implementa função reset() de manipulação de posição de ponteiros de array. A função retorna o ponteiro do
      * array para o primeiro elemento do mesmo.
-     * @return void
+     * @return null
      */
     public function testReset()
     {

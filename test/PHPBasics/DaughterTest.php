@@ -43,7 +43,7 @@ class DaughterTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Método verifica herança de instância de Daughter por Mother
-     * @return void
+     * @return null
      */
     public function testDaughterInheritance()
     {
@@ -52,7 +52,7 @@ class DaughterTest extends \PHPUnit_Framework_TestCase
     
     /**
      * Método verifica retorno da função getName()
-     * @return void
+     * @return null
      */
     public function testNameSeting()
     {
@@ -62,7 +62,7 @@ class DaughterTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Testo a correta funcionalidade do método sobrescrito do PHPUnit, tearDown();
-     * @return void;
+     * @return null;
      */
     public function testNameGetting()
     {

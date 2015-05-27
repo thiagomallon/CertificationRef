@@ -48,7 +48,7 @@ class ClosuresToBindTest extends \PHPUnit_Framework_TestCase
      * a um outro objeto, passado via parâmetro ao mesmo. No primeiro parâmetro passamos
      * a classe que desejamos que o closure associe o $this, e no segundo parâmetro, a
      * classe que desejamos que ele esteja no escopo.
-     * @return void
+     * @return null
      */
     public function testBindingClosure()
     {

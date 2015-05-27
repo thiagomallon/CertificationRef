@@ -45,7 +45,7 @@ class MagicMethodsTest extends \PHPUnit_Framework_TestCase
     /**
      * Testa-se chamada à método indefinido, através do método mágico __call(),
      * implementado no objeto da instância.
-     * @return void
+     * @return null
      * @covers App\OOProgramming\MagicMethods::__call
      */
     public function testCallMagicMethod()
@@ -63,7 +63,7 @@ class MagicMethodsTest extends \PHPUnit_Framework_TestCase
     /**
      * Testa-se atribuição de valor à propriedade inacessível, através do método mágico
      * __set(), implementado no objeto da instância.
-     * @return void
+     * @return null
      * @covers App\OOProgramming\MagicMethods::__set
      * @covers App\OOProgramming\MagicMethods::__get
      */
@@ -81,7 +81,7 @@ class MagicMethodsTest extends \PHPUnit_Framework_TestCase
      * Testa-se interceptação da função isset(), através do método mágico __isset(), declarado na classe
      * do objeto. A função é interceptada quando chama-se a função isset(), passando-se uma propriedade
      * inacessível (ou inexistente), no objeto.
-     * @return void
+     * @return null
      * @covers App\OOProgramming\MagicMethods::__isset
      */
     public function testIssetMagicMethod()
@@ -94,7 +94,7 @@ class MagicMethodsTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Método
-     * @return void
+     * @return null
      * @covers App\OOProgramming\MagicMethods::__sleep
      */
     public function testSleepMagicMethod()
@@ -115,7 +115,7 @@ class MagicMethodsTest extends \PHPUnit_Framework_TestCase
     /**
      * Testa-se impressão de instância como string, através do método mágico __toString(),
      * implementado no objeto da instância.
-     * @return void
+     * @return null
      * @covers App\OOProgramming\MagicMethods::__toString
      */
     public function testToStrindMagicMethod()

@@ -48,7 +48,7 @@ class ArrayCallbacksTest extends \PHPUnit_Framework_TestCase
      * A função submete cada elemento do array passado à uma função callback, que pode ser tanto uma função externa,
      * ou um método (em caso de escopo de classe), ou um closure. No exemplo abaixo utilizamos um closure como a função
      * callback. O closure receberá cada elemento do array e poderá então alterar o valor de cada índice recebido.
-     * @return void
+     * @return null
      */
     public function testArrayMap()
     {
@@ -64,7 +64,7 @@ class ArrayCallbacksTest extends \PHPUnit_Framework_TestCase
      * Método implementa função array_walk(), que possibilita o uso de função callback, para tratamento de valores e/ou
      * índices do array navegado. Função muito útil, e em adição à função array_map(), ela permite alteração também dos
      * índices, equanto a array_map() somente de valores.
-     * @return void
+     * @return null
      */
     public function testArrayWalk()
     {
@@ -77,7 +77,7 @@ class ArrayCallbacksTest extends \PHPUnit_Framework_TestCase
 
     /**
      * The testUSort method
-     * @return void
+     * @return null
      */
     public function testUSort()
     {
@@ -86,7 +86,7 @@ class ArrayCallbacksTest extends \PHPUnit_Framework_TestCase
 
     /**
      * The testUKSort method
-     * @return void
+     * @return null
      */
     public function testUKSort()
     {
@@ -95,7 +95,7 @@ class ArrayCallbacksTest extends \PHPUnit_Framework_TestCase
 
     /**
      * The testUASort method
-     * @return void
+     * @return null
      */
     public function testUASort()
     {

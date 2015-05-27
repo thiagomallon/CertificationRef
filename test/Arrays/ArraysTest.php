@@ -80,7 +80,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
      * porém, verifica-se que o índice criado para ele, é o 5, uma vez que foi declarado o índice
      * 4. Sendo assim conclui-se que o PHP não se importa com posições de indexação vazias, ele
      * sempre criará um índice incrementando um ao índice de maior posição.
-     * @return void
+     * @return null
      */
     public function testInsertion()
     {
@@ -96,7 +96,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
      * Método testa função in_array() do PHP. Função verifica se existe dado
      * valor em qualquer um dos índices do array passado e retorna true caso
      * ocorra.
-     * @return void
+     * @return null
      */
     public function testInArray()
     {
@@ -108,7 +108,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
      * Método testa função array_keys do PHP. Quando um array é passado à função,
      * a mesma retornará um novo array, com os elementos desse último como valores
      * e os índices, dessa vez, númericamente indexados.
-     * @return void
+     * @return null
      */
     public function testArrayKeys()
     {
@@ -132,7 +132,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
      * Por sua vez, se quisermos saber se um elemento (valor) existe em um dado array,
      * a função para tal tarefa á a in_array();
      *
-     * @return void
+     * @return null
      */
     public function testArrayKeyExists()
     {
@@ -143,7 +143,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
      * Método testa função array_values do PHP. Quando um array é passado à função
      * a mesma devolve um novo array, com os valores do antigo, porém, com novos índices,
      * dessa vez numericamente indexados.
-     * @return void
+     * @return null
      */
     public function testArrayValues()
     {
@@ -154,7 +154,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
     /**
      * Método testa função array_flip do PHP. Função recebe um array e devolve o mesmo com índices
      * e valores invertidos, ou seja, índice no lugar do valor e vice-versa.
-     * @return void
+     * @return null
      */
     public function testArrayFlip()
     {
@@ -169,7 +169,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
      * dois arrays, porém, os valores do primeiro sendo convertidos em índices. A função retorna um
      * terceiro array com a implementação. É importante ressaltar que ambos arrays a serem combinados,
      * devem ter exatamente o mesmo número de elementos, do contrário um warning é gerado.
-     * @return void
+     * @return null
      */
     public function testArrayCombine()
     {
@@ -191,7 +191,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
      * índice numérico, ou seja, caso exista o mesmo índice ASSOCIATIVO em dois arrays, o valor que prevalecerá,
      * será o valor do último array, na ordem de argumentos passados à função. Observe o print_r()
      * do array de retorno.
-     * @return void
+     * @return null
      */
     public function testArrayMerge()
     {
@@ -206,7 +206,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
     /**
      * Método implementa chamada à função array_replace() do PHP. Função, diferentemente da função array_merge(),
      * vista no método acima, implementa substituição tanto de índices associativos, quanto de índices numéricos.
-     * @return void
+     * @return null
      */
     public function testArrayReplace()
     {
@@ -225,7 +225,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
      * partindo da primeira ocorrência do valor.
      * Observa-se que independentemente do índice ser numérico ou associativo, a primeira ocorrência do valor é a que permanece, ela
      * e seu respectivo índice.
-     * @return void
+     * @return null
      */
     public function testArrayUnique()
     {
@@ -244,7 +244,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
     /**
      * Método implementa chamada à função array_shift() do PHP. A função retira o primerio elemento do
      * array passado e retorna seu valor, deixando o array passado sem o primeiro elemento.
-     * @return void
+     * @return null
      */
     public function testArrayShift()
     {
@@ -266,7 +266,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
      * solicitar ou não a reordenação do array. A função retorna o array recortado. Nota-se que quando
      * é atribuído um array associativo, os índices não são reordenados e refere-se aos índices com os
      * seus relativos numéricos e não a string associativa.
-     * @return void
+     * @return null
      */
     public function testArraySlice()
     {
@@ -280,7 +280,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
      * alfanumérico comece com representações numéricas ('345cdf') o elemento não será incluido
      * na soma, e também quando inicia com dígitos, obviamente que somente os dígitos serão
      * incluídos na soma.
-     * @return void
+     * @return null
      */
     public function testArraySum()
     {
@@ -300,7 +300,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
      * Função conta quantas vezes um mesmo valor ocorre no array passado e retorna um outro array, com dodos os valores
      * e a quantidade de suas ocorrências. O Array possui então, os valores nos lugares dos índices e a quantidade de
      * ocorrência daquele valor, em seus valor. Observe o que se imprime na função print_r();
-     * @return void
+     * @return null
      */
     public function testArrayCountValues()
     {
@@ -319,7 +319,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
      * à todos os novos índices. É importante lembrar que uma vez que existam valores duplicados, os mesmos serão
      * retirados, uma vez que os índices do array devem ser únicos. No array de exemplo abaixo, declaro dois valores
      * 'mingal', porém, array retornado da função array_fill_keys() possui apenas um índice 'mingal';
-     * @return void
+     * @return null
      */
     public function testArrayFillKeys()
     {
@@ -339,7 +339,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
      * Método implementa função (ou melhor, construtor de linguagem list()). Função atribui
      * valor de dada posição à variável atribuída, seguindo-se a ordem de ocorrência. No exemplo
      * abaixo.
-     * @return void
+     * @return null
      */
     public function testList()
     {

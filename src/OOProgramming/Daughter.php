@@ -24,7 +24,7 @@ class Daughter extends Mother
 
     /**
      * Método construtor da classe. O método chama método construtor da classe mãe.
-     * @return void
+     * @return null
      */
     public function __construct()
     {
@@ -34,7 +34,7 @@ class Daughter extends Mother
 
     /**
      * Método atribui valor de dado recebido à propriedade $name
-     * @return void
+     * @return null
      * @param string $name É esperado dado do tipo string
      */
     public function setName($name)

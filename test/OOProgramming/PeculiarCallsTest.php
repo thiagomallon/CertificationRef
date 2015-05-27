@@ -21,7 +21,7 @@ class PeculiarCallsTest extends \PHPUnit_Framework_TestCase
      * Método testa chamada à método passando string, de um olhar mais analítico
      * vemos que é algo totalmente possível, já que o PHP interpreta string como
      * métodos, só bastando colocar-se parênteses ao final da declaração.
-     * @return void
+     * @return null
      * @covers App\OOProgramming\Daughter::setName
      * @covers App\OOProgramming\Daughter::getName
      */
@@ -44,7 +44,7 @@ class PeculiarCallsTest extends \PHPUnit_Framework_TestCase
      * mesma.
      * @covers App\OOProgramming\Daughter::setName
      * @covers App\OOProgramming\Daughter::getName
-     * @return void
+     * @return null
      */
     public function testSecondMode()
     {
@@ -56,7 +56,7 @@ class PeculiarCallsTest extends \PHPUnit_Framework_TestCase
     /**
      * Método estático de teste, testa chamada peculiar em método estático
      * @covers App\OOProgramming\GrandMa::sayHello
-     * @return void
+     * @return null
      */
     public static function testStaticFirsMode()
     {

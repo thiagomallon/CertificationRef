@@ -24,7 +24,7 @@ class UNSerializingTest extends \PHPUnit_Framework_TestCase
      * string que representa o objeto. Futuramente, pode-se utilizar a função unserialize, para transformar essa string
      * no objeto novamente, lembrando-se que todas os valores atrubuídos às propriedades do objeto, após seu instanciamento
      * serão mantidas nas chamadas à serialize() e unserialize().
-     * @return void
+     * @return null
      * @covers App\OOProgramming\Daughter::__construct
      */
     public function testSerialization()

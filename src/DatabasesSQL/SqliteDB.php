@@ -39,7 +39,7 @@ class SqliteDB implements DBAdapter
     /**
      * Método construtor, recebe e atribui dados de conexão às propriedades privadas da classe
      * @param array $dbCredentials Array de dados de conexão
-     * @return void
+     * @return null
      */
     private function __construct(\SimpleXMLElement $dbCredentials)
     {
@@ -73,7 +73,7 @@ class SqliteDB implements DBAdapter
      * dependência XMLReader esteja compartilhando a mesma alocação em memória, ou seja, a dependência
      * não estará compartilhada entre os clones. Isso é uma medida esscencial, pois, senão não seria
      * possível a conexão com mais de um banco, ou mais de uma conexão como mesmo dbms
-     * @return void
+     * @return null
      */
     private function __clone()
     {
@@ -87,7 +87,7 @@ class SqliteDB implements DBAdapter
      * é totalmente possível, porém, irrelevante, uma vez que a desserialização da mesma, não ocorrerá, a menos
      * que altere-se o código único gerado através da serialização, contúdo uma tarefa complicada de ser feita,
      * mas uma brecha àqueles que compreendem o processo de serialização e gostam de desafios.
-     * @return void
+     * @return null
      */
     private function __wakeup()
     {

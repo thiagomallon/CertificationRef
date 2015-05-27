@@ -40,7 +40,7 @@ class PageContentTakerTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Método de teste
-     * @return void
+     * @return null
      * @covers App\InputOutput\PageContentTaker::takingWithGet
      */
     public function testTakingWithGet()
@@ -56,7 +56,7 @@ class PageContentTakerTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Método de teste
-     * @return void
+     * @return null
      * @covers App\InputOutput\PageContentTaker::takingWithPost
      */
     public function testTakingWithPost()
@@ -67,7 +67,7 @@ class PageContentTakerTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Método
-     * @return void
+     * @return null
      * @covers App\InputOutput\PageContentTaker::takingWithPostAndSocket
      */
     public function testTakingWithPostAndSocket()

@@ -19,7 +19,7 @@ class PregMatchTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Método
-     * @return void
+     * @return null
      */
     public function testPregMatch()
     {

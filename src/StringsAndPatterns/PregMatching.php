@@ -27,7 +27,7 @@ class PregMatching
 
     /**
      * Método construtor inicializa propriedade com conteúdo de arquivo
-     * @return void
+     * @return null
      */
     public function __construct()
     {

@@ -27,7 +27,7 @@ class ArraySortingTest extends \PHPUnit_Framework_TestCase
     /**
      * Método sobrescrito da classe herdada. Aqui está meramente reatribuíndo os valores do
      * array de teste.
-     * @return void
+     * @return null
      */
     public function setUp()
     {
@@ -41,7 +41,7 @@ class ArraySortingTest extends \PHPUnit_Framework_TestCase
     /**
      * Método sobrescrito da classe herdada. Está limpando o valor alocado em memória para
      * a propriedade.
-     * @return void
+     * @return null
      */
     public function tearDown()
     {
@@ -66,7 +66,7 @@ class ArraySortingTest extends \PHPUnit_Framework_TestCase
      * SORT_NATURAL - compara os elementos como strings, usando a ordenação natural, assim como ocorre na função natsort();
      * SORT_FLAG_CASE - quando combinada às flags SORT_STRING ou SORT_NATURAL, compara os elementos em case insensitive;
      *
-     * @return void
+     * @return null
      */
     public function testSort()
     {
@@ -80,7 +80,7 @@ class ArraySortingTest extends \PHPUnit_Framework_TestCase
     /**
      * Método atua de forma semelhante à função sort(), diferenciando-se na ordem em que se dispõe
      * os elementos, fazendo-o de forma reversa.
-     * @return void
+     * @return null
      */
     public function testRSort()
     {
@@ -95,7 +95,7 @@ class ArraySortingTest extends \PHPUnit_Framework_TestCase
      * passado, função preserva valores dos índices, sejam esses numéricos ou associativos,
      * porém, não ordena corretamente valores alfa numéricos, não substituindo, assim, a função
      * natsort().
-     * @return void
+     * @return null
      */
     public function testASort()
     {
@@ -112,7 +112,7 @@ class ArraySortingTest extends \PHPUnit_Framework_TestCase
      * mas tão somente os índices, a função ksort() não ordena de forma eficiente índices de
      * de nomes alfanuméricos, o índice book2.pdf é colocado posterior ao índice book12.pdf.
      * O var_dump mostra a atuação da função em um array associativo.
-     * @return void
+     * @return null
      */
     public function testKSort()
     {
@@ -130,7 +130,7 @@ class ArraySortingTest extends \PHPUnit_Framework_TestCase
      * função natsort() o ordenamento é o que mais comumente se espera. É importante
      * ressaltar que os índices são preservados na função nartsort(), somente a ordem
      * dos elementos é alterada.
-     * @return void
+     * @return null
      */
     public function testNatsort()
     {
@@ -144,7 +144,7 @@ class ArraySortingTest extends \PHPUnit_Framework_TestCase
      * Método implementa função array_reverse() do PHP. Função inverte ordem dos valores, sendo, sendo o último
      * elemento colocado em primeiro e vice-versa. Para índices numéricos ocorre perda de relação índice/chave,
      * porém, índices associativos são mantidos.
-     * @return void
+     * @return null
      */
     public function testArrayReverse()
     {
@@ -166,7 +166,7 @@ class ArraySortingTest extends \PHPUnit_Framework_TestCase
      * of the array. You can see that the shuffle() function randomize the order of array elements.
      * The value of the indexes is not testable, cause it was randomized, but we can see that the associative
      * indexes was lost.
-     * @return void
+     * @return null
      */
     public function testShuffle()
     {

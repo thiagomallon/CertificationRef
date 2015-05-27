@@ -23,7 +23,7 @@ class Mother extends GrandMa
 
     /**
      * Método construtor da classe
-     * @return void
+     * @return null
      */
     public function __construct()
     {
@@ -41,7 +41,7 @@ class Mother extends GrandMa
     
     /**
      * Método atribui valor à propriedade $name do objeto
-     * @return void
+     * @return null
      * @param string $name
      */
     public function setName($name)

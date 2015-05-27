@@ -45,7 +45,7 @@ class MagicMethods
      * inexistente, portanto, inacessível por métodos comuns. No exemplo abaixo armazeno
      * também em um array criado para propriedades inacessíveis para, possível futuro
      * controle.
-     * @return void
+     * @return null
      * @param string $name Nome da propriedade inacessível
      * @param mixed $value Valor à ser atribuído à propriedade inacessível
      */

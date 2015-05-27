@@ -22,7 +22,7 @@ class Daughter extends Mother
 
     /**
      * Método construtor da classe
-     * @return void
+     * @return null
      */
     public function __construct()
     {
@@ -31,7 +31,7 @@ class Daughter extends Mother
 
     /**
      * Método seta propriedade $name, não retorna valor, função de atribuição, apenas.
-     * @return void Não há retorno
+     * @return null Não há retorno
      * @param string $name Valor do parâmetro será atribuído à propriedade $name do objeto.
      */
     public function setName($name)

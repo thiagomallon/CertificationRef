@@ -50,7 +50,7 @@ class DaughterTest extends \PHPUnit_Framework_TestCase
      * OOGrancMa), foi sobrescrito, já que nas classe Mother e Daughter, a mesma propriedade é
      * setada, na sobrescrição do construtor, um jeito de consiguir pegar o valor declarado no contrutor
      * da classe GrandMa, é apresentado no método de teste que se segue.
-     * @return void
+     * @return null
      * @covers App\OOProgramming\Daughter::getGrandMaName
      */
     public function testAcessoGrandMa()
@@ -63,7 +63,7 @@ class DaughterTest extends \PHPUnit_Framework_TestCase
      * Método implementa, no metodo da classe, testado, uma forma de recuperação do valor original
      * da propriedade, uma vez que a mesma é atribuída no método construtor, sendo o mesmo sobrescrito
      * nas demais classes que herdam (Mother e Daughter).
-     * @return void
+     * @return null
      * @covers App\OOProgramming\Daughter::getMomName
      */
     public function testGetMomName()

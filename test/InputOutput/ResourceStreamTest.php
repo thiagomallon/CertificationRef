@@ -43,7 +43,7 @@ class ResourceStreamTest extends \PHPUnit_Framework_TestCase
     /**
      * Implementa testes ao método criador de stream wrappers
      * @covers App\InputOutput\ResourceStream::factoryStreamWrapper
-     * @return void
+     * @return null
      */
     public function testFactoryStreamWrapper()
     {
@@ -56,7 +56,7 @@ class ResourceStreamTest extends \PHPUnit_Framework_TestCase
     /**
      * Implementa testes ao método de escritura em streams
      * @covers App\InputOutput\ResourceStream::writeOnStreamWrapper
-     * @return void
+     * @return null
      */
     public function testWriteOnStreamWrapper()
     {
@@ -71,7 +71,7 @@ class ResourceStreamTest extends \PHPUnit_Framework_TestCase
     /**
      * Implementa testes ao método de criação de manipuladores de streams do tipo php://temp
      * @covers App\InputOutput\ResourceStream::writeOnStreamWrapper
-     * @return void
+     * @return null
      */
     public function testFactoryTempStreamManipulator()
     {

@@ -24,7 +24,7 @@ final class MySqlDB extends DB
     /**
      * Método construtor, recebe e atribui dados de conexão às propriedades privadas da classe
      * @param array $dbDetails Array de dados de conexão
-     * @return void
+     * @return null
      */
     private function __construct($dbDetails)
     {
@@ -80,7 +80,7 @@ final class MySqlDB extends DB
      * Método mágico de interceptação de clonagem de objetos. O método foi propositalmente implementado
      * com o modificador de acesso private, para que se evite clonagem, já que o objetivo do presente
      * pattern é que haja apenas uma instância do objeto.
-     * @return void
+     * @return null
      */
     protected function __clone()
     {
@@ -94,7 +94,7 @@ final class MySqlDB extends DB
      * é totalmente possível, porém, irrelevante, uma vez que a desserialização da mesma, não ocorrerá, a menos
      * que altere-se o código único gerado através da serialização, contúdo uma tarefa complicada de ser feita,
      * mas uma brecha àqueles que compreendem o processo de serialização e gostam de desafios.
-     * @return void
+     * @return null
      */
     protected function __wakeup()
     {
