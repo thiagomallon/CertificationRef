@@ -83,10 +83,22 @@ class ZlibManipulation
     /**
      * The stringCompressor method
      * @param string $string String a ser comprimida
-     * @return null
+     * @return string Valor resultante da compressão da string
      */
     public function stringCompressor($string)
     {
-        
+        $compressed = gzcompress($string, 9);
+        return $compressed;
+    }
+
+    /**
+     * The stringUncompressor method
+     * @param string $compressed A string que sofreu compressão
+     * @return string Valor resultante de descompressão da string
+     */
+    public function stringUncompressor($compressed)
+    {
+        $uncompressed = gzuncompress($compressed);
+        return $uncompressed;
     }
 }

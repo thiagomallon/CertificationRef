@@ -129,4 +129,18 @@ class FileManipulationTest extends \PHPUnit_Framework_TestCase
         $this->_fileManipulation->deleteTempFiles();
         $this->assertEquals(0, filesize('data/streams/tempFilesList'));
     }
+
+    /**
+     * The testPutData method implementa testes à método que faz uso da função
+     * file_put_content().
+     * @covers App\InputOutput\FileManipulation::putData
+     * @return null
+     */
+    public function testPutData()
+    {
+        $this->markTestSkipped('Skipping');
+        $testFile = 'data/streams/testingPutContents';
+        $this->_fileManipulation->putData($testFile, 'Hi, how are you?'.PHP_EOL);
+        $this->assertContains('Hi, how are you?', file_get_contents($testFile));
+    }
 }

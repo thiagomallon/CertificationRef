@@ -163,4 +163,29 @@ class FileManipulation
             throw new FileNotFoundException('File not found'); // caso arquivo não exista, joga exceção
         }
     }
+
+    /**
+     * The putData method implementa uso da função file_put_contents() que é utilizada para
+     * atribuição de conteúdo a um dado arquivo. A função cria o arquivo, caso o mesmo não exista, e
+     * aceita três flags distintas como terceiro parâmetro não obrigatório, sendo essas:
+     *
+     * FILE_USE_INCLUDE_PATH - Search for filename in the include directory. See include_path for more information.
+     * FILE_APPEND - If file filename already exists, append the data to the end of the file instead of overwriting it.
+     * LOCK_EX - Acquire an exclusive lock on the file while proceeding to the writing. In other words, a flock()
+     * call happens between the fopen() call and the fwrite() call. This is not identical to an fopen() call with mode "x".
+     *
+     * As flags podem ser utilizadas em conjunto, utilizando-se o operador | (pipe - 'ou' bit a bit).
+     * Observa-se dessa forma que o parâmetro é analizado de forma binária.
+     * @param string $filename Nome do arquivo ao qual será adicionado conteúdo
+     * @param mixed $data Conteúdo a ser inserido no arquivo, podendo esse ser de tipo
+     * escalar ou do tipo array.
+     * @return datatype description
+     */
+    public function putData($filename, $data)
+    {
+        file_put_contents($filename, $data, FILE_APPEND | LOCK_EX);
+        /* na função atribuímos dados ao arquivo, e é solicitada exclusividade de manipulação, ou seja,
+        enquanto o arquivo estiver sendo manipulado pela funão, o mesmo encontrar-se-a bloqueado para
+        outras operações. */
+    }
 }

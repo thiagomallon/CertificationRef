@@ -2,7 +2,7 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8">
-  <title>Dashboard for /var/www/html/RepCertification/src/StringsAndPatterns</title>
+  <title>Dashboard for /var/www/html/RepCertification/src/ErrorsAndExceptions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../css/bootstrap.min.css" rel="stylesheet">
   <link href="../css/nv.d3.css" rel="stylesheet">
@@ -19,7 +19,7 @@
      <div class="col-md-12">
       <ol class="breadcrumb">
         <li><a href="../index.html">/var/www/html/RepCertification/src</a></li>
-        <li><a href="index.html">StringsAndPatterns</a></li>
+        <li><a href="index.html">ErrorsAndExceptions</a></li>
         <li class="active">(Dashboard)</li>
 
       </ol>
@@ -59,7 +59,7 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="PregMatching.php.html#20">PregMatching</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileNotFoundException.php.html#16">FileNotFoundException</a></td><td class="text-right">0%</td></tr>
 
        </tbody>
       </table>
@@ -113,8 +113,7 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="PregMatching.php.html#41"><abbr title="PregMatching::simpleMatching">simpleMatching</a></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="PregMatching.php.html#32"><abbr title="PregMatching::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileNotFoundException.php.html#19"><abbr title="FileNotFoundException::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
 
        </tbody>
       </table>
@@ -161,7 +160,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#classCoverageDistribution svg')
-      .datum(getCoverageDistributionData([1,0,0,0,0,0,0,0,0,0,0,4], "Class Coverage"))
+      .datum(getCoverageDistributionData([1,0,0,0,0,0,0,0,0,0,0,0], "Class Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -179,7 +178,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#methodCoverageDistribution svg')
-      .datum(getCoverageDistributionData([2,0,0,0,0,0,0,0,0,0,0,0], "Method Coverage"))
+      .datum(getCoverageDistributionData([1,0,0,0,0,0,0,0,0,0,0,0], "Method Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -230,7 +229,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Cyclomatic Complexity');
 
     d3.select('#classComplexity svg')
-      .datum(getComplexityData([[0,2,"<a href=\"PregMatching.php.html#20\">PregMatching<\/a>"],[100,0,"<a href=\"PregMatchingAll.php.html#16\">PregMatchingAll<\/a>"],[100,0,"<a href=\"PregMatchingFilter.php.html#16\">PregMatchingFilter<\/a>"],[100,0,"<a href=\"PregMatchingReplace.php.html#16\">PregMatchingReplace<\/a>"],[100,0,"<a href=\"PregMathingSplit.php.html#16\">PregMatchingSplit<\/a>"]], 'Class Complexity'))
+      .datum(getComplexityData([[0,1,"<a href=\"FileNotFoundException.php.html#16\">FileNotFoundException<\/a>"]], 'Class Complexity'))
       .transition()
       .duration(500)
       .call(chart);
@@ -255,7 +254,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Method Complexity');
 
     d3.select('#methodComplexity svg')
-      .datum(getComplexityData([[0,1,"<a href=\"PregMatching.php.html#32\">PregMatching::__construct<\/a>"],[0,1,"<a href=\"PregMatching.php.html#41\">PregMatching::simpleMatching<\/a>"]], 'Method Complexity'))
+      .datum(getComplexityData([[0,1,"<a href=\"FileNotFoundException.php.html#19\">FileNotFoundException::__construct<\/a>"]], 'Method Complexity'))
       .transition()
       .duration(500)
       .call(chart);

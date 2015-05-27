@@ -58,4 +58,26 @@ class ZlibManipulationTest extends \PHPUnit_Framework_TestCase
     {
         $content = $this->_zlibManipulation->readingGz('notExistentFile.gz');
     }
+
+    /**
+     * The testStringCompressor method
+     * @covers App\InputOutput\ZlibManipulation::stringCompressor
+     * @return null
+     */
+    public function testStringCompressor()
+    {
+        $compressed = $this->_zlibManipulation->stringCompressor('Something useful'); // passa string ao método de compressão
+        $this->assertEquals('Something useful', gzuncompress($compressed)); // verifica se descompressão resulta em valor esperado
+    }
+
+    /**
+     * The testStringUncompressor method
+     * @covers App\InputOutput\ZlibManipulation::stringUncompressor
+     * @return null
+     */
+    public function testStringUncompressor()
+    {
+        $compressed = gzcompress('Good night, matey.');
+        $this->assertEquals('Good night, matey.', $this->_zlibManipulation->stringUncompressor($compressed));
+    }
 }
