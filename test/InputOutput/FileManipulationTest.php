@@ -19,15 +19,10 @@ namespace Test\InputOutput;
 class FileManipulationTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * Propriedade atuará como objeto de FileManipulation
-     * @var FileManipulation $fileHandle Objeto de de FileManipulation
-     */
-    protected $fileHandle;
-    /**
      * Property stores
-     * @var datatype $filePath description
+     * @var object $_fileManipulation
      */
-    protected $filePath = 'public/files/fileManipulationTest';
+    protected $_fileManipulation;
 
     /**
      * Sets up the fixture, for example, opens a network connection.
@@ -35,12 +30,7 @@ class FileManipulationTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->fileHandle = fopen($this->filePath, 'w+');
-        if (!$this->fileHandle) {
-            die('Unable to create/open file');
-        } else {
-            fwrite($this->fileHandle, "This is the initial file content\n");
-        }
+        $this->_fileManipulation = new \App\InputOutput\FileManipulation;
     }
 
     /**
@@ -49,27 +39,94 @@ class FileManipulationTest extends \PHPUnit_Framework_TestCase
      */
     protected function tearDown()
     {
-        //unset($this->fileHandle); // limpa variável que armazena handle
-        //unlink($this->filePath); // deleta arquivo
+        unset($this->_fileManipulation); // limpa variável que armazena handle
     }
 
     /**
-     * Método implementará testes
-     * @covers App\InputOutput\FileManipulation::factoryFile
-     * @return void
+     * The testTempFileFactory method implementa testes ao método tempFileFactory
+     * @covers \App\InputOutput\FileManipulation::tempFileFactory
+     * @covers \App\InputOutput\FileManipulation::getTempFiles
      */
-    public function testFileGetContents()
+    public function testTempFileFactory()
     {
-        // verifica conteúdo inicial do arquivo, através da função file_get_contents()
-        $this->assertContains('This is the initial file content', file_get_contents($this->filePath));
-    }
-
-    /**
-     * The testFTruncate method
-     * @return void
-     */
-    public function testFTruncate()
-    {
+        $this->markTestSkipped('Skipping cause it creates new temp file');
+        $justCreated = $this->_fileManipulation->tempFileFactory(); // cria novo arquivo temporário
+        $tempFiles = $this->_fileManipulation->getTempFiles(); // pega lista de arquivos temporários
         
+        $this->assertContains($justCreated, $tempFiles); // verifica se existe nome do arquivo
+        $this->assertFileExists($justCreated); // verifica se arquivo existe
+    }
+
+    /**
+     * The testgetTempFiles method
+     * @covers \App\InputOutput\FileManipulation::getTempFiles
+     */
+    public function testGetTempFiles()
+    {
+        $this->markTestSkipped('Skipping');
+        $tempFiles = $this->_fileManipulation->getTempFiles();
+        $this->assertRegExp('/TESTING\w+/m', $tempFiles);
+    }
+
+    /**
+     * The testReadFile method
+     * @covers \App\InputOutput\FileManipulation::tempFileFactory
+     * @covers \App\InputOutput\FileManipulation::writingFile
+     * @covers \App\InputOutput\FileManipulation::readingFile
+     */
+    public function testWritingFile()
+    {
+        $this->markTestSkipped('Skipping cause it creates new temp file');
+        $justCreated = $this->_fileManipulation->tempFileFactory(); // cria arquivo temporário
+        $this->_fileManipulation->writingFile($justCreated, 'Nova linha, recém criada'); // escreve no arquivo
+        $content = $this->_fileManipulation->readingFile($justCreated); // pega conteúdo do arquivo
+
+        $this->assertContains('Nova linha', $content);
+    }
+
+    /**
+     * The testReadingFile method verifica captura de exceção definida pelo usuário, para
+     * passagem de nome de arquivo inexistente à função da classe testada
+     * @expectedException \App\ErrorsAndExceptions\FileNotFoundException
+     * @expectedExceptionMessage File not found
+     * @covers \App\InputOutput\FileManipulation::readingFile
+     */
+    public function testReadingFile()
+    {
+        $content = $this->_fileManipulation->readingFile('mingal'); // tenta ler arquivo não existente
+    }
+
+    /**
+     * The testDeleteFileLine method
+     * @covers \App\InputOutput\FileManipulation::deleteFileLine()
+     */
+    public function testDeleteFileLine()
+    {
+        $this->markTestSkipped('Skipping cause it creates new temp file');
+        $this->_fileManipulation->deleteFileLine('data/streams/tempFilesList', '/Olanda/');
+    }
+
+    /**
+     * The testDeleteFileLineEx method
+     * @expectedException \App\ErrorsAndExceptions\FileNotFoundException
+     * @expectedExceptionMessage File not found
+     * @covers \App\InputOutput\FileManipulation::deleteFileLine
+     */
+    public function testDeleteFileLineEx()
+    {
+        $this->_fileManipulation->deleteFileLine('mingal', '/Olanda/');
+        $content = file_get_contents('data/streams/tempFilesList');
+        $this->assertNotContains('Olanda', $content);
+    }
+
+    /**
+     * The testDeleteTempFiles method
+     * @covers \App\InputOutput\FileManipulation::deleteTempFiles
+     */
+    public function testDeleteTempFiles()
+    {
+        $this->markTestSkipped('Skipping');
+        $this->_fileManipulation->deleteTempFiles();
+        $this->assertEquals(0, filesize('data/streams/tempFilesList'));
     }
 }

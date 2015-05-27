@@ -99,7 +99,7 @@ if (isset($argc)) { // checks if there is some command line argument
         print "\n\n";
         print TxtColor::decorate('FROM COMMAND LINE YOU CAN CALL: ', 'blue', 'black');
         print "\n";
-        print TxtColor::decorate('TxtColor.php [string $txt] [string $fgColor] [string $bgColor]', 'lightgray', 'black');
+        print TxtColor::decorate('TxtColor.php [string $txt [string $fgColor [string $bgColor]]]', 'lightgray', 'black');
         print "\n\n\n";
     }
 }
