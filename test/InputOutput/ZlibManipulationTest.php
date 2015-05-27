@@ -34,7 +34,7 @@ class ZlibManipulationTest extends \PHPUnit_Framework_TestCase
      */
     public function testWritingOnGz()
     {
-        // Remove the following lines when you implement this test.
+        $this->markTestSkipped('Skipping');
         $this->_zlibManipulation->writingOnGz('Hi brother!'.PHP_EOL);
     }
 

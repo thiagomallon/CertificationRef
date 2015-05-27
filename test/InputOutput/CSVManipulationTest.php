@@ -47,6 +47,7 @@ class CSVManipulationTest extends \PHPUnit_Framework_TestCase
      */
     public function testwritingOnCSV()
     {
+        $this->markTestSkipped('Skipping');
         $this->_csvManipulation->writingOnCSV(['This is a little test! =)']);
         $content = file_get_contents('data/streams/SpreadSheet.csv');
         $this->assertContains('This is a little test! =)', $content);

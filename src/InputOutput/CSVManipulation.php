@@ -45,7 +45,7 @@ class CSVManipulation
             while ($row = fgetcsv($handle)) {
                 $content .= $row[0];
             }
-            fclose($content);
+            fclose($handle);
             return $content;
         } else {
             throw new FileNotFoundException('File not found');
