@@ -188,4 +188,14 @@ class FileManipulation
         enquanto o arquivo estiver sendo manipulado pela funão, o mesmo encontrar-se-a bloqueado para
         outras operações. */
     }
+
+    /**
+     * The forceFileDownload method
+     * @return datatype description
+     */
+    public function forceFileDownload()
+    {
+        header('Content-Disposition: attachment; filename="biblia.pdf"');
+        readfile('data/streams/nwt_T.pdf');
+    }
 }

@@ -143,4 +143,15 @@ class FileManipulationTest extends \PHPUnit_Framework_TestCase
         $this->_fileManipulation->putData($testFile, 'Hi, how are you?'.PHP_EOL);
         $this->assertContains('Hi, how are you?', file_get_contents($testFile));
     }
+
+    /**
+     * The testForceFileDownload method
+     * @covers App\InputOutput\FileManipulation::forceFileDownload
+     * @return null
+     */
+    public function testForceFileDownload()
+    {
+        $this->markTestSkipped('Skipping');
+        $this->_fileManipulation->forceFileDownload();
+    }
 }
