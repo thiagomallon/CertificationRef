@@ -47,7 +47,7 @@ class DaughterTest extends \PHPUnit_Framework_TestCase
      */
     public function testDaughterInheritance()
     {
-        $this->assertInstanceOf('\App\PHPBasics\Mother', $this->_daughter);
+        $this->assertInstanceOf('App\PHPBasics\Mother', $this->_daughter);
     }
     
     /**

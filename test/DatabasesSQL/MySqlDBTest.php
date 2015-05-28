@@ -19,7 +19,8 @@ class MySqlDBTest extends \PHPUnit_Framework_TestCase
     {
         $config = new \App\WebFeatures\ConfigsXMLReader();
 
-        $mysql = $config->getElementDataByAttr(['element'=>'database','attribute'=>'dbms','value'=>'mysql']);
+        //$mysql = $config->getElementDataByAttr(['element'=>'development/database','attribute'=>'dbms','value'=>'mysql']);
+        $mysql = $config->getElementData('development/database[@dbms="mysql"]');
         $this->_mySqlDB = \App\DatabasesSQL\MySqlDB::connect($mysql);
     }
 
@@ -34,7 +35,7 @@ class MySqlDBTest extends \PHPUnit_Framework_TestCase
     /**
      * The test method
      * @return null
-     * @covers \App\DatabasesSQL\MySqlDB::fetchAll
+     * @covers App\DatabasesSQL\MySqlDB::fetchAll
      */
     public function testFetchAll()
     {

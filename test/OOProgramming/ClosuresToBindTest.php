@@ -58,7 +58,7 @@ class ClosuresToBindTest extends \PHPUnit_Framework_TestCase
         ->getMock();
 
         $myClosure = $stubClosures->getClosureFeatProperty(); // atribui closure retornado da função à $myClosure
-        $this->assertInstanceOf('\Closure', $myClosure); // closure é instância de closure e não da classe que o declara
+        $this->assertInstanceOf('Closure', $myClosure); // closure é instância de closure e não da classe que o declara
         $myClosure("Atribuíndo à propriedade de Closures"); // chama closure, passando valor a ser atribuído à propriedade da classe em que ele foi originalmente declarado
         $this->assertEquals("Atribuíndo à propriedade de Closures", $stubClosures->getProperty1()); // verifica se, de fato, valor foi atribuído à propriedade do objeto
 

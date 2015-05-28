@@ -10,6 +10,7 @@
 namespace App\InputOutput;
 
 use \App\ErrorsAndExceptions\FileNotFoundException;
+use \App\ErrorsAndExceptions\FileLockedException;
 
 /**
  * FileManipulation class. There is many modes to open a file. The following list shows the possible
@@ -46,6 +47,26 @@ class FileManipulation
     protected $masterFile = 'data/streams/tempFilesList';
 
     /**
+     * The getMasterFileHandle method retorna handle de arquivo com lock de exclusividade.
+     * A abordagem apresentada não é recomendada, já que o script que recebe o handle
+     * (script que chama a função) fica responsável por liberar o arquivo do lock, porém,
+     * serve para exemplificar o uso do lock, veja que se mais de um arquivo for solicitado
+     * pelo método, sem que aja a liberação do lock, é gerada uma exceção.
+     * @return resource Retorna handle do arquivo mestre (ou seja, arquivo que guarda
+     * os nomes dos arquivos temporários criados)
+     */
+    public function getMasterFileHandle()
+    {
+        $masterHandle = fopen($this->masterFile, 'r+'); // cria novo handler do arquivo mestre
+        if (flock($masterHandle, LOCK_EX | LOCK_NB)) { // tenta atribuir lock de exclusividade ao arquivo
+            return $masterHandle; // caso lock seja atribuído, retorna handle do arquivo
+        } else {
+            // caso não seja possível atribuição de lock ao arquivo, uma exceção é jogada.
+            throw new FileLockedException();
+        }
+    }
+
+    /**
      * The getTempFiles method implementa função file_exists(), que retorna valor boleano, para
      * existência de arquivo, função fopen() e file_get_contents().
      * @return string Lista de todos os arquivos temporários criados através do objeto da
@@ -67,13 +88,16 @@ class FileManipulation
     public function deleteTempFiles()
     {
         $handle = fopen($this->masterFile, 'r+'); // cria handle para o arquivo
-        while ($row = fgets($handle)) { // navega conteúdo do arquivo, de linha em linha
-            if (file_exists(str_replace(PHP_EOL, '', $row))) { // verifica se arquivo existe
-                unlink(str_replace(PHP_EOL, '', $row)); // deleta arquivo
+        if (flock($handle, LOCK_EX | LOCK_NB)) { // solicita lock de exclusividade, para fins de escrita
+            while ($row = fgets($handle)) { // navega conteúdo do arquivo, de linha em linha
+                if (file_exists(str_replace(PHP_EOL, '', $row))) { // verifica se arquivo existe
+                    unlink(str_replace(PHP_EOL, '', $row)); // deleta arquivo
+                }
             }
+            rewind($handle); // coloca ponteiro no 0
+            ftruncate($handle, fseek($handle, 0, SEEK_END)); // trunca arquivo do começo ao fim
         }
-        rewind($handle); // coloca ponteiro no 0
-        ftruncate($handle, fseek($handle, 0, SEEK_END)); // trunca arquivo do começo ao fim
+        flock($handle, LOCK_UN); // libera arquivo do lock
         fclose($handle); // fecha handle do arquivo
     }
 
@@ -89,20 +113,23 @@ class FileManipulation
             $ptrPos; // armazena posição do ponteiro
             $restContent; // armazena conteúdo do arquivo que ocorre após encontro do padrão
             $handle = fopen($filename, 'r+'); // cria handle do arquivo
-            while ($row = fgets($handle)) { // navega arquivos
-                if (preg_match($pattern, $row)) { // procura procura padrão na linha atual
-                    $restContent = fread($handle, filesize($filename)); // coloca valor que ocorre após padrão, na variável
-                    rewind($handle); // coloca ponteiro do arquivo no 0
-                    ftruncate($handle, $ptrPos); // trunca arquivo à partir do ponto onde foi encontrado o padrão
-                    break; // sai do loop
+            if (flock($handle, LOCK_EX | LOCK_NB)) { // implementa lock no arquivo, para fins de escrita
+                while ($row = fgets($handle)) { // navega arquivos
+                    if (preg_match($pattern, $row)) { // procura procura padrão na linha atual
+                        $restContent = fread($handle, filesize($filename)); // coloca valor que ocorre após padrão, na variável
+                        rewind($handle); // coloca ponteiro do arquivo no 0
+                        ftruncate($handle, $ptrPos); // trunca arquivo à partir do ponto onde foi encontrado o padrão
+                        break; // sai do loop
+                    }
+                    $ptrPos = ftell($handle); // captura posição do ponteiro
                 }
-                $ptrPos = ftell($handle); // captura posição do ponteiro
             }
             fseek($handle, 0, SEEK_END); // coloca ponteiro no final do arquivo
             fwrite($handle, $restContent); // escreve conteúdo posterior novamente
+            flock($handle, LOCK_UN); // libera arquivo do lock
             fclose($handle); // fecha handle do arquivo
         } else {
-            throw new FileNotFoundException('File not found'); // caso arquivo não exista, joga exceção
+            throw new FileNotFoundException(); // caso arquivo não exista, joga exceção
         }
     }
 
@@ -118,7 +145,7 @@ class FileManipulation
         if (file_exists($filename)) { // verifica se arquivo existe
             unlink($filename); // deleta arquivo
         } else {
-            throw new FileNotFoundException('File not found'); // caso arquivo não exista, joga exceção
+            throw new FileNotFoundException(); // caso arquivo não exista, joga exceção
         }
     }
 
@@ -146,8 +173,13 @@ class FileManipulation
     public function writingFile($filename, $content)
     {
         $handle = fopen($filename, 'a+'); // abre arquivo temporário
-        fwrite($handle, $content); // escreve no arquivo
-        fclose($handle); // fecha handle do arquivo temporário
+        if (flock($handle, LOCK_EX | LOCK_NB)) { // tenta atribuir lock de exclusividade ao arquivo
+            fwrite($handle, $content); // escreve no arquivo
+            flock($handle, LOCK_UN); // libera arquivo do lock
+            fclose($handle); // fecha handle do arquivo temporário
+        } else {
+            throw new FileLockedException();
+        }
     }
 
     /**
@@ -160,7 +192,7 @@ class FileManipulation
         if (file_exists($filename)) { // verifica se arquivo existe
             return file_get_contents($filename); // retorna conteúdo do arquivo
         } else {
-            throw new FileNotFoundException('File not found'); // caso arquivo não exista, joga exceção
+            throw new FileNotFoundException(); // caso arquivo não exista, joga exceção
         }
     }
 

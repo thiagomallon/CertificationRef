@@ -5,9 +5,9 @@
  */
 
 /**
+ * @subpackage Test\WebFeatures
  */
-
-namespace test\WebFeatures;
+namespace Test\WebFeatures;
 
 /**
  * Class ConfigsXMLReaderTest.
@@ -46,7 +46,7 @@ class ConfigsXMLReaderTest extends \PHPUnit_Framework_TestCase
     /**
      * The testsetFilePath method
      * @return null
-     * @covers \App\WebFeatures\ConfigsXMLReader::setFilePath
+     * @covers App\WebFeatures\ConfigsXMLReader::setFilePath
      */
     public function testSetFilePath()
     {
@@ -60,7 +60,7 @@ class ConfigsXMLReaderTest extends \PHPUnit_Framework_TestCase
     /**
      * The testGetXMLData method.
      *
-     * @covers \App\WebFeatures\ConfigsXMLReader::getXMLData
+     * @covers App\WebFeatures\ConfigsXMLReader::getXMLData
      */
     public function testGetXMLData()
     {
@@ -71,29 +71,27 @@ class ConfigsXMLReaderTest extends \PHPUnit_Framework_TestCase
 
     /**
      * The testGetElementData method.
-     *
-     * @covers \App\WebFeatures\ConfigsXMLReader::getElementData
+     * @covers App\WebFeatures\ConfigsXMLReader::getElementData
      */
     public function testGetElementData()
     {
-        $element = $this->_configXML->getElementData('database');
-        $this->assertInstanceOf('\SimpleXMLElement', $element);
-        $this->assertInternalType('object', $element);
-        //print_r($element);
+        $elementData = $this->_configXML->getElementData('development/database'); // passa o 'path' do elemento
+        $this->assertInternalType('object', $elementData); // verifica se retorno é do tipo array
+        $this->assertInstanceOf('SimpleXMLElement', $elementData); // verifica se é instância de SimpleXMLElement
+       // $this->assertCount(2, $elementData); // verifica se, de fato, existem dois elementos com nome database.
     }
 
     /**
      * The testGetElementDataByAttr method
      * @return null
-     * @covers \App\WebFeatures\ConfigsXMLReader::getElementData
-     * @covers \App\WebFeatures\ConfigsXMLReader::getElementDataByAttr
+     * @covers App\WebFeatures\ConfigsXMLReader::getElementData
      */
     public function testGetElementDataByAttr()
     {
-        $elementDetails = ['element'=>'database', 'attribute'=>'dbms', 'value'=>'mysql']; // matriz relativa ao atributo a ser selecionado
-        $selectedElm = $this->_configXML->getElementDataByAttr($elementDetails); // chama função que retorna dados do elemento, para o atributo passado
+        //$elementDetails = ['element'=>'development/database', 'attribute'=>'dbms', 'value'=>'mysql']; // matriz relativa ao atributo a ser selecionado
+        $selectedElm = $this->_configXML->getElementData('development/database[@dbms="mysql"]'); // chama função que retorna dados do elemento, para o atributo passado
         //print_r($selectedElm);
-        $this->assertInstanceOf('\SimpleXMLElement', $selectedElm); // verifica-se se é instancia esperada
+        $this->assertInstanceOf('SimpleXMLElement', $selectedElm); // verifica-se se é instancia esperada
         $this->assertInternalType('object', $selectedElm); // verifica-se se é objeto
 
         $this->assertEquals(4, count($selectedElm)); // método assertCount() não funciona para objetos, sendo assim, verifica-se atraves da função count()
@@ -104,11 +102,23 @@ class ConfigsXMLReaderTest extends \PHPUnit_Framework_TestCase
     /**
      * The testGetElementDataByAttrError method
      * @expectedException RangeException
-     * @covers \App\WebFeatures\ConfigsXMLReader::getElementDataByAttr
+     * @covers App\WebFeatures\ConfigsXMLReader::getElementData
      */
     public function testGetElementDataByAttrError()
     {
         $database = $this->_configXML->getElementData('database');
-        $selectedElm = $this->_configXML->getElementDataByAttr(['element'=>'database', 'attribute'=>'nda', 'value'=>'nda']); // chama função que retorna dados do elemento, para o atributo passado
+        $selectedElm = $this->_configXML->getElementData('development/database[@dbms="nda"]'); // chama função que retorna dados do elemento, para o atributo passado
+    }
+
+    /**
+     * The testGetXPath method
+     * @covers App\WebFeatures\ConfigsXMLReader::getXPath
+     * @return null
+     */
+    public function testGetXPath()
+    {
+        $this->markTestIncomplete('Incomplete');
+        $database = $this->_configXML->getXPath('/development');
+        //var_dump(count($database));
     }
 }

@@ -48,29 +48,28 @@ class ConfigsXMLReader implements XMLReader
     /**
      * The getElementData method
      * @return datatype description
-     * @param datatype $element description
+     * @param string $elementPath O 'path' do elemento a ser retornado. Ex: development/database
      */
-    public function getElementData($element)
+    public function getElementData($elementPath)
     {
         $this->xmlContent = $this->getXMLData();
-        return $this->xmlContent->{$this->xmlContent->stage}->{$element};
+        // return $this->xmlContent->{$this->xmlContent->stage}->{$element};
+        $element = array_shift($this->xmlContent->xpath($elementPath));
+        if ($element) {
+            return $element;
+        } else {
+            throw new \RangeException('Attributo não existe, para o elemento');
+        }
     }
 
     /**
-     * The getElementDataByAttr method
-     * @return datatype description
-     * @param datatype $element description
+     * The getXPath method
+     * @return object
      */
-    public function getElementDataByAttr(array $elementDetails)
+    public function getXPath($path, $xmlFile = 'config/configs.xml')
     {
-        $this->xmlContent = $this->getXMLData();
-        $element = $this->xmlContent->{$this->xmlContent->stage}->{$elementDetails['element']};
-        for ($i = 0; $i < count($element); $i++) {
-            if ($element[$i][$elementDetails['attribute']] == $elementDetails['value']) {
-                return $element[$i];
-            }
-        }
-        throw new \RangeException('Attributo não existe, para o elemento');
+        $xml = simplexml_load_file($xmlFile);
+        return $xml->xpath($path);
     }
 
     /**
