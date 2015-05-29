@@ -3,7 +3,7 @@
 /**
  * Created by Thiago Mallon
  */
-        
+
 /**
  * @subpackage Test\InputOutput
  */
@@ -39,14 +39,28 @@ class PageContentTakerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * The testTakingContent method
+     * @covers App\InputOutput\PageContentTaker::takingContent
+     * @return null
+     */
+    public function testTakingContent()
+    {
+        $response = json_decode($this->_pageContentTaker->takingContent());
+        // print_r($response);
+        $this->assertEquals('t.Mallon\'s interception', $response->HTTP_USER_AGENT);
+        $this->assertEquals('quintal-la-de-casa', $response->HTTP_ORIGIN);
+        $this->assertEquals('anteonte', $response->HTTP_REFERER);
+    }
+
+    /**
      * Método de teste
      * @return null
      * @covers App\InputOutput\PageContentTaker::takingWithGet
      */
     public function testTakingWithGet()
     {
-        //$this->markTestIncomplete('Incomplete. Method need more tests!');
-        //print_r($this->_pageContentTaker->takingWithGet('http://www.example.com'));
+        // $this->markTestIncomplete('Incomplete. Method need more tests!');
+        // print_r($this->_pageContentTaker->takingWithGet('http://www.example.com'));
         $content = $this->_pageContentTaker->takingWithGet('http://www.example.com');
         // $handle = fopen('public/files/html-sample.html', 'w+');
         // fwrite($handle, $content);

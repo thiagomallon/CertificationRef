@@ -11,8 +11,8 @@ namespace Test\InputOutput;
 /**
  * Class CSVManipulationTest
  * @author Thiago Mallon <thiagomallon@gmail.com>
- * @group Test/InputOutput
- * @group Test/InputOutput/CSVManipulationTest
+ * @group InputOutput
+ * @group InputOutput/CSVManipulationTest
  */
 class CSVManipulationTest extends \PHPUnit_Framework_TestCase
 {

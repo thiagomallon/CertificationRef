@@ -15,6 +15,29 @@ namespace App\InputOutput;
  */
 class PageContentTaker
 {
+
+    /**
+     * The takingContent method
+     * @return datatype description
+     */
+    public function takingContent()
+    {
+        $options = [
+            'http' => [
+                'method' => 'GET',
+                'user_agent' => "t.Mallon's interception",
+                'header' => "Accept-language: en\r\n".
+                "Cookie: foo=bar\r\n".
+                "Origin: quintal-la-de-casa\r\n".
+                "Referer: anteonte\r\n"
+            ]
+        ];
+
+        $context = stream_context_create($options);
+
+        $content = file_get_contents('http://localhost/RepCertification/data/streams/check-requisitions.php', false, $context);
+        return $content;
+    }
     /**
      * Método retorna $handle de página capturada
      * @param string $url

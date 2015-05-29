@@ -49,7 +49,7 @@ class ArrayDifferentiatingTest extends \PHPUnit_Framework_TestCase
     /**
      * Método implementa função array_intersect() do PHP, e testa sua atuação.
      * A função array_intersect() espera dois parâmetros o primeiro é o array
-     * a ser comparado e o segundo é o array a comparar. A função retorna um
+     * a ser comparado e o segundo é o array à comparar. A função retorna um
      * terceiro array, com os elementos do primeiro, que possuírem valores
      * existentes entre os elementos do segundo array. Observe o array de retorno
      * atribuído à função var_dump().
@@ -73,7 +73,7 @@ class ArrayDifferentiatingTest extends \PHPUnit_Framework_TestCase
         'Carlos'=> 'Marc'
         ];
         $res = array_intersect($localSetA, $localSetB);
-        // var_dump($res);
+        // print_r($res);
         $this->assertCount(3, $res);
     }
 }

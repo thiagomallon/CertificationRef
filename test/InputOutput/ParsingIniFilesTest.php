@@ -11,8 +11,8 @@ namespace Test\InputOutput;
 /**
  * Class ParsingIniFilesTest
  * @author Thiago Mallon <thiagomallon@gmail.com>
- * @group Test/InputOutput
- * @group Test/InputOutput/ParsingIniFilesTest
+ * @group InputOutput
+ * @group InputOutput/ParsingIniFilesTest
  */
 class ParsingIniFilesTest extends \PHPUnit_Framework_TestCase
 {
