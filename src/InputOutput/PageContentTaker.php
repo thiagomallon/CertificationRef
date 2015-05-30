@@ -23,14 +23,14 @@ class PageContentTaker
     public function takingContent()
     {
         $options = [
-            'http' => [
-                'method' => 'GET',
-                'user_agent' => "t.Mallon's interception",
-                'header' => "Accept-language: en\r\n".
-                "Cookie: foo=bar\r\n".
-                "Origin: quintal-la-de-casa\r\n".
-                "Referer: anteonte\r\n"
-            ]
+        'http' => [
+        'method' => 'GET',
+        'user_agent' => "t.Mallon's interception",
+        'header' => "Accept-language: en\r\n".
+        "Cookie: foo=bar\r\n".
+        "Origin: quintal-la-de-casa\r\n".
+        "Referer: anteonte\r\n"
+        ]
         ];
 
         $context = stream_context_create($options);
@@ -69,12 +69,9 @@ class PageContentTaker
      * @param string $url
      * @return datatype description
      */
-    public function takingWithPost($url = 'http://localhost/RepCertification/public/form.php')
+    public function takingWithPost($param, $url = 'http://localhost/RepCertification/data/streams/check-post-requisition.php')
     {
-        $postdata = http_build_query([
-            'nome' => 'Thiago',
-            'sobrenome' => 'Mallon'
-            ]);
+        $postdata = http_build_query($param);
 
         $opts = array('http' => [
             'method'  => 'POST',

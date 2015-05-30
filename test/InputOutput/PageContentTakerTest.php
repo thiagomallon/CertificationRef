@@ -75,8 +75,8 @@ class PageContentTakerTest extends \PHPUnit_Framework_TestCase
      */
     public function testTakingWithPost()
     {
-        $this->markTestIncomplete('Incomplete. Method need more tests!');
-        print_r($this->_pageContentTaker->takingWithPost());
+        $this->markTestIncomplete('Incomplete');
+        print_r($this->_pageContentTaker->takingWithPost(['name'=>'Beroea Fields']));
     }
 
     /**
