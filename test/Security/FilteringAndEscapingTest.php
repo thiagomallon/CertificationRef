@@ -75,23 +75,39 @@ class FilteringAndEscapingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * The testSanitizingInputs method
+     * The requesting method
+     * @covers App\InputOutput\UserStreamWrappers::sendRequisition
+     * @return string $res Resultado da requisição
+     */
+    public function requesting($params)
+    {
+        return \App\InputOutput\UserStreamWrappers::sendRequisition('http://localhost/RepCertification/src/Security/FilteringAndEscaping.php', 'POST', $params);
+    }
+
+    /**
+     * The testSanitizingInputs method implementa teste ao método sanitizingInputs, que implementa a
+     * função filter_input(). A função filter_input(), quando setada com tipo INPUT_POST, exige que uma
+     * requisição via POST seja feita ao documento, ela não requer simplesmente a variável setada na
+     * superglobal $_POST, sendo assim, a requisição foi implementada via stream wrapper http e uma
+     * solução não indicada foi aplicada à classe testada (FilteringAndEscaping), porém, pode-se
+     * verificar a atuação da função.
+     * caso contrário
      * @covers App\InputOutput\UserStreamWrappers::sendRequisition
      * @covers App\Security\FilteringAndEscaping::sanitizingInputs
      * @return null
      */
     public function testSanitizingInputs()
     {
-        $params = ['call'=>'sanitizingInputs','name'=>'David the King'];
-        $res = \App\InputOutput\UserStreamWrappers::sendRequisition('http://localhost/RepCertification/src/Security/FilteringAndEscaping.php', 'POST', $params);
-        $this->assertEquals('David the King', $res);
+        $params = ['call'=>'sanitizingInputs','name'=>'David the King']; // cria parâmetros com string padrão
+        $res = $this->requesting($params); // gera requisição via post
+        $this->assertEquals('David the King', $res); // verifica resultado
 
-        $params = ['call'=>'sanitizingInputs','name'=>'São Paulo'];
-        $res = \App\InputOutput\UserStreamWrappers::sendRequisition('http://localhost/RepCertification/src/Security/FilteringAndEscaping.php', 'POST', $params);
-        $this->assertEquals('São Paulo', $res);
+        $params = ['call'=>'sanitizingInputs','name'=>'São Paulo']; // cria parâmetros com caractere acentuado
+        $res = $this->requesting($params); // gera requisição via post
+        $this->assertEquals('São Paulo', $res); // verifica resultado
 
-        $params = ['call'=>'sanitizingInputs','name'=>'Injecting = '];
-        $res = \App\InputOutput\UserStreamWrappers::sendRequisition('http://localhost/RepCertification/src/Security/FilteringAndEscaping.php', 'POST', $params);
-        $this->assertEquals('Invalid value', $res);
+        $params = ['call'=>'sanitizingInputs','name'=>'Injecting = ']; // cria parâmetros com caractere inválido
+        $res = $this->requesting($params); // gera requisição via post
+        $this->assertEquals('Invalid value', $res); // verifica-se que a validação bloqueou a string passada
     }
 }
