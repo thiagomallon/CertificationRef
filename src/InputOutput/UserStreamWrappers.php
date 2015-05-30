@@ -24,7 +24,7 @@ class UserStreamWrappers
         $params = http_build_query($params);
 
         $opts = array('http' => [
-            'method'  => 'POST',
+            'method'  => $method,
             'header'  => 'Content-type: application/x-www-form-urlencoded',
             'content' => $params
             ]);
