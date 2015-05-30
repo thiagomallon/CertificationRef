@@ -93,21 +93,46 @@ class FilteringAndEscapingTest extends \PHPUnit_Framework_TestCase
      * verificar a atuação da função.
      * caso contrário
      * @covers App\InputOutput\UserStreamWrappers::sendRequisition
-     * @covers App\Security\FilteringAndEscaping::sanitizingInputs
+     * @covers App\Security\FilteringAndEscaping::sanitizingInput
      * @return null
      */
-    public function testSanitizingInputs()
+    public function testSanitizingInput()
     {
-        $params = ['call'=>'sanitizingInputs','name'=>'David the King']; // cria parâmetros com string padrão
+        $params = ['call'=>'sanitizingInput','name'=>'David the King']; // cria parâmetros com string padrão
         $res = $this->requesting($params); // gera requisição via post
         $this->assertEquals('David the King', $res); // verifica resultado
 
-        $params = ['call'=>'sanitizingInputs','name'=>'São Paulo']; // cria parâmetros com caractere acentuado
+        $params = ['call'=>'sanitizingInput','name'=>'São Paulo']; // cria parâmetros com caractere acentuado
         $res = $this->requesting($params); // gera requisição via post
         $this->assertEquals('São Paulo', $res); // verifica resultado
 
-        $params = ['call'=>'sanitizingInputs','name'=>'Injecting = ']; // cria parâmetros com caractere inválido
+        $params = ['call'=>'sanitizingInput','name'=>'Injecting = ']; // cria parâmetros com caractere inválido
         $res = $this->requesting($params); // gera requisição via post
         $this->assertEquals('Invalid value', $res); // verifica-se que a validação bloqueou a string passada
+    }
+
+    /**
+     * The testSanitizingFormInputs method
+     * @covers App\InputOutput\UserStreamWrappers::sendRequisition
+     * @covers App\Security\FilteringAndEscaping::sanitizingFormInputs
+     * @return null
+     */
+    public function testSanitizingFormInputs()
+    {
+        $params = ['call' => 'sanitizingFormInputs', 'id' => '15', 'name' => 'São João', 'pass' => 'test123', 'color' => 'green'];
+        $res = unserialize($this->requesting($params)); // resultado é serializado na classe que implementa os filtros, fazendo-se, assim, necessária desserialização
+        //print_r($res);
+        $this->assertEquals('15', $res['id']);
+        $this->assertEquals('São João', $res['name']);
+        $this->assertEquals('test123', $res['pass']);
+        $this->assertEquals('green', $res['color']);
+
+        $params = ['call' => 'sanitizingFormInputs', 'id' => 'a15', 'name' => 'São + João', 'color'=>'orange'];
+        $res = unserialize($this->requesting($params));
+        //print_r($res);
+        $this->assertFalse($res['id']);
+        $this->assertFalse($res['name']);
+        $this->assertNull($res['pass']);
+        $this->assertFalse($res['color']);
     }
 }

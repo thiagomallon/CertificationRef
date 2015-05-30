@@ -75,7 +75,7 @@ class FilteringAndEscaping
      * The sanitizingInputs method implementa uso da função filter_input()
      * @return null
      */
-    public static function sanitizingInputs()
+    public static function sanitizingInput()
     {
         // submete valor da superglobal $_POST à validação e sanitização, por regex
         $name = filter_input(INPUT_POST, 'name', FILTER_VALIDATE_REGEXP, ['options' =>
@@ -84,11 +84,45 @@ class FilteringAndEscaping
         // print($name);
         return ($name)? $name : 'Invalid value';
     }
+
+    /**
+     * The sanitizingForm method valida não apenas um campo, mas é capaz de validar de uma só
+     * vez todos os campos de um formulário.
+     * @return array
+     */
+    public static function sanitizingFormInputs()
+    {
+        $data = [
+            'id' =>  FILTER_VALIDATE_INT,
+            'name' => [
+                'filter' => FILTER_VALIDATE_REGEXP,
+                'options' => [
+                    'regexp' => '/^([\p{L}\s\.]+)$/iu' // aceita-se qualquer letra, minúscula ou maiúscula, com e/ou sem acento, espaços e pontos
+                ]
+            ],
+            'pass' => [
+                'filter' => FILTER_VALIDATE_REGEXP,
+                'options' => [
+                    'regexp' => '/^([\w\d]+)$/' // aceita-se apenas caracteres alfanuméricos
+                ]
+            ],
+            'color' => [
+                'filter' => FILTER_VALIDATE_REGEXP,
+                'options' => [
+                    'regexp' => '/(green|cyan|magenta|yellow)/' // aceita-se apenas as palavras especifidas na regex
+                ]
+            ]
+        ];
+        /* aplica-se serialização, já que resultado vem em formato de array, sendo este
+        impresso. Serializando-se o array, podemos converter a string gerada em um novo 
+        array. */
+        return serialize(filter_input_array(INPUT_POST, $data));
+    }
 }
 
 /* A função filter_input(), quando utilizada sob a diretiva INPUT_POST, exige uma requisição de fato,
 não bastando a simples criação de um índice na superglobal $_POST. Sendo assim, a solução abaixo, 
 aliada a uma requisição criada via stream wrapper http, tornou possível o teste da função via PHPUnit */
 if (isset($_POST['call'])) {
-    print FilteringAndEscaping::{$_POST['call']}();
+    print_r(FilteringAndEscaping::{$_POST['call']}());
 }
