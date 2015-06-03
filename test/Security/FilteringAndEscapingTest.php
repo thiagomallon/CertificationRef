@@ -135,4 +135,54 @@ class FilteringAndEscapingTest extends \PHPUnit_Framework_TestCase
         $this->assertNull($res['pass']);
         $this->assertFalse($res['color']);
     }
+
+    /**
+     * The testFilteringRequestData method
+     * @covers App\InputOutput\UserStreamWrappers::sendRequisition
+     * @covers App\Security\FilteringAndEscaping::filteringRequestData
+     * @return null
+     */
+    public function testFilteringRequestData()
+    {
+        $this->markTestIncomplete('Incomplete');
+        $params = ['call' => 'filteringRequestData'];
+        $res = unserialize($this->requesting($params));
+        //print_r($this->requesting($params));
+        print_r($res);
+    }
+
+    /**
+     * The testHashingPass method implementa teste ao método hashingPass, que
+     * submete valores à função password_hash(), que faz parte da nova API de
+     * criptografia.
+     * Testa-se também a função password_verify(), que promove facilidade para a validação do hash,
+     * comparando-se com a string, sem a necessidade de submeter-se toda vez a string recebida do
+     * formulário a uma criptografia.
+     * @covers App\Security\FilteringAndEscaping::hashingPass
+     * @return null
+     */
+    public function testHashingPass()
+    {
+        $safe = $this->_filteringEscaping->hashingPass('criptografia');
+        //print($safe);
+        $this->assertEquals(60, strlen($safe)); // o PHPUnit não faz contagem de string com o assertCount()
+        $this->assertTrue(password_verify('criptografia', $safe)); // verifica se hash e string coincidem.
+    }
+
+    /**
+     * The testFullPassCheck method envia valores de string de senha (valor recebido via
+     * formulário - e tratado) e hash de senha (seria valor armazenado na base de dados) e envia
+     * para o método fullPassCheck(), que submete dados às funções password_verify() e
+     * password_needs_rehash().
+     * @covers App\Security\FilteringAndEscaping::fullPassCheck
+     * @return null
+     */
+    public function testFullPassCheck()
+    {
+        $clean['pass'] = 'secure'; // senha do usuário, recebida via formulário e tratada
+        $safe = $this->_filteringEscaping->hashingPass($clean['pass']); // submete senha à criptografia - seria valor armazenado na base de dados
+
+        $res = $this->_filteringEscaping->fullPassCheck($clean['pass'], $safe); // submete a senha à validação e checagem de atualização de hash
+        $this->assertTrue($res); // verifica se resultado foi, de todo, positivo.
+    }
 }

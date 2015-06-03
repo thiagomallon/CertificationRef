@@ -78,6 +78,33 @@ class ArraySortingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * The testSortNatural method implementa função sort(), porém, com o uso da flag SORT_NATURAL, que ordena os valores do array
+     * de forma mais eficiente, valores alfanuméricos agora são ordenados de forma natural.
+     * @return null
+     */
+    public function testSortNatural()
+    {
+        sort($this->localSet, SORT_NATURAL); // submete propriedade a ordenação de valores de forma natural - eficiente para valores alfa-numéricos
+        // print_r($this->localSet); // verifica ordenação
+        $this->assertArrayNotHasKey('session1', $this->localSet); // verifica-se que índice associativo não foi preservado
+        end($this->localSet); // coloca ponteiro do array no último elemento
+        $this->assertEquals('book11.pdf', current($this->localSet)); // verifica-se que, dessa vez, os valores alfanuméricos foram corretamente ordenados.
+    }
+
+    /**
+     * The testSortString method
+     * @return null
+     */
+    public function testSortString()
+    {
+        sort($this->localSet, SORT_STRING);
+        // print_r($this->localSet); // observa-se que valores alfanuméricos não são eficientemente ordenados
+        $this->assertArrayNotHasKey('session1', $this->localSet); // verificap-se que índices não são presenvados
+        end($this->localSet); // coloca ponteiro do array no último elemento
+        $this->assertEquals('book2.pdf', current($this->localSet)); // verifica-se valores alfanuméricos não são eficientemente ordenados
+    }
+
+    /**
      * Método atua de forma semelhante à função sort(), diferenciando-se na ordem em que se dispõe
      * os elementos, fazendo-o de forma reversa.
      * @return null
@@ -107,6 +134,20 @@ class ArraySortingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * The testARSort method implementa função arsort(), que atua exatamente da mesma forma da função asort(), supra testada,
+     * porém, realiza ordenação de forma descendente.
+     * @return null
+     */
+    public function testARSort()
+    {
+        arsort($this->localSet);
+        // print_r($this->localSet);
+        $this->assertArrayHasKey('session1', $this->localSet); // verifica se índice associativo foi presenvado
+        end($this->localSet); // coloca ponteiro do array no último elemento
+        $this->assertContains('book1.pdf', current($this->localSet)); // verifica se último valor é o valor esperado.
+    }
+
+    /**
      * Método testa atribuição de array à função ksort() do PHP. Verifica-se que apesar
      * de ordenar os índices e manter a associação ao valor, não ordenando assim os valores,
      * mas tão somente os índices, a função ksort() não ordena de forma eficiente índices de
@@ -120,6 +161,19 @@ class ArraySortingTest extends \PHPUnit_Framework_TestCase
         end($this->localSet); // coloca ponteiro no elemento de última posição, para verificação da ordenação
         //print_r($this->localSet);
         $this->assertContains('book2.pdf', current($this->localSet));
+    }
+
+    /**
+     * The testKRSort method implementa uso da função krsort() à propriedade de tipo array $localSet.
+     * A função krsort() atua exatamente como a função ksort(), porém, realiza ordenação de forma descendente.
+     * @return null
+     */
+    public function testKRSort()
+    {
+        krsort($this->localSet); // submete array à função krsort()
+        end($this->localSet); // coloca ponteiro no elemento de última posição, para verificação da ordenação
+        // print_r($this->localSet);
+        $this->assertContains('book1.pdf', current($this->localSet));
     }
 
     /**

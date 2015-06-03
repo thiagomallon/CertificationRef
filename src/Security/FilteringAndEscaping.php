@@ -72,6 +72,57 @@ class FilteringAndEscaping
     }
 
     /**
+     * The hashingPass method testa a nova API de criptografia de senha, a password_hash(), que
+     * provê melhor criptografia que o MD5 e o SHA-1.
+     *
+     * Com o PHP 5.5, um novo método de criptografia de senha foi adicionado. Essa nova API de
+     * password-hashing promove a melhor bcrypt one-way hashing. Esta é superior ao MD5 e ao SHA-1.
+     *
+     * A função espera três parâmetros: o primeiro é o valor a ser criptografado, o segundo
+     * sendo a forma de criptografia, já o terceiro parâmetro, que não é obrigatório, é do tipo array,
+     * sendo possível especificar-se o salt e o cost, sendo o primeiro não recomendado e o último a
+     * complexidade de criptografia a ser empregada, podendo ser valores de 4 a um número indefinido,
+     * sendo o valor 10 o padao. Quando maior o número, mais demorado e mais seguro será o hash. Duas
+     * constantes foram disponibilizadas, para preenchimento do
+     * segundo parâmetro da função. Sendo esses:
+     *
+     * PASSWORD_BCRYPT
+     * PASSWORD_DEFAULT
+     *
+     * @param string $pass Valor de senha a ser criptografado
+     * @return datatype description
+     */
+    public function hashingPass($pass)
+    {
+        return password_hash($pass, PASSWORD_BCRYPT, ['cost' => '10']);
+    }
+
+    /**
+     * The fullPassCheck method aplica funções de verificação de string de senha, confrontado
+     * com valor de hash (seria o valor armazenado na base de dados) e verifica se a mesma
+     * necessida de um rehash através da função password_needs_rehash(), ou seja, de um novo
+     * valor de hash, sendo assim o código pode
+     * ser tratado não apenas para verficação da senha, mas uma reatribuição ao valor hash
+     * armazenado.
+     * @param string $passEntry Esse seria o valor inserido no formulário
+     * @param string $passHashStorage Esse seria o valor armazenado na base de dados
+     * @return bool Retorna resultado da verificação da senha
+     */
+    public function fullPassCheck($passEntry, $passHashStorage)
+    {
+        if (password_verify($passEntry, $passHashStorage)) {
+            if (password_needs_rehash($passHashStorage, PASSWORD_BCRYPT)) {
+                /* caso o script entre nessa condição, então seria a hora de uma atualização do valor hash
+                que consta na base de dados. */
+                $newHash = password_hash($passEntry, PASSWORD_BCRYPT, ['cost' => '10']);
+                return true;
+            }
+            return true;
+        }
+        return false;
+    }
+
+    /**
      * The sanitizingInputs method implementa uso da função filter_input()
      * @return null
      */
@@ -92,26 +143,43 @@ class FilteringAndEscaping
      */
     public static function sanitizingFormInputs()
     {
-        $data = [
+        $data = array(
             'id' =>  FILTER_VALIDATE_INT,
-            'name' => [
+            'name' => array(
                 'filter' => FILTER_VALIDATE_REGEXP,
-                'options' => [
+                'options' => array(
                     'regexp' => '/^([\p{L}\s\.]+)$/iu' // aceita-se qualquer letra, minúscula ou maiúscula, com e/ou sem acento, espaços e pontos
-                ]
-            ],
-            'pass' => [
+                    )
+                ),
+            'pass' => array(
                 'filter' => FILTER_VALIDATE_REGEXP,
-                'options' => [
+                'options' => array(
                     'regexp' => '/^([\w\d]+)$/' // aceita-se apenas caracteres alfanuméricos
-                ]
-            ],
-            'color' => [
+                    )
+                ),
+            'color' => array(
                 'filter' => FILTER_VALIDATE_REGEXP,
-                'options' => [
+                'options' => array(
                     'regexp' => '/(green|cyan|magenta|yellow)/' // aceita-se apenas as palavras especifidas na regex
-                ]
-            ]
+                    )
+                )
+            );
+        /* aplica-se serialização, já que resultado vem em formato de array, sendo este
+        impresso. Serializando-se o array, podemos converter a string gerada em um novo 
+        array. */
+        return serialize(filter_input_array(INPUT_POST, $data));
+    }
+
+    /**
+     * The filteringRequestData method
+     * @return datatype description
+     */
+    public static function filteringRequestData()
+    {
+        $data = [
+        'ip' => FILTER_VALIDATE_IP,
+        'mac' => FILTER_VALIDATE_MAC,
+        'url' => FILTER_VALIDATE_URL
         ];
         /* aplica-se serialização, já que resultado vem em formato de array, sendo este
         impresso. Serializando-se o array, podemos converter a string gerada em um novo 
