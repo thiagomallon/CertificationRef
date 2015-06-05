@@ -336,6 +336,15 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * The testArrayFill method
+     * @return null
+     */
+    public function testArrayFill()
+    {
+        
+    }
+
+    /**
      * Método implementa função (ou melhor, construtor de linguagem list()). Função atribui
      * valor de dada posição à variável atribuída, seguindo-se a ordem de ocorrência. No exemplo
      * abaixo.
@@ -355,5 +364,22 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
         list($one,$two,$three) = $localSet;
         //print_r($three);
         $this->assertEquals('5th', $three); // observa-se que o elemento de índice '3th' foi pulado na listagem
+    }
+
+    /**
+     * The testArrayChunk method implementa função array_chunk(), que separa array internamente, de acordo com o
+     * numero de elementos por agrupamento setado no segundo parâmetro. A função retorna um novo array array
+     * que consiste-se em uma transformação do array passado em um novo array, com os agrupamentos internos
+     * tornando-o agora um array multidimensional, pois cada agrupamento se torna um novo array, dentro do array.
+     * @return null
+     */
+    public function testArrayChunk()
+    {
+        $localSet = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth'];
+        $res = array_chunk($localSet, 2);
+        //print_r($res);
+        $this->assertCount(2, $res[1]);
+        $this->assertEquals('third', $res[1][0]);
+        $this->assertEquals('fourth', $res[1][1]);
     }
 }

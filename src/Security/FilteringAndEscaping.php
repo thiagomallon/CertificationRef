@@ -145,9 +145,9 @@ class FilteringAndEscaping
     {
         $data = array(
             'id' =>  FILTER_VALIDATE_INT,
-            'name' => array(
-                'filter' => FILTER_VALIDATE_REGEXP,
-                'options' => array(
+            'name' => array( // nome do campo a ser validado
+                'filter' => FILTER_VALIDATE_REGEXP, // tipo de validação/filtragem
+                'options' => array( // opções de validação/filtragem
                     'regexp' => '/^([\p{L}\s\.]+)$/iu' // aceita-se qualquer letra, minúscula ou maiúscula, com e/ou sem acento, espaços e pontos
                     )
                 ),

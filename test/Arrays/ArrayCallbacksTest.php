@@ -74,31 +74,4 @@ class ArrayCallbacksTest extends \PHPUnit_Framework_TestCase
         //print_r($localSet);
         $this->assertContains('first place', $this->localSet);
     }
-
-    /**
-     * The testUSort method
-     * @return null
-     */
-    public function testUSort()
-    {
-        $this->markTestIncomplete('Incomplete');
-    }
-
-    /**
-     * The testUKSort method
-     * @return null
-     */
-    public function testUKSort()
-    {
-        $this->markTestIncomplete('Incomplete');
-    }
-
-    /**
-     * The testUASort method
-     * @return null
-     */
-    public function testUASort()
-    {
-        $this->markTestIncomplete('Incomplete');
-    }
 }

@@ -48,6 +48,8 @@ class StringsTest extends \PHPUnit_Framework_TestCase
         $string = 'Astronaut'; // string a ser comparada
         $this->assertEquals(5, strcmp($string, 'Astr')); // sobram 5 letras
         $this->assertEquals(-1, strcmp($string, 'Astronauts')); // ficou faltando uma letra
+        $this->assertEquals(-12, strcmp($string, 'Moon')); // sobram 5 letras
+        $this->assertEquals(-45, strcmp($string, 'naut')); // sobram 5 letras
     }
 
     /**
@@ -84,6 +86,7 @@ class StringsTest extends \PHPUnit_Framework_TestCase
         $email = 'test@test.com'; // string de e-mail
         // verifica se existe @ na string passada e retorna o restante da string à partir da posição de @, ou false, caso não encontre @
         $this->assertEquals('@test.com', strstr($email, '@'));
+        $this->assertEquals('test', strstr($email, '@', true));
     }
 
     /**
@@ -121,5 +124,72 @@ class StringsTest extends \PHPUnit_Framework_TestCase
         $chara = 97; // para conversão para caractere
         $res = sprintf("%s%c", '97 equals ', $chara); // função retorna valor formatado
         $this->assertEquals('97 equals a', $res); // verifica-se se resultado é o esperado
+    }
+
+    /**
+     * The testStripTags method implementa a função strip_tags() do PHP, que retira quaisquer tags html e/ou xml
+     * da string passada. A função pode receber dois parâmetros, sendo o primeiro a string a ser tratada e o segundo
+     * parâmetro, por sua vez opcional, é usado para declarar as tags as quais não deseja-se que sejam retiradas.
+     * @return null
+     */
+    public function testStripTags()
+    {
+        $string = '<h1>Hi and welcome!</h1> We are a <strong>robot factory</strong>'; // string com tags
+        $this->assertEquals('Hi and welcome! We are a robot factory', strip_tags($string)); // todas as tags são retiradas
+        // abaixo informamos que as tags <strong></strong> devem ser preservadas
+        $this->assertEquals('Hi and welcome! We are a <strong>robot factory</strong>', strip_tags($string, '<strong></strong>'));
+    }
+
+    /**
+     * The testStrrev method implementa função strrev(), que inverte a string passada e retorna o valor.
+     * @return null
+     */
+    public function testStrrev()
+    {
+        $string = strrev('Testing stuff'); // função inverte string passada
+        // print_r($string);
+        $this->assertEquals('ffuts gnitseT', $string); // verifica inversão
+    }
+
+    /**
+     * The testExplode method implementa uso da função explode, que transforma string em um array.
+     * A função recebe o delimitador como primeiro parâmetro, a string a ser transformada no segundo
+     * e o terceiro parâmetro, dessa vez, não obrigatório é utilizado para delimitar-se o número máximo
+     * de elementos que poderão ser criados.
+     * A função não altera o dado original, mas retorna array de string tratada.
+     * @return null
+     */
+    public function testExplode()
+    {
+        $string = 'first, second, third, fourth';
+        $res = explode(', ', $string);
+        $this->assertCount(4, $res);
+        $this->assertEquals('second', $res[1]);
+    }
+
+    /**
+     * The testImplode method implementa uso da função implode, que transforma um array em uma string.
+     * O primeiro parâmetro é a string de junção, ou seja, o que será colocado entre um elemento e outro, na
+     * string gerada e o segundo parâmetro é o array a ser transformado. A função não altera o dado original,
+     * mas retorna a string recém criada.
+     * @return null
+     */
+    public function testImplode()
+    {
+        $set = ['first', 'second', 'third', 'fourth']; // array de elementos
+        $res = implode(', ', $set); // transforma array em string
+        $this->assertEquals('first, second, third, fourth', $res); // verifica string gerada
+    }
+
+    /**
+     * The testStrtokImplement method
+     * @return null
+     */
+    public function testStrtokImplement()
+    {
+        $this->markTestIncomplete('Incomplete');
+        $string = "Hi\nHow are you?\nWelcome to our website";
+        $res = strtok($string, "\n");
+        // var_dump($res);
     }
 }

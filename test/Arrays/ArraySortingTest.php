@@ -195,6 +195,21 @@ class ArraySortingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * The testNatCaseSort method implementa uso da função natcasesort(), que ordena aĺém de ordenar valores
+     * alfanuméricos eficientemente, não faz distinção entre cases, ou seja, é case insensitive. A função
+     * não altera os índices, mas tão somente a ordenação dos elementos.
+     * @return null
+     */
+    public function testNatCaseSort()
+    {
+        $justStuff = ['IMG10.PNG','IMG1.PNG','IMG11.PNG','IMG22.PNG','IMG0.png','img1.png','img2.png','IMG3.PNG'];
+        natcasesort($justStuff);
+        // print_r($justStuff);
+        next($justStuff); // ponteiro aponta para o segunto elemento do array
+        $this->assertEquals('img1.png', current($justStuff)); // verificamos não houve distinção entre os cases.
+    }
+
+    /**
      * Método implementa função array_reverse() do PHP. Função inverte ordem dos valores, sendo, sendo o último
      * elemento colocado em primeiro e vice-versa. Para índices numéricos ocorre perda de relação índice/chave,
      * porém, índices associativos são mantidos.

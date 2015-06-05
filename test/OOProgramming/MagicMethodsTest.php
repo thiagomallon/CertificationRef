@@ -29,7 +29,7 @@ class MagicMethodsTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         /* atribui instância da classe OOMohter à propriedade $_itsNotMagic */
-        $this->_itsNotMagic = new \App\OOProgramming\MagicMethods();
+        $this->_itsNotMagic = new \App\OOProgramming\MagicMethods;
     }
 
     /**
@@ -110,6 +110,21 @@ class MagicMethodsTest extends \PHPUnit_Framework_TestCase
         métodos declarados na classe do objeto, já a expressão acima, fez uso do método mágico
         __set(), declarado na classe MagicMethods(), pois a propriedade notDef, não existe na
         classe, mas foi declarada pelo método __set() e retornada pelo método __get()*/
+    }
+
+    /**
+     * The testInvokeMagicMethod method implementa teste ao método mágico __invoke(), declarado na classe
+     * testada. É interessante notar que a instanciada da classe, manipulada nos fixtures exibe um erro quando tenta-se
+     * chama-la como método, algo relacionado a como o PHPUnit trabalha as instâncias nos fixtures. Por essa razão
+     * foi criada uma instância local da classe, para que pudesse ser testada a ação realizada no método mágico.
+     * Observa-se que a literal atribuída ao retorno do método mágico é exibida abaixo.
+     * @return null
+     */
+    public function testInvokeMagicMethod()
+    {
+        $noMagic = new \App\OOProgramming\MagicMethods; // instancia da classe
+        // invoca-se método pela variável de instância da classe, para que se teste a ação do método __invoke()
+        $this->assertEquals('Hey matey, this is an object, not a function', $noMagic());
     }
 
     /**

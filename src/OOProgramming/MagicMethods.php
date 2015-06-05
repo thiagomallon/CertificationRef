@@ -109,13 +109,17 @@ class MagicMethods
      */
     public function __invoke()
     {
-
+        return 'Hey matey, this is an object, not a function';
     }
 
     /**
-     * Método
+     * Método é chamado e, tem poder de interceptar ação quando instância da classe é submetida à ação do operador
+     * clone. Tem-se a chande, através do seguinte método mágico, de criar novas instâncias para as dependências
+     * para que a da instancia clone e da clonada não compartilhem, por referência, alocamento em memória, mas tenham
+     * sejam objetos diferentes para o clone e a clonada.
+     * Isso é muito útil quando se está implementando o Pattern Prototype para uma classe que implementa injeção de
+     * dependência, e/ou simplesmente os conceitos S.O.L.I.D..
      * @return datatype description
-     *
      */
     public function __clone()
     {
@@ -123,6 +127,9 @@ class MagicMethods
     }
 
     /**
+     * O seguinte método mágico é usado para selecionar-se as propriedades as quais deseja-se que sejam incluídas após
+     * um comando de serialização de uma instância da classe. Selecionam-se as propriedades atravez do retorno de
+     * um array ao qual incluem-se os nomes da propriedades por literais de string.
      * @return datatype description
      */
     public function __sleep()
@@ -131,32 +138,23 @@ class MagicMethods
     }
 
     /**
-     * Método
+     * Método é chamado quando valor de serialização da presente classe é submetido à função unserialize() do PHP.
      * @return datatype description
      *
      */
     public function __wakeup()
     {
-
+        return 'Object waking up';
     }
 
     /**
      * Método
      * @return datatype description
      */
-    public function __set_start()
+    public static function __set_state()
     {
 
     }
-
-    /**
-     * @return datatype description
-     */
-    public function __serialize()
-    {
-
-    }
-
 
     /**
      * método é chamado toda vez que instância de classe é chamado como um string. ex:

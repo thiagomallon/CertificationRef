@@ -70,4 +70,31 @@ class DaughterTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertEquals('MotherClass!', $this->_daughter->getMomName());
     }
+
+    /**
+     * The testCheck method
+     * @covers App\OOProgramming\CPFValidator::check
+     * @covers App\OOProgramming\Daughter::check
+     * @return null
+     */
+    public function testCheck()
+    {
+        $cpf = 'Taguating';
+        $callRes = $this->_daughter->check($cpf);
+        $this->assertEquals("Welcome to Alabama, user: {$cpf}", $callRes);
+    }
+
+    /**
+     * The testValidate method testa chamada a implementação de método abstrato declarado no Trait
+     * e implementado na classe Daughter.
+     * @covers App\OOProgramming\CPFValidator::validate
+     * @covers App\OOProgramming\Daughter::validate
+     * @return null
+     */
+    public function testValidate()
+    {
+        $cpf = 'nothingMuch...';
+        $callRes = $this->_daughter->validate($cpf);
+        $this->assertEquals("It's validated: {$cpf}", $callRes);
+    }
 }

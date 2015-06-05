@@ -108,4 +108,18 @@ class Daughter extends Mother
         Mother::__construct();
         return Mother::getName();
     }
+
+    // Killing SRP - X(_
+    // use CPFValidatorTrait; // not recommended
+    use \App\OOProgramming\CPFValidatorTrait; // right way!
+
+    /**
+     * The validate method
+     * @param datatype $cpf description
+     * @return datatype description
+     */
+    public function validate($cpf)
+    {
+        return "It's validated: {$cpf}";
+    }
 }

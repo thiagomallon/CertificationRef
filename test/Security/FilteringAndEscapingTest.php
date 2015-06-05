@@ -75,7 +75,9 @@ class FilteringAndEscapingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * The requesting method
+     * The requesting method realiza requisição via cli, para endereço de testes da validação, para teste dos
+     * métodos que implementam as função filter_input() e filter_input_array(). Ambas as funções exigem requisições
+     * reais e portanto se faz necessária seguinte simulação.
      * @covers App\InputOutput\UserStreamWrappers::sendRequisition
      * @return string $res Resultado da requisição
      */
