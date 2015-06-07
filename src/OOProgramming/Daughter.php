@@ -21,6 +21,11 @@ class Daughter extends Mother
      * @var string
      */
     protected $name;
+    /**
+     * Property stores
+     * @var datatype $publicStuff description
+     */
+    public $publicStuff = 'Yes, you can see this';
 
     /**
      * Método construtor da classe. O método chama método construtor da classe mãe.

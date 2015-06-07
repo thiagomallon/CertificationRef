@@ -120,6 +120,17 @@ class RawCastingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * The testCastingStringInt method implementa casting de valor string para valor integer, verificando-se
+     * que esse tipo de conversão sempre resulta em 0.
+     * @return null
+     */
+    public function testCastingStringInt()
+    {
+        $name = 'Someone';
+        $this->assertEquals(0, (int) $name);
+    }
+
+    /**
      * The testCastingStringArray method verifica resultado de conversão de strings para array.
      * Verifica-se que casting de strings para arrays resultam sempre em índice numérico, tendo
      * como valor a literal string.
@@ -129,7 +140,23 @@ class RawCastingTest extends \PHPUnit_Framework_TestCase
         $name = 'Thiago';
         $newSet = (array) $name;
         // print_r($newSet);
-        $this->assertArrayNotHasKey('name', (array) $name);
+        $this->assertArrayNotHasKey('name', $newSet); // verifica-se que índice numérico é criado, e não associativo
+        $this->assertContains('Thiago', $newSet); // verifica que existe elemento com valor passado
+    }
+
+    /**
+     * The testCastingArrayString method implementa cast de array para string e observa-se que tal cast (ou conversão)
+     * não é possível, gerando essa uma exceção. No exemplo à seguir, como a exceção é gerada numa classe de teste,
+     * a exeção esperada deve ser PHPUnit_Frameworkd_Error, não funcionando a mera Exception.
+     *
+     * @expectedException PHPUnit_Framework_Error
+     * @expectedExceptionMessage Array to string conversion
+     * @return null
+     */
+    public function testCastingArrayString()
+    {
+        $set = ['name'=>'Arnold', 'Someone'];
+        $string = (string) $set;
     }
 
     /**
@@ -139,13 +166,28 @@ class RawCastingTest extends \PHPUnit_Framework_TestCase
     public function testCastingArrayObj()
     {
         $set = ['food' => 'mingal',  // será convertido para propriedade food
-        'notThisWay']; // não poderá ser acessado, já que não tem índice
+        'notThisWay',
+        'orThis']; // não poderá ser acessado, já que não tem índice
         $objSet = (object) $set; // realiza conversão
         // print_r($objSet);
 
         $this->assertEquals('mingal', $objSet->food);
-        // $this->assert('notThisWay', $objSet->{'0'}); // não funciona
+        // $this->assert('notThisWay', $objSet->{'0'}); // não funciona, portando, índices numéricos não podem ser recuperados num cast desse tipo
+        // $this->assertEquals('orThis', $objSet->{'1'}); // mesmo resultado da expressão supra-citada
     }
 
-    
+    /**
+     * The testCastingObjArray method
+     * @return null
+     */
+    public function testCastingObjArray()
+    {
+        $obj = new \stdClass(); // cria novo objeto
+        $obj->prop1 = 'Prop1 value';
+        $obj->prop2 = 'Prop2 value'; // atribui propriedade e valor da mesma
+
+        $arr = (array) $obj; // faz cast de objeto para array
+        $this->assertArrayHasKey('prop1', $arr); // verifica se array de cast possui índice com nome da propriedade
+        $this->assertContains('Prop1 value', $arr['prop1']); // verifica-se se array recebeu valor da propriedade como valor do elemento
+    }
 }

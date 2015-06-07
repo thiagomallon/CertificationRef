@@ -13,7 +13,7 @@ namespace App\OOProgramming;
  * Classe GrandMa
  * @author Thiago Mallon <thiagomallon@gmail.com>
  */
-class GrandMa
+class GrandMa implements FamilyInterface
 {
     /**
      * Propriedade armazena nome

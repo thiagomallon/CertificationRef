@@ -22,6 +22,11 @@ class StandardLibraryTest extends \PHPUnit_Framework_TestCase
      * @var object $_standardLib
      */
     protected $_standardLib;
+    /**
+     * Property stores
+     * @var datatype $_daughter description
+     */
+    protected $_daughter;
     
     /**
      * Sets up the fixture, for example, opens a network connection.
@@ -30,6 +35,7 @@ class StandardLibraryTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         $this->_standardLib = new \App\OOProgramming\StandardLibrary;
+        $this->_daughter = new \App\OOProgramming\Daughter;
     }
     
     /**
@@ -39,6 +45,7 @@ class StandardLibraryTest extends \PHPUnit_Framework_TestCase
     public function tearDown()
     {
         unset($this->_standardLib);
+        unset($this->_daughter);
     }
 
     /**
@@ -89,5 +96,55 @@ class StandardLibraryTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('second', $this->_standardLib->checkpoint); // valor da propriedade é alterado
 
         $generator->rewind(); // retorna ao primeiro yield
+    }
+
+    /**
+     * The testClassUses method implementa função class_uses(), que retorna trais utilizados pelo objeto.
+     * A função retorna um array associativo, cujo índice e valor são o nome do trait usado (duplicidade de índice
+     * e valor).
+     * @return null
+     */
+    public function testClassUses()
+    {
+        $res = class_uses($this->_daughter);
+        // print_r($res);
+        $this->assertArrayHasKey('App\OOProgramming\CPFValidatorTrait', $res); // verifica índices
+        $this->assertContains('App\OOProgramming\CPFValidatorTrait', $res); // verifica valores dos índices
+    }
+
+    /**
+     * The testClassParents method impĺementa uso da função class_parents(), que retorna array de classes ancestrais
+     * do objeto passado. Assim como a função acima, talvez sendo uma característica das funções SPL, a função retorna
+     * um array associativo cujos elementos possuem chave e valor iguais, sendo esses uma classe ancestral. Outro ponto
+     * interessante na função é que ela retorna toda a ancestralidade da classe e não apenas o parente direto. A classe
+     * Daughter herda da classe Mother, que, por sua vez, herda da classe GrandMa, sendo assim a classe retorna um
+     * array com dois elementos, a classe Mother e a classe GrandMa
+     * @return null
+     */
+    public function testClassParents()
+    {
+        $res = class_parents($this->_daughter);
+        // print_r($res);
+        // Mother
+        $this->assertArrayHasKey('App\OOProgramming\Mother', $res); // verifica índices
+        $this->assertContains('App\OOProgramming\Mother', $res); // verifica valores dos índices
+        // GrandMa
+        $this->assertArrayHasKey('App\OOProgramming\GrandMa', $res); // verifica índices
+        $this->assertContains('App\OOProgramming\GrandMa', $res); // verifica valores dos índices
+    }
+
+    /**
+     * The testClassImplements method implementa função class_implements(), que retorna array com interfaces
+     * implementadas pelo objeto. Assim como as duas funções anteriores, a presente função retorna um array
+     * associativo, contendo o nome das interfaces implementadas tanto no índice, quanto no valor de cada
+     * elemento.
+     * @return null
+     */
+    public function testClassImplements()
+    {
+        $res = class_implements($this->_daughter);
+        // print_r($res);
+        $this->assertArrayHasKey('App\OOProgramming\FamilyInterface', $res); // verifica índices
+        $this->assertContains('App\OOProgramming\FamilyInterface', $res); // verifica valores dos índices
     }
 }
