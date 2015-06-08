@@ -1,10 +1,15 @@
 # PHP Certification topics tested with *PHPUnit*
 
 ### Covered Topics (up to now)
-* PHP Basics (*not complete*) 
-* Functions (*not complete*)
-* Arrays (*not complete*)
-* OO Programming (*not complete*)
+*Arrays
+*Data format and Types
+*Errors and Exceptions
+*Functions
+*Inputs/Outputs
+*OO Programming
+*PHP Basics
+*Security
+*Web Features
 
 *by* **T. Mallon**
 
