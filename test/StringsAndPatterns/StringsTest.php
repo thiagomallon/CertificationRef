@@ -192,4 +192,18 @@ class StringsTest extends \PHPUnit_Framework_TestCase
         $res = strtok($string, "\n");
         // var_dump($res);
     }
+
+    /**
+     * The testStrpos method faz uso da função strpos(), que procura por uma string em outra e retorna
+     * a posição. A função começa a contagem da string com 0 e é importante ter em mente que se a string procurada
+     * estiver no começo da string de procura, ou seja, posição 0, uma condicional deve ser preparada para o resultado.
+     * A função retorna -1 caso não encontre a string.
+     * @return null
+     */
+    public function testStrpos()
+    {
+        $name = 'Sia Chandelier';
+        $this->assertEquals(4, strpos($name, 'Chandelier')); // verifica posição da string passada
+        $this->assertEquals(0, strpos($name, 'Sia')); // posição inicial para strpos() é 0
+    }
 }

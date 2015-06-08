@@ -93,6 +93,18 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * The testNegativeIndexes method
+     * @return null
+     */
+    public function testNegativeIndexes()
+    {
+        $localSet = [-1=>'First negative', -2=>'Second negative', -3=>'Third negative'];
+        // print_r($localSet);
+        $this->assertArrayHasKey(-3, $localSet);
+        $this->assertArrayHasKey(-2, $localSet);
+    }
+
+    /**
      * Método testa função in_array() do PHP. Função verifica se existe dado
      * valor em qualquer um dos índices do array passado e retorna true caso
      * ocorra.
@@ -153,7 +165,8 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Método testa função array_flip do PHP. Função recebe um array e devolve o mesmo com índices
-     * e valores invertidos, ou seja, índice no lugar do valor e vice-versa.
+     * e valores invertidos, ou seja, índice no lugar do valor e vice-versa. A função respeira índices
+     * associativos.
      * @return null
      */
     public function testArrayFlip()
@@ -341,7 +354,8 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
      */
     public function testArrayFill()
     {
-        
+        $localSet[-1] = 'Chocoloko';
+        // print_r($localSet);
     }
 
     /**

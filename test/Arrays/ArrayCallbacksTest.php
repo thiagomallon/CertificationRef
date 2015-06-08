@@ -62,16 +62,15 @@ class ArrayCallbacksTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Método implementa função array_walk(), que possibilita o uso de função callback, para tratamento de valores e/ou
-     * índices do array navegado. Função muito útil, e em adição à função array_map(), ela permite alteração também dos
-     * índices, equanto a array_map() somente de valores.
+     * índices do array navegado.
      * @return null
      */
     public function testArrayWalk()
     {
         array_walk($this->localSet, function (&$value, $key) {
-            $value = $value . " place"; // adiciona a string ' place' ao valor de cada elemento do array
+            $value = $value . " place of ".$key; // adiciona a string ' place' ao valor de cada elemento do array
         });
-        //print_r($localSet);
-        $this->assertContains('first place', $this->localSet);
+        // print_r($this->localSet);
+        $this->assertContains('first place of 1st', $this->localSet);
     }
 }

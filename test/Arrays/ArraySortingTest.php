@@ -150,8 +150,8 @@ class ArraySortingTest extends \PHPUnit_Framework_TestCase
     /**
      * Método testa atribuição de array à função ksort() do PHP. Verifica-se que apesar
      * de ordenar os índices e manter a associação ao valor, não ordenando assim os valores,
-     * mas tão somente os índices, a função ksort() não ordena de forma eficiente índices de
-     * de nomes alfanuméricos, o índice book2.pdf é colocado posterior ao índice book12.pdf.
+     * mas tão somente os índices, a função ksort() não ordena de forma eficiente índices
+     * alfanuméricos, o índice book2.pdf é colocado posterior ao índice book12.pdf.
      * O var_dump mostra a atuação da função em um array associativo.
      * @return null
      */
@@ -161,6 +161,19 @@ class ArraySortingTest extends \PHPUnit_Framework_TestCase
         end($this->localSet); // coloca ponteiro no elemento de última posição, para verificação da ordenação
         //print_r($this->localSet);
         $this->assertContains('book2.pdf', current($this->localSet));
+    }
+
+    /**
+     * The testKSortNegative method implementa função ksort, porém, com índices negativos, para verificação de ordenação.
+     * Verifica-se que índices negativos tem precedência maior.
+     * @return null
+     */
+    public function testKSortNegative()
+    {
+        $local = [-1=>'first negative',1=>'first','1st'=>'first one'];
+        ksort($local, SORT_NATURAL);
+        // print_r($local);
+        $this->assertEquals('first negative', current($local));
     }
 
     /**
@@ -189,7 +202,7 @@ class ArraySortingTest extends \PHPUnit_Framework_TestCase
     public function testNatsort()
     {
         natsort($this->localSet);
-        //print_r($this->localSet); // aqui vemos a ordenação alfanumérica acontecer
+        // print_r($this->localSet); // aqui vemos a ordenação alfanumérica acontecer
         end($this->localSet); // coloca ponteiro no último elemento do array
         $this->assertEquals('book11.pdf', current($this->localSet)); // verifica-se o valor do elemento
     }
@@ -204,6 +217,7 @@ class ArraySortingTest extends \PHPUnit_Framework_TestCase
     {
         $justStuff = ['IMG10.PNG','IMG1.PNG','IMG11.PNG','IMG22.PNG','IMG0.png','img1.png','img2.png','IMG3.PNG'];
         natcasesort($justStuff);
+        // natsort($justStuff);
         // print_r($justStuff);
         next($justStuff); // ponteiro aponta para o segunto elemento do array
         $this->assertEquals('img1.png', current($justStuff)); // verificamos não houve distinção entre os cases.
@@ -212,7 +226,7 @@ class ArraySortingTest extends \PHPUnit_Framework_TestCase
     /**
      * Método implementa função array_reverse() do PHP. Função inverte ordem dos valores, sendo, sendo o último
      * elemento colocado em primeiro e vice-versa. Para índices numéricos ocorre perda de relação índice/chave,
-     * porém, índices associativos são mantidos.
+     * porém, índices associativos são preservados.
      * @return null
      */
     public function testArrayReverse()

@@ -76,4 +76,25 @@ class ArrayDifferentiatingTest extends \PHPUnit_Framework_TestCase
         // print_r($res);
         $this->assertCount(3, $res);
     }
+    
+    /**
+     * The testArrayDiff method verifica diferença entre valores de índices iguais, sejam esses numéricos
+     * ou associativos. A função retorna elementos do primeiro array, que possuam diferenças no segundo array.  
+     * @return null
+     */
+    public function testArrayDiff()
+    {
+        $a = ['first', 'second', 'third', 'position' => 'chimpz', 'champz'];
+        $b = ['first', 'third', 'fourth', 'position' => 'champz'];
+
+        $res = array_diff($a, $b);
+        // print_r($res);
+        $this->assertCount(2, $res); // duas diferenças encontradas
+        
+        $this->assertArrayHasKey(1, $res);
+        $this->assertEquals('second', $res[1]);
+
+        $this->assertArrayHasKey('position', $res);
+        $this->assertEquals('chimpz', $res['position']);
+    }
 }

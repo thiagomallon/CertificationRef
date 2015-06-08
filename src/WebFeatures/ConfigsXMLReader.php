@@ -46,6 +46,24 @@ class ConfigsXMLReader implements XMLReader
     }
 
     /**
+     * The getDatabaseCredentials method
+     * @param datatype $dbms description
+     * @return datatype description
+     */
+    public function getDatabaseCredentials($dbms)
+    {
+        $this->xmlContent = $this->getXMLData();
+        $stage = $this->xmlContent->stage;
+        $element = array_shift($this->xmlContent->xpath($stage.'/database[@dbms="'.$dbms.'"]'));
+        if ($element) {
+            return $element;
+        } else {
+            throw new \RangeException('Attributo não existe, para o elemento');
+        }
+    }
+
+
+    /**
      * The getElementData method
      * @return datatype description
      * @param string $elementPath O 'path' do elemento a ser retornado. Ex: development/database
