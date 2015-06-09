@@ -46,6 +46,7 @@ class UserDAOTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetUser()
     {
+        $this->markTestSkipped('Skipping to avoid side efects');
         print_r($this->_userDAO->getUsers());
     }
 }

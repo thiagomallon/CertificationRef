@@ -97,4 +97,22 @@ class DaughterTest extends \PHPUnit_Framework_TestCase
         $callRes = $this->_daughter->validate($cpf);
         $this->assertEquals("It's validated: {$cpf}", $callRes);
     }
+
+    /**
+     * The testProtectedCheck method verifica alteração de visibilidade, bem como aliasing de método de trait
+     * @covers App\OOProgramming\CPFValidator::protectedCheck
+     * @return null
+     */
+    public function testProtectedCheck()
+    {
+        $check = new \ReflectionMethod('\App\OOProgramming\Daughter', 'protectedCheck');
+        
+        if ($check->isProtected()) { // verifica se método é protegido
+            $callres = $this->_daughter->protCheck('protected');
+        } elseif ($check->isPublic()) { // verifica se método é público
+            $callres = $this->_daughter->protectedCheck('public');
+        }
+        // print($callres);
+        $this->assertEquals($callres, 'This is originally a protected cpf check method'); // verifica se retorno é o esperado
+    }
 }

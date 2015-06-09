@@ -10,29 +10,19 @@
 namespace App\OOProgramming;
 
 /**
- * Trait CPFValidatorTrait
+ * Trait CNPJValidatorTrait
  * @author Thiago Mallon <thiagomallon@gmail.com>
  */
-trait CPFValidatorTrait
+trait CNPJValidatorTrait
 {
     /**
      * The check method
      * @param datatype $cpf description
      * @return datatype description
      */
-    public function check($cpf)
+    public function check($cnpj)
     {
-        return "Welcome to Alabama, user: {$cpf}";
-    }
-
-    /**
-     * The protectedCheck method
-     * @param datatype $cpf description
-     * @return datatype description
-     */
-    protected function protectedCheck($cpf)
-    {
-        return "This is originally a {$cpf} cpf check method";
+        return "Welcome to Tenesse, user: {$cnpj}";
     }
 
     /**
@@ -41,5 +31,5 @@ trait CPFValidatorTrait
      * @param string $cpf Cpf do usúario
      * @return string Validate message
      */
-    abstract public function validate($cpf);
+    abstract public function validate($cnpj);
 }

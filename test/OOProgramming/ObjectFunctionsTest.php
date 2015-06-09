@@ -56,8 +56,8 @@ class ObjectFunctionsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * The testClassAlias method implementa função get_class(), que retona o nome da classe relativa
-     * à instância passada
+     * The testClassAlias method implementa função get_class(), que retona string de nome da classe relativa
+     * ao objeto passado
      * @return null
      */
     public function testClassAlias()
@@ -94,6 +94,19 @@ class ObjectFunctionsTest extends \PHPUnit_Framework_TestCase
     public function testMethodExists()
     {
         $this->assertTrue(method_exists($this->_daughter, 'sayHello'));
+    }
+
+    /**
+     * The testPropertyExists method implementa função property_exists(), que verifica se dada propriedade existe,
+     * para dado objeto. Função pode ser utilizada para qualquer modificador de acesso, ou seja, poderá ser utilizado
+     * para verificação de propriedades public, protected e private. Desde que a propriedade exista, a função retornará
+     * true, caso contrário retornará false.
+     * @return null
+     */
+    public function testPropertyExists()
+    {
+        $this->assertTrue(property_exists($this->_daughter, 'publicStuff'));
+        $this->assertTrue(property_exists($this->_daughter, 'name'));
     }
 
     /**

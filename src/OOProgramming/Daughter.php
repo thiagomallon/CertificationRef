@@ -116,7 +116,15 @@ class Daughter extends Mother
 
     // Killing SRP - X(_
     // use CPFValidatorTrait; // not recommended
-    use \App\OOProgramming\CPFValidatorTrait; // right way!
+    use \App\OOProgramming\CPFValidatorTrait, \App\OOProgramming\CNPJValidatorTrait {
+        /* tratamento de conflitos */
+        \App\OOProgramming\CPFValidatorTrait::check insteadof \App\OOProgramming\CNPJValidatorTrait;
+        \App\OOProgramming\CPFValidatorTrait::validate insteadof \App\OOProgramming\CNPJValidatorTrait;
+        /* acessando métodos conflitados */
+        \App\OOProgramming\CNPJValidatorTrait::check as cnpjCheck;
+        /* alterando modificadores de acesso */
+        \App\OOProgramming\CPFValidatorTrait::protectedCheck as public protCheck;
+    }
 
     /**
      * The validate method
