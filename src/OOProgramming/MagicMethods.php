@@ -113,12 +113,11 @@ class MagicMethods
     }
 
     /**
-     * Método é chamado e, tem poder de interceptar ação quando instância da classe é submetida à ação do operador
-     * clone. Tem-se a chande, através do seguinte método mágico, de criar novas instâncias para as dependências
-     * para que a da instancia clone e da clonada não compartilhem, por referência, alocamento em memória, mas tenham
-     * sejam objetos diferentes para o clone e a clonada.
-     * Isso é muito útil quando se está implementando o Pattern Prototype para uma classe que implementa injeção de
-     * dependência, e/ou simplesmente os conceitos S.O.L.I.D..
+     * Método é chamado e, tem poder de interceptar ação de clonagem (objeto submetido ao operador clone).
+     * Tem-se a chande, através do seguinte método mágico, de criar novas instâncias para as dependências
+     * para que as dependências da instancia clone e da clonada não compartilhem, por referência, mesmo alocamento em memória.
+     * Isso é muito útil quando se está implementando o Pattern Prototype para classes que implementam injeção de dependência
+     * e/ou OCP, DIP, etc.
      * @return datatype description
      */
     public function __clone()
@@ -148,7 +147,7 @@ class MagicMethods
     }
 
     /**
-     * Método
+     * Método intercepta chamada da função var_export(), com objeto da presente classe, como argumento.
      * @return datatype description
      */
     public static function __set_state()
