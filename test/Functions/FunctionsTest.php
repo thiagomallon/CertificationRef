@@ -7,7 +7,7 @@
  /**
   * @subpackage Test\Functions
   */
-namespace Test\Functions;
+ namespace Test\Functions;
 
 /**
  * Classe FunctionsTest
@@ -36,5 +36,15 @@ class FunctionsTest extends \PHPUnit_Framework_TestCase
         $res = $daughter->{'getName'}(); // chamada dinâmica à método da classe Daughter
 
         $this->assertEquals('MotherClass!DaughterClass!', $res); // verifica retorno do método
+    }
+
+    /**
+     * The testMoreDynamically method
+     * @return null
+     */
+    public function testMoreDynamically()
+    {
+        $res = (new \App\OOProgramming\Daughter)->{'getName'}();
+        $this->assertEquals('MotherClass!DaughterClass!', $res);
     }
 }

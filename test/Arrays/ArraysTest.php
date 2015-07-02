@@ -118,7 +118,7 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Método testa função array_keys do PHP. Quando um array é passado à função,
-     * a mesma retornará um novo array, com os elementos desse último como valores
+     * a mesma retornará um novo array, com os índices do array passado preenchendo os valores
      * e os índices, dessa vez, númericamente indexados.
      * @return null
      */
