@@ -11,7 +11,7 @@
 * Security
 * Web Features
 
-**Abandoned,** [I'm **certified** now =)](http://www.zend.com/en/yellow-pages/ZEND027347)
+**Abandoned,** [**I'm certified now =)**](http://www.zend.com/en/yellow-pages/ZEND027347)
 
 ![GitHub Logo](mein_stream_mit_Mallon_und_semitischen.jpeg)
 
